@@ -1,0 +1,20 @@
+ext{
+    android = [
+            versionCode      : 1,
+            versionName      : "1.0.1"
+    ]
+    dependencies = [
+
+    ]
+
+    appConfig = [
+
+            //TODO 隐私协议
+            "privacyUrl": "https://crossmvp.com/agreement/MagicDoc/privacy.html",
+            "userUrl"   : "https://crossmvp.com/agreement/MagicDoc/terms.html",
+            "VERSIONNAME":android.versionName,
+
+
+    ]
+
+}

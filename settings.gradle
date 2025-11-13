@@ -121,3 +121,43 @@ dependencyResolutionManagement {
 
 rootProject.name = "OverSeasWhiteBag"
 include ':app'
+//include ':tools-ui-library'
+//project(':tools-ui-library').projectDir = file('./tools-ui-library/tools-ui-library')
+include ':setting'
+project(':setting').projectDir = file('./third-module/setting')
+include ':toolslibrary'
+project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
+include ':color_picker_library'
+project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
+//include ':edgeborderlight'
+//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
+//include ':brokendevice'
+//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+include ':setting'
+project(':setting').projectDir = file('./third-module/setting')
+include ':toolslibrary'
+project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
+include ':pic_toolslibrary'
+project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
+include ':scanlibrary'
+project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
+include ':brokendevice'
+project(':brokendevice').projectDir = file('./third-module/brokendevice')
+//include(':heartbratmeasure')
+//project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
+include(':recipes_module')
+project(':recipes_module').projectDir = file('./third-module/recipes_module')
+include(':toolsbox')
+project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
+
+include(':smalltoolslibrary')
+project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
+
+include(':sharedPreferences')
+project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
+
+include(':sharedPreferences')
+project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
+
+include(':pic_edit_library')
+project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')

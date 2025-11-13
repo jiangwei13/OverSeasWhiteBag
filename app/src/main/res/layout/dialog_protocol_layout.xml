@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@mipmap/dialog_bg2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#ff121212"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/contentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:text="我们依据最新的法律，向您说明本软件的《用户协议》和《隐私政策》。请你阅读并充分理解相关条款。为了给您提供全面、稳定的产品服务，我们将向您申请获取：了、设备信息权限、用于区分识别用户唯一1D，提供更精准的功能服务。2、存储空间权限、用于优化
+应用缓存垃圾文件占用空间，提升手机性能3、地理位置权限、用于定位更精确，提供区域化的服务。 4、应用安装列表权限，用于识别设备存在风险的应用，提供更安全的功能服务。"
+        android:textColor="#ff333333"
+        android:textSize="12sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/agreen"
+        android:layout_width="160dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/blue_round_bg"
+        android:gravity="center"
+        android:text="同意使用"
+        android:textColor="#ffffffff"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/not_agreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="拒绝"
+        android:textColor="#ffaaaaaa"
+        android:textSize="14.0sp" />
+</LinearLayout>

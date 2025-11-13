@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -10,6 +11,17 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/third-module/brokendevice" />
+            <option value="$PROJECT_DIR$/third-module/color_picker_library" />
+            <option value="$PROJECT_DIR$/third-module/pic_edit_library" />
+            <option value="$PROJECT_DIR$/third-module/pic_toolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/recipes_module" />
+            <option value="$PROJECT_DIR$/third-module/scanlibrary" />
+            <option value="$PROJECT_DIR$/third-module/setting" />
+            <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
+            <option value="$PROJECT_DIR$/third-module/smalltoolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/toolslibrary" />
+            <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

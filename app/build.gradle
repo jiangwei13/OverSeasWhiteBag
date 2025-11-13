@@ -130,7 +130,7 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
    // implementation files('libs/pluginhelper.aar')
-//    implementation project(':toolsbox')
+    implementation project(':toolsbox')
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
