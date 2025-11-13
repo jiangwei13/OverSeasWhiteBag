@@ -1,0 +1,138 @@
+plugins {
+    id 'com.android.application'
+
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'android-junk-code'
+
+
+androidJunkCode {
+    def config = {
+        packageBase = "com.sao.wen.xia"
+        packageCount = 40
+        activityCountPerPackage = 40
+        excludeActivityJavaFile = false
+        otherCountPerPackage = 50
+        methodCountPerClass = 50
+        resPrefix = "xia_"
+        drawableCount = 100
+        stringCount = 100
+    }
+    variantConfig {
+        // release config
+    }
+}
+
+android {
+
+
+
+    namespace 'com.clean.toos'
+    compileSdk 35
+
+    // 临时禁用某些严格检查
+    aaptOptions {
+        ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        additionalParameters "--no-version-vectors"
+    }
+    defaultConfig {
+        applicationId "com.saowen.magicdoc"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.1"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    packagingOptions {
+
+
+        exclude 'META-INF/DEPENDENCIES'
+        dex {
+            useLegacyPackaging true
+        }
+        exclude 'resources.arsc'
+
+        exclude 'AndroidManifest.xml'
+
+    }
+    signingConfigs {
+        release {
+            keyAlias 'magicdoc'
+            keyPassword '123456'
+            storeFile file('magicdoc.jks')
+            storePassword '123456'
+        }
+        debug {
+            keyAlias 'magicdoc'
+            keyPassword '123456'
+            storeFile file('magicdoc.jks')
+            storePassword '123456'
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xjvm-default=all",
+        ]
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+    viewBinding {
+        enabled = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+   // implementation files('libs/pluginhelper.aar')
+//    implementation project(':toolsbox')
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+
+}
