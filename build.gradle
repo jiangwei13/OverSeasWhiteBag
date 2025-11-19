@@ -49,7 +49,17 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-
+def printSoPath(File file) {
+    if (file != null) {
+        if (file.isDirectory()) {
+            file.listFiles().each {
+                printSoPath(it)
+            }
+        } else if (file.absolutePath.endsWith(".so")) {
+            println "so file: $file.absolutePath"
+        }
+    }
+}
 allprojects {
 
     //此处为了解决mac M1芯片到问题 强制使用 sqlite版本
@@ -58,5 +68,21 @@ allprojects {
             force 'org.xerial:sqlite-jdbc:3.34.0'
         }
     }
+    // 获取所有的.so文件的打包路径
+    tasks.configureEach {
+        task ->
+            if (task.name == 'mergeDebugNativeLibs') {
+                task.doFirst {
+                    println("list so files begin")
+                    it.inputs.files.each { file ->
+                        printSoPath(new File(file.absolutePath))
+                    }
+                    println("list so files end")
+                }
+            }
+    }
+
+
+
 }
 
