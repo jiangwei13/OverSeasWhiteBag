@@ -14,7 +14,24 @@ ext{
             "userUrl"   : "https://crossmvp.com/agreement/MagicDoc/terms.html",
             "VERSIONNAME":android.versionName,
 
+            //TODO 接口环境  日志log开关
+            "logSwitch"    : false,
 
+            "ad_LiveTime":"2025-04-30 10:00:00",
+
+
+
+            "umID":"",
+
+            //TODO 第三方广告SDK ID
+            "TOPON_APPID"           : "h68340e8e614b2", //topOne Id
+            "TOPON_APPKEY"          : "a5ad8bc4badab8aa9a0163b116abdc18e", //topOne key
+            "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
+            "ADJUST_TOKEN"          : "adjust",
+            "APPID"                 : "",
+            "FISRT_SPLASH"          : "",
+            "FIRST_REWORD" : " ",
+            "ad_name":"ui.aar",
     ]
 
 }

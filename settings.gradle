@@ -150,6 +150,7 @@ project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
+
 include(':smalltoolslibrary')
 project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
 
@@ -161,3 +162,8 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
+
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file('./oversea_base_module')
+include(":aar_library:app_aar")
+

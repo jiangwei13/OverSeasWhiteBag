@@ -21,3 +21,15 @@
 #-renamesourcefileattribute SourceFile
 -dontwarn org.joda.convert.FromString
 -dontwarn org.joda.convert.ToString
+######fireBase###########
+###########google###########
+-keep class com.google.android.gms.** { *; }
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.android.gms.**
+-dontwarn com.google.firebase.**
+
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+-keep public class * extends java.lang.Exception
+-keep class com.google.firebase.crashlytics.** { *; }
+-keep class com.google.firebase.analytics.** { *; }
