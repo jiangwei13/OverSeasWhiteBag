@@ -36,6 +36,8 @@
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/smalltoolslibrary" />
             <option value="$PROJECT_DIR$/third-module/toolslibrary" />
+            <option value="$PROJECT_DIR$/tools_common_module/base_ad_common_library" />
+            <option value="$PROJECT_DIR$/tools_common_module/broadcast" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>

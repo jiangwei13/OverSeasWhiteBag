@@ -1,9 +1,12 @@
 plugins {
     id 'com.android.application'
+    id("walle")
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 
 androidJunkCode {
@@ -126,9 +129,9 @@ android {
         viewBinding true
     }
 
-//    buildFeatures{
-//        compose true
-//    }
+    buildFeatures{
+        compose true
+    }
 
     lint {
         baseline = file("lint-baseline.xml")
@@ -141,28 +144,30 @@ dependencies {
 //    implementation files('libs/pluginhelper.aar')
     implementation project(':toolsbox')
     implementation(project(":aar_library:app_aar"))
+    implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
-
+    implementation project(':broadcast')
+    implementation project(':base_ad_common_library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
 
-//    // compose
-//    implementation("androidx.activity:activity-compose:1.7.2")
-//    implementation(platform("androidx.compose:compose-bom:2024.02.01"))
-//    implementation("androidx.compose.ui:ui")
-//    implementation("androidx.compose.ui:ui-graphics")
-//    implementation("androidx.compose.ui:ui-tooling-preview")
-//    implementation("androidx.compose.material:material")
-//    implementation("androidx.compose.material3:material3")
-//    implementation("androidx.compose.animation:animation")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
-//    implementation("io.coil-kt:coil-compose:2.5.0")
-//    debugImplementation("androidx.compose.ui:ui-tooling")
-//    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    // compose
+    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(platform("androidx.compose:compose-bom:2024.02.01"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.animation:animation")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     //fireBase
     implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
-    implementation("com.google.firebase:firebase-analytics")
+   implementation("com.google.firebase:firebase-analytics")
     implementation 'com.tencent:mmkv-static:1.2.10'
 
 

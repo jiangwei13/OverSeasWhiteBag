@@ -33,3 +33,5 @@
 -keep public class * extends java.lang.Exception
 -keep class com.google.firebase.crashlytics.** { *; }
 -keep class com.google.firebase.analytics.** { *; }
+
+######adjust
