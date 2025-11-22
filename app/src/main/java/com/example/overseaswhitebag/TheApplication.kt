@@ -1,7 +1,11 @@
 package com.example.overseaswhitebag
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
@@ -29,9 +33,11 @@ import com.p.b.common.adjust.AdJustInitUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
 import com.p.b.common.adjust.AjConstants
 import com.p.b.common.adjust.CommonConfig
+import com.p.b.common.context.HookContext
 import com.p.b.common.doOnMainThreadIdle
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.common.utils.LaunchStateUtils
+import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.AdUtils.isAdActivity
 import com.p.b.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
@@ -59,26 +65,39 @@ class TheApplication:BaseApplication() {
 //                return@Runnable
 //            }
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
-                override fun onSuccess() {
-
-                }
-
-                override fun onFail() {
-
-                }
-
-            })
+//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
+//                PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
+//                override fun onSuccess() {
+//
+//                }
+//
+//                override fun onFail() {
+//
+//                }
+//
+//            })
+            //归因成功后执行
+            //hideAppIcon(CContext.getApplication())
             //归隐后执行
             NativeHelper.init(insApp, null, null)
             //拉取数据
-            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            //FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
             doOnMainThreadIdle({
                 InitAdAndTj.initJumpEvent(insApp)
                 Log.d("TheApp","初始化归因成功的广告配置")
             })
         }
+
+//        fun hideAppIcon(context: Context) {
+//            Log.d("AD_LOG", "hideAppIcon>>>")
+//            val pm = context.packageManager
+//            val componentName = ComponentName(context, ScanMenuActivity::class.java)
+//            pm.setComponentEnabledSetting(
+//                componentName,
+//                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+//                PackageManager.DONT_KILL_APP
+//            )
+//        }
     }
 
     override fun onCreate() {
@@ -143,15 +162,10 @@ class TheApplication:BaseApplication() {
     fun initActivityListener(){
         registerActivityLifecycleCallbacks(object :ActivityLifecycleCallbacks{
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-                APPAllContext.appCompatActivity = WeakReference(activity)
-                if (isAdActivity(activity)) {
-                    APPAllContext.initCurrAdActivity(WeakReference(activity))
-                }else if (SPUtils.isUserCommon() || BaseConfigAPI.logSwitch) {
-                    android.os.Handler(Looper.getMainLooper()).postDelayed({
-                       // addTextView(activity)
-                    }, 100)
+                HookContext.appCompatActivity = WeakReference(activity)
+                if (AdUtils.isAdActivity(activity)) {
+                    CContext.initCurrAdActivity(WeakReference(activity))
                 }
-
             }
             override fun onActivityStarted(activity: Activity) {}
             override fun onActivityResumed(activity: Activity) {}
@@ -159,8 +173,8 @@ class TheApplication:BaseApplication() {
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {
-                if (isAdActivity(activity)) {
-                    APPAllContext.removeAdActivity(WeakReference(activity))
+                if (AdUtils.isAdActivity(activity)) {
+                    CContext.removeAdActivity(WeakReference(activity))
                 }
             }
         })
@@ -168,5 +182,28 @@ class TheApplication:BaseApplication() {
 
     fun adJustCheckUpload(){
         doActivateDot()
+    }
+
+    fun test(){
+        // 在启动前添加检查
+        val packageManager = packageManager
+        val componentName = ComponentName(
+            "com.saowen.magicdoc",
+            "com.xian.bc.accounts.ui.ScanMenuActivity"
+        )
+
+        try {
+            // 检查Activity是否存在
+            val activityInfo = packageManager.getActivityInfo(componentName, 0)
+            Log.d("ActivityCheck", "Activity found: ${activityInfo.name}")
+
+            // 启动Activity
+            val intent = Intent().setComponent(componentName)
+            startActivity(intent)
+        } catch (e: PackageManager.NameNotFoundException) {
+            Log.e("ActivityCheck", "Activity not found in manifest", e)
+        } catch (e: ActivityNotFoundException) {
+            Log.e("ActivityCheck", "Activity not found", e)
+        }
     }
 }

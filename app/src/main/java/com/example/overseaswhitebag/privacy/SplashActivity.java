@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.clean.toos.R;
-import com.xian.bc.accounts.ui.ScanMenuActivity;
+import com.xian.bc.accounts.ui.ScanMenuMainActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -25,13 +25,13 @@ public class SplashActivity extends AppCompatActivity {
         splashView = findViewById(R.id.splashView);
 
 
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
-        toMain();
+        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
+        if (!isAgressment) {
+            showProtocolDialog();
+        } else {
+            toMain();
+        }
+//        toMain();
     }
 
     private void showProtocolDialog() {
@@ -57,7 +57,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                Intent it = new Intent(SplashActivity.this, ScanMenuMainActivity.class);
                 startActivity(it);
                 finish();
 
