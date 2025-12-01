@@ -10,9 +10,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import com.blankj.utilcode.util.NativeHelper
-import com.clean.base_ad_common_library.APPAllContext
-import com.clean.base_ad_common_library.BaseConfigAPI
-import com.clean.base_ad_common_library.http.HostUtils
+
 
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.example.overseaswhitebag.common.utils.AdjustTokens
@@ -37,6 +35,7 @@ import com.p.b.common.context.HookContext
 import com.p.b.common.doOnMainThreadIdle
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.common.utils.LaunchStateUtils
+import com.p.b.http.HostUtils
 import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.AdUtils.isAdActivity
 import com.p.b.pl223.hhoosstt.CContext
@@ -65,13 +64,7 @@ class TheApplication:BaseApplication() {
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
                 PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
                 override fun onSuccess() {
-                    //归因成功后执行
-                    NativeHelper.init(insApp, null, null)
-                    //拉取数据
-                    //FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                    doOnMainThreadIdle({
-                        InitAdAndTj.initJumpEvent(insApp)
-                    })
+
                 }
 
                 override fun onFail() {
@@ -79,7 +72,13 @@ class TheApplication:BaseApplication() {
                 }
 
             })
-
+//            //归因成功后执行
+//            NativeHelper.init(CContext.getContext(), null, null)
+//            //拉取数据
+//            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//            doOnMainThreadIdle({
+//                InitAdAndTj.initJumpEvent(insApp)
+//            })
         }
     }
 
@@ -87,7 +86,6 @@ class TheApplication:BaseApplication() {
         super.onCreate()
         insApp = this
         APPContext.setApplication(this)
-        APPAllContext.setApplication(this)
         CContext.setApplication(this)
         APPToolsContext.setApplication(this)
         OverseaAppContext.setApplication(this)
@@ -95,6 +93,7 @@ class TheApplication:BaseApplication() {
         MMKV.initialize(this)
         //initFireBase
         FirebaseApp.initializeApp(this)
+        NativeHelper.init(CContext.getContext(), null, null)
         init()
     }
 
@@ -109,7 +108,7 @@ class TheApplication:BaseApplication() {
         adJustCheckUpload()
 
         DeviceIdentifier.register(this);
-        if (ENV.logSwitch) {
+        if (fixTime() || ENV.logSwitch) {
             Log.d("AD_LOG","初始化广告sdk")
             InitAdAndTj.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
