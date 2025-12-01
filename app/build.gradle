@@ -165,9 +165,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    //fireBase
-    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
-   implementation("com.google.firebase:firebase-analytics")
     implementation 'com.tencent:mmkv-static:1.2.10'
 
 
