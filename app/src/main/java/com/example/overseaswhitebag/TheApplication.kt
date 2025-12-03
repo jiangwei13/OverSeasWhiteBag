@@ -35,6 +35,7 @@ import com.p.b.common.adjust.AjConstants
 import com.p.b.common.adjust.CommonConfig
 import com.p.b.common.context.HookContext
 import com.p.b.common.doOnMainThreadIdle
+import com.p.b.common.fcm.FCMInitUtils
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.common.utils.LaunchStateUtils
 import com.p.b.http.HostUtils
@@ -100,9 +101,11 @@ class TheApplication : BaseApplication() {
         OverseaAppContext.setApplication(this)
 
         MMKV.initialize(this)
-        //initFireBase
+        // 初始化Firebase
         FirebaseApp.initializeApp(this)
         NativeHelper.init(CContext.getContext(), null, null)
+        // 初始化FCM
+        FCMInitUtils.init(this)
         init()
     }
 

@@ -147,7 +147,7 @@ dependencies {
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
     implementation project(':broadcast')
-//    implementation project(':base_ad_common_library')
+    implementation project(':base_ad_common_library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
 
@@ -165,12 +165,8 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    //fireBase
-    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
-   implementation("com.google.firebase:firebase-analytics")
-    implementation 'com.tencent:mmkv-static:1.2.12'
+    implementation 'com.tencent:mmkv-static:1.2.10'
 
-    //toolsbox_moduel 和  oversea_base_module 共同的归因状态
-    implementation project(':oversea_utils')
+
 
 }
