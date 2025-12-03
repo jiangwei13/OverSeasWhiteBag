@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import com.blankj.utilcode.util.NativeHelper
+import com.example.oversea_utils.OverSeaMMKVUtils
 
 
 import com.example.overseaswhitebag.common.utils.APPContext
@@ -24,6 +25,7 @@ import com.p.b.base_api_net.utils.DeviceUtils
 import com.p.b.base_api_net.utils.HandleUtils
 import com.p.b.common.ENV
 import com.p.b.common.GAIDUtil
+import com.p.b.common.MMKVUtils
 import com.p.b.common.OverseaAppContext
 import com.p.b.common.PhoneStatusUtils
 import com.p.b.common.SPUtils
@@ -48,37 +50,44 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
-class TheApplication:BaseApplication() {
+class TheApplication : BaseApplication() {
 
-    companion object{
+    companion object {
         var isBackLanch: Boolean = false
+
         @JvmStatic
-        var insApp:TheApplication?=null
+        var insApp: TheApplication? = null
+
         @JvmStatic
-        var fromNet:Runnable = Runnable {
+        var fromNet: Runnable = Runnable {
             isBackLanch = true
-            if (SPUtils.isUserCommon()){
+            if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay, AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),object : CommonConfig.OnConfigInterface{
-                override fun onSuccess() {
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+                AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),
+                object : CommonConfig.OnConfigInterface {
+                    override fun onSuccess() {
+                        //归因状态
+                        OverSeaMMKVUtils.setUserStatus(true)
+                        //归因成功后执行
+                        NativeHelper.init(CContext.getContext(), null, null)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(insApp)
+                        })
 
-                }
+                    }
 
-                override fun onFail() {
+                    override fun onFail() {
+                        OverSeaMMKVUtils.setUserStatus(false)
+                    }
 
-                }
+                })
 
-            })
-//            //归因成功后执行
-//            NativeHelper.init(CContext.getContext(), null, null)
-//            //拉取数据
-//            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-//            doOnMainThreadIdle({
-//                InitAdAndTj.initJumpEvent(insApp)
-//            })
         }
     }
 
@@ -98,8 +107,9 @@ class TheApplication:BaseApplication() {
     }
 
 
-    private  fun init(){
-        val channel: String = WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
+    private fun init() {
+        val channel: String =
+            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
         val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
         ConfigUtils.initConfig(defaultConfig, 1)
@@ -108,23 +118,24 @@ class TheApplication:BaseApplication() {
         adJustCheckUpload()
 
         DeviceIdentifier.register(this);
-        if (fixTime() || ENV.logSwitch) {
-            Log.d("AD_LOG","初始化广告sdk")
+        if (isStartWork() || ENV.logSwitch) {
+            Log.d("AD_LOG", "初始化广告sdk")
             InitAdAndTj.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
         }
         DeviceUtils.getFetchOaid()
-        GAIDUtil.fetchGAID(this,null)
+        GAIDUtil.fetchGAID(this, null)
     }
 
-    fun initActivityListener(){
-        registerActivityLifecycleCallbacks(object :ActivityLifecycleCallbacks{
+    fun initActivityListener() {
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
                 HookContext.appCompatActivity = WeakReference(activity)
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.initCurrAdActivity(WeakReference(activity))
                 }
             }
+
             override fun onActivityStarted(activity: Activity) {}
             override fun onActivityResumed(activity: Activity) {}
             override fun onActivityPaused(activity: Activity) {}
@@ -138,7 +149,7 @@ class TheApplication:BaseApplication() {
         })
     }
 
-    fun adJustCheckUpload(){
+    fun adJustCheckUpload() {
         doActivateDot()
     }
 

@@ -15,7 +15,7 @@ object AdjustTokens {
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                AjConstants.adjustAppToken = "";
+                AjConstants.adjustAppToken = "2t7vl9zzgfwg";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "";

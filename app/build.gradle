@@ -170,6 +170,7 @@ dependencies {
    implementation("com.google.firebase:firebase-analytics")
     implementation 'com.tencent:mmkv-static:1.2.12'
 
-
+    //toolsbox_moduel 和  oversea_base_module 共同的归因状态
+    implementation project(':oversea_utils')
 
 }
