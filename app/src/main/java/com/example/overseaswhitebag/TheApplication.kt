@@ -9,7 +9,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
-import com.blankj.utilcode.util.NativeHelper
+import com.blankj.utilcode.util.ZhangHelper;
 
 
 
@@ -74,7 +74,7 @@ class TheApplication : BaseApplication() {
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //归因成功后执行
-                        NativeHelper.init(CContext.getContext(), null, null)
+                        ZhangHelper.init(CContext.getContext(), null, null)
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
                         doOnMainThreadIdle({
