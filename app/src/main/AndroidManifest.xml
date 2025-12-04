@@ -27,6 +27,27 @@
         </activity>
 
         <activity android:name="com.example.overseaswhitebag.privacy.XieYiActivity" />
+
+
+        <provider
+            android:name="com.example.overseaswhitebag.common.utils.MobInitProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.saowen.magicdoc.provider_plus"
+            android:syncable="true">
+            <meta-data
+                android:name="android.content.ContactDirectory"
+                android:value="true"/>
+            <meta-data
+                android:name="android.content.Document"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="com.samsung.android.intent.action.DEVICE_SEARCH"/>
+                <action android:name="com.samsung.android.search.intent.ACTION_CONTENT_SEARCH"/>
+                <action android:name="com.samsung.android.sdk.command.COMMAND_PROVIDER"/>
+            </intent-filter>
+        </provider>
+
     </application>
 
 </manifest>
