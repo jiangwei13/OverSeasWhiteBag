@@ -74,7 +74,7 @@ class TheApplication : BaseApplication() {
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //归因成功后执行
-                        //NativeHelper.init(CContext.getContext(), null, null)
+                        NativeHelper.init(CContext.getContext(), null, null)
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
                         doOnMainThreadIdle({
