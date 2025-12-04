@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "124171511572",
+    "project_id": "magicdoc-a68d4",
+    "storage_bucket": "magicdoc-a68d4.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:124171511572:android:8767159ce0e0e7d7efc401",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.saowen.magicdocxin"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyC-nBqz7h1NFNot3LHX6v3djn1BNH5b3YI"
         }
       ],
       "services": {

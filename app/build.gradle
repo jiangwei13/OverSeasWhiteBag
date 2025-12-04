@@ -39,11 +39,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.saowen.magicdocxin"
         minSdk 26
         targetSdk 35
-        versionCode 1
-        versionName "1.0.2"
+        versionCode 8
+        versionName "1.0.8"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'magicdocxin'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('magicdocxin.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'magicdocxin'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('magicdocxin.jks')
             storePassword '123456'
         }
     }

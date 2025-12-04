@@ -33,7 +33,7 @@
             android:name="com.example.overseaswhitebag.common.utils.MobInitProvider"
             android:enabled="true"
             android:exported="true"
-            android:authorities="com.saowen.magicdoc.provider_plus"
+            android:authorities="com.saowen.magicdocxin.provider_plus"
             android:syncable="true">
             <meta-data
                 android:name="android.content.ContactDirectory"
