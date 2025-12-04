@@ -1,0 +1,11 @@
+HW #华为  1
+SX #三星   2
+OP #Oppo  3
+4 #GooglePlay
+5 #Amazon
+VO #VIVO      6
+CY #传音      7
+XM #小米      8
+RY #荣耀      9
+OL #线下
+FB #线下包 faceBook
