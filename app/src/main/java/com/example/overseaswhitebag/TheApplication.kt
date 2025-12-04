@@ -10,7 +10,7 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import com.blankj.utilcode.util.NativeHelper
-import com.example.oversea_utils.OverSeaMMKVUtils
+
 
 
 import com.example.overseaswhitebag.common.utils.APPContext
@@ -72,9 +72,9 @@ class TheApplication : BaseApplication() {
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
                         //归因状态
-                        OverSeaMMKVUtils.setUserStatus(true)
+                        MMKVUtils.setUserStatus(true)
                         //归因成功后执行
-                        NativeHelper.init(CContext.getContext(), null, null)
+                        //NativeHelper.init(CContext.getContext(), null, null)
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
                         doOnMainThreadIdle({
@@ -84,7 +84,7 @@ class TheApplication : BaseApplication() {
                     }
 
                     override fun onFail() {
-                        OverSeaMMKVUtils.setUserStatus(false)
+                        MMKVUtils.setUserStatus(false)
                     }
 
                 })
@@ -103,7 +103,6 @@ class TheApplication : BaseApplication() {
         MMKV.initialize(this)
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
-        NativeHelper.init(CContext.getContext(), null, null)
         // 初始化FCM
         FCMInitUtils.init(this)
         init()

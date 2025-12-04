@@ -176,4 +176,4 @@ project(':broadcast').projectDir = file("./tools_common_module/broadcast")
 include(":aar_library:app_aar")
 
 
-include ':oversea_utils'
+//include ':oversea_utils'
