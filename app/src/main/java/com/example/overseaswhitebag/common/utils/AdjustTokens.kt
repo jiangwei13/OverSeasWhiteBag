@@ -15,21 +15,21 @@ object AdjustTokens {
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                AjConstants.adjustAppToken = "2t7vl9zzgfwg";
+                AjConstants.adjustAppToken = "8t5lzekyk6ps";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "n4say1";
-                AjConstants.ipu = "42y41l";
-                AjConstants.arpu = "yyq45f";
-                AjConstants.ipu_arpu = "stmeot";
-                AjConstants.ipu_ecpm = "r4fdpi";
-                AjConstants.ipu_arpu_ecpm = "sljzeg";
-                AjConstants.blacklist = "70imt6";
-                AjConstants.ad_request = "pkp4go";
-                AjConstants.ad_filled = "v752hy";
-                AjConstants.firebase_request ="3qwssu";
-                AjConstants.firebase_success = "ave12u";
-                AjConstants.adJust_attribution_request = "35lamy";
+                AjConstants.topon_ilrd = "gccnyc";
+                AjConstants.ipu = "awmqsl";
+                AjConstants.arpu = "2e3prn";
+                AjConstants.ipu_arpu = "mjvf6x";
+                AjConstants.ipu_ecpm = "uis2k2";
+                AjConstants.ipu_arpu_ecpm = "orms9b";
+                AjConstants.blacklist = "yi46j1";
+                AjConstants.ad_request = "wf080h";
+                AjConstants.ad_filled = "vptcxl";
+                AjConstants.firebase_request ="veybqo";
+                AjConstants.firebase_success = "b47w7o";
+                AjConstants.adJust_attribution_request = "fgbrgl";
                 AjConstants.adJust_attribution_success ="";
                 AjConstants.activity_app ="";
             }
