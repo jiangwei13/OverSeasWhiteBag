@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/oversea_base_module" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/third-module" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools_common_module" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/toolsbox_moduel" vcs="Git" />
