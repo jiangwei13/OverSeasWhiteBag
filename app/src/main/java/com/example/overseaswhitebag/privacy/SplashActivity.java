@@ -11,8 +11,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.clean.toos.R;
-import com.xian.bc.accounts.ui.ScanMenuMainActivity;
-import com.xian.bc.utils.ContrlBtnShow;
+import com.bloodesugartracker.bloodpressureapp.Activity.Other_Activity.ToolsMainActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -60,7 +59,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuMainActivity.class);
+                Intent it = new Intent(SplashActivity.this, ToolsMainActivity.class);
                 startActivity(it);
                 finish();
 
