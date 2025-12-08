@@ -42,8 +42,8 @@ android {
         applicationId "com.seas.colorheart2"
         minSdk 26
         targetSdk 35
-        versionCode 8
-        versionName "1.0.8"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
