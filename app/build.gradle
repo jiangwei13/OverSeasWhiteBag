@@ -5,13 +5,13 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
 
 
 androidJunkCode {
     def config = {
-        packageBase = "com.sao.wen.xia"
+        packageBase = "com.smartht.healthtracker.xia"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
@@ -39,7 +39,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.smartht.healthtracker"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'healthtracker'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('healthtracker.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'healthtracker'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('healthtracker.jks')
             storePassword '123456'
         }
     }

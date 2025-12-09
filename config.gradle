@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/MagicDoc/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/MagicDoc/terms.html",
+            "privacyUrl": "https://crossmvp.com/agreement/HealthTracker/privacy.html",
+            "userUrl"   : "https://crossmvp.com/agreement/HealthTracker/terms.html",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
