@@ -11,7 +11,8 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.clean.toos.R;
-import com.keepb.biji.BijiMainActivity;
+
+import cn.hzw.doodledemo.ScanMenuActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -59,7 +60,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, BijiMainActivity.class);
+                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
                 startActivity(it);
                 finish();
 
