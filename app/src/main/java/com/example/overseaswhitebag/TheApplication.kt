@@ -43,7 +43,6 @@ import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.AdUtils.isAdActivity
 import com.p.b.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
-import com.xian.bc.utils.APPToolsContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -97,7 +96,6 @@ class TheApplication : BaseApplication() {
         insApp = this
         APPContext.setApplication(this)
         CContext.setApplication(this)
-        APPToolsContext.setApplication(this)
         OverseaAppContext.setApplication(this)
 
         MMKV.initialize(this)
