@@ -1,7 +1,7 @@
 ext{
     android = [
             versionCode      : 1,
-            versionName      : "1.0.2"
+            versionName      : "1.0.1"
     ]
     dependencies = [
 
@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/HealthTracker/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/HealthTracker/terms.html",
+            "privacyUrl": "https://crossmvp.com/agreement/ColorfulLights/privacy.html",
+            "userUrl"   : "https://crossmvp.com/agreement/ColorfulLights/terms.html",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
