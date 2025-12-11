@@ -35,3 +35,31 @@
 -keep class com.google.firebase.analytics.** { *; }
 
 ######adjust
+-dontwarn aQute.bnd.annotation.spi.ServiceProvider
+-dontwarn com.itextpdf.bouncycastle.BouncyCastleFactory
+-dontwarn com.itextpdf.bouncycastlefips.BouncyCastleFipsFactory
+-dontwarn com.itextpdf.eutrustedlistsresources.EuropeanTrustedListConfiguration$PemCertificateWithHash
+-dontwarn com.itextpdf.eutrustedlistsresources.EuropeanTrustedListConfiguration
+-dontwarn javax.xml.stream.XMLEventFactory
+-dontwarn javax.xml.stream.XMLInputFactory
+-dontwarn javax.xml.stream.XMLOutputFactory
+-dontwarn javax.xml.stream.XMLResolver
+-dontwarn javax.xml.stream.XMLStreamException
+-dontwarn javax.xml.stream.util.XMLEventAllocator
+-dontwarn org.apache.logging.log4j.Level
+-dontwarn org.apache.logging.log4j.LogManager
+-dontwarn org.apache.logging.log4j.Marker
+-dontwarn org.apache.logging.log4j.MarkerManager
+-dontwarn org.apache.logging.log4j.spi.AbstractLoggerAdapter
+-dontwarn org.apache.logging.log4j.spi.ExtendedLogger
+-dontwarn org.apache.logging.log4j.spi.LoggerAdapter
+-dontwarn org.apache.logging.log4j.spi.LoggerContext
+-dontwarn org.apache.logging.log4j.spi.LoggerContextFactory
+-dontwarn org.apache.logging.log4j.util.StackLocatorUtil
+-dontwarn org.conscrypt.Conscrypt
+-dontwarn sharpen.config.MappingConfiguration
+-dontwarn sharpen.config.MappingConfigurator
+-dontwarn sharpen.config.MemberKind
+-dontwarn sharpen.config.ModuleOption
+-dontwarn sharpen.config.ModulesConfigurator
+-dontwarn sharpen.config.OptionsConfigurator
