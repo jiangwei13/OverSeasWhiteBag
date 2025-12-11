@@ -39,7 +39,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.seas.colorheart2"
+        applicationId "com.seas.colorheart"
         minSdk 26
         targetSdk 35
         versionCode 1
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'colorheart2'
+            keyAlias 'colorheart'
             keyPassword '123456'
-            storeFile file('colorheart2.jks')
+            storeFile file('colorheart.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'colorheart2'
+            keyAlias 'colorheart'
             keyPassword '123456'
-            storeFile file('colorheart2.jks')
+            storeFile file('colorheart.jks')
             storePassword '123456'
         }
     }
