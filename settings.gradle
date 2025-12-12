@@ -175,8 +175,8 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 //include(':oversea_base_module')
 //project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
-include(':broadcast')
-project(':broadcast').projectDir = file("./tools_common_module/broadcast")
+//include(':broadcast')
+//project(':broadcast').projectDir = file("./tools_common_module/broadcast")
 
 //include(':base_ad_common_library')
 //project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
