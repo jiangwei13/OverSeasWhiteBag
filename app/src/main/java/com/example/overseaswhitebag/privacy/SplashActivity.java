@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.clean.toos.R;
-import cn.hzw.doodledemo.ScanMenuActivity;
+import com.p.a_b.MainWeatherActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -59,7 +59,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                Intent it = new Intent(SplashActivity.this, MainWeatherActivity.class);
                 startActivity(it);
                 finish();
 
@@ -70,7 +70,7 @@ public class SplashActivity extends AppCompatActivity {
 //        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
 //            @Override
 //            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+//                Intent it = new Intent(SplashActivity.this, MainWeatherActivity.class);
 //                startActivity(it);
 //                finish();
 //            }

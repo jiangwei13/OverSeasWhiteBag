@@ -154,6 +154,9 @@ project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 include(':smalltoolslibrary')
 project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
 
+include(':ClearLib')
+project(':ClearLib').projectDir = file('./third-module/ClearLib')
+
 include(':led_light_library')
 project(':led_light_library').projectDir = file('./third-module/led_light_library')
 
