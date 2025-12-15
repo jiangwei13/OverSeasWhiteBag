@@ -157,8 +157,8 @@ project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrar
 include(':led_light_library')
 project(':led_light_library').projectDir = file('./third-module/led_light_library')
 
-include(':edgeborderlight')
-project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')
+//include(':edgeborderlight')
+//project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')
 
 include(':tools_extra_lib')
 project(':tools_extra_lib').projectDir = file('./third-module/tools_extra_lib')
