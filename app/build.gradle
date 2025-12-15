@@ -11,13 +11,13 @@ apply plugin: "org.jetbrains.kotlin.plugin.compose"
 
 androidJunkCode {
     def config = {
-        packageBase = "com.glowbright.colorfullights.xia"
+        packageBase = "com.fastbooster.clean.xia"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
         otherCountPerPackage = 50
         methodCountPerClass = 50
-        resPrefix = "xia_"
+        resPrefix = "fastclean_"
         drawableCount = 100
         stringCount = 100
     }
@@ -39,7 +39,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.glowbright.colorfullights"
+        applicationId "com.fastbooster.clean"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'colorfullights'
+            keyAlias 'fastclean'
             keyPassword '123456'
-            storeFile file('colorfullights.jks')
+            storeFile file('fastclean.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'colorfullights'
+            keyAlias 'fastclean'
             keyPassword '123456'
-            storeFile file('colorfullights.jks')
+            storeFile file('fastclean.jks')
             storePassword '123456'
         }
     }
