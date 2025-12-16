@@ -39,7 +39,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.fastbooster.clean"
+        applicationId "com.fastboost.cleangp"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'fastclean'
+            keyAlias 'cleangp'
             keyPassword '123456'
-            storeFile file('fastclean.jks')
+            storeFile file('cleangp.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'fastclean'
+            keyAlias 'cleangp'
             keyPassword '123456'
-            storeFile file('fastclean.jks')
+            storeFile file('cleangp.jks')
             storePassword '123456'
         }
     }
