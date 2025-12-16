@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2025-04-30 10:00:00",
 
@@ -24,14 +24,14 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h691eb23982b34", //测试 topOne Id
-            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //测试 topOne key
+            "TOPON_APPID"           : "", //测试 topOne Id
+            "TOPON_APPKEY"          : "", //测试 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "adjust",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",
-            "ad_name":"ui.aar",
+            "ad_name":"",
     ]
 
 }
