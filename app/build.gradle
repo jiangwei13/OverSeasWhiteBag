@@ -145,7 +145,7 @@ dependencies {
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 //    implementation project(':oversea_base_module')
-    implementation project(':broadcast')
+//    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
