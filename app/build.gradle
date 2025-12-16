@@ -39,11 +39,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.fastboost.cleangp"
+        applicationId "com.fastboostgp.cleangp"
         minSdk 28
         targetSdk 35
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 2
+        versionName "1.0.2"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
