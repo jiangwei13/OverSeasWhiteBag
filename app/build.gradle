@@ -42,8 +42,8 @@ android {
         applicationId "com.fastboostgp.cleangp"
         minSdk 28
         targetSdk 35
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 4
+        versionName "1.0.4"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
