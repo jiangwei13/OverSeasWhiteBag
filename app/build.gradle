@@ -42,8 +42,8 @@ android {
         applicationId "com.fastboostgp.cleangp"
         minSdk 28
         targetSdk 35
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 3
+        versionName "1.0.3"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'cleangp'
+            keyAlias 'fastclean'
             keyPassword '123456'
-            storeFile file('cleangp.jks')
+            storeFile file('fastclean.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'cleangp'
+            keyAlias 'fastclean'
             keyPassword '123456'
-            storeFile file('cleangp.jks')
+            storeFile file('fastclean.jks')
             storePassword '123456'
         }
     }
