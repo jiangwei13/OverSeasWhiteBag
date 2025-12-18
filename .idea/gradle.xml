@@ -21,12 +21,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/aar_library" />
-            <option value="$PROJECT_DIR$/aar_library/app_aar" />
-            <option value="$PROJECT_DIR$/aar_library/security_checker" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/oversea_base_module" />
             <option value="$PROJECT_DIR$/third-module/brokendevice" />
             <option value="$PROJECT_DIR$/third-module/color_picker_library" />
             <option value="$PROJECT_DIR$/third-module/pic_edit_library" />
@@ -37,7 +33,6 @@
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/smalltoolslibrary" />
             <option value="$PROJECT_DIR$/third-module/toolslibrary" />
-            <option value="$PROJECT_DIR$/tools_common_module/broadcast" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>

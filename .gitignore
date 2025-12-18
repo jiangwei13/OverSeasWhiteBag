@@ -13,3 +13,28 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# 缓存目录
+.idea/caches/
+.idea/libraries/
+.idea/shelf/
+
+# 工作区设置
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/navEditor.xml
+.idea/deploymentTargetDropDown.xml
+
+# Gradle 文件
+.idea/gradle.xml
+.idea/modules.xml
+.idea/runConfigurations/
+
+# 编译输出
+.idea/compiler.xml
+.idea/jarRepositories.xml
