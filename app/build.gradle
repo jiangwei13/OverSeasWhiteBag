@@ -39,11 +39,12 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.seas.colorheart2"
+        applicationId "com.seas.colorheart"
+       //测试 applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 5
+        versionName "1.0.5"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -79,6 +80,20 @@ android {
             storeFile file('colorheart.jks')
             storePassword '123456'
         }
+
+        //测试包
+//        release {
+//            keyAlias 'magicdoc'
+//            keyPassword '123456'
+//            storeFile file('magicdoc.jks')
+//            storePassword '123456'
+//        }
+//        debug {
+//            keyAlias 'magicdoc'
+//            keyPassword '123456'
+//            storeFile file('magicdoc.jks')
+//            storePassword '123456'
+//        }
     }
 
 

@@ -34,6 +34,7 @@ class TheApplication : Application() {
         super.onCreate()
         insApp = this
         APPContext.setApplication(this)
+        CContext.setApplication(this)
         MMKV.initialize(this)
         init()
     }
@@ -50,7 +51,7 @@ class TheApplication : Application() {
         GAIDUtil.fetchGAID(this, null)
 
         InitAdAndTj.initAdTj(insApp)
-        InitAdAndTj.initJumpEvent(insApp)
+        //InitAdAndTj.initJumpEvent(insApp)
     }
 
 
