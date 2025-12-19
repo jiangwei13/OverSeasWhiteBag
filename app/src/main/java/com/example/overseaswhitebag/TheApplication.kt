@@ -5,7 +5,6 @@ import android.app.Application
 import android.os.Bundle
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.tencent.mmkv.MMKV
-import com.xian.bc.utils.APPToolsContext
 
 class TheApplication : Application() {
 
@@ -20,7 +19,6 @@ class TheApplication : Application() {
         super.onCreate()
         insApp = this
         APPContext.setApplication(this)
-        APPToolsContext.setApplication(this)
 
         MMKV.initialize(this)
         initActivityListener()

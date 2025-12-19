@@ -163,6 +163,9 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
+include(':tallynotes')
+project(':tallynotes').projectDir = file('./third-module/tallynotes')
+
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")
 
