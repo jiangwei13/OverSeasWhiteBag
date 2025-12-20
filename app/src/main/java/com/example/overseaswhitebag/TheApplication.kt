@@ -82,7 +82,7 @@ class TheApplication : BaseApplication() {
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
         // 初始化FCM
-        FCMInitUtils.init(this)
+        //FCMInitUtils.init(this)
         init()
     }
 
