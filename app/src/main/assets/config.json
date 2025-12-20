@@ -9,7 +9,7 @@
           "type": "splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n683e8c72cfc38"
+          "placement_id": ""
         }
       ]
     },
@@ -43,9 +43,8 @@
       "enable": true,
       "scene_key": "turn_time_one",
       "ad_list_beans": [
-
         {
-          "key": "three_inter",
+          "key": "one_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
@@ -57,9 +56,8 @@
       "enable": true,
       "scene_key": "interval_ad",
       "ad_list_beans": [
-
         {
-          "key": "three_inter",
+          "key": "one_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
@@ -69,6 +67,7 @@
     }
   ],
   "config": {
+    "gp": "hu812",
     "ka": true,
     "kp": true,
     "dialog": true,
@@ -80,21 +79,21 @@
       100
     ],
     "timerMinute": [
-      1,
+      2,
+      3,
+      5,
       8,
-      10,
-      20,
       30
     ],
-    "hour_turn_time": 10,
+    "hour_turn_time": 1,
     "ipu_arpu_ecpm": {
-      "ipu": 0,
+      "ipu": 10,
       "arpu": 0,
-      "ecpm": 0
+      "ecpm": 5
     },
     "tab_switch": {
       "enable": true,
-      "interval_time": 300
+      "interval_time": 120
     }
   }
 }
