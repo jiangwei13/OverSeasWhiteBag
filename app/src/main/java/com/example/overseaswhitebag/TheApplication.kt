@@ -14,6 +14,7 @@ import com.p.b.base.BaseApplication
 import com.p.b.base_api_net.base_api_bean.ConfigUtils
 import com.p.b.base_api_net.utils.DeviceUtils
 import com.p.b.base_api_net.utils.HandleUtils
+import com.p.b.common.ENV
 import com.p.b.common.GAIDUtil
 import com.p.b.common.MMKVUtils
 import com.p.b.common.OverseaAppContext
@@ -51,7 +52,7 @@ class TheApplication : BaseApplication() {
             //Adjust归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                false,
+                PhoneStatusUtils.judgeIsBlacklist(),
                 object :CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
                         //归因状态
@@ -99,7 +100,7 @@ class TheApplication : BaseApplication() {
         DeviceIdentifier.register(this);
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this, null)
-         if(isStartWork()){
+         if(isStartWork() || ENV.logSwitch){
              Log.d("AD_LOG", "初始化广告sdk")
              InitAdAndTj.initAdTj(insApp)
              HandleUtils.postDelay(fromNet,10*1000)
