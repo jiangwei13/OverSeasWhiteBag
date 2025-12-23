@@ -49,7 +49,7 @@ class TheApplication : BaseApplication() {
             AdJustInitUtils.initAdjust(
                 HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
+                false,
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
                         //归因状态
