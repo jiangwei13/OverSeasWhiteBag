@@ -1,7 +1,6 @@
 package com.example.overseaswhitebag.privacy;
 
 
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,10 +16,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.overseaswhitebag.R;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import com.clean.toos.R;
 
 
 //隐私协议

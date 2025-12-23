@@ -3,7 +3,7 @@ package com.example.overseaswhitebag
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
-import com.clean.toos.R
+import com.example.overseaswhitebag.R
 
 
 class MainActivity : AppCompatActivity() {

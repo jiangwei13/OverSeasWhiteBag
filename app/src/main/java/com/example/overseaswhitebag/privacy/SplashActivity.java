@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.clean.toos.R;
+import com.example.overseaswhitebag.R;
 import com.p.a_b.MainWeatherActivity;
 
 

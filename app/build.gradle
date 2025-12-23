@@ -30,7 +30,7 @@ android {
 
 
 
-    namespace 'com.clean.toos'
+    namespace 'com.example.overseaswhitebag'
     compileSdk 35
 
     // 临时禁用某些严格检查
