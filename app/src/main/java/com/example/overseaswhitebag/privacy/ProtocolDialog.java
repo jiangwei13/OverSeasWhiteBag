@@ -20,7 +20,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.clean.toos.R;
+import com.example.overseaswhitebag.R;
 
 
 //隐私协议

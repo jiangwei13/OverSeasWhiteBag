@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "234923302708",
+    "project_id": "colorful-lights-8f685",
+    "storage_bucket": "colorful-lights-8f685.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:234923302708:android:b129927f8261814e388f61",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.glowbright.colorfullights"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyB0RcvASY54PrLKojRxLYXg0soLSpIts6w"
         }
       ],
       "services": {

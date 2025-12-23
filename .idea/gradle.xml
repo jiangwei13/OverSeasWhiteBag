@@ -23,9 +23,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/oversea_base_module" />
             <option value="$PROJECT_DIR$/third-module/brokendevice" />
             <option value="$PROJECT_DIR$/third-module/color_picker_library" />
-            <option value="$PROJECT_DIR$/third-module/edgeborderlight" />
             <option value="$PROJECT_DIR$/third-module/led_light_library" />
             <option value="$PROJECT_DIR$/third-module/pic_edit_library" />
             <option value="$PROJECT_DIR$/third-module/pic_toolslibrary" />
