@@ -11,18 +11,18 @@ apply plugin: "org.jetbrains.kotlin.plugin.compose"
 
 androidJunkCode {
     def config = {
-        packageBase = "com.saowen.docbox.xia"
+        packageBase = "com.mistyhui.weather.xia"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
         otherCountPerPackage = 50
         methodCountPerClass = 50
-        resPrefix = "docbox_"
+        resPrefix = "mistyhui_"
         drawableCount = 100
         stringCount = 100
     }
     variantConfig {
-        release config
+//        release config
     }
 }
 
@@ -39,7 +39,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.docbox"
+        applicationId "com.mistyhui.weather"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -68,15 +68,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'docbox'
+            keyAlias 'mistyhui'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('mistyhui.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'docbox'
+            keyAlias 'mistyhui'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('mistyhui.jks')
             storePassword '123456'
         }
     }
