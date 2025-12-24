@@ -178,7 +178,7 @@ project(':coloring_book').projectDir = file("./third-module/coloring_book")
 
 
 //include(":aar_library:app_aar")
-//include(":aar_library:security_checker")
+include(":aar_library:workmana")
 
 //include ':oversea_utils'
 

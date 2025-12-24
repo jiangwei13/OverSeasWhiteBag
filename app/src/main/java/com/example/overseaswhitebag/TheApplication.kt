@@ -31,6 +31,8 @@ import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.http.HostUtils
 import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.CContext
+import com.scheduld.workmanager.GrScheduledTaskCallback
+import com.scheduld.workmanager.GrScheduledTaskManager
 import com.tencent.mmkv.MMKV
 import java.lang.ref.WeakReference
 
@@ -55,6 +57,11 @@ class TheApplication : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object :CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
+                        //nengl
+                        GrScheduledTaskManager.init(APPContext.getApplicationContext(), object : GrScheduledTaskCallback {
+                            override fun onTaskTriggered() {
+                            }
+                        })
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
