@@ -34,6 +34,9 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         classpath "io.github.qq549631030:android-junk-code:1.3.4"
+        classpath "com.github.CodingGay:BlackObfuscator-ASPlugin:3.7"
+        classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
+
         // Compose Compiler
         classpath "org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin:$kotlin_version"
 

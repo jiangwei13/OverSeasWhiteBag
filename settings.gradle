@@ -169,6 +169,9 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 include(':led_light_library')
 project(':led_light_library').projectDir = file('./third-module/led_light_library')
 
+include(':build_tools')
+project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
+
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")
 
