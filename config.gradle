@@ -10,12 +10,12 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/DocBox/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/DocBox/terms.html",
+            "privacyUrl": "https://crossmvp.com/agreement/GuideLight/privacy.html",
+            "userUrl"   : "https://crossmvp.com/agreement/GuideLight/terms.html",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2025-04-30 10:00:00",
 
