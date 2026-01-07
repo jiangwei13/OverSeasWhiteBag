@@ -1,17 +1,16 @@
 package com.example.overseaswhitebag.privacy;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.overseaswhitebag.R;
 import com.p.a_b.MainWeatherActivity;
+import com.p.b.ad.AdViewMana;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -55,6 +54,8 @@ public class SplashActivity extends AppCompatActivity {
 
     private void toMain() {
 
+
+        AdViewMana.initView(this, "in_tab");
 
         new Handler().postDelayed(new Runnable() {
             @Override
