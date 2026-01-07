@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "1043064396112",
+    "project_id": "misty-weather-ddf8e",
+    "storage_bucket": "misty-weather-ddf8e.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:1043064396112:android:82bbfe56214f2d4f6fb455",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.mistyhui.weather"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyAGj3nE-kfm5rVUYnP8GMRZ7uECqMQ2DC4"
         }
       ],
       "services": {
