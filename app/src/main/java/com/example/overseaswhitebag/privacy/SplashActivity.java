@@ -1,9 +1,7 @@
 package com.example.overseaswhitebag.privacy;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
@@ -11,8 +9,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.clean.toos.R;
-import com.xian.bc.accounts.ui.ScanMenuMainActivity;
-import com.xian.bc.utils.ContrlBtnShow;
+import com.xian.bc.xin.ScanMenuMainActivity;
 
 
 @SuppressLint("CustomSplashScreen")
