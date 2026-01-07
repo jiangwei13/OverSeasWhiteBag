@@ -163,6 +163,12 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
+//include(':edgeborderlight')
+//project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')
+
+include(':led_light_library')
+project(':led_light_library').projectDir = file('./third-module/led_light_library')
+
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")
 
