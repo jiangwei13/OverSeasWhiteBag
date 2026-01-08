@@ -1,0 +1,25 @@
+dir mapping:
+	com.example.overseaswhitebag -> nfkj
+	com.example.overseaswhitebag.privacy -> nfkk
+	cn.hzw.doodledemo.fragment -> nfkl
+	cn.hzw.doodledemo -> nfkm
+	cn.hzw.doodledemo.privacy -> nfkn
+
+class mapping:
+	com.xian.bc.accounts.ui.ScanMenuActivity -> tmlr.hti.caqq.PJK
+	com.example.overseaswhitebag.TheApplication -> nfkj.PJL
+	com.example.overseaswhitebag.privacy.SplashActivity -> nfkk.PJM
+	com.example.overseaswhitebag.privacy.XieYiActivity -> nfkk.PJN
+	cn.hzw.doodledemo.fragment.ToolFragment -> nfkl.PJO
+	cn.hzw.doodledemo.MyBottomNavView -> nfkm.PJP
+	cn.hzw.doodledemo.privacy.XieYiActivity -> nfkn.PJQ
+	cn.hzw.doodledemo.ScanMenuActivity -> nfkm.PJR
+	cn.hzw.doodledemo.FlashLampActivity -> nfkm.PJS
+	cn.hzw.doodledemo.ImageCategoryActivity -> nfkm.PJT
+	com.example.overseaswhitebag.MainActivity -> nfkj.PJU
+	com.example.overseaswhitebag.privacy.ProtocolDialog -> nfkk.PJV
+	com.example.overseaswhitebag.privacy.SPUtil -> nfkk.PJW
+	cn.hzw.doodledemo.fragment.ToolsLedFragment -> nfkl.PJX
+	cn.hzw.doodledemo.fragment.LedDisplayFragment -> nfkl.PJY
+	cn.hzw.doodledemo.privacy.ProtocolDialog -> nfkn.PJZ
+	cn.hzw.doodledemo.privacy.SPUtil -> nfkn.PKA
