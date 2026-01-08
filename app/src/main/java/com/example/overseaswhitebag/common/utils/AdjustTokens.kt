@@ -3,7 +3,7 @@ package com.example.overseaswhitebag.common.utils
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-//import com.p.b.common.adjust.AjConstants
+//import tmlr.uli.mkmu.common.adjust.AjConstants
 
 /**
  * Adjust Token

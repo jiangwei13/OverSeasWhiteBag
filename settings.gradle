@@ -129,10 +129,10 @@ include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
-//include ':edgeborderlight'
-//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+include ':edgeborderlight'
+project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')
+include ':color_picker_library'
+project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
