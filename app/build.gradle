@@ -99,7 +99,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.nightguide.flashlight"
+        applicationId "com.nightguide.flashlightgp"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -128,15 +128,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'flashlight'
+            keyAlias 'flashlightgp'
             keyPassword '123456'
-            storeFile file('flashlight.jks')
+            storeFile file('flashlightgp.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'flashlight'
+            keyAlias 'flashlightgp'
             keyPassword '123456'
-            storeFile file('flashlight.jks')
+            storeFile file('flashlightgp.jks')
             storePassword '123456'
         }
     }
