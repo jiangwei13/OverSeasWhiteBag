@@ -1,9 +1,9 @@
-package com.example.overseaswhitebag.common.utils
+package zbiz
 
 import android.annotation.SuppressLint
 import android.content.Context
 
-class APPContext {
+class DTP {
 
     companion object{
 

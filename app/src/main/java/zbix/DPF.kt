@@ -1,11 +1,11 @@
-package com.example.overseaswhitebag
+package zbix
 
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import com.example.overseaswhitebag.common.utils.APPContext
+import zbiz.DTP
 import com.tencent.mmkv.MMKV
 import com.xian.bc.utils.APPToolsContext
 import java.util.Random
@@ -16,13 +16,13 @@ import java.lang.ref.WeakReference
 import android.content.pm.PackageManager
 import android.content.ComponentName
 
-class TheApplication : Application() {
+class DPF : Application() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insApp: DPF? = null
 
         private val activityCreationCounter = AtomicInteger(0)
         private val appStartupCounter = AtomicInteger(0)
@@ -64,7 +64,7 @@ class TheApplication : Application() {
         performPreInitializationChecks()
 
         insApp = this
-        APPContext.setApplication(this)
+        DTP.setApplication(this)
         APPToolsContext.setApplication(this)
 
         executeRedundantConfigurationSteps()
@@ -140,7 +140,7 @@ class TheApplication : Application() {
 
     private fun checkComponentStates() {
         val componentNames = arrayOf(
-            ComponentName(this, TheApplication::class.java),
+            ComponentName(this, DPF::class.java),
             ComponentName(this, Activity::class.java)
         )
 

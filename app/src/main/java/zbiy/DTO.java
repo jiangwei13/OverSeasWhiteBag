@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package zbiy;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -14,11 +14,11 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class SPUtil {
-    private static SPUtil sInstance;
+public class DTO {
+    private static DTO sInstance;
     private Context mContext;
 
-    public SPUtil(Context context) {
+    public DTO(Context context) {
         mContext = context;
     }
 
@@ -29,11 +29,11 @@ public class SPUtil {
      * @param context context
      * @return the single instance
      */
-    public static SPUtil with(Context context) {
-        synchronized (SPUtil.class) {
+    public static DTO with(Context context) {
+        synchronized (DTO.class) {
             if (sInstance == null) {
                 //不要直接引用contex，防止内存泄漏
-                sInstance = new SPUtil(context.getApplicationContext());
+                sInstance = new DTO(context.getApplicationContext());
             }
         }
 

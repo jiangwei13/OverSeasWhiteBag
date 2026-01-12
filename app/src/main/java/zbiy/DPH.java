@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package zbiy;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.clean.toos.R;
 
 
-public class XieYiActivity extends AppCompatActivity {
+public class DPH extends AppCompatActivity {
 
 
     @Override

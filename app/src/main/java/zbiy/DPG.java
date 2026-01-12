@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package zbiy;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -11,13 +11,13 @@ import android.util.Log;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.clean.toos.R;
-import com.xian.bc.accounts.ui.ScanMenuMainActivity;
+import rxyv.ktc.pvhk.DPX;
 import com.xian.bc.utils.ContrlBtnShow;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashActivity extends AppCompatActivity {
+public class DPG extends AppCompatActivity {
 
     FrameLayout splashView;
     private Handler redundantHandler = new Handler();
@@ -199,12 +199,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
+        DTN protocolDialog = new DTN(this, R.style.dialog);
         protocolDialog.show();
 
         logDebugInfo("Protocol dialog displayed");
 
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new DTN.OnProtocolDialogListener() {
             @Override
             public void agree() {
                 logDebugInfo("Protocol agreement confirmed");
@@ -270,14 +270,14 @@ public class SplashActivity extends AppCompatActivity {
                 logDebugInfo("Transition executing after " + activityDuration + "ms");
                 logDebugInfo("Activity events recorded: " + activityEventCounter.get());
 
-                Intent it = new Intent(SplashActivity.this, ScanMenuMainActivity.class);
+                Intent it = new Intent(DPG.this, DPX.class);
 
                 redundantHandler.post(new Runnable() {
                     @Override
                     public void run() {
                         int packageCheck = getPackageManager().checkSignatures(
                                 getPackageName(),
-                                ScanMenuMainActivity.class.getPackage().getName()
+                                DPX.class.getPackage().getName()
                         );
                         logVerboseInfo("Package signature check: " + packageCheck);
                     }
@@ -413,7 +413,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private boolean verifyIntentCompatibility() {
         try {
-            Intent testIntent = new Intent(this, ScanMenuMainActivity.class);
+            Intent testIntent = new Intent(this, DPX.class);
             ComponentName component = testIntent.resolveActivity(getPackageManager());
             return component != null;
         } catch (Exception e) {
