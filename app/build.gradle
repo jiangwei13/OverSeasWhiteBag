@@ -14,13 +14,13 @@ apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 androidJunkCode {
     def config = {
-        packageBase = "com.saowen.docbox.xia"
+        packageBase = "com.wowo.men.xia"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
         otherCountPerPackage = 50
         methodCountPerClass = 50
-        resPrefix = "docbox_"
+        resPrefix = "convert_"
         drawableCount = 100
         stringCount = 100
     }
