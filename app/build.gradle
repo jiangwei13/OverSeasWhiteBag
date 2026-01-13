@@ -62,7 +62,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.docbox"
+        applicationId "com.doc.kitool"
         minSdk 26
         targetSdk 35
         versionCode 1
@@ -91,15 +91,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'docbox'
+            keyAlias 'kitool'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('kitool.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'docbox'
+            keyAlias 'kitool'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('kitool.jks')
             storePassword '123456'
         }
     }

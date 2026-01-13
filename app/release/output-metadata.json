@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.saowen.docbox",
+  "applicationId": "com.doc.kitool",
   "variantName": "release",
   "elements": [
     {
