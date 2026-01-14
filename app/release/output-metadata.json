@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.glowflow.ledglow",
+  "applicationId": "com.glowflow.ledglowgp",
   "variantName": "release",
   "elements": [
     {

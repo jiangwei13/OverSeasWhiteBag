@@ -86,7 +86,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.glowflow.ledglow"
+        applicationId "com.glowflow.ledglowgp"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -115,15 +115,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'ledglow'
+            keyAlias 'ledglowgp'
             keyPassword '123456'
-            storeFile file('ledglow.jks')
+            storeFile file('ledglowgp.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'ledglow'
+            keyAlias 'ledglowgp'
             keyPassword '123456'
-            storeFile file('ledglow.jks')
+            storeFile file('ledglowgp.jks')
             storePassword '123456'
         }
     }
