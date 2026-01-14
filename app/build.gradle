@@ -5,8 +5,8 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
 apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
@@ -86,11 +86,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.glowbright.colorfullights"
+        applicationId "com.glowflow.ledglow"
         minSdk 28
         targetSdk 35
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -115,15 +115,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'colorfullights'
+            keyAlias 'ledglow'
             keyPassword '123456'
-            storeFile file('colorfullights.jks')
+            storeFile file('ledglow.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'colorfullights'
+            keyAlias 'ledglow'
             keyPassword '123456'
-            storeFile file('colorfullights.jks')
+            storeFile file('ledglow.jks')
             storePassword '123456'
         }
     }
