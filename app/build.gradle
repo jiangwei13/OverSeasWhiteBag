@@ -128,15 +128,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'flashlightgp'
+            keyAlias 'lightgp'
             keyPassword '123456'
-            storeFile file('flashlightgp.jks')
+            storeFile file('lightgp.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'flashlightgp'
+            keyAlias 'lightgp'
             keyPassword '123456'
-            storeFile file('flashlightgp.jks')
+            storeFile file('lightgp.jks')
             storePassword '123456'
         }
     }
