@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.clean.toos.R;
+import com.example.overseaswhitebag.R;
 
 
 public class XieYiActivity extends AppCompatActivity {

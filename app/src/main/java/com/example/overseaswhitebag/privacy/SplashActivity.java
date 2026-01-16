@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.clean.toos.R;
+import com.example.overseaswhitebag.R;
 import com.xian.bc.xin.ScanMenuMainActivity;
 
 
@@ -34,22 +34,6 @@ public class SplashActivity extends AppCompatActivity {
         toMain();
     }
 
-    private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
-        protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
-    }
 
     private void toMain() {
 
@@ -65,14 +49,6 @@ public class SplashActivity extends AppCompatActivity {
         },3000);
 
 
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
-//            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
-//                finish();
-//            }
-//        });
 
 
 
