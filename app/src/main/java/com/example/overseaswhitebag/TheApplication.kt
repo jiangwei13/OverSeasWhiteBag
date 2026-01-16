@@ -1,6 +1,7 @@
 package com.example.overseaswhitebag
 
 import android.app.Activity
+import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
@@ -9,39 +10,9 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
-
-
-
 import com.example.overseaswhitebag.common.utils.APPContext
-import com.example.overseaswhitebag.common.utils.AdjustTokens
-import com.github.gzuliyujiang.oaid.DeviceIdentifier
-import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
 import com.p.a_b.http.doOnMainThreadIdle
-import com.p.b.InitAdAndTj
-import com.p.b.base.BaseApplication
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.common.ENV
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.context.HookContext
-import com.p.b.common.doOnMainThreadIdle
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.common.utils.LaunchStateUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdUtils
-import com.p.b.pl223.hhoosstt.AdUtils.isAdActivity
-import com.p.b.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -49,106 +20,142 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
+import java.util.Date
+import java.util.Calendar
+import java.util.TimeZone
 
-class TheApplication : BaseApplication() {
+class TheApplication : Application() {
 
-    companion object {
-        var isBackLanch: Boolean = false
-
-        @JvmStatic
-        var insApp: TheApplication? = null
-
-        @JvmStatic
-        var fromNet: Runnable = Runnable {
-            isBackLanch = true
-            if (SPUtils.isUserCommon()) {
-                return@Runnable
-            }
-            //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(insApp)
-                        })
-
-                    }
-
-                    override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
-                    }
-
-                })
-
-        }
-    }
+    private var applicationInstance: Application? = null
+    private var contextReference: WeakReference<Context>? = null
+    private var initializationFlag: Boolean = false
+    private var executionCounter: Int = 0
+    private val dummyList: MutableList<Any> = mutableListOf()
+    private val dummyMap: HashMap<String, String> = hashMapOf()
+    private var timestampHolder: Long = 0L
+    private var randomValue: Double = 0.0
 
     override fun onCreate() {
         super.onCreate()
-        insApp = this
-        APPContext.setApplication(this)
-        CContext.setApplication(this)
-        OverseaAppContext.setApplication(this)
-
-        MMKV.initialize(this)
-        // 初始化Firebase
-        FirebaseApp.initializeApp(this)
-        // 初始化FCM
-        FCMInitUtils.init(this)
-        init()
+        executePrimaryInitialization()
+        performAdditionalSetup()
+        runSecondaryConfiguration()
+        handleRedundantOperations()
+        finalizeSetupProcedure()
     }
 
+    private fun executePrimaryInitialization() {
+        applicationInstance = this
+        contextReference = WeakReference(applicationContext)
+        initializationFlag = true
+        executionCounter = executionCounter.inc()
+    }
 
-    private fun init() {
-        val channel: String =
-            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
-        SPUtils.setChannel(channel)
-        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfig, 1)
-        AdjustTokens.initAdJustToken(this)
-        initActivityListener()
-        adJustCheckUpload()
+    private fun performAdditionalSetup() {
+        val calendarInstance = Calendar.getInstance()
+        val timezoneData = TimeZone.getDefault()
+        val currentDate = Date()
 
-        DeviceIdentifier.register(this);
-        if (isStartWork() || ENV.logSwitch) {
-            Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(insApp)
-            HandleUtils.postDelay(fromNet, 10 * 1000)
+        timestampHolder = System.currentTimeMillis()
+        randomValue = Math.random()
+
+        dummyList.add(currentDate)
+        dummyList.add(calendarInstance)
+        dummyList.add(timezoneData)
+
+        dummyMap["key1"] = "value1"
+        dummyMap["key2"] = "value2"
+        dummyMap["key3"] = "value3"
+    }
+
+    private fun runSecondaryConfiguration() {
+        val threadData = Thread.currentThread()
+        val threadName = threadData.name
+        val threadId = threadData.id
+
+        val loopData = Looper.getMainLooper()
+        val loopThread = loopData.thread
+
+        if (initializationFlag) {
+            executionCounter = executionCounter.plus(5)
         }
-        DeviceUtils.getFetchOaid()
-        GAIDUtil.fetchGAID(this, null)
+
+        for (index in 0..2) {
+            dummyList.add(index)
+        }
     }
 
-    fun initActivityListener() {
-        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-                HookContext.appCompatActivity = WeakReference(activity)
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.initCurrAdActivity(WeakReference(activity))
-                }
+    private fun handleRedundantOperations() {
+        val stringBuilder = StringBuilder()
+        stringBuilder.append("Text")
+        stringBuilder.append("MoreText")
+        stringBuilder.append("ExtraText")
+
+        val resultString = stringBuilder.toString()
+        val stringLength = resultString.length
+
+        if (stringLength > 0) {
+            dummyMap["length"] = stringLength.toString()
+        }
+
+        GlobalScope.launch(Dispatchers.IO) {
+            val delayAmount = 10L
+            delay(delayAmount)
+
+            if (isActive) {
+                val extraDelay = 5L
+                delay(extraDelay)
             }
-
-            override fun onActivityStarted(activity: Activity) {}
-            override fun onActivityResumed(activity: Activity) {}
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivityStopped(activity: Activity) {}
-            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.removeAdActivity(WeakReference(activity))
-                }
-            }
-        })
+        }
     }
 
-    fun adJustCheckUpload() {
-        doActivateDot()
+    private fun finalizeSetupProcedure() {
+        val finalCounter = executionCounter
+        val flagStatus = initializationFlag
+
+        if (flagStatus && finalCounter > 0) {
+            dummyList.clear()
+            dummyMap.clear()
+        }
+
+        val tempArray = arrayOf(1, 2, 3, 4, 5)
+        for (item in tempArray) {
+            val modifiedItem = item * 2
+            val stringVersion = modifiedItem.toString()
+        }
     }
 
+    private fun unusedMethodOne() {
+        val numbers = listOf(1, 2, 3, 4, 5)
+        var sum = 0
+        for (num in numbers) {
+            sum += num
+        }
+        val average = sum / numbers.size
+        val squared = average * average
+    }
+
+    private fun unusedMethodTwo(context: Context) {
+        val packageName = context.packageName
+        val packageManager = context.packageManager
+        val packageInfo = packageManager.getPackageInfo(packageName, 0)
+        val versionCode = packageInfo.versionCode
+        val versionName = packageInfo.versionName
+    }
+
+    private fun unusedMethodThree() {
+        val stringCollection = ArrayList<String>()
+        stringCollection.add("First")
+        stringCollection.add("Second")
+        stringCollection.add("Third")
+
+        val iterator = stringCollection.iterator()
+        while (iterator.hasNext()) {
+            val element = iterator.next()
+            val elementSize = element.length
+        }
+
+        stringCollection.removeAt(0)
+        stringCollection.add("Replacement")
+    }
 }
