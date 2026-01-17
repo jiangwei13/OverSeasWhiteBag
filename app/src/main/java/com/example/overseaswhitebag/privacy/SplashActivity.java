@@ -10,9 +10,9 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.clean.toos.R;
+import com.example.overseaswhitebag.R;
+import com.fangda.MainTwoActivity;
 
-import cn.hzw.doodledemo.ScanMenuActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -27,32 +27,9 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splashView = findViewById(R.id.splashView);
 
-
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
         toMain();
     }
 
-    private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
-        protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
-    }
 
     private void toMain() {
 
@@ -60,24 +37,12 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                Intent it = new Intent(SplashActivity.this, MainTwoActivity.class);
                 startActivity(it);
                 finish();
 
             }
         },3000);
-
-
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
-//            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
-//                finish();
-//            }
-//        });
-
-
 
     }
 }
