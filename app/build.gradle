@@ -5,8 +5,11 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'top.niunaijun.blackobfuscator'
+apply plugin: 'xml-class-guard'
+apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 
 androidJunkCode {
@@ -24,6 +27,24 @@ androidJunkCode {
     variantConfig {
         // release config
     }
+}
+
+xmlClassGuard {
+    mappingFile = file("xml-class-mapping.txt")
+    //更改manifest文件的package属性，即包名
+    packageChange = [
+            "com.example.overseaswhitebag"  : "tmlr.hti.caqq",
+    ]
+    //移动目录
+    moveDir = [
+            "com.example.overseaswhitebag.privacy"   : "tmlr.fcgl.stuee",
+            "com.yao.tool.scenic.bean"   : "tmlr.fzurv.ivwpk",
+            "com.yao.tool.bean"                    : "tmlr.vikch.cygeu",
+            "com.clean.scanlibrary.bean"        : "tmlr.cvj.kne",
+            "com.p.b.base_api_net.base_api_bean"             : "tmlr.mkkne.zojxr",
+            "com.clean.pic_toolslibrary"                                 : "tmlr.wgrwf.xfgrb",
+            "com.p.b"                                        : "tmlr.uli.mkmu",
+    ]
 }
 
 android {
