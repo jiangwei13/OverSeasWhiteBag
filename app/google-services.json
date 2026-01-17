@@ -1,0 +1,31 @@
+
+{
+  "project_info": {
+    "project_number": "358180079268",
+    "project_id": "dockittools-c2ccf",
+    "storage_bucket": "dockittools-c2ccf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358180079268:android:4768df69b0a606d2f5c831",
+        "android_client_info": {
+          "package_name": "com.doc.kitool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlTi_vUqEfkOSRccL72l13GNZzPkOngeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
