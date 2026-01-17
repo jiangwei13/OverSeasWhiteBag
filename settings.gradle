@@ -131,8 +131,8 @@ include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
 //include ':edgeborderlight'
 //project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+include ':tallynotes'
+project(':tallynotes').projectDir = file('./third-module/tallynotes')
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'

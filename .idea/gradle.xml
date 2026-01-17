@@ -33,11 +33,11 @@
             <option value="$PROJECT_DIR$/third-module/setting" />
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/smalltoolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/tallynotes" />
             <option value="$PROJECT_DIR$/third-module/toolslibrary" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
