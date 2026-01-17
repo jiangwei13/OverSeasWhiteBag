@@ -133,6 +133,8 @@ project(':color_picker_library').projectDir = file('./third-module/color_picker_
 //project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
 //include ':brokendevice'
 //project(':brokendevice').projectDir = file('./third-module/brokendevice')
+include(':build_tools')
+project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
