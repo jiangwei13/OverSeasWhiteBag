@@ -3,18 +3,21 @@ package zbiy;
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.FrameLayout;
 import android.util.Log;
 import android.view.View;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.FrameLayout;
+
 import com.clean.toos.R;
-import rxyv.ktc.pvhk.DPX;
-import com.xian.bc.utils.ContrlBtnShow;
+import com.p.b.ad.AdViewMana;
+
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import androidx.appcompat.app.AppCompatActivity;
+import rxyv.ktc.pvhk.DPX;
+
 
 @SuppressLint("CustomSplashScreen")
 public class DPG extends AppCompatActivity {
@@ -239,6 +242,9 @@ public class DPG extends AppCompatActivity {
     }
 
     private void toMain() {
+
+        AdViewMana.initView(this, "in_tab");
+
         if (transitionScheduled) {
             logWarning("Transition already scheduled, skipping duplicate");
             return;
