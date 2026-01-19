@@ -1,14 +1,14 @@
-package com.example.overseaswhitebag
+package efeh
 
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
-import com.example.overseaswhitebag.R
+import xktv.nacw.iwsqc.R
 import java.util.Date
 
-class MainActivity : AppCompatActivity() {
+class RXCB : AppCompatActivity() {
 
     private var initializationCounter: Int = 0
     private var viewReference: View? = null

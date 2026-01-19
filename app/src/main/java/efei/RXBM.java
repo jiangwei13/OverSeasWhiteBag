@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package efei;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.example.overseaswhitebag.R;
-import com.p.a_b.MainWeatherActivity;
+import xktv.nacw.iwsqc.R;
+import efen.RXBU;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +24,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashActivity extends AppCompatActivity {
+public class RXBM extends AppCompatActivity {
 
     FrameLayout splashView;
     private Handler secondaryHandler;
@@ -108,12 +108,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
+        RXCC protocolDialog = new RXCC(this, R.style.dialog);
         protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new RXCC.OnProtocolDialogListener() {
             @Override
             public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
+                RXCD.with(RXBM.this).load().save("isAgressment", true);
                 performPostAgreementTasks();
                 toMain();
             }
@@ -157,7 +157,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 processTransitionOperations();
-                Intent it = new Intent(SplashActivity.this, MainWeatherActivity.class);
+                Intent it = new Intent(RXBM.this, RXBU.class);
                 startActivity(it);
                 completeActivityTermination();
             }

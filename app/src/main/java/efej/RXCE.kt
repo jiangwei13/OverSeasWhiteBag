@@ -1,9 +1,9 @@
-package com.example.overseaswhitebag.common.utils
+package efej
 
 import android.annotation.SuppressLint
 import android.content.Context
 
-class APPContext {
+class RXCE {
 
     companion object{
 

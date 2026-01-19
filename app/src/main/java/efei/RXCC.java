@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package efei;
 
 
 import android.app.Dialog;
@@ -16,30 +16,30 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.overseaswhitebag.R;
+import xktv.nacw.iwsqc.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 
 //隐私协议
-public class ProtocolDialog extends Dialog {
+public class RXCC extends Dialog {
     private OnProtocolDialogListener onProtocolDialogListener;
     private Context context;
 
-    public ProtocolDialog(@NonNull Context context) {
+    public RXCC(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public ProtocolDialog(@NonNull Context context, int themeResId) {
+    public RXCC(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected ProtocolDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected RXCC(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();
@@ -74,7 +74,7 @@ public class ProtocolDialog extends Dialog {
             @Override
             public void onClick(View widget) {
                 // 跳转到用户协议页面
-                Intent intent = new Intent(context, XieYiActivity.class);
+                Intent intent = new Intent(context, RXBN.class);
                 intent.putExtra("TITLE", "用户协议");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
                 context.startActivity(intent);
@@ -93,7 +93,7 @@ public class ProtocolDialog extends Dialog {
             @Override
             public void onClick(View widget) {
                 // 跳转到隐私政策页面
-                Intent intent = new Intent(context, XieYiActivity.class);
+                Intent intent = new Intent(context, RXBN.class);
                 intent.putExtra("TITLE", "隐私政策");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
                 context.startActivity(intent);
@@ -142,7 +142,7 @@ public class ProtocolDialog extends Dialog {
 //        dialogView.findViewById(R.id.protocol_url_1).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(context, XieYiActivity.class);
+//                Intent intent = new Intent(context, RXBN.class);
 //                intent.putExtra("TITLE", "隐私政策");
 //                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/privacy.html");
 //                context.startActivity(intent);
@@ -152,7 +152,7 @@ public class ProtocolDialog extends Dialog {
 //        dialogView.findViewById(R.id.protocol_url_2).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(context, XieYiActivity.class);
+//                Intent intent = new Intent(context, RXBN.class);
 //                intent.putExtra("TITLE", "用户协议");
 //                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/user.html");
 //                context.startActivity(intent);

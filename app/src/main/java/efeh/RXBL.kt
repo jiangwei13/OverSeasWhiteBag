@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag
+package efeh
 
 import android.app.Activity
 import android.app.Application
@@ -10,7 +10,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
-import com.example.overseaswhitebag.common.utils.APPContext
+import efej.RXCE
 import com.meituan.android.walle.WalleChannelReader
 import com.p.a_b.http.doOnMainThreadIdle
 import com.tencent.mmkv.MMKV
@@ -24,7 +24,7 @@ import java.util.Date
 import java.util.Calendar
 import java.util.TimeZone
 
-class TheApplication : Application() {
+class RXBL : Application() {
 
     private var applicationInstance: Application? = null
     private var contextReference: WeakReference<Context>? = null

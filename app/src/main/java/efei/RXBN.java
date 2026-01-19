@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package efei;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.overseaswhitebag.R;
+import xktv.nacw.iwsqc.R;
 
 
-public class XieYiActivity extends AppCompatActivity {
+public class RXBN extends AppCompatActivity {
 
 
     @Override
