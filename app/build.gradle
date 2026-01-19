@@ -141,7 +141,7 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
-//    implementation files('libs/pluginhelper.aar')
+    //implementation files('libs/toolslibrary-release.aar')
     implementation project(':toolsbox')
 //    implementation(project(":aar_library:app_aar"))
     implementation 'com.github.Petterpx.walle:library:1.0.5'

@@ -14,7 +14,6 @@ import com.example.overseaswhitebag.R;
 import com.fangda.MainTwoActivity;
 
 
-
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
@@ -37,7 +36,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, MainTwoActivity.class);
+              Intent it = new Intent(SplashActivity.this, MainTwoActivity.class);
+             //   Intent it = new Intent(SplashActivity.this, CalculateActivity.class);
                 startActivity(it);
                 finish();
 
