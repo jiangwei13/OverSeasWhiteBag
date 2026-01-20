@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
