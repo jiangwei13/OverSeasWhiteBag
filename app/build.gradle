@@ -32,7 +32,7 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
 
     //更改manifest文件的package属性，即包名
-    packageChange = ["com.ultra.kingclean"  : "com.gongjuy.d",
+    packageChange = ["com.fangda"  : "com.gongjuy.d",
                      "com.p.b.ad"           : "com.gongjuy.e",
                      "com.p.b.common"       : "com.gongjuy.cd",
                      "com.p.b.base_api_keep": "com.gongjuy.ef",
