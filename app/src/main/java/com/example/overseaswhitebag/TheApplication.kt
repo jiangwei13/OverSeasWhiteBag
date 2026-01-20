@@ -1,7 +1,6 @@
 package com.example.overseaswhitebag
 
 import android.app.Application
-import com.example.overseaswhitebag.common.utils.APPContext
 
 
 class TheApplication : Application() {
@@ -18,7 +17,6 @@ class TheApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         insApp = this
-        APPContext.setApplication(this)
 
     }
 

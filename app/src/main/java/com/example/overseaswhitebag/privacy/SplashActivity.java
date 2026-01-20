@@ -14,6 +14,7 @@ import com.example.overseaswhitebag.R;
 import com.fangda.MainTwoActivity;
 
 
+
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
