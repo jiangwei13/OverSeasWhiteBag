@@ -157,3 +157,9 @@
 -dontwarn sharpen.config.ModuleOption
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
+
+# 保护你的自定义视图类（如果有）
+-keep class efen.RXDE { *; }
+-keep class efen.RXDD { *; }
+-keep class efen.RXDC { *; }
+-keep class efen.** { *; }
