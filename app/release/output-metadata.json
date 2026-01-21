@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.mistyhui.weather",
+  "applicationId": "com.horizon.weather",
   "variantName": "release",
   "elements": [
     {
