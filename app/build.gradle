@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 //apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
@@ -60,11 +60,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.mistyhui.weather"
+        applicationId "com.horizon.weather"
         minSdk 28
         targetSdk 35
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -89,15 +89,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'mistyhui'
+            keyAlias 'horizonWeather'
             keyPassword '123456'
-            storeFile file('mistyhui.jks')
+            storeFile file('horizonWeather.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'mistyhui'
+            keyAlias 'horizonWeather'
             keyPassword '123456'
-            storeFile file('mistyhui.jks')
+            storeFile file('horizonWeather.jks')
             storePassword '123456'
         }
     }
