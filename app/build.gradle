@@ -33,18 +33,18 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-            "com.example.overseaswhitebag"  : "tmlr.hti.caqq",
-    ]
+                 "com.example.overseaswhitebag"  : "xmf.ntrb.ycapq",
+                ]
     //移动目录
     moveDir = [
-            "com.example.overseaswhitebag.privacy"   : "tmlr.fcgl.stuee",
-            "com.yao.tool.scenic.bean"   : "tmlr.fzurv.ivwpk",
-            "com.yao.tool.bean"                    : "tmlr.vikch.cygeu",
-            "com.clean.scanlibrary.bean"        : "tmlr.cvj.kne",
-            "com.p.b.base_api_net.base_api_bean"             : "tmlr.mkkne.zojxr",
-            "com.clean.pic_toolslibrary"                                 : "tmlr.wgrwf.xfgrb",
-            "com.p.b"                                        : "tmlr.uli.mkmu",
-    ]
+           "com.example.overseaswhitebag.privacy"   : "xmf.upqdh.nbauk",
+           "com.yao.tool.scenic.bean"   : "xmf.ncny.igvq",
+           "com.yao.tool.bean"                    : "xmf.bjdl.exii",
+           "com.clean.scanlibrary.bean"        : "xmf.rxnxs.yslii",
+           "com.p.b.base_api_net.base_api_bean"             : "xmf.meve.xkx",
+           "com.clean.pic_toolslibrary"                                 : "xmf.brjw.yynu",
+           "com.p.b"                                        : "xmf.diz.kwld",
+           ]
 }
 
 android {
