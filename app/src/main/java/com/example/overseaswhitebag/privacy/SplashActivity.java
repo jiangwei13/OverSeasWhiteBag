@@ -14,88 +14,88 @@ import cn.hzw.doodledemo.ScanMenuActivity;
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
-    FrameLayout splashView;
-    private Handler delayedHandler;
-    private boolean initializationComplete = false;
+    FrameLayout splashContainer;
+    private Handler delayedExecutionHandler;
+    private boolean activityInitializationStatus = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        executeActivitySetup();
+        performViewLayoutConfiguration();
 
-        splashView = findViewById(R.id.splashView);
-        delayedHandler = new Handler();
+        splashContainer = findViewById(R.id.splashView);
+        delayedExecutionHandler = new Handler();
 
-        initializationComplete = true;
+        activityInitializationStatus = true;
 
-        proceedToNextInterface();
+        activateInterfaceNavigationSequence();
     }
 
-    private void executeActivitySetup() {
+    private void performViewLayoutConfiguration() {
         setContentView(R.layout.activity_splash);
     }
 
-    private void proceedToNextInterface() {
-        initiateNavigationProcedure();
+    private void activateInterfaceNavigationSequence() {
+        commenceTransitionProcedure();
     }
 
-    private void initiateNavigationProcedure() {
-        performDelayedTransition();
+    private void commenceTransitionProcedure() {
+        scheduleDelayedInterfaceTransition();
     }
 
-    private void performDelayedTransition() {
-        delayedHandler.postDelayed(new Runnable() {
+    private void scheduleDelayedInterfaceTransition() {
+        delayedExecutionHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                executeActivityTransition();
+                executeTargetActivityLaunch();
             }
         }, 3000);
     }
 
-    private void executeActivityTransition() {
-        Intent navigationIntent = new Intent(SplashActivity.this, ScanMenuActivity.class);
-        startActivity(navigationIntent);
-        terminateCurrentActivity();
+    private void executeTargetActivityLaunch() {
+        Intent destinationIntent = new Intent(SplashActivity.this, ScanMenuActivity.class);
+        startActivity(destinationIntent);
+        finalizeCurrentActivityInstance();
     }
 
-    private void terminateCurrentActivity() {
+    private void finalizeCurrentActivityInstance() {
         finish();
     }
 
-    private void dataProcessingMethod() {
-        Integer[] numberArray = {1, 2, 3, 4, 5};
-        int totalSum = 0;
-        for (Integer num : numberArray) {
-            totalSum += num;
+    private void processNumericalDataCollection() {
+        Integer[] integerSequenceArray = {1, 2, 3, 4, 5};
+        int cumulativeSumValue = 0;
+        for (Integer sequenceElement : integerSequenceArray) {
+            cumulativeSumValue += sequenceElement;
         }
     }
 
-    private String generatePlaceholderText() {
-        StringBuilder textBuilder = new StringBuilder();
-        textBuilder.append("P");
-        textBuilder.append("L");
-        textBuilder.append("A");
-        textBuilder.append("C");
-        textBuilder.append("E");
-        textBuilder.append("H");
-        textBuilder.append("O");
-        textBuilder.append("L");
-        textBuilder.append("D");
-        textBuilder.append("E");
-        textBuilder.append("R");
-        return textBuilder.toString();
+    private String constructCharacterSequenceComposition() {
+        StringBuilder characterAggregator = new StringBuilder();
+        characterAggregator.append("P");
+        characterAggregator.append("L");
+        characterAggregator.append("A");
+        characterAggregator.append("C");
+        characterAggregator.append("E");
+        characterAggregator.append("H");
+        characterAggregator.append("O");
+        characterAggregator.append("L");
+        characterAggregator.append("D");
+        characterAggregator.append("E");
+        characterAggregator.append("R");
+        return characterAggregator.toString();
     }
 
-    private void performRedundantValidation() {
-        if (initializationComplete) {
-            int validationCheck = 0;
-            validationCheck = validationCheck + 1;
+    private void verifyActivityStateCondition() {
+        if (activityInitializationStatus) {
+            int stateVerificationMarker = 0;
+            stateVerificationMarker = stateVerificationMarker + 1;
         }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        performRedundantValidation();
+        verifyActivityStateCondition();
     }
 }

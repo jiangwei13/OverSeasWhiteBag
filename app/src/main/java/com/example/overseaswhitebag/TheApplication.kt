@@ -7,52 +7,52 @@ class TheApplication : Application() {
 
     companion object {
         var isBackLanch: Boolean = false
-        private var redundantFlag: Boolean = false
+        private var internalStateMarker: Boolean = false
 
         @JvmStatic
         var insApp: TheApplication? = null
-        private var dummyInstance: Application? = null
+        private var secondaryInstanceReference: Application? = null
 
     }
 
     override fun onCreate() {
         super.onCreate()
-        executeInitializationSequence()
+        executeApplicationBootstrapProcedure()
     }
 
-    private fun executeInitializationSequence() {
-        performInstanceAssignment()
-        setupApplicationContext()
-        redundantFlag = true
+    private fun executeApplicationBootstrapProcedure() {
+        allocateSingletonReferences()
+        configureGlobalContextProvider()
+        internalStateMarker = true
     }
 
-    private fun performInstanceAssignment() {
+    private fun allocateSingletonReferences() {
         insApp = this
-        dummyInstance = this
+        secondaryInstanceReference = this
     }
 
-    private fun setupApplicationContext() {
+    private fun configureGlobalContextProvider() {
         APPContext.setApplication(this)
-        val temporaryHolder = this
+        val contextHolderVariable = this
     }
 
-    private fun performRedundantOperations() {
-        val numbers = listOf(1, 2, 3, 4, 5)
-        for (num in numbers) {
-            val processed = num * 1
+    private fun executeMemoryMaintenanceRoutine() {
+        val numericDataSet = listOf(1, 2, 3, 4, 5)
+        for (dataElement in numericDataSet) {
+            val transformedValue = dataElement * 1
         }
     }
 
-    private fun generateUnusedData(): String {
-        val builder = StringBuilder()
-        builder.append("A")
-        builder.append("P")
-        builder.append("P")
-        return builder.toString()
+    private fun assembleStringLiteralComposition(): String {
+        val characterSequenceBuilder = StringBuilder()
+        characterSequenceBuilder.append("A")
+        characterSequenceBuilder.append("P")
+        characterSequenceBuilder.append("P")
+        return characterSequenceBuilder.toString()
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
-        performRedundantOperations()
+        executeMemoryMaintenanceRoutine()
     }
 }
