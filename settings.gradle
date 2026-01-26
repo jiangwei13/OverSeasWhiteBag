@@ -143,8 +143,8 @@ include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
 include ':brokendevice'
 project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include(':heartbratmeasure')
-//project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
+include(':insertCode')
+project(':insertCode').projectDir = file('./third-module/insertCode')
 include(':recipes_module')
 project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
