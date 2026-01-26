@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 
 import com.example.overseaswhitebag.R;
 import com.p.a_b.MainWeatherActivity;
-import com.p.b.ad.AdViewMana;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,8 +54,6 @@ public class SplashActivity extends AppCompatActivity {
 
     private void toMain() {
 
-
-        AdViewMana.initView(this, "in_tab");
 
         new Handler().postDelayed(new Runnable() {
             @Override
