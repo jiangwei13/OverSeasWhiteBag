@@ -143,8 +143,8 @@ include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
 include ':brokendevice'
 project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include(':insertCode')
-//project(':insertCode').projectDir = file('./third-module/insertCode')
+include(':insertCode')
+project(':insertCode').projectDir = file('./third-module/insertCode')
 include(':recipes_module')
 project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
@@ -171,7 +171,8 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 
 //include(':base_ad_common_library')
 //project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
-
+include(':build_tools')
+project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
 include(':coloring_book')
 project(':coloring_book').projectDir = file("./third-module/coloring_book")
