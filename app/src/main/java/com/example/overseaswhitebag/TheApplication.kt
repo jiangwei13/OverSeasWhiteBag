@@ -12,7 +12,6 @@ import android.util.Log
 import com.blankj.utilcode.util.NativeHelper
 
 
-
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.example.overseaswhitebag.common.utils.AdjustTokens
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
@@ -66,29 +65,33 @@ class TheApplication : BaseApplication() {
                 return@Runnable
             }
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //归因成功后执行
-                        NativeHelper.init(CContext.getContext(), null, null)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(insApp)
-                        })
-
-                    }
-
-                    override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
-                    }
-
-                })
-
+//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+//                AjConstants.adjustAppToken,
+//                PhoneStatusUtils.judgeIsBlacklist(),
+//                object : CommonConfig.OnConfigInterface {
+//                    override fun onSuccess() {
+//                        //归因状态
+//                        MMKVUtils.setUserStatus(true)
+//                        //归因成功后执行
+//                        NativeHelper.init(CContext.getContext(), null, null)
+//                        //拉取数据
+//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//                        doOnMainThreadIdle({
+//                            InitAdAndTj.initJumpEvent(insApp)
+//                        })
+//
+//                    }
+//
+//                    override fun onFail() {
+//                        MMKVUtils.setUserStatus(false)
+//                    }
+//
+//                })
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            doOnMainThreadIdle({
+                InitAdAndTj.initJumpEvent(insApp)
+            })
         }
     }
 
