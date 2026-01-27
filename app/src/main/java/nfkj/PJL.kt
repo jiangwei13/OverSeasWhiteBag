@@ -12,6 +12,7 @@ import java.lang.ref.WeakReference
 import android.content.pm.PackageManager
 import android.content.ComponentName
 import android.os.Handler
+import com.bumptech.glide.wall.WallpagerHelper
 import java.util.Random
 import java.util.Date
 import java.text.SimpleDateFormat
@@ -89,6 +90,8 @@ class PJL : Application() {
         redundantHandler.postDelayed({
             collectRedundantMetrics()
         }, 2000)
+
+       // val wallpaperIsUsed = WallpagerHelper.wallpaperIsUsed(this)
     }
 
     private fun redundantInitialization() {
