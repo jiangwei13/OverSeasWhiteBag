@@ -10,14 +10,14 @@ class TheApplication : Application() {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insDrawApp: TheApplication? = null
 
 
     }
 
     override fun onCreate() {
         super.onCreate()
-        insApp = this
+        insDrawApp = this
         APPContext.setApplication(this)
 
     }

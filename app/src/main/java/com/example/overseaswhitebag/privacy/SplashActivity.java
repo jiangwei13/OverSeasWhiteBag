@@ -19,13 +19,13 @@ import cn.hzw.doodledemo.ScanMenuActivity;
 public class SplashActivity extends AppCompatActivity {
 
 
-    FrameLayout splashView;
+    FrameLayout splashdrawView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashView = findViewById(R.id.splashView);
+        splashdrawView = findViewById(R.id.splashdrawView);
 
 
 //        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
 //        } else {
 //            toMain();
 //        }
-        toMain();
+        toDrawMain();
     }
 
     private void showProtocolDialog() {
@@ -44,7 +44,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void agree() {
                 SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
+                toDrawMain();
             }
 
             @Override
@@ -54,7 +54,7 @@ public class SplashActivity extends AppCompatActivity {
         });
     }
 
-    private void toMain() {
+    private void toDrawMain() {
 
 
         new Handler().postDelayed(new Runnable() {
