@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.privacy;
+package efei;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 
-import com.example.overseaswhitebag.R;
-import com.p.a_b.MainWeatherActivity;
+import xktv.nacw.iwsqc.R;
+import efen.RXBU;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
-public class SplashActivity extends AppCompatActivity {
+public class RXBM extends AppCompatActivity {
 
     FrameLayout splashView;
 
@@ -27,12 +27,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showUserAgreement() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
+        RXCC protocolDialog = new RXCC(this, R.style.dialog);
         protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new RXCC.OnProtocolDialogListener() {
             @Override
             public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
+                RXCD.with(RXBM.this).load().save("isAgressment", true);
                 navigateToMainScreen();
             }
 
@@ -45,7 +45,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initializeApp() {
         // 方法名称修改：initializeApp -> 原注释代码逻辑
-        // boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
+        // boolean isAgressment = RXCD.with(this).load().read("isAgressment", false);
         // if (!isAgressment) {
         //     showUserAgreement();
         // } else {
@@ -58,7 +58,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, MainWeatherActivity.class);
+                Intent it = new Intent(RXBM.this, RXBU.class);
                 startActivity(it);
                 finish();
             }
@@ -74,7 +74,7 @@ public class SplashActivity extends AppCompatActivity {
         AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
             @Override
             public void splashEnd() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                Intent it = new Intent(RXBM.this, ScanMenuActivity.class);
                 startActivity(it);
                 finish();
             }

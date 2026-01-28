@@ -1,4 +1,4 @@
-package com.example.overseaswhitebag.common.utils;
+package efej;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -7,7 +7,7 @@ import android.net.Uri;
 
 import kotlin.jvm.internal.Intrinsics;
 
-public final class MobInitProvider extends ContentProvider {
+public final class RXBO extends ContentProvider {
     @Override // android.content.ContentProvider
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         Intrinsics.checkNotNullParameter(uri, "uri");

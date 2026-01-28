@@ -1,12 +1,12 @@
-package com.example.overseaswhitebag
+package efeh
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
-import com.example.overseaswhitebag.R
+import xktv.nacw.iwsqc.R
 
 
-class MainActivity : AppCompatActivity() {
+class RXCB : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

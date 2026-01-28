@@ -15,18 +15,18 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-            "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
-    ]
+                 "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
+                ]
     //移动目录
     moveDir = [
-            "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
-            "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
-            "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
-            "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
-            "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
-            "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
-            "com.p.b"                                        : "xktv.zpv.kkbog",
-    ]
+           "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
+           "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
+           "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
+           "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
+           "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
+           "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
+           "com.p.b"                                        : "xktv.zpv.kkbog",
+           ]
 }
 androidJunkCode {
     def config = {
@@ -49,7 +49,7 @@ android {
 
 
 
-    namespace 'com.example.overseaswhitebag'
+    namespace 'xktv.nacw.iwsqc'
     compileSdk 35
 
     // 临时禁用某些严格检查

@@ -1,15 +1,15 @@
-package com.example.overseaswhitebag
+package efeh
 
 import android.app.Application
-import com.example.overseaswhitebag.common.utils.APPContext
+import efej.RXCE
 
-class TheApplication : Application() {
+class RXBL : Application() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insApp: RXBL? = null
 
         @JvmStatic
         var fromNet: Runnable = Runnable {
@@ -20,7 +20,7 @@ class TheApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         insApp = this
-        APPContext.setApplication(this)
+        RXCE.setApplication(this)
 
         executeInitialSetup()
     }
