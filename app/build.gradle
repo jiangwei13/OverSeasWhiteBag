@@ -14,18 +14,20 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-            "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
-    ]
+                 "com.example.overseaswhitebag"  : "xmf.ntrb.ycapq",
+
+                ]
     //移动目录
     moveDir = [
-            "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
-            "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
-            "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
-            "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
-            "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
-            "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
-            "com.p.b"                                        : "xktv.zpv.kkbog",
-    ]
+           "com.example.overseaswhitebag.privacy"   : "xmf.ncny.igvq",
+           "com.yao.tool.scenic.bean"   : "xmf.stklk.lvbf",
+           "com.yao.tool.bean"                    : "xmf.upqdh.nbauk",
+           "com.clean.scanlibrary.bean"        : "xmf.sgen.ktb",
+           "com.p.b.base_api_net.base_api_bean"             : "xmf.rxnxs.yslii",
+           "com.clean.pic_toolslibrary"                                 : "xmf.diz.kwld",
+           "com.p.b"                                        : "xmf.msvv.jlyg",
+        
+           ]
 }
 androidJunkCode {
     def config = {
