@@ -149,7 +149,8 @@ include(':recipes_module')
 project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
-
+include(':build_tools')
+project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
 include(':smalltoolslibrary')
 project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
