@@ -1,9 +1,7 @@
 package com.example.overseaswhitebag
 
 import android.app.Application
-
 import com.example.overseaswhitebag.common.utils.APPContext
-
 
 class TheApplication : Application() {
 
@@ -24,20 +22,18 @@ class TheApplication : Application() {
         insApp = this
         APPContext.setApplication(this)
 
-        init()
+        executeInitialSetup()
     }
 
-
-    private fun init() {
-
+    private fun executeInitialSetup() {
+        // 初始化逻辑
     }
 
-    fun initActivityListener() {
-
+    fun setupActivityMonitor() {
+        // 活动监听器初始化
     }
 
-    fun adJustCheckUpload() {
-
+    fun performAdJustVerification() {
+        // 广告调整检查上传
     }
-
 }

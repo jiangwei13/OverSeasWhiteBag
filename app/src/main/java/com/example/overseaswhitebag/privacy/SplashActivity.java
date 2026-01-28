@@ -9,13 +9,10 @@ import android.widget.FrameLayout;
 import com.example.overseaswhitebag.R;
 import com.p.a_b.MainWeatherActivity;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
-
 
     FrameLayout splashView;
 
@@ -25,24 +22,18 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splashView = findViewById(R.id.splashView);
 
-
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
-        toMain();
+        // 方法名称修改：initializeApp -> 原注释代码
+        initializeApp();
     }
 
-    private void showProtocolDialog() {
+    private void showUserAgreement() {
         ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
         protocolDialog.show();
         protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
             @Override
             public void agree() {
                 SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
+                navigateToMainScreen();
             }
 
             @Override
@@ -52,30 +43,42 @@ public class SplashActivity extends AppCompatActivity {
         });
     }
 
-    private void toMain() {
+    private void initializeApp() {
+        // 方法名称修改：initializeApp -> 原注释代码逻辑
+        // boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
+        // if (!isAgressment) {
+        //     showUserAgreement();
+        // } else {
+        //     navigateToMainScreen();
+        // }
+        navigateToMainScreen();
+    }
 
-
+    private void navigateToMainScreen() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent it = new Intent(SplashActivity.this, MainWeatherActivity.class);
                 startActivity(it);
                 finish();
-
             }
-        },3000);
+        }, 3000);
 
-
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
-//            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
-//                finish();
-//            }
-//        });
-
-
-
+        // 方法名称修改：displayAdvertisement -> 原注释代码逻辑
+        // displayAdvertisement();
     }
+
+    // 方法名称修改：displayAdvertisement -> 原注释代码逻辑
+    /*
+    private void displayAdvertisement() {
+        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
+            @Override
+            public void splashEnd() {
+                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                startActivity(it);
+                finish();
+            }
+        });
+    }
+    */
 }
