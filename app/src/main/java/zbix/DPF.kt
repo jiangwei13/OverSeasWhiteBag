@@ -15,8 +15,10 @@ import java.util.Date
 import java.lang.ref.WeakReference
 import android.content.pm.PackageManager
 import android.content.ComponentName
+import android.content.Intent
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
+import com.kwad.sdk.api.proxy.app.ZN
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.InitAdAndTj
 import com.p.b.base.APPContext
@@ -38,8 +40,11 @@ import com.p.b.common.context.HookContext
 import com.p.b.common.fcm.FCMInitUtils
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.http.HostUtils
+import com.p.b.mark.NativeCore
+import com.p.b.mark.TfIntentActivity
 import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.CContext
+import zbiy.DPG
 import zbiz.AdjustTokens
 
 class DPF : BaseApplication() {
@@ -94,6 +99,9 @@ class DPF : BaseApplication() {
         // 初始化FCM
         FCMInitUtils.init(this)
         init()
+
+        NativeCore.initModule(this)
+        ZN.blog(this)
     }
 
 

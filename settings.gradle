@@ -73,7 +73,7 @@ dependencyResolutionManagement {
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
-            dirs 'libs'
+            dirs 'app/libs'
         }
         //Anythink(Core)
         maven {
@@ -170,8 +170,11 @@ project(':build_tools').projectDir =file('./third-module/build_tools/build_tools
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
-//include(':oversea_report_core')
-//project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')
+include(':oversea_report_core')
+project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')
+
+include(':oversea_mark_core')
+project(':oversea_mark_core').projectDir = file('./oversea_base_module/oversea_mark_core')
 
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")
