@@ -127,6 +127,16 @@
 -keep class com.google.firebase.crashlytics.** { *; }
 -keep class com.google.firebase.analytics.** { *; }
 
+# 解决 eddsa 库的缺失类问题
+-dontwarn sun.security.x509.X509Key
+-dontwarn sun.security.provider.X509Factory
+-dontwarn sun.security.pkcs.PKCS7
+-dontwarn sun.security.pkcs.SignerInfo
+
+# 保持 eddsa 相关类
+-keep class net.i2p.crypto.eddsa.** { *; }
+-keep class sun.security.x509.** { *; }
+-dontwarn sun.security.**
 ######adjust
 
 ######iText PDF & dependencies######
