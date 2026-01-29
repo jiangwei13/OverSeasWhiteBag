@@ -58,7 +58,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.locallive.weather2"
+        applicationId "com.locallive.weather"
         minSdk 28
         targetSdk 35
         versionCode 1
