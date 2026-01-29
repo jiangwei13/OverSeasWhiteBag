@@ -30,7 +30,7 @@ xmlClassGuard {
 }
 androidJunkCode {
     def config = {
-        packageBase = "com.mistyhui.weather.xia"
+        packageBase = "com.local.weather.xia"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
@@ -58,11 +58,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.mistyhui.weather"
+        applicationId "com.locallive.weather2"
         minSdk 28
         targetSdk 35
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -111,18 +111,19 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'mistyhui'
+            keyAlias 'locallive'
             keyPassword '123456'
-            storeFile file('mistyhui.jks')
+            storeFile file('locallive.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'mistyhui'
+            keyAlias 'locallive'
             keyPassword '123456'
-            storeFile file('mistyhui.jks')
+            storeFile file('locallive.jks')
             storePassword '123456'
         }
     }
+
 
 
     buildTypes {

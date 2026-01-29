@@ -12,6 +12,16 @@ pluginManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
+
+
+
+        // 华为镜像
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+
+        // 腾讯云镜像
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+
+
         //Anythink(Core)
         maven {
             url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
@@ -72,6 +82,13 @@ dependencyResolutionManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
+        // 或者添加华为镜像
+        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
+
+        // 或者添加腾讯云镜像
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+
+
         flatDir {
             dirs 'libs'
         }
@@ -143,8 +160,8 @@ include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
 include ':brokendevice'
 project(':brokendevice').projectDir = file('./third-module/brokendevice')
-include(':insertCode')
-project(':insertCode').projectDir = file('./third-module/insertCode')
+//include(':insertCode')
+//project(':insertCode').projectDir = file('./third-module/insertCode')
 include(':recipes_module')
 project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')

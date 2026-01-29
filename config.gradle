@@ -1,7 +1,7 @@
 ext{
     android = [
-            versionCode      : 2,
-            versionName      : "1.0.2"
+            versionCode      : 1,
+            versionName      : "1.0.1"
     ]
     dependencies = [
 
@@ -10,12 +10,12 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/MistyWeather/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/MistyWeather/terms.html",
+            "privacyUrl": "https://crossmvp.com/agreement/LocalLiveWeather/privacy.html",
+            "userUrl"   : "https://crossmvp.com/agreement/LocalLiveWeather/terms.html",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2025-04-30 10:00:00",
 
@@ -24,10 +24,10 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h695b6a65da9bc", //测试 topOne Id
-            "TOPON_APPKEY"          : "a7b12eee57a0d630a59854ff23a0af72d", //测试 topOne key
-            "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "q8vbhz7h5c74",
+            "TOPON_APPID"           : "", //测试 topOne Id
+            "TOPON_APPKEY"          : "", //测试 topOne key
+            "AF_APP_KEY"            : "",//appsflyer：
+            "ADJUST_TOKEN"          : "",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",

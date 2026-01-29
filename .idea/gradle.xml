@@ -17,7 +17,7 @@
         </compositeConfiguration>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="17" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -26,7 +26,6 @@
             <option value="$PROJECT_DIR$/third-module/brokendevice" />
             <option value="$PROJECT_DIR$/third-module/build_tools/build_tools" />
             <option value="$PROJECT_DIR$/third-module/color_picker_library" />
-            <option value="$PROJECT_DIR$/third-module/insertCode" />
             <option value="$PROJECT_DIR$/third-module/pic_edit_library" />
             <option value="$PROJECT_DIR$/third-module/pic_toolslibrary" />
             <option value="$PROJECT_DIR$/third-module/recipes_module" />
@@ -39,6 +38,7 @@
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
