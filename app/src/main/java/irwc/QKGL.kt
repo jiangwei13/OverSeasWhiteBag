@@ -9,6 +9,7 @@ class QKGL : Application() {
     companion object {
         var isBackLanch: Boolean = false
 
+
         @JvmStatic
         var insDrawApp: QKGL? = null
 
