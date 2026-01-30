@@ -59,11 +59,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.seas.colorheart"
+        applicationId "com.board.chroma"
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -88,15 +88,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'colorheart'
+            keyAlias 'chroma'
             keyPassword '123456'
-            storeFile file('colorheart.jks')
+            storeFile file('chroma.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'colorheart'
+            keyAlias 'chroma'
             keyPassword '123456'
-            storeFile file('colorheart.jks')
+            storeFile file('chroma.jks')
             storePassword '123456'
         }
     }
