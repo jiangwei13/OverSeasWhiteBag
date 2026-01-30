@@ -36,18 +36,18 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "rxyv.ktc.pvhk",
-                ]
+            "com.example.overseaswhitebag"  : "rxyv.ktc.pvhk",
+    ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "rxyv.kly.cgu",
-           "com.yao.tool.scenic.bean"   : "rxyv.rfdz.tldtk",
-           "com.yao.tool.bean"                    : "rxyv.mpq.llnmy",
-           "com.clean.scanlibrary.bean"        : "rxyv.jdtod.wims",
-           "com.p.b.base_api_net.base_api_bean"             : "rxyv.adbh.pje",
-           "com.clean.pic_toolslibrary"                                 : "rxyv.jmb.zlpen",
-           "com.p.b"                                        : "rxyv.mpaq.qsz",
-           ]
+            "com.example.overseaswhitebag.privacy"   : "rxyv.kly.cgu",
+            "com.yao.tool.scenic.bean"   : "rxyv.rfdz.tldtk",
+            "com.yao.tool.bean"                    : "rxyv.mpq.llnmy",
+            "com.clean.scanlibrary.bean"        : "rxyv.jdtod.wims",
+            "com.p.b.base_api_net.base_api_bean"             : "rxyv.adbh.pje",
+            "com.clean.pic_toolslibrary"                                 : "rxyv.jmb.zlpen",
+            "com.p.b"                                        : "rxyv.mpaq.qsz",
+    ]
 }
 android {
 
@@ -165,11 +165,9 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 //    implementation files('libs/pluginhelper.aar')
-    implementation(name: 'BaiduLBS_Android_v1company', ext: 'aar')
     implementation project(':toolsbox')
     implementation project(':oversea_base_module')
-    // implementation project(':oversea_report_core')
-    implementation project(':oversea_mark_core')
+//    implementation project(':oversea_report_core')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
