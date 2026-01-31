@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.overseaswhitebag.R;
+import com.p.b.ad.AdViewMana;
 import com.xian.bc.xin.ScanMenuMainActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 @SuppressLint("CustomSplashScreen")
@@ -37,6 +38,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void toMain() {
 
+        AdViewMana.initView(this, "in_tab");
 
         new Handler().postDelayed(new Runnable() {
             @Override
