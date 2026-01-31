@@ -141,8 +141,8 @@ include ':pic_toolslibrary'
 project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
 include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
-include ':brokendevice'
-project(':brokendevice').projectDir = file('./third-module/brokendevice')
+//include ':brokendevice'
+//project(':brokendevice').projectDir = file('./third-module/brokendevice')
 include(':insertCode')
 project(':insertCode').projectDir = file('./third-module/insertCode')
 include(':recipes_module')
