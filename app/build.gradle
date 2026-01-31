@@ -60,7 +60,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.seas.colorheart2"
+        applicationId "com.seas.colorheart"
       //applicationId "com.saowen.magicdoc" //  测试
         minSdk 26
         targetSdk 35
