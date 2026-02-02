@@ -1,0 +1,22 @@
+dir mapping:
+	com.example.overseaswhitebag -> nmu.qaki.mxft
+	com.example.overseaswhitebag.privacy -> a
+	com.fangda.view -> b
+	com.fangda -> c
+
+class mapping:
+	com.example.overseaswhitebag.MainActivity -> nmu.qaki.mxft.AFEK
+	com.p.b.base.BaseAdApplication -> nmu.qaki.mxft.LJBM
+	com.example.overseaswhitebag.TheApplication -> nmu.qaki.mxft.BGSK
+	com.p.b.op.re.LeAcRecever -> nmu.mxvy.xvx.GVA
+	com.p.b.CustomStringFogImpl -> nmu.pmjym.dosq.GBK
+	com.baidu.mobads.sdk.api.BtFileAdWebActivity -> nmu.kxruy.vnth.RALD
+	com.baidu.mobads.sdk.api.OpenReceiver -> nmu.kxruy.vnth.VPDE
+	com.example.overseaswhitebag.privacy.SplashActivity -> a.VPDF
+	com.example.overseaswhitebag.privacy.XieYiActivity -> a.VPDG
+	com.fangda.view.FangDaFocusImageView -> b.VPDH
+	com.fangda.view.FangDaJingLoupeView -> b.VPDI
+	com.fangda.XinFangDaCameraActivity -> c.VPDJ
+	com.fangda.MainTwoActivity -> c.VPDK
+	com.example.overseaswhitebag.privacy.SPUtil -> a.VPDL
+	com.fangda.view.TipsTextSizeDialog -> b.VPDM
