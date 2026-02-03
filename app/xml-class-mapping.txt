@@ -1,0 +1,24 @@
+dir mapping:
+	nfkj -> nfkj
+	nfkk -> nfkk
+	nfkl -> nfkl
+	nfkm -> nfkm
+	nfkn -> nfkn
+
+class mapping:
+	com.xian.bc.accounts.ui.ScanMenuActivity -> tmlr.hti.caqq.PJK
+	nfkj.PJL -> nfkj.PJL
+	nfkk.PJM -> nfkk.PJM
+	nfkk.PJN -> nfkk.PJN
+	nfkl.PJO -> nfkl.PJO
+	nfkm.PJP -> nfkm.PJP
+	nfkn.PJQ -> nfkn.PJQ
+	nfkm.PJR -> nfkm.PJR
+	nfkm.PJS -> nfkm.PJS
+	nfkm.PJT -> nfkm.PJT
+	nfkj.PJU -> nfkj.PJU
+	nfkk.PJW -> nfkk.PJV
+	nfkl.PJY -> nfkl.PJW
+	nfkl.PJX -> nfkl.PJX
+	nfkn.PJZ -> nfkn.PJY
+	nfkn.PKA -> nfkn.PJZ
