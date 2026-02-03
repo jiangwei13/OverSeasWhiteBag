@@ -10,23 +10,23 @@ import com.xian.bc.utils.APPToolsContext
 class TheApplication : Application() {
 
     companion object {
-        var isBackLanch: Boolean = false
+        var isBackgroundLaunch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
+        var instance: TheApplication? = null
     }
 
     override fun onCreate() {
         super.onCreate()
-        insApp = this
+        instance = this
         APPContext.setApplication(this)
         APPToolsContext.setApplication(this)
 
         MMKV.initialize(this)
-        initActivityListener()
+        setupActivityMonitor()
     }
 
-    private fun initActivityListener() {
+    private fun setupActivityMonitor() {
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
             override fun onActivityStarted(activity: Activity) {}

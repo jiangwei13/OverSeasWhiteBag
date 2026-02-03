@@ -38,6 +38,7 @@ buildscript {
         classpath "org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin:$kotlin_version"
 
         classpath 'com.github.Petterpx.walle:plugin:1.0.5'
+        classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
     }
 }
 
