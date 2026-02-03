@@ -13,98 +13,98 @@ import java.lang.ref.WeakReference
 class TheApplication : Application() {
 
     companion object {
-        var isBackLanch: Boolean = false
+        var isBackgroundLaunch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
-//        @JvmStatic
-//        var fromNet:Runnable = Runnable {
-//            if(SPUtils.isUserCommon()){
-//                return@Runnable
-//            }
-//
-//            //Adjust归因
-//            AdJustInitUtils.initAdjust(
-//                HostUtils.randomConfig_from_delay,
-//                AjConstants.adjustAppToken,
-//                false,
-//                object : CommonConfig.OnConfigInterface{
-//                    override fun onSuccess() {
-//                        //归因状态
-//                        MMKVUtils.setUserStatus(true)
-//                        //拉取数据
-//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-////                        doOnMainThreadIdle({
-////                            InitAdAndTj.initJumpEvent(insApp)
-////                        })
-//                    }
-//
-//                    override fun onFail() {
-//                        MMKVUtils.setUserStatus(false)
-//                    }
-//
-//                }
-//            )
-//        }
+        var appInstance: TheApplication? = null
+        //        @JvmStatic
+        //        var delayedNetworkTask:Runnable = Runnable {
+        //            if(SPUtils.isUserCommon()){
+        //                return@Runnable
+        //            }
+        //
+        //            //Adjust归因
+        //            AdJustInitUtils.initializeAdjust(
+        //                HostUtils.randomConfig_from_delay,
+        //                AjConstants.adjustAppToken,
+        //                false,
+        //                object : CommonConfig.ConfigurationInterface{
+        //                    override fun onSuccess() {
+        //                        //归因状态
+        //                        MMKVUtils.setUserStatus(true)
+        //                        //拉取数据
+        //                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+        ////                        executeOnMainThreadIdle({
+        ////                            InitAdAndTj.initializeJumpEvent(appInstance)
+        ////                        })
+        //                    }
+        //
+        //                    override fun onFailure() {
+        //                        MMKVUtils.setUserStatus(false)
+        //                    }
+        //
+        //                }
+        //            )
+        //        }
 
     }
 
     override fun onCreate() {
         super.onCreate()
-        insApp = this
+        appInstance = this
         APPContext.setApplication(this)
-//        CContext.setApplication(this)
-//        OverseaAppContext.setApplication(this)
-//        MMKV.initialize(this)
-//        // 初始化Firebase
-//        FirebaseApp.initializeApp(this)
-        init()
+        //        CContext.setApplication(this)
+        //        OverseaAppContext.setApplication(this)
+        //        MMKV.initialize(this)
+        //        // 初始化Firebase
+        //        FirebaseApp.initializeApp(this)
+        initializeApplication()
     }
 
 
-    private fun init() {
-//        val channel: String =
-//            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
-//        SPUtils.setChannel(channel)
-//        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-//        ConfigUtils.initConfig(defaultConfig, 1)
-//        AdjustTokens.initAdJustToken(this)
-//        initActivityListener()
-//        adJustCheckUpload()
-//
-//        DeviceIdentifier.register(this);
-//        DeviceUtils.getFetchOaid()
-//        GAIDUtil.fetchGAID(this, null)
-//        if(isStartWork() || ENV.logSwitch){
-//            Log.d("AD_LOG", "初始化广告sdk")
-//            InitAdAndTj.initAdTj(insApp)
-//            HandleUtils.postDelay(fromNet,10*1000)
-//        }
+    private fun initializeApplication() {
+        //        val distributionChannel: String =
+        //            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
+        //        SPUtils.setDistributionChannel(distributionChannel)
+        //        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
+        //        ConfigUtils.initializeConfiguration(defaultConfiguration, 1)
+        //        AdjustTokens.initializeAdjustToken(this)
+        //        setupActivityMonitor()
+        //        checkAdjustUpload()
+        //
+        //        DeviceIdentifier.register(this);
+        //        DeviceUtils.retrieveOaid()
+        //        GAIDUtil.retrieveGAID(this, null)
+        //        if(isStartWork() || ENV.logSwitch){
+        //            Log.d("AD_LOG", "初始化广告sdk")
+        //            InitAdAndTj.initializeAdTj(appInstance)
+        //            HandleUtils.scheduleDelay(delayedNetworkTask,10*1000)
+        //        }
     }
-//
-//    fun initActivityListener() {
-//        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-//            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-//                HookContext.appCompatActivity = WeakReference(activity)
-//                if (AdUtils.isAdActivity(activity)) {
-//                    CContext.initCurrAdActivity(WeakReference(activity))
-//                }
-//            }
-//
-//            override fun onActivityStarted(activity: Activity) {}
-//            override fun onActivityResumed(activity: Activity) {}
-//            override fun onActivityPaused(activity: Activity) {}
-//            override fun onActivityStopped(activity: Activity) {}
-//            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-//            override fun onActivityDestroyed(activity: Activity) {
-//                if (AdUtils.isAdActivity(activity)) {
-//                    CContext.removeAdActivity(WeakReference(activity))
-//                }
-//            }
-//        })
-//    }
-//    fun adJustCheckUpload() {
-//        doActivateDot()
-//    }
+    //
+    //    fun setupActivityMonitor() {
+    //        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+    //            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+    //                HookContext.currentActivity = WeakReference(activity)
+    //                if (AdUtils.isAdActivity(activity)) {
+    //                    CContext.setCurrentAdActivity(WeakReference(activity))
+    //                }
+    //            }
+    //
+    //            override fun onActivityStarted(activity: Activity) {}
+    //            override fun onActivityResumed(activity: Activity) {}
+    //            override fun onActivityPaused(activity: Activity) {}
+    //            override fun onActivityStopped(activity: Activity) {}
+    //            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+    //            override fun onActivityDestroyed(activity: Activity) {
+    //                if (AdUtils.isAdActivity(activity)) {
+    //                    CContext.removeAdActivity(WeakReference(activity))
+    //                }
+    //            }
+    //        })
+    //    }
+    //    fun checkAdjustUpload() {
+    //        performActivationPoint()
+    //    }
 
 }

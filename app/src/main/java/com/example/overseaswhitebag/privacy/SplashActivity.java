@@ -14,70 +14,60 @@ import com.example.overseaswhitebag.R;
 
 import cn.hzw.doodledemo.ScanMenuActivity;
 
-
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
-
-    FrameLayout splashView;
+    FrameLayout splashContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashView = findViewById(R.id.splashView);
+        splashContainer = findViewById(R.id.splashView);
 
-
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
-        toMain();
+        //        boolean isAgreementAccepted = SPUtil.with(this).load().read("isAgreementAccepted", false);
+        //        if (!isAgreementAccepted) {
+        //            showAgreementDialog();
+        //        } else {
+        //            navigateToHome();
+        //        }
+        navigateToHome();
     }
 
-    private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
-        protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
-    }
-
-    private void toMain() {
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-                startActivity(it);
-                finish();
-
-            }
-        },3000);
-
-
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
+    private void showAgreementDialog() {
+//        ProtocolDialog agreementDialog = new ProtocolDialog(this, R.style.dialog);
+//        agreementDialog.show();
+//        agreementDialog.setDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
 //            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
+//            public void agree() {
+//                SPUtil.with(SplashActivity.this).load().save("isAgreementAccepted", true);
+//                navigateToHome();
+//            }
+//
+//            @Override
+//            public void refuse() {
 //                finish();
 //            }
 //        });
+    }
 
+    private void navigateToHome() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent mainIntent = new Intent(SplashActivity.this, ScanMenuActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        }, 3000);
 
-
+        //        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashContainer, new AuditAdUtilsNew.onSplashAdListener() {
+        //            @Override
+        //            public void splashEnd() {
+        //                Intent mainIntent = new Intent(SplashActivity.this, ScanMenuActivity.class);
+        //                startActivity(mainIntent);
+        //                finish();
+        //            }
+        //        });
     }
 }
