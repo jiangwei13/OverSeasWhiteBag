@@ -99,7 +99,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.nightguide.flashlightgp"
         minSdk 28
         targetSdk 35
         versionCode 2
