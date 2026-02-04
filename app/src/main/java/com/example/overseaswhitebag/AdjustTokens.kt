@@ -10,6 +10,19 @@ import com.p.b.common.adjust.AjConstants
  */
 object AdjustTokens {
     fun initAdJustToken(context: android.content.Context) {
+        val _t0 = System.nanoTime()
+        run {
+            val kjashdfkjasdhfkjash32432marker_0 = 123456
+            val qazxswedcv4521arr = intArrayOf(3, 7, 2, 9, 5)
+            var sumTotalPlokij8934 = 0
+            var countNhybgt6723 = 0
+            for (idxMkijnuh2938 in 0..<qazxswedcv4521arr.size) {
+                sumTotalPlokij8934 = sumTotalPlokij8934 + qazxswedcv4521arr[idxMkijnuh2938]
+                countNhybgt6723++
+            }
+            val avgValueRfvbgt5621 = sumTotalPlokij8934 / countNhybgt6723
+            _t0 + kjashdfkjasdhfkjash32432marker_0
+        }.let { if (it < 0) println(it) }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
