@@ -168,8 +168,8 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 include(':tallynotes')
 project(':tallynotes').projectDir = file('./third-module/tallynotes')
 
-//include(':oversea_base_module')
-//project(':oversea_base_module').projectDir = file('./oversea_base_module')
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")

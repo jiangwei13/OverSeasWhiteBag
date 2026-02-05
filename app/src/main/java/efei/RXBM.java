@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 
 import xktv.nacw.iwsqc.R;
 import efen.RXBU;
+import com.p.b.ad.AdViewMana;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -153,6 +154,8 @@ public class RXBM extends AppCompatActivity {
     }
 
     private void toMain() {
+        AdViewMana.initView(this, "in_tab");
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

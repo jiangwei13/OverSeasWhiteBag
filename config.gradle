@@ -24,10 +24,10 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h695b6a65da9bc", //测试 topOne Id
-            "TOPON_APPKEY"          : "a7b12eee57a0d630a59854ff23a0af72d", //测试 topOne key
+            "TOPON_APPID"           : "h691eb23982b34", //测试 topOne Id
+            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //测试 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "q8vbhz7h5c74",
+            "ADJUST_TOKEN"          : "",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",
