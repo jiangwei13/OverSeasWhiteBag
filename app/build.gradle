@@ -60,7 +60,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.horizon.weather"
         minSdk 28
         targetSdk 35
         versionCode 2
