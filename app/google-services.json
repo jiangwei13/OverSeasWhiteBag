@@ -1,21 +1,22 @@
+
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "876562034394",
+    "project_id": "tag2div-smsgateway-ef293",
+    "storage_bucket": "tag2div-smsgateway-ef293.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:876562034394:android:163bc31528156af7197fe3",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.glowflow.ledglow"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyD-0kn2JKhBO4z9APSnd26A3Q7Fwwi2OP4"
         }
       ],
       "services": {
@@ -27,3 +28,5 @@
   ],
   "configuration_version": "1"
 }
+
+    

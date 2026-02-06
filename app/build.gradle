@@ -86,7 +86,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.glowflow.ledglow"
         minSdk 28
         targetSdk 35
         versionCode 3
