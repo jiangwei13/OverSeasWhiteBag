@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/LedGlow/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/LedGlow/terms.html",
+            "privacyUrl": "https://sites.google.com/view/ledglow/home/privacy",
+            "userUrl"   : "https://sites.google.com/view/ledglow/home/terms",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
