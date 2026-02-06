@@ -5,8 +5,8 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-//apply plugin: 'com.google.gms.google-services'
-//apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
 apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
@@ -86,11 +86,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.glowflow.ledglowgp"
+        applicationId "com.saowen.magicdoc"
         minSdk 28
         targetSdk 35
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 3
+        versionName "1.0.3"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -213,6 +213,8 @@ dependencies {
 
     implementation 'com.tencent:mmkv:2.3.0'
 
+    implementation project(':oversea_base_module')
+//    implementation project(':oversea_report_core')
 
 
 }

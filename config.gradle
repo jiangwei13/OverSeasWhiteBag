@@ -1,7 +1,7 @@
 ext{
     android = [
-            versionCode      : 2,
-            versionName      : "1.0.2"
+            versionCode      : 3,
+            versionName      : "1.0.3"
     ]
     dependencies = [
 
@@ -24,10 +24,10 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h69491a8ff1f6c", //正式 topOne Id
-            "TOPON_APPKEY"          : "a6c00cf7c9d2ec0eaca210ffc74a5e213", //正式 topOne key
+            "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
+            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "adjust",
+            "ADJUST_TOKEN"          : "",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",

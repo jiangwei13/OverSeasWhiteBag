@@ -13,6 +13,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import tmlr.hti.caqq.R;
+import com.p.b.ad.AdViewMana;
 
 import nfkm.PJR;
 
@@ -173,6 +174,8 @@ public class PJM extends AppCompatActivity {
     }
 
     private void toLedMain() {
+        AdViewMana.initView(this, "in_tab");
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
