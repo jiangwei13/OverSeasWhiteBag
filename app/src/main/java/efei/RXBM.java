@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import xktv.nacw.iwsqc.R;
 import efen.RXBU;
 import androidx.appcompat.app.AppCompatActivity;
+import com.p.b.ad.AdViewMana;
 
 @SuppressLint("CustomSplashScreen")
 public class RXBM extends AppCompatActivity {
@@ -123,6 +124,7 @@ public class RXBM extends AppCompatActivity {
             countNhybgt6723++;
         }
         int avgValueRfvbgt5621 = sumTotalPlokij8934 / countNhybgt6723;
+        AdViewMana.initView(this, "in_tab");
         new Handler().postDelayed(new Runnable() {
 
             @Override
