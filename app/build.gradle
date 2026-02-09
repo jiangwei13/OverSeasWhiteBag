@@ -86,7 +86,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.glowbright.colorfullights"
+        applicationId "com.glowbright.colorfullights2"
         minSdk 28
         targetSdk 35
         versionCode 2
