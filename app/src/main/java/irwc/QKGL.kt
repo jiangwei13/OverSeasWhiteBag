@@ -1,44 +1,135 @@
 package irwc
 
+import android.app.Activity
 import android.app.Application
+import android.os.Bundle
+import android.util.Log
 import com.example.overseaswhitebag.common.utils.APPContext
+import com.github.gzuliyujiang.oaid.DeviceIdentifier
+import com.google.firebase.FirebaseApp
+import com.meituan.android.walle.WalleChannelReader
+import com.p.b.InitAdAndTj
+import com.p.b.base.BaseApplication
+import com.p.b.base_api_net.base_api_bean.ConfigUtils
+import com.p.b.base_api_net.utils.DeviceUtils
+import com.p.b.base_api_net.utils.HandleUtils
+import com.p.b.common.ENV
+import com.p.b.common.GAIDUtil
+import com.p.b.common.MMKVUtils
+import com.p.b.common.OverseaAppContext
+import com.p.b.common.PhoneStatusUtils
+import com.p.b.common.SPUtils
+import com.p.b.common.adjust.AdJustInitUtils
+import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
+import com.p.b.common.adjust.AjConstants
+import com.p.b.common.adjust.CommonConfig
+import com.p.b.common.context.HookContext
+import com.p.b.common.fcm.FCMInitUtils
+import com.p.b.common.firebase.FireBaseInitUtils
+import com.p.b.http.HostUtils
+import com.p.b.pl223.hhoosstt.AdUtils
+import com.p.b.pl223.hhoosstt.CContext
+import com.tencent.mmkv.MMKV
+import java.lang.ref.WeakReference
 
-
-class QKGL : Application() {
+class QKGL : BaseApplication() {
 
     companion object {
         var isBackLanch: Boolean = false
 
-
         @JvmStatic
         var insDrawApp: QKGL? = null
 
+        @JvmStatic
+        var fromNet: Runnable = Runnable {
+            QKGL.Companion.isBackLanch = true
+            if (SPUtils.isUserCommon()) {
+                return@Runnable
+            }
+            //归因
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+                AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),
+                object : CommonConfig.OnConfigInterface {
+                    override fun onSuccess() {
+                        //归因状态
+                        MMKVUtils.setUserStatus(true)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        com.p.b.common.doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(QKGL.Companion.insDrawApp)
+                        })
 
+                    }
+
+                    override fun onFail() {
+                        MMKVUtils.setUserStatus(false)
+                    }
+
+                })
+
+        }
     }
 
     override fun onCreate() {
-        val _t0 = System.nanoTime()
-        run {
-            val kjashdfkjasdhfkjash32432marker_0 = 123456
-            val asdfghjk5621arr = intArrayOf(12, 5, 8, 19, 3)
-            var maxValPlokmn8734 = asdfghjk5621arr[0]
-            var maxIdxQazwsx9812 = 0
-            for (iterYhnujm3456 in 1..<asdfghjk5621arr.size) {
-                if (asdfghjk5621arr[iterYhnujm3456] > maxValPlokmn8734) {
-                    maxValPlokmn8734 = asdfghjk5621arr[iterYhnujm3456]
-                    maxIdxQazwsx9812 = iterYhnujm3456
-                }
-            }
-            val unusedMaxRfvtgb2198 = maxValPlokmn8734
-            _t0 + kjashdfkjasdhfkjash32432marker_0
-        }.let { if (it < 0) println(it) }
         super.onCreate()
-        insDrawApp = this
-        APPContext.setApplication(this)
+        QKGL.Companion.insDrawApp = this
+        com.p.b.base.APPContext.setApplication(this)
+        CContext.setApplication(this)
+        OverseaAppContext.setApplication(this)
 
+        MMKV.initialize(this)
+        // 初始化Firebase
+        FirebaseApp.initializeApp(this)
+        // 初始化FCM
+        FCMInitUtils.init(this)
+        init()
     }
 
 
+    private fun init() {
+        val channel: String =
+            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
+        SPUtils.setChannel(channel)
+        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
+        ConfigUtils.initConfig(defaultConfig, 1)
+        AdjustTokens.initAdJustToken(this)
+        initActivityListener()
+        adJustCheckUpload()
 
+        DeviceIdentifier.register(this);
+        if (isStartWork() || ENV.logSwitch) {
+            Log.d("AD_LOG", "初始化广告sdk")
+            InitAdAndTj.initAdTj(QKGL.Companion.insDrawApp)
+            HandleUtils.postDelay(QKGL.Companion.fromNet, 10 * 1000)
+        }
+        DeviceUtils.getFetchOaid()
+        GAIDUtil.fetchGAID(this, null)
+    }
 
+    fun initActivityListener() {
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                HookContext.appCompatActivity = WeakReference(activity)
+                if (AdUtils.isAdActivity(activity)) {
+                    CContext.initCurrAdActivity(WeakReference(activity))
+                }
+            }
+
+            override fun onActivityStarted(activity: Activity) {}
+            override fun onActivityResumed(activity: Activity) {}
+            override fun onActivityPaused(activity: Activity) {}
+            override fun onActivityStopped(activity: Activity) {}
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+            override fun onActivityDestroyed(activity: Activity) {
+                if (AdUtils.isAdActivity(activity)) {
+                    CContext.removeAdActivity(WeakReference(activity))
+                }
+            }
+        })
+    }
+
+    fun adJustCheckUpload() {
+        doActivateDot()
+    }
 }
