@@ -10,7 +10,6 @@ import android.widget.FrameLayout;
 import com.clean.toos.R;
 import com.p.b.ad.AdViewMana;
 import irwf.QKGZ;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
@@ -101,9 +100,7 @@ public class QKGM extends AppCompatActivity {
                 }
             }
         }
-
         AdViewMana.initView(this, "in_tab");
-
         new Handler().postDelayed(new Runnable() {
 
             @Override
