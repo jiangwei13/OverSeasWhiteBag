@@ -1,7 +1,7 @@
 ext{
     android = [
-            versionCode      : 3,
-            versionName      : "1.0.3"
+            versionCode      : 4,
+            versionName      : "1.0.4"
     ]
     dependencies = [
 
@@ -18,16 +18,24 @@ ext{
             "logSwitch"    : false,
 
             "ad_LiveTime":"2025-12-06 10:00:00",
+            "ad_huawei_LiveTime":"2025-12-06 10:00:00",
 
-
+            "HOST":"",
+            "DEBUG_APPID":"",
+            "RELEASE_APPID":"",
+            "DEBUG_SSK":"",
+            "RELEASE_SSK":"",
+            "isDebug":"false",
+            "buglyId":"",
+            "Admob_AppId":"",
 
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "", //正式 topOne Id
-            "TOPON_APPKEY"          : "", //正式 topOne key
+            "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
+            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "adjust",
+            "ADJUST_TOKEN"          : "",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "

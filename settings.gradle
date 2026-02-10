@@ -163,8 +163,8 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
-//include(':oversea_base_module')
-//project(':oversea_base_module').projectDir = file('./oversea_base_module')
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
 //include(':broadcast')
 //project(':broadcast').projectDir = file("./tools_common_module/broadcast")
