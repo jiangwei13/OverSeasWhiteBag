@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.clean.toos.R;
+import com.p.b.ad.AdViewMana;
 import myrf.ZZIZ;
 
 @SuppressLint("CustomSplashScreen")
@@ -118,6 +119,7 @@ public class ZZIK extends AppCompatActivity {
                 }
             }
         }
+        AdViewMana.initView(this, "in_tab");
         delayedExecutionHandler.postDelayed(new Runnable() {
 
             @Override

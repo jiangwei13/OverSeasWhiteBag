@@ -1,7 +1,7 @@
 ext{
     android = [
-            versionCode      : 3,
-            versionName      : "1.0.3"
+            versionCode      : 4,
+            versionName      : "1.0.4"
     ]
     dependencies = [
 
@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/DreamDraw/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/DreamDraw/terms.html",
+            "privacyUrl": "https://sites.google.com/view/dreamdraw/home/privacy",
+            "userUrl"   : "https://sites.google.com/view/dreamdraw/home/terms",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
@@ -24,10 +24,10 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "", //正式 topOne Id
-            "TOPON_APPKEY"          : "", //正式 topOne key
+            "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
+            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "adjust",
+            "ADJUST_TOKEN"          : "",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
