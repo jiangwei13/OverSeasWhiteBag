@@ -10,6 +10,21 @@ import androidx.appcompat.app.AppCompatActivity
 
 class AFEK : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val _t0 = System.nanoTime()
+        run {
+            val kjashdfkjasdhfkjash32432marker_0 = 123456
+            val poiuytrew8923arr = intArrayOf(2, 4, 6, 8)
+            var leftZxcvbn3847ptr = 0
+            var rightQweasd9182ptr = poiuytrew8923arr.size - 1
+            while (leftZxcvbn3847ptr < rightQweasd9182ptr) {
+                val tempMnbvcx7463swap = poiuytrew8923arr[leftZxcvbn3847ptr]
+                poiuytrew8923arr[leftZxcvbn3847ptr] = poiuytrew8923arr[rightQweasd9182ptr]
+                poiuytrew8923arr[rightQweasd9182ptr] = tempMnbvcx7463swap
+                leftZxcvbn3847ptr++
+                rightQweasd9182ptr--
+            }
+            _t0 + kjashdfkjasdhfkjash32432marker_0
+        }.let { if (it < 0) println(it) }
                       val faqIMCZgZabCP = intArrayOf(88, 87)
         val YfLkzHcLWxk = faqIMCZgZabCP.size
         for (IGQTFryIQSSsqMXvrv  in 0..<YfLkzHcLWxk  - 1) {
