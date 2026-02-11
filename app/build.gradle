@@ -86,7 +86,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.mukuled.ledlight"
+        applicationId "com.mukuled.ledlightgp"
         minSdk 28
         targetSdk 35
         versionCode 1
@@ -115,15 +115,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'ledlight'
+            keyAlias 'ledlightgp'
             keyPassword '123456'
-            storeFile file('ledlight.jks')
+            storeFile file('ledlightgp.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'ledlight'
+            keyAlias 'ledlightgp'
             keyPassword '123456'
-            storeFile file('ledlight.jks')
+            storeFile file('ledlightgp.jks')
             storePassword '123456'
         }
     }
