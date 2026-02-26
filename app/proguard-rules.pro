@@ -64,3 +64,7 @@
 -dontwarn sharpen.config.ModuleOption
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
+
+# tradplus 混淆配置
+-keep public class com.tradplus.** { *; }
+-keep class com.tradplus.ads.** { *; }
