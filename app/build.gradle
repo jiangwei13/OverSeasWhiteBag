@@ -58,7 +58,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.docbox"
+        applicationId "com.yingguo.pdfusion"
         minSdk 26
         targetSdk 35
         versionCode 1
@@ -87,15 +87,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'docbox'
+            keyAlias 'pdfusion'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('pdfusion.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'docbox'
+            keyAlias 'pdfusion'
             keyPassword '123456'
-            storeFile file('docbox.jks')
+            storeFile file('pdfusion.jks')
             storePassword '123456'
         }
     }
