@@ -1,53 +1,60 @@
-package com.example.overseaswhitebag
+package edp.sasea.vim
 
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import edp.kubqt.yjb.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object WDIX {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_ykBAGCZSbb = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_luouyhxvOJmCurq  = (arr_ykBAGCZSbb  shl 40) xor (arr_ykBAGCZSbb  shr 15)
+         val j_CBENBXSULct  = i_luouyhxvOJmCurq .inv() and 0xFFFF
+         if (j_CBENBXSULct  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_NpCwuiPpGDuGeXjkI")
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "2t7vl9zzgfwg";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "n4say1";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "42y41l";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "yyq45f";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "stmeot";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "r4fdpi";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "sljzeg";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "70imt6";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "pkp4go";
-                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "v752hy";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="3qwssu";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "ave12u";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "35lamy";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.adjustAppToken = "2t7vl9zzgfwg";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.Login = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.Reg = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.topon_ilrd = "n4say1";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu = "42y41l";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.arpu = "yyq45f";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_arpu = "stmeot";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_ecpm = "r4fdpi";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_arpu_ecpm = "sljzeg";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.blacklist = "70imt6";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ad_request = "pkp4go";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ad_filled = "v752hy";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.firebase_request ="3qwssu";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.firebase_success = "ave12u";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.adJust_attribution_request = "35lamy";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.adJust_attribution_success ="";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.activity_app ="";
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.adjustAppToken = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.Login = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.Reg = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.topon_ilrd = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.arpu = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_arpu = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_ecpm = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.blacklist = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ad_request = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.ad_filled = "";
+                edp.kubqt.yjb.adjust.AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
@@ -195,7 +202,7 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                Log.d("WDIX", "测试")
                 //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)

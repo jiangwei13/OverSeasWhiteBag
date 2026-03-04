@@ -1,0 +1,33 @@
+dir mapping:
+	com.example.overseaswhitebag -> edp.sasea.vim
+	com.p.b -> edp.xdzxr.jdk
+	com.example.overseaswhitebag.privacy -> a
+	com.xian.bc.xin -> b
+	com.p.b.common.fcm -> c
+
+class mapping:
+	com.example.overseaswhitebag.MainActivity -> edp.sasea.vim.TSV
+	com.p.b.base.BaseAdApplication -> edp.sasea.vim.JTWJ
+	com.example.overseaswhitebag.TheApplication -> edp.sasea.vim.BLKV
+	com.p.b.op.re.LeAcRecever -> edp.jkst.khzlc.RDKW
+	com.p.b.CustomStringFogImpl -> edp.xdzxr.jdk.WDIR
+	com.baidu.mobads.sdk.api.BtFileAdWebActivity -> edp.yybii.awup.SBIL
+	com.baidu.mobads.sdk.api.OpenReceiver -> edp.yybii.awup.AMOW
+	com.example.overseaswhitebag.privacy.SplashActivity -> a.WDIS
+	com.example.overseaswhitebag.privacy.XieYiActivity -> a.WDIT
+	com.xian.bc.xin.ScanMenuMainActivity -> b.WDIU
+	com.xian.bc.xin.WellThemesEdgeLightActivity -> b.WDIV
+	com.p.b.common.fcm.FCMService -> c.WDIW
+	com.example.overseaswhitebag.AdjustTokens -> edp.sasea.vim.WDIX
+	com.p.b.DisplayUtil -> edp.xdzxr.jdk.WDIY
+	com.p.b.InitAdAndTj -> edp.xdzxr.jdk.WDIZ
+	com.p.b.LineStatistisc -> edp.xdzxr.jdk.WDJA
+	com.p.b.AppStatusListener -> edp.xdzxr.jdk.WDJB
+	com.p.b.AdStatisticsUtils -> edp.xdzxr.jdk.WDJC
+	com.example.overseaswhitebag.privacy.ProtocolDialog -> a.WDJD
+	com.example.overseaswhitebag.privacy.SPUtil -> a.WDJE
+	com.xian.bc.xin.MenuXinTwoFragment -> b.WDJF
+	com.p.b.common.fcm.FCMViewModel -> c.WDJG
+	com.p.b.common.fcm.FCMRepository -> c.WDJH
+	com.p.b.common.fcm.FCMInitUtils -> c.WDJI
+	com.p.b.common.fcm.FCMMessage -> c.WDJJ
