@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
 //    gradlePluginPortal()
         google()
+        // TradPlus
         mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -12,16 +13,6 @@ pluginManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-
-
-
-        // 华为镜像
-        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
-
-        // 腾讯云镜像
-        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
-
-
         //Anythink(Core)
         maven {
             url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
@@ -63,6 +54,26 @@ pluginManagement {
         maven {
             url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
         }
+
+        /////////////////////////////////// TradPlus相关引用///////////////////////
+        // Ironsource
+        maven { url 'https://android-sdk.is.com/' }
+        // Pangle
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        // Chartboost
+        maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
+        maven {
+            name "Chartboost Mediation’s maven repo"
+            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
+        }
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
     }
 }
 
@@ -82,13 +93,6 @@ dependencyResolutionManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-        // 或者添加华为镜像
-        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
-
-        // 或者添加腾讯云镜像
-        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
-
-
         flatDir {
             dirs 'libs'
         }
@@ -131,6 +135,26 @@ dependencyResolutionManagement {
         //Bigo
         maven {
             url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+        }
+
+        /////////////////////////////////// TradPlus相关引用///////////////////////
+        // Ironsource
+        maven { url 'https://android-sdk.is.com/' }
+        // Pangle
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle'
+        }
+        // Chartboost
+        maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
+        maven {
+            name "Chartboost Mediation’s maven repo"
+            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
+        }
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
     }
 }
