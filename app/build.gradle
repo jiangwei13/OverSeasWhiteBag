@@ -201,6 +201,8 @@ android {
 }
 
 dependencies {
+    implementation files('libs/shell.aar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
