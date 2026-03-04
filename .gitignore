@@ -18,7 +18,8 @@ local.properties
 *.iws
 *.iml
 *.ipr
-
+*.apk
+*.aab
 # 缓存目录
 .idea/caches/
 .idea/libraries/
