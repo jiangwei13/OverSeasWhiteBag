@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.board.chroma2",
+  "applicationId": "com.board.chroma",
   "variantName": "release",
   "elements": [
     {
