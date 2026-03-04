@@ -1,136 +1,64 @@
 pluginManagement {
     repositories {
-//    gradlePluginPortal()
-        google()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url "https://jitpack.io" }
-        maven { url "https://artifact.bytedance.com/repository/pangle" }
-
-        maven { url 'https://developer.huawei.com/repo' }
-        maven { url 'https://developer.hihonor.com/repo' }
-
-
-
-        // 华为镜像
-        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
-
-        // 腾讯云镜像
-        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
-
-
-        //Anythink(Core)
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
-
-        //Ironsource
-        maven {
-            url "https://android-sdk.is.com/"
-        }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Huawei
-        maven {
-            url "https://developer.huawei.com/repo/"
-        }
-
-        //Mintegral
-        maven {
-            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
-        }
-
-
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
-
-        //Chartboost
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-ads"
-        }
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
-        }
-        //Bigo
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
+        gradlePluginPortal()
     }
 }
-
-
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-//    gradlePluginPortal()
-        google()
-        mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url "https://jitpack.io" }
-        maven { url "https://artifact.bytedance.com/repository/pangle" }
-
-        maven { url 'https://developer.huawei.com/repo' }
-        maven { url 'https://developer.hihonor.com/repo' }
-        // 或者添加华为镜像
-        maven { url 'https://repo.huaweicloud.com/repository/maven/' }
-
-        // 或者添加腾讯云镜像
         maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        google()
+        mavenCentral()
+        maven { url = uri("https://www.jitpack.io") }
+        maven { url = uri("https://jitpack.io") }
 
-
-        flatDir {
-            dirs 'libs'
-        }
-        //Anythink(Core)
+        // TopOn SDK (AnyThink)
+        maven { url 'https://jfrog.anythinktech.com/artifactory/overseas_sdk' }
+        // 荣耀 HMS
+        maven { url 'https://developer.hihonor.com/repo' }
+        // Chartboost
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-mediation' }
+        // Pangle
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
+        // Mintegral
+        maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
+        // InMobi
+        maven { url 'https://dl.bintray.com/inmobi-sdk/maven' }
+        // 华为 HMS
+        maven { url 'https://developer.huawei.com/repo/' }
+        // Fyber / DT Exchange
+        maven { url 'https://android-sdk.is.com/' }
+        // IronSource
+        maven { url 'https://android-sdk.is.com/' }
+        /////////////////////////////////// TradPlus相关引用///////////////////////
+        // Ironsource
+        maven { url 'https://android-sdk.is.com/' }
+        // Pangle
         maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+            url 'https://artifact.bytedance.com/repository/pangle'
         }
-
-        //Ironsource
+        // Chartboost
+        maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
         maven {
-            url "https://android-sdk.is.com/"
-        }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Huawei
-        maven {
-            url "https://developer.huawei.com/repo/"
-        }
-
-        //Mintegral
-        maven {
-            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
-        }
-
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
-
-        //Chartboost
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-ads"
-        }
-        maven {
+            name "Chartboost Mediation’s maven repo"
             url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
         }
-        //Bigo
+        // Mintegral
+        //Launch GP market application， Android X Version
+        //If you fail to pull the code using gradle, add the maven warehouse configuration to the project root build.gradle file
         maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
     }
 }
