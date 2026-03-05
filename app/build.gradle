@@ -80,11 +80,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.fanda.magnisee"
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.6"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
