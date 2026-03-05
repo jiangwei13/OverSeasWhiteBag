@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
+        maven { url 'https://www.jitpack.io' }
         google()
         // TradPlus
         mavenCentral()
@@ -82,6 +83,7 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
 //    gradlePluginPortal()
+        maven { url 'https://www.jitpack.io' }
         google()
         mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
