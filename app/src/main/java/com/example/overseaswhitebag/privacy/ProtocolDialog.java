@@ -77,7 +77,7 @@ public class ProtocolDialog extends Dialog {
                 // 跳转到用户协议页面
                 Intent intent = new Intent(context, XieYiActivity.class);
                 intent.putExtra("TITLE", "用户协议");
-                intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
+                intent.putExtra("CONTENT", "https://sites.google.com/view/rasterloomdoc/home/terms");
                 context.startActivity(intent);
             }
 
@@ -96,7 +96,7 @@ public class ProtocolDialog extends Dialog {
                 // 跳转到隐私政策页面
                 Intent intent = new Intent(context, XieYiActivity.class);
                 intent.putExtra("TITLE", "隐私政策");
-                intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
+                intent.putExtra("CONTENT", "https://sites.google.com/view/rasterloomdoc/home/privacy");
                 context.startActivity(intent);
             }
 
