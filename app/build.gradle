@@ -15,18 +15,18 @@ apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 androidJunkCode {
     variantConfig {
         release {
-            packageBase = "com.tmlr.rstt.piqr"
-            packageCount = 57
-            activityCountPerPackage = 59
+            packageBase = "com.hjsl.kqqno.jny"
+            packageCount = 51
+            activityCountPerPackage = 66
             excludeActivityJavaFile = false
-            otherCountPerPackage = 78
-            methodCountPerClass = 35
-            resPrefix = "kdzi_"
-            drawableCount = 169
-            stringCount =  174
+            otherCountPerPackage = 92
+            methodCountPerClass = 22
+            resPrefix = "qdh_"
+            drawableCount = 148
+            stringCount =  127
         }
     }
-}                        
+}                                    
 
 
 
@@ -34,17 +34,17 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "tmlr.hti.caqq",
+                 "com.example.overseaswhitebag"  : "hjsl.ochyv.xcja",
                 ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "tmlr.fcgl.stuee",
-           "com.yao.tool.scenic.bean"   : "tmlr.fzurv.ivwpk",
-           "com.yao.tool.bean"                    : "tmlr.vikch.cygeu",
-           "com.clean.scanlibrary.bean"        : "tmlr.cvj.kne",
-           "com.p.b.base_api_net.base_api_bean"             : "tmlr.mkkne.zojxr",
-           "com.clean.pic_toolslibrary"                                 : "tmlr.wgrwf.xfgrb",
-           "com.p.b"                                        : "tmlr.uli.mkmu",
+           "com.example.overseaswhitebag.privacy"   : "hjsl.djbp.jorhy",
+           "com.yao.tool.scenic.bean"   : "hjsl.zvflb.rilp",
+           "com.yao.tool.bean"                    : "hjsl.ryw.jsfs",
+           "com.clean.scanlibrary.bean"        : "hjsl.alqpf.awsp",
+           "com.p.b.base_api_net.base_api_bean"             : "hjsl.bsbx.euej",
+           "com.clean.pic_toolslibrary"                                 : "hjsl.rox.fld",
+           "com.p.b"                                        : "hjsl.fthn.htelt",
            ]
 }
 
@@ -58,10 +58,10 @@ BlackObfuscator {
     depth 2
     // 需要混淆的包或者类(匹配前面一段)
     obfClass = [
-                "tmlr.hti.caqq", 
-                "tmlr.bwlsw.egltn",
-                "tmlr.wgrwf.xfgrb",
-                "tmlr.uli.mkmu", 
+                "hjsl.ochyv.xcja", 
+                "hjsl.ucmv.mfb",
+                "hjsl.rox.fld",
+                "hjsl.fthn.htelt", 
     ]
     // blackClass中的包或者类不会进行混淆(匹配前面一段)
     blackClass = ["top.niunaijun.black"]
