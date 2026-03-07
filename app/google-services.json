@@ -1,0 +1,30 @@
+
+{
+  "project_info": {
+    "project_number": "862341584161",
+    "project_id": "ledlight-21abf",
+    "storage_bucket": "ledlight-21abf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862341584161:android:712eaf7b1590eeb4c0da60",
+        "android_client_info": {
+          "package_name": "com.mukuled.ledlightgp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmHBegm7UcPu1rF7du5mxmEWyDn_Lpkxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
