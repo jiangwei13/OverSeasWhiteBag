@@ -14,3 +14,14 @@
 .cxx
 local.properties
 /.kotlin
+
+# IDE（替代原有零散的 .idea 条目）
+.idea/
+
+# 构建产物
+*.apk
+*.aab
+app/release/
+
+# 日志
+*.log
