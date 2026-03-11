@@ -49,28 +49,28 @@ class TheApplication : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
-            jumpIntent()
+//            jumpIntent()
             //归因
-//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-//                AjConstants.adjustAppToken,
-//                PhoneStatusUtils.judgeIsBlacklist(),
-//                object : CommonConfig.OnConfigInterface {
-//                    override fun onSuccess() {
-//                        //归因状态
-//                        MMKVUtils.setUserStatus(true)
-//                        //拉取数据
-//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-//                        com.p.b.common.doOnMainThreadIdle({
-//                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
-//                        })
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+                AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),
+                object : CommonConfig.OnConfigInterface {
+                    override fun onSuccess() {
+                        //归因状态
+                        MMKVUtils.setUserStatus(true)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        com.p.b.common.doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
+                        })
 //                        jumpIntent()
-//                    }
-//
-//                    override fun onFail() {
-//                        MMKVUtils.setUserStatus(false)
-//                    }
-//
-//                })
+                    }
+
+                    override fun onFail() {
+                        MMKVUtils.setUserStatus(false)
+                    }
+
+                })
 
         }
     }
