@@ -26,13 +26,13 @@ ext{
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "", //测试 topOne Id
             "TOPON_APPKEY"          : "", //测试 topOne key
-            "TradPlus_ID"           : "6F120308F42A023DB64783A6351DB611",// 正式
+            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 正式
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "vjjythxozc3k",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",
-            "ad_name":"ui.aar",
+            "ad_name":"test.aar",
     ]
 
 }

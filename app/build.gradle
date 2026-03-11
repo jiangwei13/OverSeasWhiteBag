@@ -99,8 +99,8 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-       // applicationId "com.saowen.magicdoc"
-        applicationId "com.nightguide.flashlightgp"
+        applicationId "com.saowen.magicdoc"
+//        applicationId "com.nightguide.flashlightgp"
         minSdk 28
         targetSdk 35
         versionCode 7
@@ -127,21 +127,35 @@ android {
         }
     }
     ndkVersion "28.0.12433566"
+//    signingConfigs {
+//        release {
+//            keyAlias 'lightgp'
+//            keyPassword '123456'
+//            storeFile file('lightgp.jks')
+//            storePassword '123456'
+//        }
+//        debug {
+//            keyAlias 'lightgp'
+//            keyPassword '123456'
+//            storeFile file('lightgp.jks')
+//            storePassword '123456'
+//        }
+//    }
+//测试
     signingConfigs {
         release {
-            keyAlias 'lightgp'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('lightgp.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'lightgp'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('lightgp.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
-
 
     buildTypes {
         release {
@@ -201,7 +215,8 @@ android {
 }
 
 dependencies {
-    implementation files('libs/shell.aar')
+
+    implementation files('libs/'+rootProject.ext.appConfig["ad_name"])
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation project(':toolsbox')

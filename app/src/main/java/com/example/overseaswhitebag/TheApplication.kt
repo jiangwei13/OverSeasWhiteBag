@@ -3,10 +3,13 @@ package com.example.overseaswhitebag
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
+import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.InitAdAndTj
 import com.p.b.base.BaseApplication
@@ -46,27 +49,28 @@ class TheApplication : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
+            jumpIntent()
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
-                        })
-
-                    }
-
-                    override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
-                    }
-
-                })
+//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+//                AjConstants.adjustAppToken,
+//                PhoneStatusUtils.judgeIsBlacklist(),
+//                object : CommonConfig.OnConfigInterface {
+//                    override fun onSuccess() {
+//                        //归因状态
+//                        MMKVUtils.setUserStatus(true)
+//                        //拉取数据
+//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//                        com.p.b.common.doOnMainThreadIdle({
+//                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
+//                        })
+//                        jumpIntent()
+//                    }
+//
+//                    override fun onFail() {
+//                        MMKVUtils.setUserStatus(false)
+//                    }
+//
+//                })
 
         }
     }
@@ -74,6 +78,7 @@ class TheApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
         TheApplication.Companion.insApp = this
+        appBaseContext = this
         com.p.b.base.APPContext.setApplication(this)
         CContext.setApplication(this)
         OverseaAppContext.setApplication(this)
@@ -100,12 +105,17 @@ class TheApplication : BaseApplication() {
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
+            df.vir(this);
             InitAdAndTj.initAdTj(TheApplication.Companion.insApp)
             HandleUtils.postDelay(TheApplication.Companion.fromNet, 10 * 1000)
+
         }
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this, null)
     }
+
+
+
 
     fun initActivityListener() {
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
@@ -132,4 +142,5 @@ class TheApplication : BaseApplication() {
     fun adJustCheckUpload() {
         doActivateDot()
     }
+
 }
