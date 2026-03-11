@@ -63,7 +63,7 @@ class TheApplication : BaseApplication() {
                         com.p.b.common.doOnMainThreadIdle({
                             InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
                         })
-//                        jumpIntent()
+                        jumpIntent()
                     }
 
                     override fun onFail() {
