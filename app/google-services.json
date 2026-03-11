@@ -1,3 +1,4 @@
+
 {
   "project_info": {
     "project_number": "170619423502",
@@ -9,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:170619423502:android:d5bb6e8f5a32a169cde55f",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.nightguide.flashlightgp"
         }
       },
       "oauth_client": [],
@@ -27,3 +28,5 @@
   ],
   "configuration_version": "1"
 }
+
+    
