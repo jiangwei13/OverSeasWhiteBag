@@ -15,21 +15,21 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "vjjythxozc3k";
+                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "9r4fadr9d1xc";
                 com.p.b.common.adjust.AjConstants.Companion.Login = "";
                 com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "edf7bo";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "refvlm";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "7z8jzk";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "t43z5p";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "eznnot";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mkoa46";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "9xu8ai";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "1700w9";
-                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "21gh1r";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="2s6dox";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "ba1ynt";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "dybuhb";
+                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "ygqq7z";
+                com.p.b.common.adjust.AjConstants.Companion.ipu = "tsqriu";
+                com.p.b.common.adjust.AjConstants.Companion.arpu = "iad17a";
+                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "mv6z6d";
+                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "c90xbb";
+                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "9ezm91";
+                com.p.b.common.adjust.AjConstants.Companion.blacklist = "9bbji3";
+                com.p.b.common.adjust.AjConstants.Companion.ad_request = "kt2wpz";
+                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "96yw7c";
+                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="wkhtof";
+                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "vxue5o";
+                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "ypy20k";
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="";
                 com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
             }
