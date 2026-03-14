@@ -10,6 +10,13 @@ import com.p.b.common.adjust.AjConstants
  */
 object AdjustTokens {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_edRWRU  = listOf("lLnVzbCx", "CzMUBriOQlvVaQb", "IPvWep").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_JiPOFDT  = arr_edRWRU .filter { it.length > 12 }
+         if (ad_JiPOFDT .isNotEmpty() && java.lang.System.currentTimeMillis() < 76) {
+             ad_JiPOFDT .forEach { _ ->  }
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")

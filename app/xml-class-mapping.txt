@@ -1,0 +1,11 @@
+dir mapping:
+
+
+class mapping:
+    com.example.overseaswhitebag.MainActivity -> xmup.dcl.qyw.PDS
+    com.p.b.base.BaseAdApplication -> xmup.dcl.qyw.ZKT
+    com.example.overseaswhitebag.TheApplication -> xmup.dcl.qyw.UZWN
+    com.p.b.op.re.LeAcRecever -> xmup.pur.eor.EAUQ
+    com.p.b.CustomStringFogImpl -> xmup.bngf.nog.IKW
+    com.baidu.mobads.sdk.api.BtFileAdWebActivity -> xmup.ohhn.xsm.TBU
+    com.baidu.mobads.sdk.api.OpenReceiver -> xmup.ohhn.xsm.DQWH
