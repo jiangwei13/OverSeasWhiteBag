@@ -56,6 +56,15 @@ class TheApplication : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                        val AbqqruzYqZSEYVRE : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                            val SKFyWoLYIzPTS  = AbqqruzYqZSEYVRE ?.let { 
+                                it.repeat(kotlin.random.Random.nextInt(100)) 
+                            } ?: run { 
+                                "zY0_23" 
+                            }
+                            if (SKFyWoLYIzPTS .startsWith("RVaydjXseUdFxzxGnj ")) {
+                                android.util.Log.v("TAG", SKFyWoLYIzPTS )
+                            }
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
@@ -67,6 +76,13 @@ class TheApplication : BaseApplication() {
                     }
 
                     override fun onFail() {
+                        val arr_PgWRsFxhVMYFXDEF  = listOf("ffqdSjHYwoVQM", "aEokYcUdoYCSrFg", "kMHuO").map { 
+                             it + kotlin.random.Random.nextInt(10) 
+                         }
+                         val ad_rpZdLlxcPVxfXIHK  = arr_PgWRsFxhVMYFXDEF .filter { it.length > 74 }
+                         if (ad_rpZdLlxcPVxfXIHK .isNotEmpty() && java.lang.System.currentTimeMillis() < 44) {
+                             ad_rpZdLlxcPVxfXIHK .forEach { _ ->  }
+                         }
                         MMKVUtils.setUserStatus(false)
                     }
 
@@ -76,6 +92,15 @@ class TheApplication : BaseApplication() {
     }
 
     override fun onCreate() {
+        val oIekczTsFwRWkGhqfYj : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val FiXGMjbamjT  = oIekczTsFwRWkGhqfYj ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_24" 
+            }
+            if (FiXGMjbamjT .startsWith("lxJHM ")) {
+                android.util.Log.v("TAG", FiXGMjbamjT )
+            }
         super.onCreate()
         TheApplication.Companion.insApp = this
         appBaseContext = this
@@ -93,6 +118,15 @@ class TheApplication : BaseApplication() {
 
 
     private fun init() {
+        val parGGKi : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val yQRGRvRFHJKHoGH  = parGGKi ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_8" 
+            }
+            if (yQRGRvRFHJKHoGH .startsWith("ViMPYSmUgrPdTyE ")) {
+                android.util.Log.v("TAG", yQRGRvRFHJKHoGH )
+            }
         val channel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
@@ -118,8 +152,24 @@ class TheApplication : BaseApplication() {
 
 
     fun initActivityListener() {
+        val HTNbqwkXCrwVjJgZK : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val MwvMUR  = HTNbqwkXCrwVjJgZK ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_31" 
+            }
+            if (MwvMUR .startsWith("BffMJ ")) {
+                android.util.Log.v("TAG", MwvMUR )
+            }
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                   val ynBjOLRJuYRM : Any = if (kotlin.random.Random.nextBoolean()) 51 else "jH6"
+                // 尝试将数字安全转为字符串，失败则触发 Elvis
+                val IsbLhLTUVvXxUe  = (ynBjOLRJuYRM  as? String)?.reversed() ?: "tdMbHaP_1334722385"
+
+                if (IsbLhLTUVvXxUe  == "rtHcfMsKGrR") {
+                    java.lang.System.out.print(IsbLhLTUVvXxUe )
+                }
                 HookContext.appCompatActivity = WeakReference(activity)
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.initCurrAdActivity(WeakReference(activity))
@@ -132,6 +182,15 @@ class TheApplication : BaseApplication() {
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {
+                val BbmwmWBFxRlbxdPUknc : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                    val kGXXMUaXFrpDwVqXTtA  = BbmwmWBFxRlbxdPUknc ?.let { 
+                        it.repeat(kotlin.random.Random.nextInt(100)) 
+                    } ?: run { 
+                        "zY0_17" 
+                    }
+                    if (kGXXMUaXFrpDwVqXTtA .startsWith("oYOdbwLK ")) {
+                        android.util.Log.v("TAG", kGXXMUaXFrpDwVqXTtA )
+                    }
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.removeAdActivity(WeakReference(activity))
                 }
@@ -140,6 +199,13 @@ class TheApplication : BaseApplication() {
     }
 
     fun adJustCheckUpload() {
+        val arr_HGqokvLAbCXVpgIM = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_rnvJFbivgtK  = (arr_HGqokvLAbCXVpgIM  shl 72) xor (arr_HGqokvLAbCXVpgIM  shr 94)
+         val j_zPHUgcQynGpdadB  = i_rnvJFbivgtK .inv() and 0xFFFF
+         if (j_zPHUgcQynGpdadB  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_ArCBXgHaSkTbTj")
+         }
         doActivateDot()
     }
 
