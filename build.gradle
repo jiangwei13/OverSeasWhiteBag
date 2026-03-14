@@ -34,7 +34,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         classpath "io.github.qq549631030:android-junk-code:1.3.4"
-        classpath "com.github.CodingGay:BlackObfuscator-ASPlugin:3.7"
+        // Local patched implementation lives in buildSrc so we can control Kotlin/<clinit> filtering.
         classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
 
         // Compose Compiler
@@ -100,4 +100,3 @@ allprojects {
 
 
 }
-

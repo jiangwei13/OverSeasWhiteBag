@@ -66,11 +66,16 @@ xmlClassGuard {
 // 加入dex混淆配置
 BlackObfuscator {
     // 是否启用（仅 release 构建时开启）
-   //  enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
-    enabled true
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
     // 混淆深度
     depth 2
-    // 需要混淆的包或者类(匹配前面一段)
+    // xmlClassGuard/packageChange 产出的映射，供本地插件回填原始/变更后的包名前缀
+    mappingFile = file("xml-class-mapping.txt")
+    // Kotlin object/companion 的静态初始化对 verifier 很敏感，dex 级变换默认跳过这些结构
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    // 这里只是候选包前缀，最终是否进入 dex 控制流混淆还会经过 Kotlin 安全过滤
     obfClass = ["ai.pgr", "b125.ztm",
                 "com.tencent.mm.plugin.tter",
                 "com.tencent.mm.plugin.out",
