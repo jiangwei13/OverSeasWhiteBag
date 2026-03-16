@@ -19,6 +19,13 @@ import java.util.Set;
 
 final class KotlinDexFilter {
     private static final String KOTLIN_METADATA = "Lkotlin/Metadata;";
+    private static final String[] COMPONENT_SUFFIXES = {
+        "Application", "Activity", "Fragment", "Service", "Receiver", "Provider", "Worker", "ViewModel"
+    };
+    private static final String[] CALLBACK_MARKERS = {
+        "ActivityLifecycleCallbacks", "LifecycleObserver", "LifecycleEventObserver", "DefaultLifecycleObserver",
+        "OnLifecycleEvent", "Callback", "Listener", "Observer", "Runnable", "Callable", "Factory", "Adapter"
+    };
 
     private KotlinDexFilter() {
     }
@@ -64,6 +71,16 @@ final class KotlinDexFilter {
 
     private static boolean shouldSkipClass(ClassDef classDef, boolean isKotlinClass, BlackObfuscatorExtension extension) {
         String descriptorName = classDef.getType();
+        String dottedName = ObfDex.toDottedName(descriptorName);
+        if (extension.isSkipInnerClasses() && descriptorName.contains("$")) {
+            return true;
+        }
+        if (extension.isSkipAndroidComponents() && isAndroidComponentClass(classDef, dottedName)) {
+            return true;
+        }
+        if (extension.isSkipCallbackLikeClasses() && isCallbackLikeClass(classDef, dottedName)) {
+            return true;
+        }
         if (extension.isSkipKotlinSingletonLikeClasses() && isKotlinClass) {
             if (descriptorName.contains("$Companion;")
                 || descriptorName.contains("$DefaultImpls;")
@@ -108,6 +125,53 @@ final class KotlinDexFilter {
             if ("INSTANCE".equals(field.getName())
                 && AccessFlags.STATIC.isSet(field.getAccessFlags())
                 && classDef.getType().equals(field.getType())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isAndroidComponentClass(ClassDef classDef, String dottedName) {
+        if (hasMarker(dottedName, COMPONENT_SUFFIXES)) {
+            return true;
+        }
+        String superclass = ObfDex.toDottedName(classDef.getSuperclass());
+        if (superclass == null) {
+            return false;
+        }
+        return superclass.startsWith("android.")
+            || superclass.startsWith("androidx.")
+            || superclass.startsWith("com.google.firebase.messaging.")
+            || superclass.startsWith("androidx.work.")
+            || hasMarker(superclass, COMPONENT_SUFFIXES);
+    }
+
+    private static boolean isCallbackLikeClass(ClassDef classDef, String dottedName) {
+        if (hasMarker(dottedName, CALLBACK_MARKERS)) {
+            return true;
+        }
+        for (String iface : classDef.getInterfaces()) {
+            String dottedInterface = ObfDex.toDottedName(iface);
+            if (dottedInterface == null) {
+                continue;
+            }
+            if (dottedInterface.startsWith("android.")
+                || dottedInterface.startsWith("androidx.lifecycle.")
+                || dottedInterface.startsWith("java.lang.")
+                || dottedInterface.startsWith("kotlin.jvm.functions.")
+                || hasMarker(dottedInterface, CALLBACK_MARKERS)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean hasMarker(String name, String[] markers) {
+        if (name == null || name.isEmpty()) {
+            return false;
+        }
+        for (String marker : markers) {
+            if (name.endsWith(marker) || name.contains("." + marker) || name.contains("$" + marker)) {
                 return true;
             }
         }

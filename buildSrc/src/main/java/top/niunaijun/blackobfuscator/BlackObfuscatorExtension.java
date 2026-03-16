@@ -16,6 +16,9 @@ public class BlackObfuscatorExtension {
     private boolean skipStaticInitializer = true;
     private boolean skipKotlinSynthetic = true;
     private boolean skipKotlinSingletonLikeClasses = true;
+    private boolean skipInnerClasses = true;
+    private boolean skipAndroidComponents = true;
+    private boolean skipCallbackLikeClasses = true;
 
     public BlackObfuscatorExtension(Project project) {
         this.project = project;
@@ -159,9 +162,60 @@ public class BlackObfuscatorExtension {
             ", skipStaticInitializer=" + skipStaticInitializer +
             ", skipKotlinSynthetic=" + skipKotlinSynthetic +
             ", skipKotlinSingletonLikeClasses=" + skipKotlinSingletonLikeClasses +
+            ", skipInnerClasses=" + skipInnerClasses +
+            ", skipAndroidComponents=" + skipAndroidComponents +
+            ", skipCallbackLikeClasses=" + skipCallbackLikeClasses +
             ", obfClassCount=" + obfClass.length +
             ", blackClassCount=" + blackClass.length +
             '}';
+    }
+
+    public boolean getSkipInnerClasses() {
+        return skipInnerClasses;
+    }
+
+    public boolean isSkipInnerClasses() {
+        return skipInnerClasses;
+    }
+
+    public void setSkipInnerClasses(boolean skipInnerClasses) {
+        this.skipInnerClasses = skipInnerClasses;
+    }
+
+    public void skipInnerClasses(boolean skipInnerClasses) {
+        setSkipInnerClasses(skipInnerClasses);
+    }
+
+    public boolean getSkipAndroidComponents() {
+        return skipAndroidComponents;
+    }
+
+    public boolean isSkipAndroidComponents() {
+        return skipAndroidComponents;
+    }
+
+    public void setSkipAndroidComponents(boolean skipAndroidComponents) {
+        this.skipAndroidComponents = skipAndroidComponents;
+    }
+
+    public void skipAndroidComponents(boolean skipAndroidComponents) {
+        setSkipAndroidComponents(skipAndroidComponents);
+    }
+
+    public boolean getSkipCallbackLikeClasses() {
+        return skipCallbackLikeClasses;
+    }
+
+    public boolean isSkipCallbackLikeClasses() {
+        return skipCallbackLikeClasses;
+    }
+
+    public void setSkipCallbackLikeClasses(boolean skipCallbackLikeClasses) {
+        this.skipCallbackLikeClasses = skipCallbackLikeClasses;
+    }
+
+    public void skipCallbackLikeClasses(boolean skipCallbackLikeClasses) {
+        setSkipCallbackLikeClasses(skipCallbackLikeClasses);
     }
 
     private static String[] sanitize(String... values) {
