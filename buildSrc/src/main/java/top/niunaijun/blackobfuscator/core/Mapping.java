@@ -28,9 +28,19 @@ public class Mapping {
         }
         try {
             List<String> lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
+            boolean sawSectionHeader = false;
+            boolean inClassMapping = false;
             for (String line : lines) {
                 String trimmed = line == null ? "" : line.trim();
-                if (trimmed.isEmpty() || trimmed.startsWith("#") || trimmed.endsWith(":")) {
+                if (trimmed.isEmpty() || trimmed.startsWith("#")) {
+                    continue;
+                }
+                if (trimmed.endsWith(":")) {
+                    sawSectionHeader = true;
+                    inClassMapping = "class mapping:".equalsIgnoreCase(trimmed);
+                    continue;
+                }
+                if (sawSectionHeader && !inClassMapping) {
                     continue;
                 }
                 int arrowIndex = trimmed.indexOf("->");
