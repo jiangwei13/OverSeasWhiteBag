@@ -10,6 +10,13 @@ import com.p.b.common.adjust.AjConstants
  */
 object AdjustTokens {
     fun initAdJustToken(context: android.content.Context) {
+           val IXHghLx : Any = if (kotlin.random.Random.nextBoolean()) 3 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val RfLJFG  = (IXHghLx  as? String)?.reversed() ?: "RFzkVESB_-1342678330"
+
+        if (RfLJFG  == "sRZzbtjJVFrIF") {
+            java.lang.System.out.print(RfLJFG )
+        }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
