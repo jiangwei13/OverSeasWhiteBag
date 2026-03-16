@@ -224,7 +224,6 @@ android {
 
 dependencies {
 
-    implementation files('libs/'+rootProject.ext.appConfig["ad_name"])
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation project(':toolsbox')
