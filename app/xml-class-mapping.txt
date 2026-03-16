@@ -1,41 +1,4 @@
 dir mapping:
-	com.example.overseaswhitebag.privacy -> xmup.bsh.fya
-	com.example.overseaswhitebag.common.utils -> xmup.bheio.xdfkm
-	com.p.b.base -> xmup.tbu.dqw
-	com.p.b.base_api_net -> xmup.ncfy.lhuy
-	com.p.b.common -> xmup.vdlel.btq
-	com.p.b.common.fcm -> xmup.tuz.wnpur
-	com.p.b.common.firebase -> xmup.hymtg.pdszk
-	com.p.b.http -> xmup.itqk.bof
-	com.p.b.master -> xmup.upzb.wqpoo
-	com.p.b.mark -> xmup.qlq.ppool
-	com.p.b.op -> xmup.uhwxt.pmxh
-	com.p.b.outpage -> xmup.eor.eau
-	com.p.b.pl223 -> xmup.rbzyl.lchd
+
 
 class mapping:
-	com.example.overseaswhitebag.MainActivity -> xmup.dcl.qyw.VDFA
-	com.example.overseaswhitebag.TheApplication -> xmup.dcl.qyw.CFGS
-	com.example.overseaswhitebag.AdjustTokens -> xmup.dcl.qyw.QOGS
-	com.example.overseaswhitebag.privacy.SplashActivity -> xmup.bsh.fya.ONBV
-	com.example.overseaswhitebag.privacy.XieYiActivity -> xmup.bsh.fya.BRAO
-	com.example.overseaswhitebag.common.utils.MobInitProvider -> xmup.bheio.xdfkm.XQWG
-	com.p.b.base.BaseApplication -> xmup.tbu.dqw.ZFR
-	com.p.b.AdTransitActivity -> xmup.wug.dlk.YMQ
-	com.p.b.DisplayUtil -> xmup.dfs.bdm.XBNI
-	com.p.b.common.DisplayUtils -> xmup.vdlel.btq.GMLF
-	com.p.b.common.RomUtils -> xmup.vdlel.btq.PAJ
-	com.p.b.common.fcm.FCMInitUtils -> xmup.tuz.wnpur.CUJS
-	com.p.b.common.fcm.FCMService -> xmup.tuz.wnpur.BESB
-	com.p.b.common.firebase.FireBaseInitUtils -> xmup.hymtg.pdszk.WDK
-	com.p.b.http.HarmonyUtils -> xmup.itqk.bof.LSJE
-	com.p.b.mark.TfIntentActivity -> xmup.qlq.ppool.SNY
-	com.p.b.outpage.LeAcRecever -> xmup.eor.eau.JYP
-	com.p.b.outpage.TfIntentActivity -> xmup.eor.eau.CBWX
-	com.p.b.outpage.UnloadMenuActivity -> xmup.eor.eau.BDO
-	com.p.b.outpage.RemoveMenuActivity -> xmup.eor.eau.DBJU
-	com.p.b.op.utils.ChanUtils -> xmup.uhwxt.pmxh.BPA
-	com.p.b.pl223.hhoosstt.ScreenUtils -> xmup.rbzyl.lchd.IVO
-	com.p.b.CustomStringFogImpl -> xmup.bngf.nog.IKW
-	com.baidu.mobads.sdk.api.BtFileAdWebActivity -> xmup.ohhn.xsm.GEMX
-	com.baidu.mobads.sdk.api.OpenReceiver -> xmup.ohhn.xsm.ZWLW

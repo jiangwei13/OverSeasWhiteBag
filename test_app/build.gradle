@@ -6,7 +6,6 @@ plugins {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
-apply plugin: "org.jetbrains.kotlin.plugin.compose"
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
 apply plugin: 'stringfog'
@@ -41,7 +40,7 @@ xmlClassGuard {
 }
 
 BlackObfuscator {
-    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+    enabled true
     depth 2
     obfClass = ["com.test"]
     blackClass = ["top.niunaijun.black"]
@@ -110,10 +109,8 @@ android {
                 "-Xjvm-default=all",
         ]
     }
-    buildFeatures {
-        compose true
-    }
 }
+
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
