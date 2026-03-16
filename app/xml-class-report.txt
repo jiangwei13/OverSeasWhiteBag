@@ -1,0 +1,45 @@
+           packageChange count: 2
+           moveDir count: 13
+           classMapping count: 25
+
+           moveDir targets:
+            - com.example.overseaswhitebag.privacy -> xmup.bsh.fya
+- com.example.overseaswhitebag.common.utils -> xmup.bheio.xdfkm
+- com.p.b.base -> xmup.tbu.dqw
+- com.p.b.base_api_net -> xmup.ncfy.lhuy
+- com.p.b.common -> xmup.vdlel.btq
+- com.p.b.common.fcm -> xmup.tuz.wnpur
+- com.p.b.common.firebase -> xmup.hymtg.pdszk
+- com.p.b.http -> xmup.itqk.bof
+- com.p.b.master -> xmup.upzb.wqpoo
+- com.p.b.mark -> xmup.qlq.ppool
+- com.p.b.op -> xmup.uhwxt.pmxh
+- com.p.b.outpage -> xmup.eor.eau
+- com.p.b.pl223 -> xmup.rbzyl.lchd
+
+           classMapping targets:
+            - com.example.overseaswhitebag.MainActivity
+- com.example.overseaswhitebag.TheApplication
+- com.example.overseaswhitebag.AdjustTokens
+- com.example.overseaswhitebag.privacy.SplashActivity
+- com.example.overseaswhitebag.privacy.XieYiActivity
+- com.example.overseaswhitebag.common.utils.MobInitProvider
+- com.p.b.base.BaseApplication
+- com.p.b.AdTransitActivity
+- com.p.b.DisplayUtil
+- com.p.b.common.DisplayUtils
+- com.p.b.common.RomUtils
+- com.p.b.common.fcm.FCMInitUtils
+- com.p.b.common.fcm.FCMService
+- com.p.b.common.firebase.FireBaseInitUtils
+- com.p.b.http.HarmonyUtils
+- com.p.b.mark.TfIntentActivity
+- com.p.b.outpage.LeAcRecever
+- com.p.b.outpage.TfIntentActivity
+- com.p.b.outpage.UnloadMenuActivity
+- com.p.b.outpage.RemoveMenuActivity
+- com.p.b.op.utils.ChanUtils
+- com.p.b.pl223.hhoosstt.ScreenUtils
+- com.p.b.CustomStringFogImpl
+- com.baidu.mobads.sdk.api.BtFileAdWebActivity
+- com.baidu.mobads.sdk.api.OpenReceiver

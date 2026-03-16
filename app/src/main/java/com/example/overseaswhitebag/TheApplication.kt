@@ -56,6 +56,15 @@ class TheApplication : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                        val QPzAKH : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                            val xltxknhJlxVSI  = QPzAKH ?.let { 
+                                it.repeat(kotlin.random.Random.nextInt(100)) 
+                            } ?: run { 
+                                "zY0_49" 
+                            }
+                            if (xltxknhJlxVSI .startsWith("IXSHutYJcPSTJo ")) {
+                                android.util.Log.v("TAG", xltxknhJlxVSI )
+                            }
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
@@ -67,6 +76,13 @@ class TheApplication : BaseApplication() {
                     }
 
                     override fun onFail() {
+                           val LrfGN : Any = if (kotlin.random.Random.nextBoolean()) 61 else "jH6"
+                        // 尝试将数字安全转为字符串，失败则触发 Elvis
+                        val GtWKvIUK  = (LrfGN  as? String)?.reversed() ?: "pDXXMCFcYbT_73684071"
+
+                        if (GtWKvIUK  == "KwcblJvtxHBq") {
+                            java.lang.System.out.print(GtWKvIUK )
+                        }
                         MMKVUtils.setUserStatus(false)
                     }
 
@@ -76,6 +92,13 @@ class TheApplication : BaseApplication() {
     }
 
     override fun onCreate() {
+           val xSSCGWyS : Any = if (kotlin.random.Random.nextBoolean()) 51 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val CpZPBDopN  = (xSSCGWyS  as? String)?.reversed() ?: "SIgogwx_1772502229"
+
+        if (CpZPBDopN  == "ILRksbGrUsHhOwZWGQd") {
+            java.lang.System.out.print(CpZPBDopN )
+        }
         super.onCreate()
         TheApplication.Companion.insApp = this
         appBaseContext = this
@@ -93,6 +116,13 @@ class TheApplication : BaseApplication() {
 
 
     private fun init() {
+        val arr_IYWLr = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_aVJquOUVhHQJkMpuLFn  = (arr_IYWLr  shl 51) xor (arr_IYWLr  shr 36)
+         val j_pynTxbJgtCxAEjAZkNA  = i_aVJquOUVhHQJkMpuLFn .inv() and 0xFFFF
+         if (j_pynTxbJgtCxAEjAZkNA  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_qwtokpxaS")
+         }
         val channel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
@@ -118,8 +148,22 @@ class TheApplication : BaseApplication() {
 
 
     fun initActivityListener() {
+        val arr_RfzdUGmGUHZfdA  = listOf("MSGOsgUgH", "oIEOuSiEnL", "zVExdgkuXLej").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_MmhSelUR  = arr_RfzdUGmGUHZfdA .filter { it.length > 93 }
+         if (ad_MmhSelUR .isNotEmpty() && java.lang.System.currentTimeMillis() < 74) {
+             ad_MmhSelUR .forEach { _ ->  }
+         }
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                   val dijvZfJ : Any = if (kotlin.random.Random.nextBoolean()) 43 else "jH6"
+                // 尝试将数字安全转为字符串，失败则触发 Elvis
+                val khGaJOtyUFHnVX  = (dijvZfJ  as? String)?.reversed() ?: "rudlbBJYPUvxWzaE_1663614029"
+
+                if (khGaJOtyUFHnVX  == "KOPcSZCQBkerCWcoiD") {
+                    java.lang.System.out.print(khGaJOtyUFHnVX )
+                }
                 HookContext.appCompatActivity = WeakReference(activity)
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.initCurrAdActivity(WeakReference(activity))
@@ -132,6 +176,13 @@ class TheApplication : BaseApplication() {
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {
+                   val FwNOCykoNQspv : Any = if (kotlin.random.Random.nextBoolean()) 9 else "jH6"
+                // 尝试将数字安全转为字符串，失败则触发 Elvis
+                val HZetPNEyiU  = (FwNOCykoNQspv  as? String)?.reversed() ?: "NPOUqgbnBmTkzhO_1361949354"
+
+                if (HZetPNEyiU  == "hgBbIWOXAjjy") {
+                    java.lang.System.out.print(HZetPNEyiU )
+                }
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.removeAdActivity(WeakReference(activity))
                 }
@@ -140,6 +191,13 @@ class TheApplication : BaseApplication() {
     }
 
     fun adJustCheckUpload() {
+        val arr_AoSLejiYGVocxQHXSl = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_bzAVvmc  = (arr_AoSLejiYGVocxQHXSl  shl 64) xor (arr_AoSLejiYGVocxQHXSl  shr 28)
+         val j_VeMJalWXAZqDRo  = i_bzAVvmc .inv() and 0xFFFF
+         if (j_VeMJalWXAZqDRo  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_IopMqiRTWSrBcEJ")
+         }
         doActivateDot()
     }
 

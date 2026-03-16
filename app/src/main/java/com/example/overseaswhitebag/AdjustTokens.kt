@@ -10,6 +10,13 @@ import com.p.b.common.adjust.AjConstants
  */
 object AdjustTokens {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_oxeWbQFoYzv = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_ITTKzGOtN  = (arr_oxeWbQFoYzv  shl 61) xor (arr_oxeWbQFoYzv  shr 41)
+         val j_YypfNiHaapgsvQY  = i_ITTKzGOtN .inv() and 0xFFFF
+         if (j_YypfNiHaapgsvQY  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_VsfppENNDO")
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
