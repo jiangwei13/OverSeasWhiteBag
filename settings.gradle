@@ -234,3 +234,5 @@ project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
 //include ':oversea_utils'
 include':aar_library:aar_name'
+
+include ':test_app'

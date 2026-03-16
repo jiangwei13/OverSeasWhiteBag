@@ -1,0 +1,124 @@
+import com.github.megatronking.stringfog.plugin.StringFogMode
+import com.p.b.CustomKeyGenerator
+
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'android-junk-code'
+apply plugin: "org.jetbrains.kotlin.plugin.compose"
+apply plugin: 'top.niunaijun.blackobfuscator'
+apply plugin: 'xml-class-guard'
+apply plugin: 'stringfog'
+apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
+
+androidJunkCode {
+    variantConfig {
+        release {
+            packageBase = "com.test.junk"
+            packageCount = 5
+            activityCountPerPackage = 5
+            excludeActivityJavaFile = false
+            otherCountPerPackage = 5
+            methodCountPerClass = 5
+            resPrefix = "test_"
+            drawableCount = 5
+            stringCount = 5
+        }
+    }
+}
+
+xmlClassGuard {
+    mappingFile = file("xml-class-mapping.txt")
+    packageChange = [
+                 "com.example.overseaswhitebag"  : "com.test.pkg",
+                 "com.p.b"  : "com.test.ad",
+                ]
+    moveDir = [
+           "com.example.overseaswhitebag.privacy"   : "com.test.weather",
+           "com.example.overseaswhitebag.common.utils" : "com.test.bean",
+           ]
+}
+
+BlackObfuscator {
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+    depth 2
+    obfClass = ["com.test"]
+    blackClass = ["top.niunaijun.black"]
+}
+
+stringfog {
+    enable true
+    debug false
+    implementation 'com.p.b.CustomStringFogImpl'
+    kg new CustomKeyGenerator()
+    mode StringFogMode.base64
+}
+
+android {
+    namespace 'com.example.overseaswhitebag'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.saowen.magicdoc.test"
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName "1.0.0"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'magicdoc'
+            keyPassword '123456'
+            storeFile file('../app/magicdoc.jks')
+            storePassword '123456'
+        }
+        debug {
+            keyAlias 'magicdoc'
+            keyPassword '123456'
+            storeFile file('../app/magicdoc.jks')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xjvm-default=all",
+        ]
+    }
+    buildFeatures {
+        compose true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+    implementation 'com.github.megatronking.stringfog:interface:5.0.0'
+}
