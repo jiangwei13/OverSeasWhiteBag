@@ -49,7 +49,7 @@ BlackObfuscator {
 stringfog {
     enable true
     debug false
-    implementation 'com.p.b.CustomStringFogImpl'
+    implementation 'com.stringfog.impl.CustomStringFogImpl'
     kg new CustomKeyGenerator()
     mode StringFogMode.base64
 }
@@ -118,4 +118,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.github.megatronking.stringfog:xor:5.0.0'
     implementation 'com.github.megatronking.stringfog:interface:5.0.0'
+
+    implementation project(':oversea_base_module')
 }
