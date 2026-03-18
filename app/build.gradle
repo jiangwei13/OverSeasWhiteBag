@@ -172,6 +172,10 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            // 禁用构建期间 Crashlytics mapping 自动上传
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
         debug {
             minifyEnabled false
