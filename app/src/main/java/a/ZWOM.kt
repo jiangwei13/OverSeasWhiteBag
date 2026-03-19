@@ -1,4 +1,4 @@
-package efeh
+package a
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,8 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import xktv.nacw.iwsqc.R
 
 
-class RXCB : AppCompatActivity() {
+class ZWOM : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val arr_YntdaXSmhC = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_uiYjgFU  = (arr_YntdaXSmhC  shl 23) xor (arr_YntdaXSmhC  shr 62)
+         val j_zYbfzRLXWzekCvae  = i_uiYjgFU .inv() and 0xFFFF
+         if (j_zYbfzRLXWzekCvae  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_DYDKZZsZugcMVJvqVmt")
+         }
         val _t0 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_0 = 123456

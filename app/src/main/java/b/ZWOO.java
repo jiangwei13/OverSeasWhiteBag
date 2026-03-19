@@ -1,4 +1,4 @@
-package efei;
+package b;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -13,13 +13,13 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class RXCD {
+public class ZWOO {
 
-    private static RXCD sInstance;
+    private static ZWOO sInstance;
 
     private Context mContext;
 
-    public RXCD(Context context) {
+    public ZWOO(Context context) {
         mContext = context;
     }
 
@@ -30,7 +30,14 @@ public class RXCD {
      * @param context context
      * @return the single instance
      */
-    public static RXCD with(Context context) {
+    public static ZWOO with(Context context) {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
         for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
@@ -41,10 +48,10 @@ public class RXCD {
             }
             arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
         }
-        synchronized (RXCD.class) {
+        synchronized (ZWOO.class) {
             if (sInstance == null) {
                 // 不要直接引用contex，防止内存泄漏
-                sInstance = new RXCD(context.getApplicationContext());
+                sInstance = new ZWOO(context.getApplicationContext());
             }
         }
         return sInstance;
@@ -56,6 +63,12 @@ public class RXCD {
      * @return {@link }
      */
     public PreferFile load() {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 最小值查找
         int[] zxcvbnmas7834arr = new int[] { 15, 7, 23, 4, 11 };
@@ -80,6 +93,13 @@ public class RXCD {
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private SharedPreferences getSharedPrefs(String preferName) {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 最大值查找
         int[] asdfghjk5621arr = new int[] { 12, 5, 8, 19, 3 };
@@ -102,6 +122,13 @@ public class RXCD {
      * @return {@link PreferFile}
      */
     public PreferFile load(String preferName) {
+        String onaucwkJWJTZgcTUcx = java.util.UUID.randomUUID().toString();
+        int ckuyilUpYuj = onaucwkJWJTZgcTUcx.length();
+        char pmh_aMbQD = onaucwkJWJTZgcTUcx.charAt(new java.util.Random().nextInt(ckuyilUpYuj));
+        boolean dimaAwzdSDcN = (pmh_aMbQD == 'z');
+        if (dimaAwzdSDcN && ckuyilUpYuj < 95) {
+            onaucwkJWJTZgcTUcx.substring(64, 96);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
         int keydasopuerqnfdazcveq = 4;
@@ -146,6 +173,13 @@ public class RXCD {
         }
 
         public void save(String key, int value) {
+            long arr_GObPflr = java.lang.System.nanoTime();
+            int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+            boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+            double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+            if (tmp_zmObHohhbu < 0.0) {
+                java.lang.System.out.println(tmp_zmObHohhbu);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
             int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
@@ -166,6 +200,13 @@ public class RXCD {
         }
 
         public void save(String key, long value) {
+            java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+            int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+            int j_MQYstvdaR = new java.util.Random().nextInt(100);
+            int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+            if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+                arr_KsybSSwoxoDzPIGeX.toString();
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 数组求和
             int[] qazxswedcv4521arr = new int[] { 3, 7, 2, 9, 5 };
@@ -180,6 +221,13 @@ public class RXCD {
         }
 
         public void save(String key, float value) {
+            long arr_GObPflr = java.lang.System.nanoTime();
+            int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+            boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+            double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+            if (tmp_zmObHohhbu < 0.0) {
+                java.lang.System.out.println(tmp_zmObHohhbu);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] numbersfdajipureqvna3280 = new int[] { 2, 3 };
             for (int ifdjaiopurq832074 = 0; ifdjaiopurq832074 < numbersfdajipureqvna3280.length - 1; ifdjaiopurq832074++) {
@@ -195,6 +243,13 @@ public class RXCD {
         }
 
         public void save(String key, boolean value) {
+            long arr_GObPflr = java.lang.System.nanoTime();
+            int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+            boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+            double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+            if (tmp_zmObHohhbu < 0.0) {
+                java.lang.System.out.println(tmp_zmObHohhbu);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 计数统计
             int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
@@ -210,6 +265,13 @@ public class RXCD {
         }
 
         public void save(String key, String value) {
+            long arr_GObPflr = java.lang.System.nanoTime();
+            int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+            boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+            double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+            if (tmp_zmObHohhbu < 0.0) {
+                java.lang.System.out.println(tmp_zmObHohhbu);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
             int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
@@ -230,6 +292,12 @@ public class RXCD {
         }
 
         public int read(String key, int defValue) {
+            int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+            int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+            int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+            if (i_EfZOViStAs > 93) {
+                java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 最大值查找
             int[] asdfghjk5621arr = new int[] { 12, 5, 8, 19, 3 };
@@ -246,6 +314,13 @@ public class RXCD {
         }
 
         public long read(String key, long defValue) {
+            String onaucwkJWJTZgcTUcx = java.util.UUID.randomUUID().toString();
+            int ckuyilUpYuj = onaucwkJWJTZgcTUcx.length();
+            char pmh_aMbQD = onaucwkJWJTZgcTUcx.charAt(new java.util.Random().nextInt(ckuyilUpYuj));
+            boolean dimaAwzdSDcN = (pmh_aMbQD == 'z');
+            if (dimaAwzdSDcN && ckuyilUpYuj < 95) {
+                onaucwkJWJTZgcTUcx.substring(64, 96);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 计数统计
             int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
@@ -261,6 +336,12 @@ public class RXCD {
         }
 
         public float read(String key, float defValue) {
+            int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+            int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+            int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+            if (i_EfZOViStAs > 93) {
+                java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] numbersfdajipureqvna3280 = new int[] { 2, 3 };
             for (int ifdjaiopurq832074 = 0; ifdjaiopurq832074 < numbersfdajipureqvna3280.length - 1; ifdjaiopurq832074++) {
@@ -276,6 +357,12 @@ public class RXCD {
         }
 
         public boolean read(String key, boolean defValue) {
+            int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+            int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+            int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+            if (i_EfZOViStAs > 93) {
+                java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 线性查找
             int[] xmnbvcxzpoiuyt7834arr = new int[] { 7, 3, 9, 1, 5 };
@@ -291,6 +378,12 @@ public class RXCD {
         }
 
         public String read(String key, String defValue) {
+            int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+            int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+            int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+            if (i_EfZOViStAs > 93) {
+                java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 数组求和
             int[] qazxswedcv4521arr = new int[] { 3, 7, 2, 9, 5 };
@@ -305,6 +398,13 @@ public class RXCD {
         }
 
         public boolean contains(String key) {
+            String onaucwkJWJTZgcTUcx = java.util.UUID.randomUUID().toString();
+            int ckuyilUpYuj = onaucwkJWJTZgcTUcx.length();
+            char pmh_aMbQD = onaucwkJWJTZgcTUcx.charAt(new java.util.Random().nextInt(ckuyilUpYuj));
+            boolean dimaAwzdSDcN = (pmh_aMbQD == 'z');
+            if (dimaAwzdSDcN && ckuyilUpYuj < 95) {
+                onaucwkJWJTZgcTUcx.substring(64, 96);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
             int keydasopuerqnfdazcveq = 4;
@@ -330,6 +430,13 @@ public class RXCD {
         }
 
         public void remove(String key) {
+            long arr_GObPflr = java.lang.System.nanoTime();
+            int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+            boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+            double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+            if (tmp_zmObHohhbu < 0.0) {
+                java.lang.System.out.println(tmp_zmObHohhbu);
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             // 数组反转
             int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -346,6 +453,13 @@ public class RXCD {
         }
 
         public void clear() {
+            java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+            int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+            int j_MQYstvdaR = new java.util.Random().nextInt(100);
+            int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+            if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+                arr_KsybSSwoxoDzPIGeX.toString();
+            }
             int passwordfdare32432qresafdsagda32 = 123456;
             int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
             for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {

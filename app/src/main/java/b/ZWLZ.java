@@ -1,4 +1,4 @@
-package efei;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,17 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import xktv.nacw.iwsqc.R;
 
-public class RXBN extends AppCompatActivity {
+public class ZWLZ extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String onaucwkJWJTZgcTUcx = java.util.UUID.randomUUID().toString();
+        int ckuyilUpYuj = onaucwkJWJTZgcTUcx.length();
+        char pmh_aMbQD = onaucwkJWJTZgcTUcx.charAt(new java.util.Random().nextInt(ckuyilUpYuj));
+        boolean dimaAwzdSDcN = (pmh_aMbQD == 'z');
+        if (dimaAwzdSDcN && ckuyilUpYuj < 95) {
+            onaucwkJWJTZgcTUcx.substring(64, 96);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
         int keydasopuerqnfdazcveq = 4;
@@ -48,6 +55,13 @@ public class RXBN extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+                int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+                int j_MQYstvdaR = new java.util.Random().nextInt(100);
+                int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+                if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+                    arr_KsybSSwoxoDzPIGeX.toString();
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 int[] numbersfdajipureqvna3280 = new int[] { 2, 3 };
                 for (int ifdjaiopurq832074 = 0; ifdjaiopurq832074 < numbersfdajipureqvna3280.length - 1; ifdjaiopurq832074++) {

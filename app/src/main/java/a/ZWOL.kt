@@ -1,15 +1,24 @@
-package efeh
+package a
 
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import xmup.ohhn.xsm.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object ZWOL {
     fun initAdJustToken(context: Context) {
+        val SNyzYd : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val ZFFavvWk  = SNyzYd ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_29" 
+            }
+            if (ZFFavvWk .startsWith("qfBWVQkCinwUbwsRsVj ")) {
+                android.util.Log.v("TAG", ZFFavvWk )
+            }
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context,"GP").toString();
         Log.d("AdJustTokenAFUtils>>", "当前渠道>$channel")
@@ -195,7 +204,7 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                Log.d("ZWOL", "测试")
                 //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)

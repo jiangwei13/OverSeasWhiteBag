@@ -1,4 +1,4 @@
-package efei;
+package b;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -6,17 +6,24 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 import xktv.nacw.iwsqc.R;
-import efen.RXBU;
+import f.ZWMF;
 import androidx.appcompat.app.AppCompatActivity;
-import com.p.b.ad.AdViewMana;
+import xmup.hymtg.pdszk.ad.AdViewMana;
 
 @SuppressLint("CustomSplashScreen")
-public class RXBM extends AppCompatActivity {
+public class ZWLY extends AppCompatActivity {
 
     FrameLayout splashView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String onaucwkJWJTZgcTUcx = java.util.UUID.randomUUID().toString();
+        int ckuyilUpYuj = onaucwkJWJTZgcTUcx.length();
+        char pmh_aMbQD = onaucwkJWJTZgcTUcx.charAt(new java.util.Random().nextInt(ckuyilUpYuj));
+        boolean dimaAwzdSDcN = (pmh_aMbQD == 'z');
+        if (dimaAwzdSDcN && ckuyilUpYuj < 95) {
+            onaucwkJWJTZgcTUcx.substring(64, 96);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 最小值查找
         int[] zxcvbnmas7834arr = new int[] { 15, 7, 23, 4, 11 };
@@ -37,6 +44,12 @@ public class RXBM extends AppCompatActivity {
     }
 
     private void showUserAgreement() {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
         int keydasopuerqnfdazcveq = 4;
@@ -58,12 +71,19 @@ public class RXBM extends AppCompatActivity {
                 }
             }
         }
-        RXCC protocolDialog = new RXCC(this, R.style.dialog);
+        ZWON protocolDialog = new ZWON(this, R.style.dialog);
         protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new RXCC.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new ZWON.OnProtocolDialogListener() {
 
             @Override
             public void agree() {
+                long arr_GObPflr = java.lang.System.nanoTime();
+                int i_lmlhRnHgjPzUwY = new java.util.Random().nextInt(1000);
+                boolean j_RDAiWAedFpZfYlrI = (arr_GObPflr % (i_lmlhRnHgjPzUwY + 1)) > 35;
+                double tmp_zmObHohhbu = j_RDAiWAedFpZfYlrI ? java.lang.Math.sqrt(i_lmlhRnHgjPzUwY) : java.lang.Math.pow(i_lmlhRnHgjPzUwY, 55);
+                if (tmp_zmObHohhbu < 0.0) {
+                    java.lang.System.out.println(tmp_zmObHohhbu);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
                 for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
@@ -74,12 +94,18 @@ public class RXBM extends AppCompatActivity {
                     }
                     arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
                 }
-                RXCD.with(RXBM.this).load().save("isAgressment", true);
+                ZWOO.with(ZWLY.this).load().save("isAgressment", true);
                 navigateToMainScreen();
             }
 
             @Override
             public void refuse() {
+                int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+                int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+                int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+                if (i_EfZOViStAs > 93) {
+                    java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 // 数组反转
                 int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -98,6 +124,13 @@ public class RXBM extends AppCompatActivity {
     }
 
     private void initializeApp() {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 线性查找
         int[] xmnbvcxzpoiuyt7834arr = new int[] { 7, 3, 9, 1, 5 };
@@ -114,6 +147,12 @@ public class RXBM extends AppCompatActivity {
     }
 
     private void navigateToMainScreen() {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 数组求和
         int[] qazxswedcv4521arr = new int[] { 3, 7, 2, 9, 5 };
@@ -129,6 +168,13 @@ public class RXBM extends AppCompatActivity {
 
             @Override
             public void run() {
+                java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+                int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+                int j_MQYstvdaR = new java.util.Random().nextInt(100);
+                int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+                if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+                    arr_KsybSSwoxoDzPIGeX.toString();
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
                 for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
@@ -139,7 +185,7 @@ public class RXBM extends AppCompatActivity {
                     }
                     arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
                 }
-                Intent it = new Intent(RXBM.this, RXBU.class);
+                Intent it = new Intent(ZWLY.this, ZWMF.class);
                 startActivity(it);
                 finish();
             }
@@ -151,7 +197,7 @@ public class RXBM extends AppCompatActivity {
         AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
             @Override
             public void splashEnd() {
-                Intent it = new Intent(RXBM.this, ScanMenuActivity.class);
+                Intent it = new Intent(ZWLY.this, ScanMenuActivity.class);
                 startActivity(it);
                 finish();
             }

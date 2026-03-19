@@ -15,17 +15,20 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
+                 "com.example.overseaswhitebag"  : "xmup.dcl.qyw",
+                 "com.p.b"  : "xmup.dfs.bdm",
                 ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
-           "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
-           "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
-           "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
-           "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
-           "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
-           "com.p.b"                                        : "xktv.zpv.kkbog",
+           "com.example.overseaswhitebag.privacy"   : "xmup.bsh.fya",
+           "com.example.overseaswhitebag.common.utils"                    : "xmup.bheio.xdfkm",
+           "com.p.b.master"                                 : "xmup.upzb.wqpoo",
+           "com.p.b.op"                                        : "xmup.sjfos.rrc",
+            "com.p.b.base_api_net"  : "xmup.ncfy.lhuy",
+            "com.p.b.pl223"         : "xmup.rbzyl.lchd",
+            "com.p.b.common"         : "xmup.ohhn.xsm",
+            "com.p.b"         : "xmup.hymtg.pdszk",
+            
            ]
 }
 androidJunkCode {
@@ -58,7 +61,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.locallive.weather"
         minSdk 29
         targetSdk 35
         versionCode 4

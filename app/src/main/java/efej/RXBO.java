@@ -11,6 +11,12 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
         int keydasopuerqnfdazcveq = 4;
@@ -39,6 +45,13 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public String getType(Uri uri) {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 最大值查找
         int[] asdfghjk5621arr = new int[] { 12, 5, 8, 19, 3 };
@@ -58,6 +71,12 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public Uri insert(Uri uri, ContentValues values) {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 数组反转
         int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -77,6 +96,12 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public boolean onCreate() {
+        int process_mcbqtyesGmBrTtpy = new java.util.Random().nextInt(50);
+        int stack_yIPvBLhVjkfPvCL = (process_mcbqtyesGmBrTtpy > 6) ? 1 : ((process_mcbqtyesGmBrTtpy > 43) ? 74 : ((process_mcbqtyesGmBrTtpy > 14) ? 32 : 79));
+        int i_EfZOViStAs = stack_yIPvBLhVjkfPvCL * process_mcbqtyesGmBrTtpy;
+        if (i_EfZOViStAs > 93) {
+            java.lang.System.arraycopy(new int[] { i_EfZOViStAs }, 0, new int[] { 0 }, 0, 1);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 数组反转
         int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -95,6 +120,13 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 计数统计
         int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
@@ -113,6 +145,13 @@ public final class RXBO extends ContentProvider {
     // android.content.ContentProvider
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+        java.lang.Object arr_KsybSSwoxoDzPIGeX = new java.lang.Object();
+        int i_qugwneZaAzkrtRQud = arr_KsybSSwoxoDzPIGeX.hashCode();
+        int j_MQYstvdaR = new java.util.Random().nextInt(100);
+        int tmp_spBrxeHbJeK = (i_qugwneZaAzkrtRQud ^ j_MQYstvdaR) & 0x7FFFFFFF;
+        if (tmp_spBrxeHbJeK == 36 && i_qugwneZaAzkrtRQud < 99) {
+            arr_KsybSSwoxoDzPIGeX.toString();
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         // 计数统计
         int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };

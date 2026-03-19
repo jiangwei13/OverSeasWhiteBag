@@ -1,4 +1,4 @@
-package efeh
+package a
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,38 +7,38 @@ import com.amour.Amour
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.InitAdAndTj
-import com.p.b.base.BaseApplication
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.common.ENV
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.context.HookContext
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdUtils
-import com.p.b.pl223.hhoosstt.CContext
+import xmup.bngf.nog.ZWOH
+import xmup.hymtg.pdszk.base.BaseApplication
+import xmup.tbu.dqw.ZWMP
+import xmup.ncfy.lhuy.utils.DeviceUtils
+import xmup.ncfy.lhuy.utils.HandleUtils
+import xmup.ohhn.xsm.ENV
+import xmup.ohhn.xsm.GAIDUtil
+import xmup.ohhn.xsm.MMKVUtils
+import xmup.ohhn.xsm.OverseaAppContext
+import xmup.ohhn.xsm.PhoneStatusUtils
+import xmup.ohhn.xsm.SPUtils
+import xmup.ohhn.xsm.adjust.AdJustInitUtils
+import xmup.ohhn.xsm.adjust.AdJustTokenAFUtils.doActivateDot
+import xmup.ohhn.xsm.adjust.AjConstants
+import xmup.ohhn.xsm.adjust.CommonConfig
+import xmup.ohhn.xsm.context.HookContext
+import xmup.qlq.ppool.CFGS
+import xmup.ohhn.xsm.firebase.FireBaseInitUtils
+import xmup.hymtg.pdszk.http.HostUtils
+import xmup.vdlel.btq.ZWNQ
+import xmup.vdlel.btq.ZWNU
 import com.tencent.mmkv.MMKV
 import efej.RXCE
 import java.lang.ref.WeakReference
 
-class RXBL : BaseApplication() {
+class ZWLX : BaseApplication() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: RXBL? = null
+        var insApp: ZWLX? = null
 
         @JvmStatic
         var fromNet: Runnable = Runnable {
@@ -56,8 +56,8 @@ class RXBL : BaseApplication() {
 //                        MMKVUtils.setUserStatus(true)
 //                        //拉取数据
 //                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-//                        com.p.b.common.doOnMainThreadIdle({
-//                            InitAdAndTj.initJumpEvent(insApp)
+//                        xmup.ohhn.xsm.doOnMainThreadIdle({
+//                            ZWOH.initJumpEvent(insApp)
 //                        })
 //                    }
 //
@@ -69,6 +69,15 @@ class RXBL : BaseApplication() {
     }
 
     override fun onCreate() {
+        val ENMBVeqPMaS : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val yfmbeDHneWipvMEmg  = ENMBVeqPMaS ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_40" 
+            }
+            if (yfmbeDHneWipvMEmg .startsWith("DOHGrklTHvSbiDwEKsZ ")) {
+                android.util.Log.v("TAG", yfmbeDHneWipvMEmg )
+            }
         val _t0 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_0 = 123456
@@ -86,19 +95,26 @@ class RXBL : BaseApplication() {
         super.onCreate()
         insApp = this
         RXCE.setApplication(this)
-        CContext.setApplication(this)
+        ZWNU.setApplication(this)
         OverseaAppContext.setApplication(this)
 
         MMKV.initialize(this)
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
         // 初始化FCM
-        FCMInitUtils.init(this)
+        CFGS.init(this)
 
         executeInitialSetup()
     }
 
     private fun executeInitialSetup() {
+        val arr_hVWAXkOYVjsilpmdRc = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_TTugXtMoMtZVRo  = (arr_hVWAXkOYVjsilpmdRc  shl 34) xor (arr_hVWAXkOYVjsilpmdRc  shr 38)
+         val j_REOAXqyhoAzXkU  = i_TTugXtMoMtZVRo .inv() and 0xFFFF
+         if (j_REOAXqyhoAzXkU  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_OgEZrJiQnSW")
+         }
         val _t1 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_1 = 123456
@@ -115,18 +131,18 @@ class RXBL : BaseApplication() {
             _t1 + kjashdfkjasdhfkjash32432marker_1
         }.let { if (it < 0) println(it) }
         val channel: String =
-            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
+            WalleChannelReader.getChannel(ZWNU.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
-        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfig, 1)
-        AdjustTokens.initAdJustToken(this)
+        val defaultConfig: String = ZWMP.getConfigJson(ZWNU.getApplication())
+        ZWMP.initConfig(defaultConfig, 1)
+        ZWOL.initAdJustToken(this)
         setupActivityMonitor()
         performAdJustVerification()
 
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(insApp)
+            ZWOH.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
         }
         DeviceUtils.getFetchOaid()
@@ -134,6 +150,13 @@ class RXBL : BaseApplication() {
     }
 
     fun setupActivityMonitor() {
+           val rwXFTaDQBVsaJ : Any = if (kotlin.random.Random.nextBoolean()) 90 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val EEztyZBf  = (rwXFTaDQBVsaJ  as? String)?.reversed() ?: "WNRtGvw_1653652667"
+
+        if (EEztyZBf  == "OXjcakL") {
+            java.lang.System.out.print(EEztyZBf )
+        }
         val _t2 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_2 = 123456
@@ -161,9 +184,16 @@ class RXBL : BaseApplication() {
         }.let { if (it < 0) println(it) }
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                   val FJRzQjYgLNubE : Any = if (kotlin.random.Random.nextBoolean()) 90 else "jH6"
+                // 尝试将数字安全转为字符串，失败则触发 Elvis
+                val HhzoRtxGvkvYiJG  = (FJRzQjYgLNubE  as? String)?.reversed() ?: "jINlPAumncML_-1837865181"
+
+                if (HhzoRtxGvkvYiJG  == "qnIBcnqQysKnOqBphdv") {
+                    java.lang.System.out.print(HhzoRtxGvkvYiJG )
+                }
                 HookContext.appCompatActivity = WeakReference(activity)
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.initCurrAdActivity(WeakReference(activity))
+                if (ZWNQ.isAdActivity(activity)) {
+                    ZWNU.initCurrAdActivity(WeakReference(activity))
                 }
             }
 
@@ -173,14 +203,30 @@ class RXBL : BaseApplication() {
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.removeAdActivity(WeakReference(activity))
+                val NvfcKsKVRJ : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                    val EamGYJFQoz  = NvfcKsKVRJ ?.let { 
+                        it.repeat(kotlin.random.Random.nextInt(100)) 
+                    } ?: run { 
+                        "zY0_31" 
+                    }
+                    if (EamGYJFQoz .startsWith("jfPtLzwCEJWykCfc ")) {
+                        android.util.Log.v("TAG", EamGYJFQoz )
+                    }
+                if (ZWNQ.isAdActivity(activity)) {
+                    ZWNU.removeAdActivity(WeakReference(activity))
                 }
             }
         })
     }
 
     fun performAdJustVerification() {
+        val arr_egzoUthdSY  = listOf("pRMFKzCoSwhEogLIq", "idWCzOYGYFyerxa", "ZsAXedHsiM").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_ZGSGazpjiQ  = arr_egzoUthdSY .filter { it.length > 74 }
+         if (ad_ZGSGazpjiQ .isNotEmpty() && java.lang.System.currentTimeMillis() < 85) {
+             ad_ZGSGazpjiQ .forEach { _ ->  }
+         }
         val _t3 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_3 = 123456
