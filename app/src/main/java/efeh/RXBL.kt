@@ -3,6 +3,7 @@ package efeh
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import com.amour.Amour
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
@@ -45,25 +46,25 @@ class RXBL : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
-            //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(insApp)
-                        })
-                    }
-
-                    override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
-                    }
-                })
+//            //归因
+//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+//                AjConstants.adjustAppToken,
+//                PhoneStatusUtils.judgeIsBlacklist(),
+//                object : CommonConfig.OnConfigInterface {
+//                    override fun onSuccess() {
+//                        //归因状态
+//                        MMKVUtils.setUserStatus(true)
+//                        //拉取数据
+//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//                        com.p.b.common.doOnMainThreadIdle({
+//                            InitAdAndTj.initJumpEvent(insApp)
+//                        })
+//                    }
+//
+//                    override fun onFail() {
+//                        MMKVUtils.setUserStatus(false)
+//                    }
+//                })
         }
     }
 
