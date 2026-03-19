@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.nightguide.flashlightgp",
+  "applicationId": "com.saowen.magicdoc",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0.1",
+      "versionCode": 8,
+      "versionName": "1.0.8",
       "outputFile": "app-release.apk"
     }
   ],
