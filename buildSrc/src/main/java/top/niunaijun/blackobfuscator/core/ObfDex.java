@@ -140,8 +140,18 @@ public class ObfDex {
                 continue;
             }
             String trimmed = prefix.trim();
-            if (!trimmed.isEmpty() && normalizedCandidate.startsWith(trimmed)) {
-                return true;
+            if (trimmed.isEmpty()) {
+                continue;
+            }
+            // 短前缀（≤2字符）必须精确匹配包名（加 "." 后缀），避免 "d" 误匹配 "dalvik" 等
+            if (trimmed.length() <= 2) {
+                if (normalizedCandidate.startsWith(trimmed + ".") || normalizedCandidate.equals(trimmed)) {
+                    return true;
+                }
+            } else {
+                if (normalizedCandidate.startsWith(trimmed)) {
+                    return true;
+                }
             }
         }
         return false;

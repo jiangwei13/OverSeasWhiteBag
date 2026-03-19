@@ -36,6 +36,8 @@ public class ObfPlugin implements Plugin<Project> {
                 project.getLogger().warn("BlackObfuscator skipped: com.android.application not found in {}", project.getPath());
                 return;
             }
+            ATTACHED_TASKS.clear();
+            PROCESSED_OUTPUTS.clear();
             logHeader(project.getLogger(), extension);
             attachTasks(project, extension);
         });
