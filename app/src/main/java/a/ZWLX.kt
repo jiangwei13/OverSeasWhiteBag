@@ -138,7 +138,6 @@ class ZWLX : BaseApplication() {
         ZWOL.initAdJustToken(this)
         setupActivityMonitor()
         performAdJustVerification()
-
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
