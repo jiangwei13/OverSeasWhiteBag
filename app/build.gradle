@@ -76,7 +76,7 @@ BlackObfuscator {
     skipKotlinSynthetic true
     skipKotlinSingletonLikeClasses true
     skipInnerClasses true
-    skipAndroidComponents true
+    skipAndroidComponents false
     skipCallbackLikeClasses true
     // 这里只是候选包前缀，最终是否进入 dex 控制流混淆还会经过 Kotlin 安全过滤
     obfClass = ["ai.pgr", "b125.ztm",
