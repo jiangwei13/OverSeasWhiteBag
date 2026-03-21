@@ -13,10 +13,7 @@ pluginManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-        //Anythink(Core)
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
+
 
         //Ironsource
         maven {
@@ -39,9 +36,7 @@ pluginManagement {
         }
 
 
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
+
 
         //Chartboost
         maven {
@@ -50,10 +45,7 @@ pluginManagement {
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
         }
-        //Bigo
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
+
 
         /////////////////////////////////// TradPlus相关引用///////////////////////
         // Ironsource
@@ -96,10 +88,7 @@ dependencyResolutionManagement {
         flatDir {
             dirs 'libs'
         }
-        //Anythink(Core)
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
+
 
         //Ironsource
         maven {
@@ -121,9 +110,7 @@ dependencyResolutionManagement {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
 
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
+
 
         //Chartboost
         maven {
@@ -132,10 +119,7 @@ dependencyResolutionManagement {
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
         }
-        //Bigo
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
+
 
         /////////////////////////////////// TradPlus相关引用///////////////////////
         // Ironsource

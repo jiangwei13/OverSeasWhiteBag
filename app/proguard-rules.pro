@@ -75,3 +75,8 @@
 # tradplus 混淆配置
 -keep public class com.tradplus.** { *; }
 -keep class com.tradplus.ads.** { *; }
+
+# 保留 native 方法，避免 R8 移除导致 JNI 注册失败
+-keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
+    native <methods>;
+}
