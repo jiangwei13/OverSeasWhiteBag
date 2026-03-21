@@ -1,4 +1,4 @@
-package com.p.b;
+package acq.zxpj.swn;
 
 import com.github.megatronking.stringfog.IStringFog;
 
@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
  * @author Sundy
  * @since 2019/3/4 23:41
  */
-public class CustomStringFogImpl implements IStringFog {
+public class BZG implements IStringFog {
 
     @Override
     public byte[] encrypt(String data, byte[] key) {
