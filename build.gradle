@@ -75,6 +75,19 @@ def printSoPath(File file) {
         }
     }
 }
+// 所有库模块自动适配 app 的 product flavor 维度
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin('com.android.library')) {
+            project.android {
+                defaultConfig {
+                    missingDimensionStrategy 'product', 'magicdoc'
+                }
+            }
+        }
+    }
+}
+
 allprojects {
 
     //此处为了解决mac M1芯片到问题 强制使用 sqlite版本

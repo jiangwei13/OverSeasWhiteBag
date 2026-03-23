@@ -100,8 +100,6 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
-//        applicationId "com.nightguide.flashlightgp"
         minSdk 28
         targetSdk 35
         versionCode 8
@@ -110,6 +108,18 @@ android {
             abiFilters 'arm64-v8a'
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "product"
+    productFlavors {
+        flashlight {
+            dimension "product"
+            applicationId "com.saowen.magicdoc"
+        }
+        magicdoc {
+            dimension "product"
+            applicationId "com.saowen.magicdoc"
+        }
     }
     packaging {
         resources {
@@ -242,5 +252,9 @@ dependencies {
     implementation project(':oversea_base_module')
 //    implementation project(':oversea_report_core')
 
-
+    // 仅 magicdoc 变体需要的模块
+    magicdocImplementation project(':scanlibrary')
+    magicdocImplementation project(':pic_toolslibrary')
+    magicdocImplementation project(':pic_edit_library')
+    magicdocImplementation project(':smalltoolslibrary')
 }
