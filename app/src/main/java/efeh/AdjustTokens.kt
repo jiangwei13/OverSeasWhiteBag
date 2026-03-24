@@ -32,6 +32,8 @@ object AdjustTokens {
                 AjConstants.adJust_attribution_request = "35lamy";
                 AjConstants.adJust_attribution_success ="";
                 AjConstants.activity_app ="";
+                AjConstants.LiveTime = "cguu2a"
+
             }
 
             "HW" -> {

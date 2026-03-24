@@ -47,24 +47,26 @@ class RXBL : BaseApplication() {
                 return@Runnable
             }
 //            //归因
-//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-//                AjConstants.adjustAppToken,
-//                PhoneStatusUtils.judgeIsBlacklist(),
-//                object : CommonConfig.OnConfigInterface {
-//                    override fun onSuccess() {
-//                        //归因状态
-//                        MMKVUtils.setUserStatus(true)
-//                        //拉取数据
-//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-//                        com.p.b.common.doOnMainThreadIdle({
-//                            InitAdAndTj.initJumpEvent(insApp)
-//                        })
-//                    }
-//
-//                    override fun onFail() {
-//                        MMKVUtils.setUserStatus(false)
-//                    }
-//                })
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+                AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),
+                object : CommonConfig.OnConfigInterface {
+                    override fun onSuccess() {
+                        //初始化
+                        Amour.getInstance().Init(insApp)
+                        //归因状态
+                        MMKVUtils.setUserStatus(true)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        com.p.b.common.doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(insApp)
+                        })
+                    }
+
+                    override fun onFail() {
+                        MMKVUtils.setUserStatus(false)
+                    }
+                })
         }
     }
 
