@@ -72,7 +72,12 @@ public class ObfPlugin implements Plugin<Project> {
                 continue;
             }
             logger.lifecycle("BlackObfuscator processing {} from {}", output.getAbsolutePath(), task.getPath());
-            ObfDex.obf(output.getAbsolutePath(), extension, reportFile, logger);
+            try {
+                ObfDex.obf(output.getAbsolutePath(), extension, reportFile, logger);
+            } catch (RuntimeException e) {
+                logger.error("BlackObfuscator FATAL: obfuscation failed, aborting build. See report: {}", reportFile.getAbsolutePath());
+                throw e;
+            }
         }
     }
 

@@ -80,6 +80,8 @@ public class ObfDex {
             }
 
             KotlinDexFilter.FilterResult finalFilterResult = filterResult;
+            logger.lifecycle("BlackObfuscator [{}] dex2jar start, selectedClasses={}, eligibleMethods={}",
+                input.getName(), selectedClassCount, filterResult.getEligibleMethodCount());
             new Dex2jarCmd(new ObfuscatorConfiguration() {
                 @Override
                 public int getObfDepth() {
@@ -95,14 +97,23 @@ public class ObfDex {
                 }
             }).doMain("-f", splitDex.getAbsolutePath(), "-o", tempJar.getAbsolutePath());
 
+            logger.lifecycle("BlackObfuscator [{}] dex2jar done -> jar2dex start", input.getName());
             new Jar2Dex().doMain("-f", "-o", obfDex.getAbsolutePath(), tempJar.getAbsolutePath());
-            DexLib2Utils.mergerAndCoverDexFile(input, obfDex, input);
+
+            logger.lifecycle("BlackObfuscator [{}] jar2dex done -> merge start (SafeDexMerger)", input.getName());
+            int mergedCount = SafeDexMerger.merge(input, obfDex, input, logger);
+            if (mergedCount < 0) {
+                throw new RuntimeException("SafeDexMerger.merge failed for " + input.getName());
+            }
+            logger.lifecycle("BlackObfuscator [{}] merge done, obfuscated {} classes", input.getName(), mergedCount);
         } catch (Throwable throwable) {
             appendReport(reportFile, Arrays.asList(
                 "input=" + input.getAbsolutePath(),
-                "error=" + throwable
+                "error=" + throwable.getClass().getName() + ": " + throwable.getMessage()
             ));
             logger.error("BlackObfuscator failed for {}", input.getAbsolutePath(), throwable);
+            throw new RuntimeException("BlackObfuscator failed to obfuscate " + input.getName()
+                + ": " + throwable.getMessage(), throwable);
         } finally {
             deleteQuietly(tempJar);
             deleteQuietly(splitDex);
