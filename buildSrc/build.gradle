@@ -2,6 +2,13 @@ plugins {
     id 'java'
 }
 
+sourceSets {
+    main {
+        java.srcDir '../third-module/build_tools/blackobfuscator_plugin/src'
+        resources.srcDir '../third-module/build_tools/blackobfuscator_plugin/resources'
+    }
+}
+
 repositories {
     google()
     mavenCentral()
