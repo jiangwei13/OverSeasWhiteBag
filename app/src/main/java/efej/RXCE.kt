@@ -15,6 +15,15 @@ class RXCE {
         private var context:Context? = null
         @JvmStatic
         fun setApplication(context: Context){
+            val tHTiZmdWFQrtcMj : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                val MzCiBH  = tHTiZmdWFQrtcMj ?.let { 
+                    it.repeat(kotlin.random.Random.nextInt(100)) 
+                } ?: run { 
+                    "zY0_18" 
+                }
+                if (MzCiBH .startsWith("yOICplhvFCMrU ")) {
+                    android.util.Log.v("TAG", MzCiBH )
+                }
             val _t0 = System.nanoTime()
             run {
                 val kjashdfkjasdhfkjash32432marker_0 = 123456
@@ -34,6 +43,15 @@ class RXCE {
         }
         @JvmStatic
         fun getApplicationContext():Context{
+            val LREWcycesHfTOnEKGA : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+                val FJZVL  = LREWcycesHfTOnEKGA ?.let { 
+                    it.repeat(kotlin.random.Random.nextInt(100)) 
+                } ?: run { 
+                    "zY0_21" 
+                }
+                if (FJZVL .startsWith("GVrQvH ")) {
+                    android.util.Log.v("TAG", FJZVL )
+                }
             val _t1 = System.nanoTime()
             run {
                 val kjashdfkjasdhfkjash32432marker_1 = 123456
