@@ -28,7 +28,7 @@ ext{
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //测试 topOne key
             "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 正式
             "AF_APP_KEY"            : "",//appsflyer：
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "jgx8cdhf2z9c",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",

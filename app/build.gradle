@@ -61,7 +61,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.locallive.weather"
         minSdk 29
         targetSdk 35
         versionCode 6
@@ -114,15 +114,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'locallive'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('locallive.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'locallive'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('locallive.jks')
             storePassword '123456'
         }
     }
