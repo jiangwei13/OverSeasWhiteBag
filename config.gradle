@@ -32,6 +32,16 @@ ext{
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",
             "ad_name":"ui.aar",
+            // oversea_base_module 需要的字段（测试占位）
+            "HOST": "",
+            "DEBUG_APPID": "",
+            "RELEASE_APPID": "",
+            "DEBUG_SSK": "",
+            "RELEASE_SSK": "",
+            "isDebug": "false",
+            "buglyId": "",
+            "Admob_AppId": "",
+            "ad_huawei_LiveTime": "2025-04-30 10:00:00",
     ]
 
 }

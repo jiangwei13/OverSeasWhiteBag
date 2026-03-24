@@ -70,21 +70,12 @@ android {
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    packagingOptions {
-
-
-        exclude 'META-INF/DEPENDENCIES'
-        dex {
-            useLegacyPackaging true
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'resources.arsc', 'AndroidManifest.xml']
         }
-        exclude 'resources.arsc'
-
-        exclude 'AndroidManifest.xml'
-        jniLibs {
-
-            useLegacyPackaging true
-
-        }
+        dex { useLegacyPackaging true }
+        jniLibs { useLegacyPackaging true }
     }
     ndkVersion "28.0.12433566"
     signingConfigs {
@@ -109,6 +100,9 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
         debug {
             minifyEnabled false

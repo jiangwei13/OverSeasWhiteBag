@@ -12,11 +12,6 @@ pluginManagement {
 
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-        //Anythink(Core)
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
-
         //Ironsource
         maven {
             url "https://android-sdk.is.com/"
@@ -37,21 +32,12 @@ pluginManagement {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
 
-
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
-
         //Chartboost
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-ads"
         }
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
-        }
-        //Bigo
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
         }
     }
 }
@@ -75,11 +61,6 @@ dependencyResolutionManagement {
         flatDir {
             dirs 'libs'
         }
-        //Anythink(Core)
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
-        }
-
         //Ironsource
         maven {
             url "https://android-sdk.is.com/"
@@ -100,20 +81,12 @@ dependencyResolutionManagement {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
 
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/debugger"
-        }
-
         //Chartboost
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-ads"
         }
         maven {
             url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
-        }
-        //Bigo
-        maven {
-            url "https://jfrog.anythinktech.com/artifactory/overseas_sdk"
         }
     }
 }
