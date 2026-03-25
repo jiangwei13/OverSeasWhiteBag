@@ -181,6 +181,6 @@ dependencies {
 
     implementation 'com.tencent:mmkv:2.3.0'
 
-
+    api project(':aar_library:aar_name')
 
 }
