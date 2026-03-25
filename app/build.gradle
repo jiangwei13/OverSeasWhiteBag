@@ -1,3 +1,6 @@
+import com.github.megatronking.stringfog.plugin.StringFogMode
+import tiul.iyuhf.xcg.MXE
+
 plugins {
     id 'com.android.application'
     id("walle")
@@ -9,6 +12,22 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
+
+apply plugin: 'stringfog'
+
+stringfog {
+    enable true
+    debug false
+    // 指定加解密的具体实现类，buildSrc中和app中均要包含此实现源文件
+    implementation 'com.stringfog.impl.CustomStringFogImpl'
+    // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密
+    //    fogPackages = ["tiul.iyuhf.xcg"]
+    // 4.0版本新增：使用自定义密钥生成器
+    kg new MXE()
+    // 可选（4.0版本新增）：用于控制字符串加密后在字节码中的存在形式, 默认为base64，
+    // 也可以使用text或者bytes
+     mode StringFogMode.base64
+}
 apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 
@@ -33,17 +52,22 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
+                 "com.example.overseaswhitebag"  : "tiul.esxc.hsyx",
+                 "com.p.b"  : "tiul.dkid.bmq",
                 ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
-           "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
-           "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
-           "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
-           "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
-           "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
-           "com.p.b"                                        : "xktv.zpv.kkbog",
+           "com.example.overseaswhitebag.privacy"   : "tiul.gxdno.oarhq",
+           "com.example.overseaswhitebag.common.utils"                    : "tiul.msnyg.geg",
+           "com.p.b.master"                                 : "tiul.dgfb.ihuci",
+           "com.p.b.op"                                        : "tiul.bux.rov",
+            "com.p.b.base_api_net"  : "tiul.ydzru.rwvw",
+            "com.p.b.pl223"         : "tiul.kbnn.sjb",
+            "com.p.b.common.fcm"     : "tiul.umdub.eyly",
+            "com.p.b.common"         : "tiul.kqo.zhpx",
+            "com.xian.bc.xin"        : "tiul.cbvvv.zne",
+            "com.p.b"         : "tiul.njcol.cjnx",
+            
            ]
 }
 
@@ -60,7 +84,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.horizon.weather"
         minSdk 28
         targetSdk 35
         versionCode 3
@@ -155,6 +179,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+    implementation 'com.github.megatronking.stringfog:interface:5.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
 //    implementation files('libs/pluginhelper.aar')
     implementation project(':toolsbox')
@@ -183,4 +209,59 @@ dependencies {
 
     api project(':aar_library:aar_name')
 
+}
+BlackObfuscator {
+    // 是否启用
+    enabled true
+    // 混淆深度（3 比 2 更难反编译，4 以上可能导致方法字节码超限）
+    depth 3
+    // 所有业务代码都在 tiul.* 下，一个前缀覆盖所有，不会误匹配第三方 SDK
+    obfClass = [
+                "tiul",
+    ]
+    // Kotlin 安全配置
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses false
+    skipAndroidComponents false
+    skipCallbackLikeClasses false
+    // blackClass中的包或者类不会进行混淆(匹配前面一段)
+    blackClass = [
+                "top.niunaijun.black",
+                "androidx",
+                "com.google",
+                "com.facebook",
+                "com.applovin",
+                "com.unity3d",
+                "com.ironsource",
+                "com.chartboost",
+                "com.mbridge",
+                "com.pangle",
+                "com.tradplusad",
+                "com.bigossp",
+                "com.vungle",
+                "com.inmobi",
+                "com.huawei",
+                "com.hihonor",
+                "com.adjust",
+                "com.appsflyer",
+                "com.tencent",
+                "com.squareup",
+                "com.jakewharton",
+                "com.github",
+                "com.fyber",
+                "com.smartdigimkttech",
+                "com.thinkup",
+                "com.mi",
+                "com.miui",
+                "com.android",
+                "org.greenrobot",
+                "org.jetbrains",
+                "io.reactivex",
+                "io.github",
+                "kotlin",
+                "kotlinx.coroutines",
+                "com.stringfog",
+    ]
 }
