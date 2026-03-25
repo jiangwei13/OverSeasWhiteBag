@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.saowen.magicdoc",
+  "applicationId": "com.locallive.weather",
   "variantName": "release",
   "elements": [
     {
