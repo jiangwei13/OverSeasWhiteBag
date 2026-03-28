@@ -208,8 +208,8 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
-include(':oversea_base_module')
-project(':oversea_base_module').projectDir = file('./oversea_base_module')
+//include(':oversea_base_module')
+//project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
 //include(':oversea_report_core')
 //project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')

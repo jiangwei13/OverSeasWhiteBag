@@ -4,7 +4,7 @@
     package="com.clean.toos">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name="zbix.DPF"
+        android:name="com.example.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
