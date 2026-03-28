@@ -49,13 +49,23 @@ class TheApplication : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
-//            jumpIntent()
+
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+
+                        //归因状态
+                        MMKVUtils.setUserStatus(true)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        com.p.b.common.doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
+                        })
+                        jumpIntent()
+
                         val _t0 = System.nanoTime()
                         run {
                             val kjashdfkjasdhfkjash32432marker_0 = 123456
@@ -70,14 +80,6 @@ class TheApplication : BaseApplication() {
                             val unusedCntZxcvbn9812 = countResultAsdfgh7623
                             _t0 + kjashdfkjasdhfkjash32432marker_0
                         }.let { if (it < 0) println(it) }
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
-                        })
-                        jumpIntent()
                     }
 
                     override fun onFail() {
