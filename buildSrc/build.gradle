@@ -9,6 +9,7 @@ sourceSets {
 }
 
 repositories {
+    maven { url "https://jitpack.io" }
     google()
     mavenCentral()
     mavenLocal()
@@ -17,4 +18,9 @@ repositories {
 dependencies {
     // 自定义算法实现依赖库
     implementation 'com.github.megatronking.stringfog:interface:5.0.0'
+    implementation gradleApi()
+    implementation('com.github.CodingGay.BlackObfuscator:dex-tools:2.1') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    implementation 'com.google.guava:guava:32.0.1-jre'
 }
