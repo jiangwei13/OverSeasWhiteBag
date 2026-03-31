@@ -221,7 +221,7 @@ project(':oversea_base_module').projectDir = file('./oversea_base_module')
 //project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
 
 
-//include(":aar_library:app_aar")
+include("aar_library:aar_name2")
 //include(":aar_library:security_checker")
 
 //include ':oversea_utils'

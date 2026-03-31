@@ -30,8 +30,11 @@ object AdjustTokens {
                 AjConstants.firebase_request ="3qwssu";
                 AjConstants.firebase_success = "ave12u";
                 AjConstants.adJust_attribution_request = "35lamy";
+                AjConstants.LiveTime ="cguu2a";
                 AjConstants.adJust_attribution_success ="";
                 AjConstants.activity_app ="";
+
+
             }
 
             "HW" -> {

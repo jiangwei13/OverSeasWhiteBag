@@ -3,6 +3,7 @@ package efeh
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import com.amour.Amour
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
@@ -51,6 +52,8 @@ class RXBL : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                        //初始化
+                        Amour.getInstance().Init(insApp);
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
