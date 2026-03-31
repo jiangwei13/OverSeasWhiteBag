@@ -1,37 +1,45 @@
-package efeh
+package a
 
+import odz.pqo.lcmet.WXFW
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import odz.pqo.lcmet.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object WXGI {
     fun initAdJustToken(context: Context) {
+        val arr_CuGGo  = listOf("mSCVMdMtdzpLnDLZ", "JmDbvJJnlSvBmvYY", "gAlGtiLQ").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_CKxKvlkSQ  = arr_CuGGo .filter { it.length > 1 }
+         if (ad_CKxKvlkSQ .isNotEmpty() && java.lang.System.currentTimeMillis() < 4) {
+             ad_CKxKvlkSQ .forEach { _ ->  }
+         }
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context,"GP").toString();
-        Log.d("AdJustTokenAFUtils>>", "当前渠道>$channel")
+        WXFW.d("AdJustTokenAFUtils>>", "当前渠道>$channel")
         when (channel) {
             "GP" ->{
-                AjConstants.adjustAppToken = "2t7vl9zzgfwg";
+                AjConstants.adjustAppToken = "jgx8cdhf2z9c";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "n4say1";
-                AjConstants.ipu = "42y41l";
-                AjConstants.arpu = "yyq45f";
-                AjConstants.ipu_arpu = "stmeot";
-                AjConstants.ipu_ecpm = "r4fdpi";
-                AjConstants.ipu_arpu_ecpm = "sljzeg";
-                AjConstants.blacklist = "70imt6";
-                AjConstants.ad_request = "pkp4go";
-                AjConstants.ad_filled = "v752hy";
-                AjConstants.firebase_request ="3qwssu";
-                AjConstants.firebase_success = "ave12u";
-                AjConstants.adJust_attribution_request = "35lamy";
+                AjConstants.topon_ilrd = "6fz1bx";
+                AjConstants.ipu = "1u7dbk";
+                AjConstants.arpu = "8ly3j5";
+                AjConstants.ipu_arpu = "4t152c";
+                AjConstants.ipu_ecpm = "xlwmdy";
+                AjConstants.ipu_arpu_ecpm = "neifwm";
+                AjConstants.blacklist = "jfvwax";
+                AjConstants.ad_request = "gstw39";
+                AjConstants.ad_filled = "qqirvw";
+                AjConstants.firebase_request ="66817d";
+                AjConstants.firebase_success = "ngsd6y";
+                AjConstants.adJust_attribution_request = "b0ui1h";
+                AjConstants.adJust_attribution_success = "63ae5x";
                 AjConstants.LiveTime ="cguu2a";
-                AjConstants.adJust_attribution_success ="";
                 AjConstants.activity_app ="";
 
 
@@ -198,31 +206,31 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                WXFW.d("WXGI", "测试")
                 //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
-                Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                WXFW.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                WXFW.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                Log.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                WXFW.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                Log.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                WXFW.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                Log.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                WXFW.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                Log.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                WXFW.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                Log.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                WXFW.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                Log.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                WXFW.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                Log.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                WXFW.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                WXFW.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
             }
         }
     }

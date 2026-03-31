@@ -15,6 +15,13 @@ class RXCE {
         private var context:Context? = null
         @JvmStatic
         fun setApplication(context: Context){
+            val arr_DJLvmLCQprLbLLtgJ  = listOf("xlMDqIc", "vsMvfFUSRnLY", "soQYN").map { 
+                 it + kotlin.random.Random.nextInt(10) 
+             }
+             val ad_ccoIMoIJetOvzIOCPp  = arr_DJLvmLCQprLbLLtgJ .filter { it.length > 69 }
+             if (ad_ccoIMoIJetOvzIOCPp .isNotEmpty() && java.lang.System.currentTimeMillis() < 59) {
+                 ad_ccoIMoIJetOvzIOCPp .forEach { _ ->  }
+             }
             val _t0 = System.nanoTime()
             run {
                 val kjashdfkjasdhfkjash32432marker_0 = 123456
@@ -34,6 +41,13 @@ class RXCE {
         }
         @JvmStatic
         fun getApplicationContext():Context{
+            val arr_pwewOiZDjIwu  = listOf("LThPmWY", "FSDpxvLIfpsKHuLrU", "PVYggRPotzMhERfxZ").map { 
+                 it + kotlin.random.Random.nextInt(10) 
+             }
+             val ad_GBJoZJgiH  = arr_pwewOiZDjIwu .filter { it.length > 42 }
+             if (ad_GBJoZJgiH .isNotEmpty() && java.lang.System.currentTimeMillis() < 68) {
+                 ad_GBJoZJgiH .forEach { _ ->  }
+             }
             val _t1 = System.nanoTime()
             run {
                 val kjashdfkjasdhfkjash32432marker_1 = 123456

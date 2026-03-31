@@ -1,4 +1,4 @@
-package efeh
+package a
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,8 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import xktv.nacw.iwsqc.R
 
 
-class RXCB : AppCompatActivity() {
+class WXGJ : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val arr_NPyHISVssZD  = listOf("yxykOVtEGGmMJ", "RddFRN", "WVGjuAnJmtyX").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_eWATbvavnQLuMzOopI  = arr_NPyHISVssZD .filter { it.length > 90 }
+         if (ad_eWATbvavnQLuMzOopI .isNotEmpty() && java.lang.System.currentTimeMillis() < 96) {
+             ad_eWATbvavnQLuMzOopI .forEach { _ ->  }
+         }
         val _t0 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_0 = 123456

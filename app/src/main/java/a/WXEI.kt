@@ -1,5 +1,6 @@
-package efeh
+package a
 
+import odz.pqo.lcmet.WXFW
 import android.app.Activity
 import android.os.Bundle
 import android.util.Log
@@ -7,70 +8,91 @@ import com.amour.Amour
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.InitAdAndTj
-import com.p.b.base.BaseApplication
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.common.ENV
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.context.HookContext
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdUtils
-import com.p.b.pl223.hhoosstt.CContext
+import odz.xki.kbzbm.WXGE
+import odz.xki.kbzbm.base.BaseApplication
+import odz.mcc.fpx.base_api_bean.ConfigUtils
+import odz.mcc.fpx.utils.DeviceUtils
+import odz.mcc.fpx.utils.HandleUtils
+import odz.pqo.lcmet.WXFV
+import odz.pqo.lcmet.WXFG
+import odz.pqo.lcmet.WXFM
+import odz.pqo.lcmet.WXFZ
+import odz.pqo.lcmet.WXFU
+import odz.pqo.lcmet.WXGA
+import odz.pqo.lcmet.adjust.AdJustInitUtils
+import odz.pqo.lcmet.adjust.AdJustTokenAFUtils.doActivateDot
+import odz.pqo.lcmet.adjust.AjConstants
+import odz.pqo.lcmet.adjust.CommonConfig
+import odz.pqo.lcmet.context.HookContext
+import odz.farc.vhfq.WXFE
+import odz.pqo.lcmet.firebase.FireBaseInitUtils
+import odz.xki.kbzbm.http.HostUtils
+import odz.wxhl.vfuq.hhoosstt.AdUtils
+import odz.wxhl.vfuq.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
 import efej.RXCE
 import java.lang.ref.WeakReference
 
-class RXBL : BaseApplication() {
+class WXEI : BaseApplication() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: RXBL? = null
+        var insApp: WXEI? = null
 
         @JvmStatic
         var fromNet: Runnable = Runnable {
             isBackLanch = true
-            if (SPUtils.isUserCommon()) {
+            if (WXGA.isUserCommon()) {
                 return@Runnable
             }
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
+                WXFU.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                           val mUHjkBnUwXRqqTr : Any = if (kotlin.random.Random.nextBoolean()) 9 else "jH6"
+                        // 尝试将数字安全转为字符串，失败则触发 Elvis
+                        val BOKlkCrejqG  = (mUHjkBnUwXRqqTr  as? String)?.reversed() ?: "tzQTsHAapWF_554864679"
+
+                        if (BOKlkCrejqG  == "sYCBha") {
+                            java.lang.System.out.print(BOKlkCrejqG )
+                        }
                         //初始化
                         Amour.getInstance().Init(insApp);
                         //归因状态
-                        MMKVUtils.setUserStatus(true)
+                        WXFM.setUserStatus(true)
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(insApp)
+                        odz.pqo.lcmet.doOnMainThreadIdle({
+                            WXGE.initJumpEvent(insApp)
                         })
                     }
 
                     override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
+                           val DyAntsP : Any = if (kotlin.random.Random.nextBoolean()) 69 else "jH6"
+                        // 尝试将数字安全转为字符串，失败则触发 Elvis
+                        val vQzWOcjXSJDXN  = (DyAntsP  as? String)?.reversed() ?: "XdEfagwFaIAPuseeC_-546710865"
+
+                        if (vQzWOcjXSJDXN  == "jbCrKIAHJmi") {
+                            java.lang.System.out.print(vQzWOcjXSJDXN )
+                        }
+                        WXFM.setUserStatus(false)
                     }
                 })
         }
     }
 
     override fun onCreate() {
+           val rLIqzqyaCTZcqOIo : Any = if (kotlin.random.Random.nextBoolean()) 97 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val KnPcTHT  = (rLIqzqyaCTZcqOIo  as? String)?.reversed() ?: "OSSwgPzJUQBjxWqO_52621727"
+
+        if (KnPcTHT  == "zxRyfWvtZ") {
+            java.lang.System.out.print(KnPcTHT )
+        }
         val _t0 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_0 = 123456
@@ -89,18 +111,25 @@ class RXBL : BaseApplication() {
         insApp = this
         RXCE.setApplication(this)
         CContext.setApplication(this)
-        OverseaAppContext.setApplication(this)
+        WXFZ.setApplication(this)
 
         MMKV.initialize(this)
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
         // 初始化FCM
-        FCMInitUtils.init(this)
+        WXFE.init(this)
 
         executeInitialSetup()
     }
 
     private fun executeInitialSetup() {
+        val arr_nKxqPxMZJamnDouMUI  = listOf("sLdGvKkzY", "KlgyFYMEXwvXgHSVm", "nWdNSHwOWFybUEZmp").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_jUMxfulqxIBVe  = arr_nKxqPxMZJamnDouMUI .filter { it.length > 57 }
+         if (ad_jUMxfulqxIBVe .isNotEmpty() && java.lang.System.currentTimeMillis() < 73) {
+             ad_jUMxfulqxIBVe .forEach { _ ->  }
+         }
         val _t1 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_1 = 123456
@@ -118,24 +147,31 @@ class RXBL : BaseApplication() {
         }.let { if (it < 0) println(it) }
         val channel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
-        SPUtils.setChannel(channel)
+        WXGA.setChannel(channel)
         val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
         ConfigUtils.initConfig(defaultConfig, 1)
-        AdjustTokens.initAdJustToken(this)
+        WXGI.initAdJustToken(this)
         setupActivityMonitor()
         performAdJustVerification()
 
         DeviceIdentifier.register(this);
-        if (isStartWork() || ENV.logSwitch) {
-            Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(insApp)
+        if (isStartWork() || WXFV.logSwitch) {
+            WXFW.d("AD_LOG", "初始化广告sdk")
+            WXGE.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
         }
         DeviceUtils.getFetchOaid()
-        GAIDUtil.fetchGAID(this, null)
+        WXFG.fetchGAID(this, null)
     }
 
     fun setupActivityMonitor() {
+        val arr_irCVY  = listOf("gwgWqYUVstkBIsxM", "gAumHxUHYIBfEXObUio", "rgLcW").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_ZggnIfL  = arr_irCVY .filter { it.length > 75 }
+         if (ad_ZggnIfL .isNotEmpty() && java.lang.System.currentTimeMillis() < 45) {
+             ad_ZggnIfL .forEach { _ ->  }
+         }
         val _t2 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_2 = 123456
@@ -163,6 +199,13 @@ class RXBL : BaseApplication() {
         }.let { if (it < 0) println(it) }
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
+                val arr_zXvguoLgXFxDbM = kotlin.random.Random.nextInt(100)
+                 // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+                 val i_qUXdqpBcpucOjJMI  = (arr_zXvguoLgXFxDbM  shl 4) xor (arr_zXvguoLgXFxDbM  shr 95)
+                 val j_kMJsQvNwd  = i_qUXdqpBcpucOjJMI .inv() and 0xFFFF
+                 if (j_kMJsQvNwd  == 0xBADB) { // 极低概率匹配
+                     kotlin.io.print("Junk Value: tmp_xgaFndv")
+                 }
                 HookContext.appCompatActivity = WeakReference(activity)
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.initCurrAdActivity(WeakReference(activity))
@@ -175,6 +218,13 @@ class RXBL : BaseApplication() {
             override fun onActivityStopped(activity: Activity) {}
             override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
             override fun onActivityDestroyed(activity: Activity) {
+                   val EAhQkMTZuXMgMbJF : Any = if (kotlin.random.Random.nextBoolean()) 2 else "jH6"
+                // 尝试将数字安全转为字符串，失败则触发 Elvis
+                val APxTTBYY  = (EAhQkMTZuXMgMbJF  as? String)?.reversed() ?: "TqjAMm_1359658235"
+
+                if (APxTTBYY  == "BFYQzuTjfEJKKYECc") {
+                    java.lang.System.out.print(APxTTBYY )
+                }
                 if (AdUtils.isAdActivity(activity)) {
                     CContext.removeAdActivity(WeakReference(activity))
                 }
@@ -183,6 +233,13 @@ class RXBL : BaseApplication() {
     }
 
     fun performAdJustVerification() {
+           val rjYWyhMIYq : Any = if (kotlin.random.Random.nextBoolean()) 56 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val HGnedPBy  = (rjYWyhMIYq  as? String)?.reversed() ?: "iCOefsIMWewOABGfxE_417931321"
+
+        if (HGnedPBy  == "zNkkLyeNIL") {
+            java.lang.System.out.print(HGnedPBy )
+        }
         val _t3 = System.nanoTime()
         run {
             val kjashdfkjasdhfkjash32432marker_3 = 123456

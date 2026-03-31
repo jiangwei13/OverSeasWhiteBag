@@ -1,4 +1,4 @@
 dependencies {
     configurations.maybeCreate("default")
-    artifacts.add("default", file('Amour-2603302152.aar'))
+    artifacts.add("default", file('Amour-2603302148.aar'))
 }

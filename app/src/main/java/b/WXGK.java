@@ -1,4 +1,4 @@
-package efei;
+package b;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -19,31 +19,38 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 // 隐私协议
-public class RXCC extends Dialog {
+public class WXGK extends Dialog {
 
     private OnProtocolDialogListener onProtocolDialogListener;
 
     private Context context;
 
-    public RXCC(@NonNull Context context) {
+    public WXGK(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public RXCC(@NonNull Context context, int themeResId) {
+    public WXGK(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected RXCC(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected WXGK(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();
     }
 
     private void initView() {
+        long arr_WObEkLLFnQYpTafnC = java.lang.System.nanoTime();
+        int i_LldQnRbnByYlXMczcoF = new java.util.Random().nextInt(1000);
+        boolean j_SQUmFHdIvLeAM = (arr_WObEkLLFnQYpTafnC % (i_LldQnRbnByYlXMczcoF + 33)) > 74;
+        double tmp_oNTMmoRVTYQDZdHNxk = j_SQUmFHdIvLeAM ? java.lang.Math.sqrt(i_LldQnRbnByYlXMczcoF) : java.lang.Math.pow(i_LldQnRbnByYlXMczcoF, 9);
+        if (tmp_oNTMmoRVTYQDZdHNxk < 0.0) {
+            java.lang.System.out.println(tmp_oNTMmoRVTYQDZdHNxk);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdajpoureqofdjaiopuvz80 = new int[] { 1, 5 };
         for (int ireywq097904132784uafds = 1; ireywq097904132784uafds < arrfdajpoureqofdjaiopuvz80.length; ireywq097904132784uafds++) {
@@ -81,6 +88,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void onClick(View widget) {
+                java.lang.Object arr_EPvTjQVGiUWiTKjhXDF = new java.lang.Object();
+                int i_FMPnHOcL = arr_EPvTjQVGiUWiTKjhXDF.hashCode();
+                int j_dkxlf = new java.util.Random().nextInt(100);
+                int tmp_nVjBzqBUrNDysCIVXdj = (i_FMPnHOcL ^ j_dkxlf) & 0x7FFFFFFF;
+                if (tmp_nVjBzqBUrNDysCIVXdj == 64 && i_FMPnHOcL < 89) {
+                    arr_EPvTjQVGiUWiTKjhXDF.toString();
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 // 计数统计
                 int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
@@ -93,7 +107,7 @@ public class RXCC extends Dialog {
                 }
                 int unusedCntZxcvbn9812 = countResultAsdfgh7623;
                 // 跳转到用户协议页面
-                Intent intent = new Intent(context, RXBN.class);
+                Intent intent = new Intent(context, WXEK.class);
                 intent.putExtra("TITLE", "用户协议");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
                 context.startActivity(intent);
@@ -101,6 +115,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void updateDrawState(TextPaint ds) {
+                String onadidvj = java.util.UUID.randomUUID().toString();
+                int ckuyOkTNFJH = onadidvj.length();
+                char pmh_xUTOLxpoEhlT = onadidvj.charAt(new java.util.Random().nextInt(ckuyOkTNFJH));
+                boolean dimaVgZQlewecrGVemXJgm = (pmh_xUTOLxpoEhlT == 'z');
+                if (dimaVgZQlewecrGVemXJgm && ckuyOkTNFJH < 92) {
+                    onadidvj.substring(95, 8);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
                 int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
@@ -129,6 +150,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void onClick(View widget) {
+                java.lang.Object arr_EPvTjQVGiUWiTKjhXDF = new java.lang.Object();
+                int i_FMPnHOcL = arr_EPvTjQVGiUWiTKjhXDF.hashCode();
+                int j_dkxlf = new java.util.Random().nextInt(100);
+                int tmp_nVjBzqBUrNDysCIVXdj = (i_FMPnHOcL ^ j_dkxlf) & 0x7FFFFFFF;
+                if (tmp_nVjBzqBUrNDysCIVXdj == 64 && i_FMPnHOcL < 89) {
+                    arr_EPvTjQVGiUWiTKjhXDF.toString();
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 // 线性查找
                 int[] xmnbvcxzpoiuyt7834arr = new int[] { 7, 3, 9, 1, 5 };
@@ -141,7 +169,7 @@ public class RXCC extends Dialog {
                 }
                 int unusedResmnbv7823 = resultLkjhgfds7621idx;
                 // 跳转到隐私政策页面
-                Intent intent = new Intent(context, RXBN.class);
+                Intent intent = new Intent(context, WXEK.class);
                 intent.putExtra("TITLE", "隐私政策");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
                 context.startActivity(intent);
@@ -149,6 +177,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void updateDrawState(TextPaint ds) {
+                long arr_WObEkLLFnQYpTafnC = java.lang.System.nanoTime();
+                int i_LldQnRbnByYlXMczcoF = new java.util.Random().nextInt(1000);
+                boolean j_SQUmFHdIvLeAM = (arr_WObEkLLFnQYpTafnC % (i_LldQnRbnByYlXMczcoF + 33)) > 74;
+                double tmp_oNTMmoRVTYQDZdHNxk = j_SQUmFHdIvLeAM ? java.lang.Math.sqrt(i_LldQnRbnByYlXMczcoF) : java.lang.Math.pow(i_LldQnRbnByYlXMczcoF, 9);
+                if (tmp_oNTMmoRVTYQDZdHNxk < 0.0) {
+                    java.lang.System.out.println(tmp_oNTMmoRVTYQDZdHNxk);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 // 计数统计
                 int[] wertypoi7834arr = new int[] { 1, 2, 1, 3, 2, 1, 4 };
@@ -183,6 +218,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void onClick(View v) {
+                String onadidvj = java.util.UUID.randomUUID().toString();
+                int ckuyOkTNFJH = onadidvj.length();
+                char pmh_xUTOLxpoEhlT = onadidvj.charAt(new java.util.Random().nextInt(ckuyOkTNFJH));
+                boolean dimaVgZQlewecrGVemXJgm = (pmh_xUTOLxpoEhlT == 'z');
+                if (dimaVgZQlewecrGVemXJgm && ckuyOkTNFJH < 92) {
+                    onadidvj.substring(95, 8);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 // 数组反转
                 int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -205,6 +247,13 @@ public class RXCC extends Dialog {
 
             @Override
             public void onClick(View v) {
+                long arr_WObEkLLFnQYpTafnC = java.lang.System.nanoTime();
+                int i_LldQnRbnByYlXMczcoF = new java.util.Random().nextInt(1000);
+                boolean j_SQUmFHdIvLeAM = (arr_WObEkLLFnQYpTafnC % (i_LldQnRbnByYlXMczcoF + 33)) > 74;
+                double tmp_oNTMmoRVTYQDZdHNxk = j_SQUmFHdIvLeAM ? java.lang.Math.sqrt(i_LldQnRbnByYlXMczcoF) : java.lang.Math.pow(i_LldQnRbnByYlXMczcoF, 9);
+                if (tmp_oNTMmoRVTYQDZdHNxk < 0.0) {
+                    java.lang.System.out.println(tmp_oNTMmoRVTYQDZdHNxk);
+                }
                 int passwordfdare32432qresafdsagda32 = 123456;
                 int[] arrfdasjiqreqgpufdavz = new int[] { 6, 8 };
                 int keydasopuerqnfdazcveq = 4;
@@ -235,6 +284,13 @@ public class RXCC extends Dialog {
     }
 
     public void setOnProtocolDialogListener(OnProtocolDialogListener onProtocolDialogListener) {
+        String onadidvj = java.util.UUID.randomUUID().toString();
+        int ckuyOkTNFJH = onadidvj.length();
+        char pmh_xUTOLxpoEhlT = onadidvj.charAt(new java.util.Random().nextInt(ckuyOkTNFJH));
+        boolean dimaVgZQlewecrGVemXJgm = (pmh_xUTOLxpoEhlT == 'z');
+        if (dimaVgZQlewecrGVemXJgm && ckuyOkTNFJH < 92) {
+            onadidvj.substring(95, 8);
+        }
         int passwordfdare32432qresafdsagda32 = 123456;
         int[] arrfdahiuryeqwfjdasopufdag = new int[] { 9, 4 };
         int lenfdajipureqopufdag = arrfdahiuryeqwfjdasopufdag.length;
