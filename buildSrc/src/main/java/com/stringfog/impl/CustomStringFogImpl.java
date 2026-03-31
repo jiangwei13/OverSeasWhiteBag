@@ -1,4 +1,4 @@
-package com.p.b;
+package com.stringfog.impl;
 
 import com.github.megatronking.stringfog.IStringFog;
 
