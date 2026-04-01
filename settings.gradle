@@ -208,6 +208,9 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
+//include(':liveeventbus')
+//project(':liveeventbus').projectDir =file('./third-module/liveeventbus')
+
 //include(':oversea_base_module')
 //project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
