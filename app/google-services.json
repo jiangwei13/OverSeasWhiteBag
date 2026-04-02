@@ -1,3 +1,4 @@
+
 {
   "project_info": {
     "project_number": "1049047941800",
@@ -9,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1049047941800:android:9dbc39f8e018fa8300f89d",
         "android_client_info": {
-          "package_name": "com.locallive.weather2"
+          "package_name": "com.locallive.weather"
         }
       },
       "oauth_client": [],

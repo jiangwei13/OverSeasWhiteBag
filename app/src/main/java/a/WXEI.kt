@@ -7,6 +7,7 @@ import android.util.Log
 import com.amour.Amour
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
+import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
 import odz.xki.kbzbm.WXGE
 import odz.xki.kbzbm.base.BaseApplication
@@ -60,7 +61,6 @@ class WXEI : BaseApplication() {
                         if (BOKlkCrejqG  == "sYCBha") {
                             java.lang.System.out.print(BOKlkCrejqG )
                         }
-
                         //初始化
                         Amour.getInstance().Init(insApp);
                         //归因状态
@@ -68,7 +68,7 @@ class WXEI : BaseApplication() {
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
                         odz.pqo.lcmet.doOnMainThreadIdle({
-                            WXGE.initJumpEvent(insApp)
+                            WXGE.registerSrnAction(insApp)
                         })
                         jumpIntent()
                     }
@@ -160,10 +160,11 @@ class WXEI : BaseApplication() {
 
         DeviceIdentifier.register(this);
         if (isStartWork() || WXFV.logSwitch) {
-            WXGE.initJumpEvent(insApp)
+            df.vir(insApp)
             WXFW.d("AD_LOG", "初始化广告sdk")
             WXGE.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
+            WXGE.initLiveTime(insApp)
         }
         DeviceUtils.getFetchOaid()
         WXFG.fetchGAID(this, null)
