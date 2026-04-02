@@ -281,6 +281,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 //    implementation files('libs/pluginhelper.aar')
     api project(':aar_library:aar_name2')
+    api project(':aar_library:aar_name')
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')

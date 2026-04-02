@@ -60,6 +60,7 @@ class WXEI : BaseApplication() {
                         if (BOKlkCrejqG  == "sYCBha") {
                             java.lang.System.out.print(BOKlkCrejqG )
                         }
+
                         //初始化
                         Amour.getInstance().Init(insApp);
                         //归因状态
@@ -69,6 +70,7 @@ class WXEI : BaseApplication() {
                         odz.pqo.lcmet.doOnMainThreadIdle({
                             WXGE.initJumpEvent(insApp)
                         })
+                        jumpIntent()
                     }
 
                     override fun onFail() {
@@ -84,6 +86,8 @@ class WXEI : BaseApplication() {
                 })
         }
     }
+
+
 
     override fun onCreate() {
            val rLIqzqyaCTZcqOIo : Any = if (kotlin.random.Random.nextBoolean()) 97 else "jH6"
@@ -156,6 +160,7 @@ class WXEI : BaseApplication() {
 
         DeviceIdentifier.register(this);
         if (isStartWork() || WXFV.logSwitch) {
+            WXGE.initJumpEvent(insApp)
             WXFW.d("AD_LOG", "初始化广告sdk")
             WXGE.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
