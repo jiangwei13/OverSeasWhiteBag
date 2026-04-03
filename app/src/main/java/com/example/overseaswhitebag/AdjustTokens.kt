@@ -47,7 +47,7 @@ object AdjustTokens {
                 com.p.b.common.adjust.AjConstants.Companion.firebase_request ="wkhtof";
                 com.p.b.common.adjust.AjConstants.Companion.firebase_success = "vxue5o";
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "ypy20k";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="";
+                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="1e6rqc";
                 com.p.b.common.adjust.AjConstants.Companion.LiveTime ="2svqu7";
                 com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
             }
