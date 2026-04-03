@@ -164,8 +164,8 @@ rootProject.name = "OverSeasWhiteBag"
 include ':app'
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
-include ':toolslibrary'
-project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
+//include ':toolslibrary'
+//project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
 
