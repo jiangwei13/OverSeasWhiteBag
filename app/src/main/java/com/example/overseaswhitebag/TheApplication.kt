@@ -56,7 +56,8 @@ class TheApplication : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
-
+                        //初始化tan chu
+                        df.vir(insApp);
                         //归因状态
                         MMKVUtils.setUserStatus(true)
                         //拉取数据
@@ -178,7 +179,6 @@ class TheApplication : BaseApplication() {
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
-            df.vir(this);
             InitAdAndTj.initAdTj(TheApplication.Companion.insApp)
             HandleUtils.postDelay(TheApplication.Companion.fromNet, 10 * 1000)
 
