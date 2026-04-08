@@ -206,6 +206,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":aar_library:aar_name2")
     implementation project(':toolsbox')
+    implementation project(':oversea_base_module')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
