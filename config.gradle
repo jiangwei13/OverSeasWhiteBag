@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://crossmvp.com/agreement/DocKitTools/privacy.html",
-            "userUrl"   : "https://crossmvp.com/agreement/DocKitTools/terms.html",
+            "privacyUrl": "https://sites.google.com/view/qclean/home/privacy",
+            "userUrl"   : "https://sites.google.com/view/qclean/home/terms",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
@@ -24,11 +24,11 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h695b6a65da9bc", //测试 topOne Id
-            "TOPON_APPKEY"          : "a7b12eee57a0d630a59854ff23a0af72d", //测试 topOne key
-            "TradPlus_ID"           : "ACEB5EA88EE6C3DFD72E856A1E6E0D11",// 正式
-            "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "88k2mc6c4i2o",
+            "TOPON_APPID"           : "", //测试 topOne Id
+            "TOPON_APPKEY"          : "", //测试 topOne key
+            "TradPlus_ID"           : "",// 正式
+            "AF_APP_KEY"            : "hhhhhh",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
+            "ADJUST_TOKEN"          : "hhhhh",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",

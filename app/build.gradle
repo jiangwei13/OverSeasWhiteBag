@@ -14,7 +14,7 @@ apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 androidJunkCode {
     def config = {
-        packageBase = "com.wowo.men.xia"
+        packageBase = "com.clean.qick.qcl"
         packageCount = 40
         activityCountPerPackage = 40
         excludeActivityJavaFile = false
@@ -62,11 +62,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.doc.kitool2"
+        applicationId "com.clean.qclean"
         minSdk 26
         targetSdk 35
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -91,15 +91,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'kitool'
+            keyAlias 'qclean'
             keyPassword '123456'
-            storeFile file('kitool.jks')
+            storeFile file('qclean.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'kitool'
+            keyAlias 'qclean'
             keyPassword '123456'
-            storeFile file('kitool.jks')
+            storeFile file('qclean.jks')
             storePassword '123456'
         }
     }
