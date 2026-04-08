@@ -224,4 +224,4 @@ project(':build_tools').projectDir =file('./third-module/build_tools/build_tools
 include':aar_library:aar_name2'
 
 
-
+include ':oversea_base_power'
