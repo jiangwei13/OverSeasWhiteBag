@@ -53,11 +53,11 @@ class YQK : Application() {
         super.onCreate()
         appInstance = this
         APPContext.setApplication(this)
-        //        CContext.setApplication(this)
-        //        OverseaAppContext.setApplication(this)
-        //        MMKV.initialize(this)
-        //        // 初始化Firebase
-        //        FirebaseApp.initializeApp(this)
+//                CContext.setApplication(this)
+//                OverseaAppContext.setApplication(this)
+//                MMKV.initialize(this)
+//                // 初始化Firebase
+//                FirebaseApp.initializeApp(this)
         initializeApplication()
     }
 
