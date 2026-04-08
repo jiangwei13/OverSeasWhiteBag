@@ -1,4 +1,4 @@
-package nwq
+package a
 
 import android.app.Activity
 import android.app.Application
@@ -10,13 +10,13 @@ import com.meituan.android.walle.WalleChannelReader
 import com.tencent.mmkv.MMKV
 import java.lang.ref.WeakReference
 
-class YQK : Application() {
+class SYMR : Application() {
 
     companion object {
         var isBackgroundLaunch: Boolean = false
 
         @JvmStatic
-        var appInstance: YQK? = null
+        var appInstance: SYMR? = null
         //        @JvmStatic
         //        var delayedNetworkTask:Runnable = Runnable {
         //            if(SPUtils.isUserCommon()){
