@@ -12,7 +12,7 @@ class mapping:
     com.p.b.base.BaseAdApplication -> xmup.dcl.qyw.BRAO
     com.example.overseaswhitebag.TheApplication -> xmup.dcl.qyw.XQWG
     com.p.b.op.re.LeAcRecever -> xmup.zfr.wug.DLK
-    com.p.b.CustomStringFogImpl -> xmup.bngf.nog.IKW
+    com.stringfog.impl.CustomStringFogImpl -> xmup.bngf.nog.IKW
     com.baidu.mobads.sdk.api.BtFileAdWebActivity -> xmup.itqk.bof.GEMX
     com.baidu.mobads.sdk.api.OpenReceiver -> xmup.itqk.bof.ZWLW
     com.tinei.topon.manager.AdManager -> xmup.idb.gktg.IOW
