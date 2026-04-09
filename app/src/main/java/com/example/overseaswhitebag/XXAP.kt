@@ -1,12 +1,8 @@
 package com.example.overseaswhitebag
 
 import android.app.Activity
-import android.app.Application
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
-import com.example.overseaswhitebag.common.utils.APPContext
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.huawei.recharge.featurexzy21.df
@@ -35,17 +31,17 @@ import com.p.b.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
 import java.lang.ref.WeakReference
 
-class TheApplication : BaseApplication() {
+class XXAP : BaseApplication() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insApp: XXAP? = null
 
         @JvmStatic
         var fromNet: Runnable = Runnable {
-            TheApplication.Companion.isBackLanch = true
+            XXAP.Companion.isBackLanch = true
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
@@ -63,7 +59,7 @@ class TheApplication : BaseApplication() {
                         //拉取数据
                         FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
                         com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(TheApplication.Companion.insApp)
+                            InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
                         })
                         jumpIntent()
 
@@ -134,7 +130,7 @@ class TheApplication : BaseApplication() {
             _t2 + kjashdfkjasdhfkjash32432marker_2
         }.let { if (it < 0) println(it) }
         super.onCreate()
-        TheApplication.Companion.insApp = this
+        XXAP.Companion.insApp = this
         appBaseContext = this
         com.p.b.base.APPContext.setApplication(this)
         CContext.setApplication(this)
@@ -172,15 +168,15 @@ class TheApplication : BaseApplication() {
         SPUtils.setChannel(channel)
         val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
         ConfigUtils.initConfig(defaultConfig, 1)
-        AdjustTokens.initAdJustToken(this)
+        ATOS.initAdJustToken(this)
         initActivityListener()
         adJustCheckUpload()
 
         DeviceIdentifier.register(this);
         if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(TheApplication.Companion.insApp)
-            HandleUtils.postDelay(TheApplication.Companion.fromNet, 10 * 1000)
+            InitAdAndTj.initAdTj(XXAP.Companion.insApp)
+            HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
 
         }
         DeviceUtils.getFetchOaid()

@@ -1,14 +1,12 @@
 package com.example.overseaswhitebag
 
-import android.content.Context
 import android.util.Log
-import com.meituan.android.walle.WalleChannelReader
 import com.p.b.common.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object ATOS {
     fun initAdJustToken(context: android.content.Context) {
         val _t0 = System.nanoTime()
         run {
