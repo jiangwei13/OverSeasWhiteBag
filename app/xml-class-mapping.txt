@@ -1,20 +1,5 @@
 dir mapping:
-    com.p.b.base_api_net.base_api_bean -> xmup.tbu.dqw
-    com.p.b.ad.splash-> xmup.uhwxt.pmxh
-    com.tinei.topon.manager-> xmup.idb.gktg
-    com.p.b.pl223.hhoosstt-> xmup.vdlel.btq
-    com.p.b.ad.adimp.tradplus-> xmup.eor.eau
-    com.p.b.master.view-> xmup.tuz.wnpur
-    com.p.b.common.fcm-> xmup.qlq.ppool
+
 
 class mapping:
-    com.example.overseaswhitebag.MainActivity -> xmup.dcl.qyw.ONBV
-    com.p.b.base.BaseAdApplication -> xmup.dcl.qyw.BRAO
-    com.example.overseaswhitebag.TheApplication -> xmup.dcl.qyw.XQWG
-    com.p.b.op.re.LeAcRecever -> xmup.zfr.wug.DLK
-    com.stringfog.impl.CustomStringFogImpl -> xmup.bngf.nog.IKW
-    com.baidu.mobads.sdk.api.BtFileAdWebActivity -> xmup.itqk.bof.GEMX
-    com.baidu.mobads.sdk.api.OpenReceiver -> xmup.itqk.bof.ZWLW
-    com.tinei.topon.manager.AdManager -> xmup.idb.gktg.IOW
-    com.example.overseaswhitebag.AdjustTokens -> xmup.dcl.qyw.VDFA
-    com.p.b.common.fcm.FCMInitUtils -> xmup.qlq.ppool.CFGS
+
