@@ -126,7 +126,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.mukuled.ledlightgp"
+        applicationId "com.mukuled.ledlightgp2"
         minSdk 29
         targetSdk 35
         versionCode 5

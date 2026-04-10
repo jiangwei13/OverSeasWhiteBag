@@ -33,7 +33,7 @@
             <option value="$PROJECT_DIR$/third-module/setting" />
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/tools_extra_lib" />
-            <option value="$PROJECT_DIR$/third-module/toolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/tools_led_lib" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
