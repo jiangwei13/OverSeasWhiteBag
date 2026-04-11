@@ -227,6 +227,7 @@ dependencies {
 
     implementation 'com.tencent:mmkv:2.3.0'
 
-
-
+    implementation project(':oversea_base_power')
+    implementation project(':oversea_common_library')
+    implementation project(':oversea_base_module')
 }
