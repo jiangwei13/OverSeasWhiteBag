@@ -18,19 +18,20 @@ object AdjustTokens {
                 AjConstants.adjustAppToken = "qb9i8fd1oni8";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "4kmm0p";
-                AjConstants.ipu = "itdazl";
-                AjConstants.arpu = "eh6e52";
-                AjConstants.ipu_arpu = "u3g04a";
-                AjConstants.ipu_ecpm = "s8mq9h";
-                AjConstants.ipu_arpu_ecpm = "t7llm4";
-                AjConstants.blacklist = "12uqp8";
-                AjConstants.ad_request = "camagt";
-                AjConstants.ad_filled = "jtn65l";
-                AjConstants.firebase_request ="35whot";
-                AjConstants.firebase_success = "pfvlac";
-                AjConstants.adJust_attribution_request = "3kk6kj";
+                AjConstants.topon_ilrd = "";
+                AjConstants.ipu = "";
+                AjConstants.arpu = "";
+                AjConstants.ipu_arpu = "";
+                AjConstants.ipu_ecpm = "";
+                AjConstants.ipu_arpu_ecpm = "";
+                AjConstants.blacklist = "";
+                AjConstants.ad_request = "";
+                AjConstants.ad_filled = "";
+                AjConstants.firebase_request ="";
+                AjConstants.firebase_success = "";
+                AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
+                AjConstants.LiveTime ="";
                 AjConstants.activity_app ="";
             }
 
