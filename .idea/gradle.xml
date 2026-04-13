@@ -29,11 +29,10 @@
             <option value="$PROJECT_DIR$/oversea_base_power" />
             <option value="$PROJECT_DIR$/third-module/build_tools/build_tools" />
             <option value="$PROJECT_DIR$/third-module/color_picker_library" />
-            <option value="$PROJECT_DIR$/third-module/led_light_library" />
             <option value="$PROJECT_DIR$/third-module/setting" />
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/tools_extra_lib" />
-            <option value="$PROJECT_DIR$/third-module/toolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/tools_led_lib" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>

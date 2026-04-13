@@ -1,4 +1,4 @@
-package nwr;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import tmlr.hti.caqq.R;
 
 
-public class YQM extends AppCompatActivity {
+public class SYMT extends AppCompatActivity {
 
 
     @Override

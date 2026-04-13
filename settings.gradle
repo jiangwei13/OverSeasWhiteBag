@@ -170,14 +170,17 @@ project(':setting').projectDir = file('./third-module/setting')
 //project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
+include ':tools_led_lib'
+project(':tools_led_lib').projectDir = file('./third-module/tools_led_lib')
+
 //include ':edgeborderlight'
 //project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
 //include ':brokendevice'
 //project(':brokendevice').projectDir = file('./third-module/brokendevice')
 //include ':setting'
 //project(':setting').projectDir = file('./third-module/setting')
-include ':toolslibrary'
-project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
+//include ':toolslibrary'
+//project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 //include ':pic_toolslibrary'
 //project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
 //include ':scanlibrary'
@@ -195,8 +198,8 @@ project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 //include(':smalltoolslibrary')
 //project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
 
-include(':led_light_library')
-project(':led_light_library').projectDir = file('./third-module/led_light_library')
+//include(':led_light_library')
+//project(':led_light_library').projectDir = file('./third-module/led_light_library')
 
 //include(':edgeborderlight')
 //project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')

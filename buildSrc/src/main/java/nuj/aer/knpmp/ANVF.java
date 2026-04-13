@@ -1,10 +1,10 @@
-package com.p.b;
+package nuj.aer.knpmp;
 
 import com.github.megatronking.stringfog.IKeyGenerator;
 
 import java.nio.charset.StandardCharsets;
 
-public class CustomKeyGenerator implements IKeyGenerator {
+public class ANVF implements IKeyGenerator {
 
     @Override
     public byte[] generate(String value) {
