@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import com.amour.Amour
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.example.overseaswhitebag.common.utils.AdjustTokens
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
@@ -51,6 +52,7 @@ class SYMR : BaseApplication() {
                 false,
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
+                        Amour.getInstance().Init(appInstance);
                         //归因状态
                         SYNP.setUserStatus(true)
                         //拉取数据
