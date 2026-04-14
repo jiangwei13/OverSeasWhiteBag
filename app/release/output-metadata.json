@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.mukuled.ledlightgp2",
+  "applicationId": "com.mukuled.ledlightgp",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 5,
-      "versionName": "1.0.5",
+      "versionCode": 6,
+      "versionName": "1.0.6",
       "outputFile": "app-release.apk"
     }
   ],

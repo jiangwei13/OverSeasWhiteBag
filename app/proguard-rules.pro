@@ -85,6 +85,12 @@
 -keep class com.jakewharton.** {*;}
 -keep class com.github.** {*;}
 -keep class org.greenrobot.** {*;}
+# GreenDAO - LED 模块 DAO 类（反射需要保留类名和字段名）
+-keep class com.base.tools.led.db.** {*;}
+-keepclassmembers class * extends org.greenrobot.greendao.AbstractDao {
+    public static java.lang.String TABLENAME;
+}
+-keep class **$Properties { *; }
 -keep class io.reactivex.** {*;}
 -keep class org.jetbrains.** {*;}
 -keep class kotlin.** {*;}

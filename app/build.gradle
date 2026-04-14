@@ -126,11 +126,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.mukuled.ledlightgp2"
+        applicationId "com.mukuled.ledlightgp"
         minSdk 29
         targetSdk 35
-        versionCode 5
-        versionName "1.0.5"
+        versionCode 6
+        versionName "1.0.6"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -241,6 +241,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":aar_library:aar_name2")
     implementation project(':toolsbox')
+    implementation project(':oversea_base_module')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
