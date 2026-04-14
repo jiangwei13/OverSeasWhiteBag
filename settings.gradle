@@ -1,15 +1,15 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
-        google()
-        mavenCentral()
+
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -61,15 +61,15 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
 //    gradlePluginPortal()
-        google()
-        mavenCentral()
+
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
@@ -168,14 +168,17 @@ include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
 
-//include(':broadcast')
-//project(':broadcast').projectDir = file("./tools_common_module/broadcast")
-
-//include(':base_ad_common_library')
-//project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
+include(':oversea_base_power')
+project(':oversea_base_power').projectDir = file("./oversea_base_module/oversea_base_power")
 
 
-//include(":aar_library:app_aar")
-//include(":aar_library:security_checker")
 
-//include ':oversea_utils'
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file("./oversea_base_module")
+
+include(':oversea_common_library')
+project(':oversea_common_library').projectDir = file("./oversea_base_module/oversea_common_library")
+
+
+
+
