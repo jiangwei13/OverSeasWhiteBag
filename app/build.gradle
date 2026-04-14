@@ -65,8 +65,8 @@ android {
         applicationId "com.doc.kitool"
         minSdk 26
         targetSdk 35
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.0.3"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -165,7 +165,7 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 //    implementation files('libs/pluginhelper.aar')
-
+    implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
@@ -188,8 +188,6 @@ dependencies {
 
     implementation 'com.tencent:mmkv:2.3.0'
 
-    implementation project(':toolsbox')
-    implementation project(':oversea_base_module')
-    implementation project(':oversea_base_power')
-    implementation project(':oversea_common_library')
+
+
 }
