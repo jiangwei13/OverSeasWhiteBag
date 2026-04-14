@@ -1,16 +1,16 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
-        google()
-        // TradPlus
-        mavenCentral()
+
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        // TradPlus
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -82,15 +82,15 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
 //    gradlePluginPortal()
-        google()
-        mavenCentral()
+
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
@@ -168,6 +168,8 @@ include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
+//include(':screenshot_cleaner')
+//project(':screenshot_cleaner').projectDir = file('./third-module/screenshot_cleaner')
 
 //include(":aar_library:app_aar")
 //include(":aar_library:security_checker")

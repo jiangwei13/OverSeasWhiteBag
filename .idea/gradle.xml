@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/third-module/build_tools/build_tools" />
+            <option value="$PROJECT_DIR$/third-module/screenshot_cleaner" />
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
