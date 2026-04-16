@@ -15,16 +15,21 @@ import java.util.Date
 import java.lang.ref.WeakReference
 import android.content.pm.PackageManager
 import android.content.ComponentName
+import android.content.Intent
+import com.examp.oversea_base_power.BaseApplication
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.InitAdAndTj
 import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
+
 import com.p.b.base_api_net.base_api_bean.ConfigUtils
 import com.p.b.base_api_net.utils.DeviceUtils
 import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.common.ENV
+import com.p.b.comm.ENV
+import com.p.b.comm.context.CContext
+import com.p.b.comm.context.HookContext
+
 import com.p.b.common.GAIDUtil
 import com.p.b.common.MMKVUtils
 import com.p.b.common.OverseaAppContext
@@ -34,12 +39,10 @@ import com.p.b.common.adjust.AdJustInitUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
 import com.p.b.common.adjust.AjConstants
 import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.context.HookContext
 import com.p.b.common.fcm.FCMInitUtils
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.http.HostUtils
 import com.p.b.pl223.hhoosstt.AdUtils
-import com.p.b.pl223.hhoosstt.CContext
 import zbiz.AdjustTokens
 
 class DPF : BaseApplication() {
@@ -94,6 +97,10 @@ class DPF : BaseApplication() {
         // 初始化FCM
         FCMInitUtils.init(this)
         init()
+    }
+
+    override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
+
     }
 
 
