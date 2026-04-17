@@ -42,9 +42,9 @@ class XXAP : BaseApplication() {
         @JvmStatic
         var fromNet: Runnable = Runnable {
             XXAP.Companion.isBackLanch = true
-            if (SPUtils.isUserCommon()) {
-                return@Runnable
-            }
+//            if (SPUtils.isUserCommon()) {
+//                return@Runnable
+//            }
 
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
@@ -52,8 +52,8 @@ class XXAP : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
-//                        if (isStartWork()) {
-//                        }
+                        val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
+                        ConfigUtils.initConfig(defaultConfig, 1)
                         //初始化tan chu
                         df.vir(insApp);
                         //归因状态
@@ -168,17 +168,14 @@ class XXAP : BaseApplication() {
         val channel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
-        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfig, 1)
+
         ATOS.initAdJustToken(this)
         initActivityListener()
         adJustCheckUpload()
-
         DeviceIdentifier.register(this);
-            Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(XXAP.Companion.insApp)
-            HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
-
+        Log.d("AD_LOG", "初始化广告sdk")
+        InitAdAndTj.initAdTj(XXAP.Companion.insApp)
+        HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this, null)
     }
