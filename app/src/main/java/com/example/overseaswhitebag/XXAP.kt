@@ -52,6 +52,8 @@ class XXAP : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+//                        if (isStartWork()) {
+//                        }
                         //初始化tan chu
                         df.vir(insApp);
                         //归因状态
@@ -173,12 +175,10 @@ class XXAP : BaseApplication() {
         adJustCheckUpload()
 
         DeviceIdentifier.register(this);
-        if (isStartWork() || ENV.logSwitch) {
             Log.d("AD_LOG", "初始化广告sdk")
             InitAdAndTj.initAdTj(XXAP.Companion.insApp)
             HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
 
-        }
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this, null)
     }
