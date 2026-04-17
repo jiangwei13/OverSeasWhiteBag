@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.nightguide.flashlightgp2",
+  "applicationId": "com.nightguide.flashlightgp",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 11,
-      "versionName": "1.1.1",
+      "versionCode": 13,
+      "versionName": "1.1.3",
       "outputFile": "app-release.apk"
     }
   ],
