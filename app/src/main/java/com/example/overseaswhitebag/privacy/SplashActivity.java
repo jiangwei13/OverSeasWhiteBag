@@ -53,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         }
         int unusedMaxRfvtgb2198 = maxValPlokmn8734;
-        AdViewMana.initView(this, "in_tab");
+        //AdViewMana.initView(this, "in_tab");
         new Handler().postDelayed(new Runnable() {
 
             @Override
