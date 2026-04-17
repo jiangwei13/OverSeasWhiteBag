@@ -147,11 +147,11 @@ android {
     }
     defaultConfig {
 //        applicationId "com.saowen.magicdoc"
-        applicationId "com.nightguide.flashlightgp2"
+        applicationId "com.nightguide.flashlightgp"
         minSdk 28
         targetSdk 35
-        versionCode 12
-        versionName "1.1.2"
+        versionCode 13
+        versionName "1.1.3"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }

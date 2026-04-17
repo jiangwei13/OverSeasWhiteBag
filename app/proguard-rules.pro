@@ -80,3 +80,11 @@
 -keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
     native <methods>;
 }
+
+-keep class com.adjust.sdk.** { *; }
+-keep class com.google.android.gms.common.** { *; }
+-keep class com.google.android.gms.ads.identifier.** { *; }
+-keepnames class * implements com.adjust.sdk.OnGoogleAdIdReadListener
+-keepclassmembers class com.adjust.sdk.** {
+    *;
+}
