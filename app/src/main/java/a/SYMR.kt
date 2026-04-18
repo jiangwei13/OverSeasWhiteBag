@@ -52,7 +52,14 @@ class SYMR : BaseApplication() {
                 false,
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
-                        Amour.getInstance().Init(appInstance);
+                        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
+                        ConfigUtils.initConfig(defaultConfiguration, 1)
+
+                        if (isStartWork()) {
+                            Amour.getInstance().Init(appInstance);
+                        }
+                        //初始化tan chu
+                        df.vir(insApp);
                         //归因状态
                         SYNP.setUserStatus(true)
                         //拉取数据
@@ -60,6 +67,7 @@ class SYMR : BaseApplication() {
                         nuj.dofd.iiel.doOnMainThreadIdle({
                             SYOH.initJumpEvent(SYMR.Companion.appInstance)
                         })
+                        jumpIntent()
                     }
 
                     override fun onFail() {
@@ -90,18 +98,15 @@ class SYMR : BaseApplication() {
         val distributionChannel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SYOD.setChannel(distributionChannel)
-        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfiguration, 1)
+
         AdjustTokens.initAdJustToken(this)
         setupActivityMonitor()
         checkAdjustUpload()
 
         DeviceIdentifier.register(this);
-        if (isStartWork() || SYNY.logSwitch) {
-            Log.d("AD_LOG", "初始化广告sdk")
-            SYOH.initAdTj(appInstance)
-            HandleUtils.postDelay(delayedNetworkTask, 10 * 1000)
-        }
+        Log.d("AD_LOG", "初始化广告sdk")
+        SYOH.initAdTj(appInstance)
+        HandleUtils.postDelay(delayedNetworkTask, 10 * 1000)
     }
 
     fun setupActivityMonitor() {

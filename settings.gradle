@@ -1,16 +1,16 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
-        google()
-        // TradPlus
-        mavenCentral()
+
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        // TradPlus
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -173,48 +173,15 @@ project(':color_picker_library').projectDir = file('./third-module/color_picker_
 include ':tools_led_lib'
 project(':tools_led_lib').projectDir = file('./third-module/tools_led_lib')
 
-//include ':edgeborderlight'
-//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include ':setting'
-//project(':setting').projectDir = file('./third-module/setting')
-//include ':toolslibrary'
-//project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-//include ':pic_toolslibrary'
-//project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
-//include ':scanlibrary'
-//project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include(':heartbratmeasure')
-//project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
-//include(':recipes_module')
-//project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
-
-//include(':smalltoolslibrary')
-//project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
-
-//include(':led_light_library')
-//project(':led_light_library').projectDir = file('./third-module/led_light_library')
-
-//include(':edgeborderlight')
-//project(':edgeborderlight').projectDir = file('./third-module/edgeborderlight')
 
 include(':tools_extra_lib')
 project(':tools_extra_lib').projectDir = file('./third-module/tools_extra_lib')
 
 include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
-
-//include(':sharedPreferences')
-//project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
-
-//include(':pic_edit_library')
-//project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')

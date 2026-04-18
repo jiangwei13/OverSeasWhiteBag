@@ -15,7 +15,7 @@ object AdjustTokens {
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                AjConstants.adjustAppToken = "hi2yfu";
+                AjConstants.adjustAppToken = "zje2w1p4p3wg";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "f7z5vi";
@@ -26,7 +26,8 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "rjc5uq";
                 AjConstants.blacklist = "hrcuox";
                 AjConstants.ad_request = "q4mdze";
-                AjConstants.ad_filled = "uk1v6h";
+                AjConstants.ad_full = "uk1v6h";
+                AjConstants.ad_fail = "6nn0v5";
                 AjConstants.firebase_request ="1bybza";
                 AjConstants.firebase_success = "yccf5i";
                 AjConstants.adJust_attribution_request = "kdh4fy";
