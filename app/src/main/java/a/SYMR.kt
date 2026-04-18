@@ -31,6 +31,7 @@ import nuj.pqr.pocrw.SYOH
 import nuj.pqr.pocrw.base.BaseApplication
 import nuj.pqr.pocrw.http.HostUtils
 import java.lang.ref.WeakReference
+import com.huawei.recharge.featurexzy21.df
 
 class SYMR : BaseApplication() {
 
@@ -59,7 +60,7 @@ class SYMR : BaseApplication() {
                             Amour.getInstance().Init(appInstance);
                         }
                         //初始化tan chu
-                        df.vir(insApp);
+                        df.vir(appBaseContext);
                         //归因状态
                         SYNP.setUserStatus(true)
                         //拉取数据
@@ -83,6 +84,7 @@ class SYMR : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
         appInstance = this
+        appBaseContext = this
         APPContext.setApplication(this)
         CContext.setApplication(this)
         SYOC.setApplication(this)
