@@ -83,6 +83,8 @@ class WBAR : BaseApplication() {
                         if (gOUmICKhDzDF  == "foWIkSiWsPGVAVpF") {
                             java.lang.System.out.print(gOUmICKhDzDF )
                         }
+                        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
+                        ConfigUtils.initConfig(defaultConfig, 1)
                         //归因状态
                         WBBV.setUserStatus(true)
                         //拉取数据
@@ -90,6 +92,7 @@ class WBAR : BaseApplication() {
                         tiul.kqo.zhpx.doOnMainThreadIdle({
                             WBCN.initJumpEvent(insApp)
                         })
+                        jumpIntent()
                     }
 
                     override fun onFail() {
@@ -140,18 +143,15 @@ class WBAR : BaseApplication() {
         }
         val channel: String = WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         WBCJ.setChannel(channel)
-        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfig, 1)
+
         WBCR.initAdJustToken(this)
         initActivityListener()
         adJustCheckUpload()
 
         DeviceIdentifier.register(this)
-        if (isStartWork() || WBCE.logSwitch) {
             WBCF.d("AD_LOG", "初始化广告sdk")
             WBCN.initAdTj(insApp)
             HandleUtils.postDelay(fromNet, 10 * 1000)
-        }
         DeviceUtils.getFetchOaid()
         WBBP.fetchGAID(this, null)
     }
