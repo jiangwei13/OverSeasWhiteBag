@@ -13,6 +13,7 @@ import android.util.Log
 import efej.RXCE
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
+import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
 import com.p.a_b.http.doOnMainThreadIdle
 import tiul.njcol.cjnx.WBCN
@@ -85,6 +86,9 @@ class WBAR : BaseApplication() {
                         }
                         val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
                         ConfigUtils.initConfig(defaultConfig, 1)
+
+                        df.vir(insApp)
+
                         //归因状态
                         WBBV.setUserStatus(true)
                         //拉取数据

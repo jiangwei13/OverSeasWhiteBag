@@ -17,7 +17,7 @@ ext{
             //TODO 接口环境  日志log开关
             "logSwitch"    : false,
 
-            "ad_LiveTime":"2026-01-30 10:00:00",
+            "ad_LiveTime":"2026-04-22 18:00:00",
 
 
 
@@ -28,7 +28,7 @@ ext{
             "TOPON_APPKEY"          : "", //测试 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "TradPlus_ID"           : "C0172B249BA8862A17BC8C42907A1311",
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "7xl22ryzkozk",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " ",
