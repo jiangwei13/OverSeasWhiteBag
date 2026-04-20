@@ -129,8 +129,8 @@ android {
         applicationId "com.mukuled.ledlightgp"
         minSdk 29
         targetSdk 35
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 7
+        versionName "1.0.7"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -240,6 +240,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":aar_library:aar_name2")
+    implementation project(":aar_library:aar_name")
     implementation project(':toolsbox')
     implementation project(':oversea_base_module')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
