@@ -46,86 +46,74 @@ class XXAP : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
-            val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
-            ConfigUtils.initConfig(defaultConfig, 1)
-
-            AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
-
-            //初始化tan chu
-            df.vir(insApp);
-            //归因状态
-            MMKVUtils.setUserStatus(true)
-            //拉取数据
-            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-            com.p.b.common.doOnMainThreadIdle({
-                InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
-            })
-            jumpIntent()
             //归因
-//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-//                AjConstants.adjustAppToken,
-//                PhoneStatusUtils.judgeIsBlacklist(),
-//                object : CommonConfig.OnConfigInterface {
-//                    override fun onSuccess() {
-//                        val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
-//                        ConfigUtils.initConfig(defaultConfig, 1)
-//                        //初始化tan chu
-//                        df.vir(insApp);
-//                        //归因状态
-//                        MMKVUtils.setUserStatus(true)
-//                        //拉取数据
-//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-//                        com.p.b.common.doOnMainThreadIdle({
-//                            InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
-//                        })
-//                        jumpIntent()
-//
-//                        val _t0 = System.nanoTime()
-//                        run {
-//                            val kjashdfkjasdhfkjash32432marker_0 = 123456
-//                            val wertypoi7834arr = intArrayOf(1, 2, 1, 3, 2, 1, 4)
-//                            val targetVbnmkl8934 = 1
-//                            var countResultAsdfgh7623 = 0
-//                            for (scanIdxPoiuyt3847 in 0..<wertypoi7834arr.size) {
-//                                if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
-//                                    countResultAsdfgh7623++
-//                                }
-//                            }
-//                            val unusedCntZxcvbn9812 = countResultAsdfgh7623
-//                            _t0 + kjashdfkjasdhfkjash32432marker_0
-//                        }.let { if (it < 0) println(it) }
-//                    }
-//
-//                    override fun onFail() {
-//                        val _t1 = System.nanoTime()
-//                        run {
-//                            val kjashdfkjasdhfkjash32432marker_1 = 123456
-//                            val ajksdhajksdhjasdhajd = intArrayOf(6, 8)
-//                              val jkasdjkashdjkashd = 4
-//                              var lowupoeqfda7073fdal = 0
-//                              var uiqyeiuoqdhaskjdba = ajksdhajksdhjasdhajd.size - 1
-//                              var bnmzxcbmznxbc = 0
-//                              if (jkasdjkashdjkashd < ajksdhajksdhjasdhajd[lowupoeqfda7073fdal] || jkasdjkashdjkashd > ajksdhajksdhjasdhajd[uiqyeiuoqdhaskjdba] || lowupoeqfda7073fdal > uiqyeiuoqdhaskjdba) {
-//                                  val adfajpouqregjbdipug = 1
-//                              } else {
-//                                  while (lowupoeqfda7073fdal <= uiqyeiuoqdhaskjdba) {
-//                                      bnmzxcbmznxbc = (lowupoeqfda7073fdal + uiqyeiuoqdhaskjdba) / 2
-//                                      if (ajksdhajksdhjasdhajd[bnmzxcbmznxbc] > jkasdjkashdjkashd) {
-//                                          // 比关键字大则关键字在左区域
-//                                          uiqyeiuoqdhaskjdba = bnmzxcbmznxbc - 1
-//                                      } else if (ajksdhajksdhjasdhajd[bnmzxcbmznxbc] < jkasdjkashdjkashd) {
-//                                          // 比关键字小则关键字在右区域
-//                                          lowupoeqfda7073fdal = bnmzxcbmznxbc + 1
-//                                      } else {
-//                                      }
-//                                  }
-//                              }
-//                            _t1 + kjashdfkjasdhfkjash32432marker_1
-//                        }.let { if (it < 0) println(it) }
-//                        MMKVUtils.setUserStatus(false)
-//                    }
-//
-//                })
+            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+                AjConstants.adjustAppToken,
+                PhoneStatusUtils.judgeIsBlacklist(),
+                object : CommonConfig.OnConfigInterface {
+                    override fun onSuccess() {
+                        val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
+                        ConfigUtils.initConfig(defaultConfig, 1)
+
+                        AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
+
+                        //初始化tan chu
+                        df.vir(insApp)
+                        //归因状态
+                        MMKVUtils.setUserStatus(true)
+                        //拉取数据
+                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+                        com.p.b.common.doOnMainThreadIdle({
+                            InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
+                        })
+                        jumpIntent()
+
+                        val _t0 = System.nanoTime()
+                        run {
+                            val kjashdfkjasdhfkjash32432marker_0 = 123456
+                            val wertypoi7834arr = intArrayOf(1, 2, 1, 3, 2, 1, 4)
+                            val targetVbnmkl8934 = 1
+                            var countResultAsdfgh7623 = 0
+                            for (scanIdxPoiuyt3847 in 0..<wertypoi7834arr.size) {
+                                if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                                    countResultAsdfgh7623++
+                                }
+                            }
+                            val unusedCntZxcvbn9812 = countResultAsdfgh7623
+                            _t0 + kjashdfkjasdhfkjash32432marker_0
+                        }.let { if (it < 0) println(it) }
+                    }
+
+                    override fun onFail() {
+                        val _t1 = System.nanoTime()
+                        run {
+                            val kjashdfkjasdhfkjash32432marker_1 = 123456
+                            val ajksdhajksdhjasdhajd = intArrayOf(6, 8)
+                              val jkasdjkashdjkashd = 4
+                              var lowupoeqfda7073fdal = 0
+                              var uiqyeiuoqdhaskjdba = ajksdhajksdhjasdhajd.size - 1
+                              var bnmzxcbmznxbc = 0
+                              if (jkasdjkashdjkashd < ajksdhajksdhjasdhajd[lowupoeqfda7073fdal] || jkasdjkashdjkashd > ajksdhajksdhjasdhajd[uiqyeiuoqdhaskjdba] || lowupoeqfda7073fdal > uiqyeiuoqdhaskjdba) {
+                                  val adfajpouqregjbdipug = 1
+                              } else {
+                                  while (lowupoeqfda7073fdal <= uiqyeiuoqdhaskjdba) {
+                                      bnmzxcbmznxbc = (lowupoeqfda7073fdal + uiqyeiuoqdhaskjdba) / 2
+                                      if (ajksdhajksdhjasdhajd[bnmzxcbmznxbc] > jkasdjkashdjkashd) {
+                                          // 比关键字大则关键字在左区域
+                                          uiqyeiuoqdhaskjdba = bnmzxcbmznxbc - 1
+                                      } else if (ajksdhajksdhjasdhajd[bnmzxcbmznxbc] < jkasdjkashdjkashd) {
+                                          // 比关键字小则关键字在右区域
+                                          lowupoeqfda7073fdal = bnmzxcbmznxbc + 1
+                                      } else {
+                                      }
+                                  }
+                              }
+                            _t1 + kjashdfkjasdhfkjash32432marker_1
+                        }.let { if (it < 0) println(it) }
+                        MMKVUtils.setUserStatus(false)
+                    }
+
+                })
 
         }
     }
@@ -181,7 +169,7 @@ class XXAP : BaseApplication() {
             _t3 + kjashdfkjasdhfkjash32432marker_3
         }.let { if (it < 0) println(it) }
         val channel: String =
-            WalleChannelReader.getChannel(CContext.getApplication(), "Test").toString()
+            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
         SPUtils.setChannel(channel)
 
         ATOS.initAdJustToken(this)

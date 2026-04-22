@@ -26,7 +26,7 @@ object ATOS {
             _t0 + kjashdfkjasdhfkjash32432marker_0
         }.let { if (it < 0) println(it) }
         //adJust 打点需要初始化
-        val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"Test").toString();
+        val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
