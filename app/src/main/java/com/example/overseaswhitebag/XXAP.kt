@@ -42,9 +42,9 @@ class XXAP : BaseApplication() {
         @JvmStatic
         var fromNet: Runnable = Runnable {
             XXAP.Companion.isBackLanch = true
-//            if (SPUtils.isUserCommon()) {
-//                return@Runnable
-//            }
+            if (SPUtils.isUserCommon()) {
+                return@Runnable
+            }
 
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
