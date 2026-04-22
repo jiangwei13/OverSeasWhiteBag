@@ -177,7 +177,7 @@ class XXAP : BaseApplication() {
             _t3 + kjashdfkjasdhfkjash32432marker_3
         }.let { if (it < 0) println(it) }
         val channel: String =
-            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
+            WalleChannelReader.getChannel(CContext.getApplication(), "Test").toString()
         SPUtils.setChannel(channel)
 
         ATOS.initAdJustToken(this)
