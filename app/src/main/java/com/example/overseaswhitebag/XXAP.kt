@@ -26,6 +26,7 @@ import com.p.b.common.context.HookContext
 import com.p.b.common.fcm.FCMInitUtils
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.http.HostUtils
+import com.p.b.pl223.hhoosstt.AdLoadMana
 import com.p.b.pl223.hhoosstt.AdUtils
 import com.p.b.pl223.hhoosstt.CContext
 import com.tencent.mmkv.MMKV
@@ -45,6 +46,7 @@ class XXAP : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
+            AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
             val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
             ConfigUtils.initConfig(defaultConfig, 1)
             //初始化tan chu

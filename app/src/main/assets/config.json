@@ -88,6 +88,7 @@
       30
     ],
     "hour_turn_time": 10,
+    "adAutoCloseTime": 15,
     "ipu_arpu_ecpm": {
       "ipu": 0,
       "arpu": 0,
