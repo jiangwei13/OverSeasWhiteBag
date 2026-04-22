@@ -46,9 +46,11 @@ class XXAP : BaseApplication() {
             if (SPUtils.isUserCommon()) {
                 return@Runnable
             }
-            AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
             val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
             ConfigUtils.initConfig(defaultConfig, 1)
+
+            AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
+
             //初始化tan chu
             df.vir(insApp);
             //归因状态
@@ -188,7 +190,7 @@ class XXAP : BaseApplication() {
         DeviceIdentifier.register(this);
         Log.d("AD_LOG", "初始化广告sdk")
         InitAdAndTj.initAdTj(XXAP.Companion.insApp)
-        HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
+        HandleUtils.postDelay(XXAP.Companion.fromNet, 3 * 1000)
         DeviceUtils.getFetchOaid()
         GAIDUtil.fetchGAID(this, null)
     }
