@@ -100,7 +100,7 @@ android {
     }
     defaultConfig {
 //        applicationId "com.saowen.magicdoc"
-        applicationId "com.nightguide.flashlightgp"
+        applicationId "com.saowen.magicdoc"
         minSdk 28
         targetSdk 35
         versionCode 14
@@ -137,15 +137,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'lightgp'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('lightgp.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'lightgp'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('lightgp.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
