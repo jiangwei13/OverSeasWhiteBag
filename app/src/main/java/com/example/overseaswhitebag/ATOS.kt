@@ -43,6 +43,33 @@ object ATOS {
                 com.p.b.common.adjust.AjConstants.Companion.ad_request = "kt2wpz";
                 com.p.b.common.adjust.AjConstants.Companion.ad_full = "96yw7c";
                 com.p.b.common.adjust.AjConstants.Companion.ad_fail = "2sivb1";
+                // —— 广告链路漏斗事件
+                com.p.b.common.adjust.AjConstants.Companion.ad_tick_fire = "ux9qbh";
+                com.p.b.common.adjust.AjConstants.Companion.ad_tick_init = "mbva1a";
+                com.p.b.common.adjust.AjConstants.Companion.ad_tick_config_missing = "fnkd50";
+                com.p.b.common.adjust.AjConstants.Companion.ad_placement_miss = "tvrntv";
+                com.p.b.common.adjust.AjConstants.Companion.ad_posthandle_fail = "d9ftlm";
+                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail = "4ohsou";
+                com.p.b.common.adjust.AjConstants.Companion.ad_load_success = "40z8wg";
+                com.p.b.common.adjust.AjConstants.Companion.ad_load_timeout = "31rfxc";
+                com.p.b.common.adjust.AjConstants.Companion.ad_next_load_fail = "rajgzl";
+                com.p.b.common.adjust.AjConstants.Companion.ad_adlist_empty = "cntuu9";
+                com.p.b.common.adjust.AjConstants.Companion.ad_silent_blackhole = "ympcy9";
+                com.p.b.common.adjust.AjConstants.Companion.ad_transit_created = "venk5v";
+                com.p.b.common.adjust.AjConstants.Companion.ad_view_controller_null = "wsachr";
+                com.p.b.common.adjust.AjConstants.Companion.ad_show_timeout = "x58tpa";
+                com.p.b.common.adjust.AjConstants.Companion.ad_show_complete = "gqcgsw";
+                com.p.b.common.adjust.AjConstants.Companion.ad_show_next = "t70qc3";
+                com.p.b.common.adjust.AjConstants.Companion.ad_show_flow = "qfkgz8";
+                com.p.b.common.adjust.AjConstants.Companion.ad_weakref_lost = "vea8ua";
+                com.p.b.common.adjust.AjConstants.Companion.ad_scope_destroy_before_complete = "d80cfo";
+                com.p.b.common.adjust.AjConstants.Companion.ad_init_fail = "d8t40l";
+                com.p.b.common.adjust.AjConstants.Companion.ad_handler_destroy = "aqgjwj";
+                com.p.b.common.adjust.AjConstants.Companion.ad_close_source = "ux78y1";
+                com.p.b.common.adjust.AjConstants.Companion.ad_jump_entry = "4nf06r";
+                com.p.b.common.adjust.AjConstants.Companion.ad_params_null = "rjuval";
+                com.p.b.common.adjust.AjConstants.Companion.ad_realshow = "x7ixkd";
+                com.p.b.common.adjust.AjConstants.Companion.ad_disabled_early_complete = "mfvog8";
                 com.p.b.common.adjust.AjConstants.Companion.firebase_request ="wkhtof";
                 com.p.b.common.adjust.AjConstants.Companion.firebase_success = "vxue5o";
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "ypy20k";
@@ -69,6 +96,34 @@ object ATOS {
                 AjConstants.firebase_success = "ba1ynt";
                 AjConstants.adJust_attribution_request = "dybuhb";
                 AjConstants.adJust_attribution_success ="";
+                //  广告链路漏斗事件
+                AjConstants.ad_fail = "";
+                AjConstants.ad_tick_fire = "";
+                AjConstants.ad_tick_init = "";
+                AjConstants.ad_tick_config_missing = "";
+                AjConstants.ad_placement_miss = "";
+                AjConstants.ad_posthandle_fail = "";
+                AjConstants.ad_load_fail = "";
+                AjConstants.ad_load_success = "";
+                AjConstants.ad_load_timeout = "";
+                AjConstants.ad_next_load_fail = "";
+                AjConstants.ad_adlist_empty = "";
+                AjConstants.ad_silent_blackhole = "";
+                AjConstants.ad_transit_created = "";
+                AjConstants.ad_view_controller_null = "";
+                AjConstants.ad_show_timeout = "";
+                AjConstants.ad_show_complete = "";
+                AjConstants.ad_show_next = "";
+                AjConstants.ad_show_flow = "";
+                AjConstants.ad_weakref_lost = "";
+                AjConstants.ad_scope_destroy_before_complete = "";
+                AjConstants.ad_init_fail = "";
+                AjConstants.ad_handler_destroy = "";
+                AjConstants.ad_close_source = "";
+                AjConstants.ad_jump_entry = "";
+                AjConstants.ad_params_null = "";
+                AjConstants.ad_realshow = "";
+                AjConstants.ad_disabled_early_complete = "";
                 AjConstants.activity_app ="";
             }
 
@@ -89,6 +144,34 @@ object ATOS {
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = "";
+                AjConstants.ad_tick_fire = "";
+                AjConstants.ad_tick_init = "";
+                AjConstants.ad_tick_config_missing = "";
+                AjConstants.ad_placement_miss = "";
+                AjConstants.ad_posthandle_fail = "";
+                AjConstants.ad_load_fail = "";
+                AjConstants.ad_load_success = "";
+                AjConstants.ad_load_timeout = "";
+                AjConstants.ad_next_load_fail = "";
+                AjConstants.ad_adlist_empty = "";
+                AjConstants.ad_silent_blackhole = "";
+                AjConstants.ad_transit_created = "";
+                AjConstants.ad_view_controller_null = "";
+                AjConstants.ad_show_timeout = "";
+                AjConstants.ad_show_complete = "";
+                AjConstants.ad_show_next = "";
+                AjConstants.ad_show_flow = "";
+                AjConstants.ad_weakref_lost = "";
+                AjConstants.ad_scope_destroy_before_complete = "";
+                AjConstants.ad_init_fail = "";
+                AjConstants.ad_handler_destroy = "";
+                AjConstants.ad_close_source = "";
+                AjConstants.ad_jump_entry = "";
+                AjConstants.ad_params_null = "";
+                AjConstants.ad_realshow = "";
+                AjConstants.ad_disabled_early_complete = "";
                 AjConstants.activity_app ="";
             }
 
@@ -109,6 +192,34 @@ object ATOS {
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = "";
+                AjConstants.ad_tick_fire = "";
+                AjConstants.ad_tick_init = "";
+                AjConstants.ad_tick_config_missing = "";
+                AjConstants.ad_placement_miss = "";
+                AjConstants.ad_posthandle_fail = "";
+                AjConstants.ad_load_fail = "";
+                AjConstants.ad_load_success = "";
+                AjConstants.ad_load_timeout = "";
+                AjConstants.ad_next_load_fail = "";
+                AjConstants.ad_adlist_empty = "";
+                AjConstants.ad_silent_blackhole = "";
+                AjConstants.ad_transit_created = "";
+                AjConstants.ad_view_controller_null = "";
+                AjConstants.ad_show_timeout = "";
+                AjConstants.ad_show_complete = "";
+                AjConstants.ad_show_next = "";
+                AjConstants.ad_show_flow = "";
+                AjConstants.ad_weakref_lost = "";
+                AjConstants.ad_scope_destroy_before_complete = "";
+                AjConstants.ad_init_fail = "";
+                AjConstants.ad_handler_destroy = "";
+                AjConstants.ad_close_source = "";
+                AjConstants.ad_jump_entry = "";
+                AjConstants.ad_params_null = "";
+                AjConstants.ad_realshow = "";
+                AjConstants.ad_disabled_early_complete = "";
                 AjConstants.activity_app ="";
             }
 
@@ -129,6 +240,34 @@ object ATOS {
                 AjConstants.firebase_success="";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail="";
+                AjConstants.ad_tick_fire="";
+                AjConstants.ad_tick_init="";
+                AjConstants.ad_tick_config_missing="";
+                AjConstants.ad_placement_miss="";
+                AjConstants.ad_posthandle_fail="";
+                AjConstants.ad_load_fail="";
+                AjConstants.ad_load_success="";
+                AjConstants.ad_load_timeout="";
+                AjConstants.ad_next_load_fail="";
+                AjConstants.ad_adlist_empty="";
+                AjConstants.ad_silent_blackhole="";
+                AjConstants.ad_transit_created="";
+                AjConstants.ad_view_controller_null="";
+                AjConstants.ad_show_timeout="";
+                AjConstants.ad_show_complete="";
+                AjConstants.ad_show_next="";
+                AjConstants.ad_show_flow="";
+                AjConstants.ad_weakref_lost="";
+                AjConstants.ad_scope_destroy_before_complete="";
+                AjConstants.ad_init_fail="";
+                AjConstants.ad_handler_destroy="";
+                AjConstants.ad_close_source="";
+                AjConstants.ad_jump_entry="";
+                AjConstants.ad_params_null="";
+                AjConstants.ad_realshow="";
+                AjConstants.ad_disabled_early_complete="";
                 AjConstants.activity_app ="";
             }
 
@@ -149,6 +288,34 @@ object ATOS {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
                 AjConstants.activity_app = ""
             }
 
@@ -169,6 +336,34 @@ object ATOS {
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = "";
+                AjConstants.ad_tick_fire = "";
+                AjConstants.ad_tick_init = "";
+                AjConstants.ad_tick_config_missing = "";
+                AjConstants.ad_placement_miss = "";
+                AjConstants.ad_posthandle_fail = "";
+                AjConstants.ad_load_fail = "";
+                AjConstants.ad_load_success = "";
+                AjConstants.ad_load_timeout = "";
+                AjConstants.ad_next_load_fail = "";
+                AjConstants.ad_adlist_empty = "";
+                AjConstants.ad_silent_blackhole = "";
+                AjConstants.ad_transit_created = "";
+                AjConstants.ad_view_controller_null = "";
+                AjConstants.ad_show_timeout = "";
+                AjConstants.ad_show_complete = "";
+                AjConstants.ad_show_next = "";
+                AjConstants.ad_show_flow = "";
+                AjConstants.ad_weakref_lost = "";
+                AjConstants.ad_scope_destroy_before_complete = "";
+                AjConstants.ad_init_fail = "";
+                AjConstants.ad_handler_destroy = "";
+                AjConstants.ad_close_source = "";
+                AjConstants.ad_jump_entry = "";
+                AjConstants.ad_params_null = "";
+                AjConstants.ad_realshow = "";
+                AjConstants.ad_disabled_early_complete = "";
                 AjConstants.activity_app ="";
             }
 
@@ -189,6 +384,34 @@ object ATOS {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
                 AjConstants.activity_app = ""
             }
 
@@ -209,6 +432,34 @@ object ATOS {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
                 AjConstants.activity_app = ""
             }
 
@@ -238,6 +489,34 @@ object ATOS {
 
                 AjConstants.blacklist = "ytkgif"
                 Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                // —— 广告链路漏斗事件（占位）
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
             }
         }
     }
