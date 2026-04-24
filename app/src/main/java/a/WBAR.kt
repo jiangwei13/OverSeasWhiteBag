@@ -147,6 +147,7 @@ class WBAR : BaseApplication() {
             }
         super.onCreate()
         insApp = this
+        appBaseContext = this
         tiul.njcol.cjnx.base.APPContext.setApplication(this)
         CContext.setApplication(this)
         WBCI.setApplication(this)
