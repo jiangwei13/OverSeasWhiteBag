@@ -68,48 +68,70 @@ class WBAR : BaseApplication() {
         @JvmStatic
         var fromNet: Runnable = Runnable {
             isBackLanch = true
-            if (WBCJ.isUserCommon()) {
-                return@Runnable
+//            if (WBCJ.isUserCommon()) {
+//                return@Runnable
+//            }
+
+            val VJVgnmqaLO : Any = if (kotlin.random.Random.nextBoolean()) 0 else "jH6"
+            // 尝试将数字安全转为字符串，失败则触发 Elvis
+            val gOUmICKhDzDF  = (VJVgnmqaLO  as? String)?.reversed() ?: "YVavgobws_-593171817"
+
+            if (gOUmICKhDzDF  == "foWIkSiWsPGVAVpF") {
+                java.lang.System.out.print(gOUmICKhDzDF )
             }
+            val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
+            ConfigUtils.initConfig(defaultConfig, 1)
+
+            df.vir(insApp)
+
+            //归因状态
+            WBBV.setUserStatus(true)
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            tiul.kqo.zhpx.doOnMainThreadIdle({
+                WBCN.initJumpEvent(insApp)
+            })
+            jumpIntent()
+
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                WBCD.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                           val VJVgnmqaLO : Any = if (kotlin.random.Random.nextBoolean()) 0 else "jH6"
-                        // 尝试将数字安全转为字符串，失败则触发 Elvis
-                        val gOUmICKhDzDF  = (VJVgnmqaLO  as? String)?.reversed() ?: "YVavgobws_-593171817"
-
-                        if (gOUmICKhDzDF  == "foWIkSiWsPGVAVpF") {
-                            java.lang.System.out.print(gOUmICKhDzDF )
-                        }
-                        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-                        ConfigUtils.initConfig(defaultConfig, 1)
-
-                        df.vir(insApp)
-
-                        //归因状态
-                        WBBV.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        tiul.kqo.zhpx.doOnMainThreadIdle({
-                            WBCN.initJumpEvent(insApp)
-                        })
-                        jumpIntent()
-                    }
-
-                    override fun onFail() {
-                           val toHHaysBmZZsJlW : Any = if (kotlin.random.Random.nextBoolean()) 66 else "jH6"
-                        // 尝试将数字安全转为字符串，失败则触发 Elvis
-                        val pQkQBklvYT  = (toHHaysBmZZsJlW  as? String)?.reversed() ?: "qsohKJwq_1314232813"
-
-                        if (pQkQBklvYT  == "kBIHeAydwuPBkR") {
-                            java.lang.System.out.print(pQkQBklvYT )
-                        }
-                        WBBV.setUserStatus(false)
-                    }
-                })
+//            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+//                AjConstants.adjustAppToken,
+//                WBCD.judgeIsBlacklist(),
+//                object : CommonConfig.OnConfigInterface {
+//                    override fun onSuccess() {
+//                           val VJVgnmqaLO : Any = if (kotlin.random.Random.nextBoolean()) 0 else "jH6"
+//                        // 尝试将数字安全转为字符串，失败则触发 Elvis
+//                        val gOUmICKhDzDF  = (VJVgnmqaLO  as? String)?.reversed() ?: "YVavgobws_-593171817"
+//
+//                        if (gOUmICKhDzDF  == "foWIkSiWsPGVAVpF") {
+//                            java.lang.System.out.print(gOUmICKhDzDF )
+//                        }
+//                        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
+//                        ConfigUtils.initConfig(defaultConfig, 1)
+//
+//                        df.vir(insApp)
+//
+//                        //归因状态
+//                        WBBV.setUserStatus(true)
+//                        //拉取数据
+//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//                        tiul.kqo.zhpx.doOnMainThreadIdle({
+//                            WBCN.initJumpEvent(insApp)
+//                        })
+//                        jumpIntent()
+//                    }
+//
+//                    override fun onFail() {
+//                           val toHHaysBmZZsJlW : Any = if (kotlin.random.Random.nextBoolean()) 66 else "jH6"
+//                        // 尝试将数字安全转为字符串，失败则触发 Elvis
+//                        val pQkQBklvYT  = (toHHaysBmZZsJlW  as? String)?.reversed() ?: "qsohKJwq_1314232813"
+//
+//                        if (pQkQBklvYT  == "kBIHeAydwuPBkR") {
+//                            java.lang.System.out.print(pQkQBklvYT )
+//                        }
+//                        WBBV.setUserStatus(false)
+//                    }
+//                })
         }
     }
 
