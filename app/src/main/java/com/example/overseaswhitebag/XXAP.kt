@@ -257,7 +257,7 @@ class XXAP : BaseApplication() {
         DeviceIdentifier.register(this);
         Log.d("AD_LOG", "初始化广告sdk")
         InitAdAndTj.initAdTj(XXAP.Companion.insApp)
-        HandleUtils.postDelay(XXAP.Companion.fromNet, 3 * 1000)
+        HandleUtils.postDelay(XXAP.Companion.fromNet, 10 * 1000)
 
 //        attribution()
 
