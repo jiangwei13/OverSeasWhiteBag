@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : false,
+            "logSwitch"    : true,
 
             "ad_LiveTime":"2026-04-22 18:00:00",
 
@@ -27,7 +27,7 @@ ext{
             "TOPON_APPID"           : "", //测试 topOne Id
             "TOPON_APPKEY"          : "", //测试 topOne key
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "TradPlus_ID"           : "C0172B249BA8862A17BC8C42907A1311",
+            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "ADJUST_TOKEN"          : "7xl22ryzkozk",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
