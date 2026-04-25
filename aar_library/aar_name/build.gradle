@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('pop-2026-04-18-1446.aar'))
+artifacts.add("default", file('test.aar'))

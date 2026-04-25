@@ -47,36 +47,52 @@ class SYMR : BaseApplication() {
             }
 
             //Adjust归因
-            AdJustInitUtils.initAdjust(
-                HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                false,
-                object : CommonConfig.OnConfigInterface{
-                    override fun onSuccess() {
-                        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
-                        ConfigUtils.initConfig(defaultConfiguration, 1)
+            val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
+            ConfigUtils.initConfig(defaultConfiguration, 1)
 
-                        if (isStartWork()) {
-                            Amour.getInstance().Init(appInstance);
-                        }
-                        //初始化tan chu
-                        df.vir(appBaseContext);
-                        //归因状态
-                        SYNP.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        nuj.dofd.iiel.doOnMainThreadIdle({
-                            SYOH.initJumpEvent(SYMR.Companion.appInstance)
-                        })
-                        jumpIntent()
-                    }
-
-                    override fun onFail() {
-                        SYNP.setUserStatus(false)
-                    }
-
-                }
-            )
+//            if (isStartWork()) {
+//                Amour.getInstance().Init(appInstance);
+//            }
+            //初始化tan chu
+            df.vir(appBaseContext);
+            //归因状态
+            SYNP.setUserStatus(true)
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            nuj.dofd.iiel.doOnMainThreadIdle({
+                SYOH.initJumpEvent(SYMR.Companion.appInstance)
+            })
+            jumpIntent()
+//            AdJustInitUtils.initAdjust(
+//                HostUtils.randomConfig_from_delay,
+//                AjConstants.adjustAppToken,
+//                false,
+//                object : CommonConfig.OnConfigInterface{
+//                    override fun onSuccess() {
+//                        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
+//                        ConfigUtils.initConfig(defaultConfiguration, 1)
+//
+//                        if (isStartWork()) {
+//                            Amour.getInstance().Init(appInstance);
+//                        }
+//                        //初始化tan chu
+//                        df.vir(appBaseContext);
+//                        //归因状态
+//                        SYNP.setUserStatus(true)
+//                        //拉取数据
+//                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+//                        nuj.dofd.iiel.doOnMainThreadIdle({
+//                            SYOH.initJumpEvent(SYMR.Companion.appInstance)
+//                        })
+//                        jumpIntent()
+//                    }
+//
+//                    override fun onFail() {
+//                        SYNP.setUserStatus(false)
+//                    }
+//
+//                }
+//            )
         }
 
     }

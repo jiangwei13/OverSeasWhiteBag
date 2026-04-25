@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "862341584161",
-    "project_id": "ledlight-21abf",
-    "storage_bucket": "ledlight-21abf.firebasestorage.app"
+    "project_number": "7429770582",
+    "project_id": "mdtextapp",
+    "storage_bucket": "mdtextapp.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:862341584161:android:712eaf7b1590eeb4c0da60",
+        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
         "android_client_info": {
-          "package_name": "com.mukuled.ledlightgp"
+          "package_name": "com.saowen.magicdoc"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCmHBegm7UcPu1rF7du5mxmEWyDn_Lpkxs"
+          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
         }
       ],
       "services": {
@@ -27,5 +27,3 @@
   ],
   "configuration_version": "1"
 }
-
-    
