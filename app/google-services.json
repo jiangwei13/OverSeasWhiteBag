@@ -1,22 +1,21 @@
-
 {
   "project_info": {
-    "project_number": "556789608497",
-    "project_id": "horizon-weather-589e3",
-    "storage_bucket": "horizon-weather-589e3.firebasestorage.app"
+    "project_number": "7429770582",
+    "project_id": "mdtextapp",
+    "storage_bucket": "mdtextapp.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:556789608497:android:bbaac798f2833b13596510",
+        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
         "android_client_info": {
-          "package_name": "com.horizon.weather"
+          "package_name": "com.saowen.magicdoc"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBBvhZNQBacBqySFOJp3e2HasB-xEHHRJg"
+          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
         }
       ],
       "services": {
@@ -28,5 +27,3 @@
   ],
   "configuration_version": "1"
 }
-
-    

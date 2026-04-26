@@ -22,7 +22,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "23D5C05CE03EC624F865B746F74BD512"
+          "placement_id": "2103AC9966218048719813E32F012412"
         }
       ]
     },
@@ -35,7 +35,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "23D5C05CE03EC624F865B746F74BD512"
+          "placement_id": "2103AC9966218048719813E32F012412"
         }
       ]
     },
@@ -72,6 +72,7 @@
     "ka": true,
     "kp": true,
     "dialog": true,
+    "ad_single_interval": 1,
     "timerCount": [
       5,
       8,
