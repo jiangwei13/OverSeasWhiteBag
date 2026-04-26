@@ -68,9 +68,9 @@ class WBAR : BaseApplication() {
         @JvmStatic
         var fromNet: Runnable = Runnable {
             isBackLanch = true
-            if (WBCJ.isUserCommon()) {
-                return@Runnable
-            }
+//            if (WBCJ.isUserCommon()) {
+//                return@Runnable
+//            }
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
