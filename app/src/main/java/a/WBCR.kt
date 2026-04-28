@@ -41,7 +41,6 @@ object WBCR {
                 AjConstants.firebase_success = "dft9lx"
                 AjConstants.adJust_attribution_request = "fcizu3"
                 AjConstants.adJust_attribution_success = "dbvzho"
-                AjConstants.adJust_attribution_fail = "qt9g9v"
                 AjConstants.activity_app = ""
             }
 
