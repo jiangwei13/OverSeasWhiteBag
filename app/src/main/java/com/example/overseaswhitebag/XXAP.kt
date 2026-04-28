@@ -18,6 +18,7 @@ import com.p.b.common.MMKVUtils
 import com.p.b.common.OverseaAppContext
 import com.p.b.common.PhoneStatusUtils
 import com.p.b.common.SPUtils
+import com.p.b.common.SkipAttrGesture
 import com.p.b.common.adjust.AdJustInitUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
@@ -47,27 +48,19 @@ class XXAP : BaseApplication() {
 //            if (SPUtils.isUserCommon()) {
 //                return@Runnable
 //            }
+            // 开关开启时跳过 AdJust 归因，直接执行归因后初始化
+            if (SPUtils.isSkipAttribution()) {
+                postAttributionInit()
+                return@Runnable
+            }
+
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
-                        val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
-                        ConfigUtils.initConfig(defaultConfig, 1)
-
-                        AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
-
-                        //初始化tan chu
-                        df.vir(insApp)
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
-                        })
-                        jumpIntent()
+                        postAttributionInit()
 
                         val _t0 = System.nanoTime()
                         run {
@@ -124,6 +117,39 @@ class XXAP : BaseApplication() {
                 })
 
         }
+
+        @JvmStatic
+        fun postAttributionInit() {
+            val _tPa0 = System.nanoTime()
+            run {
+                val kjashdfkjasdhfkjash32432markerPa0 = 123456
+                val wertypoi7834arr = intArrayOf(1, 2, 1, 3, 2, 1, 4)
+                val targetVbnmkl8934 = 1
+                var countResultAsdfgh7623 = 0
+                for (scanIdxPoiuyt3847 in 0..<wertypoi7834arr.size) {
+                    if (wertypoi7834arr[scanIdxPoiuyt3847] == targetVbnmkl8934) {
+                        countResultAsdfgh7623++
+                    }
+                }
+                val unusedCntZxcvbn9812 = countResultAsdfgh7623
+                _tPa0 + kjashdfkjasdhfkjash32432markerPa0
+            }.let { if (it < 0) println(it) }
+            val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
+            ConfigUtils.initConfig(defaultConfig, 1)
+
+            AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
+
+            //初始化tan chu
+            df.vir(insApp)
+            //归因状态
+            MMKVUtils.setUserStatus(true)
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            com.p.b.common.doOnMainThreadIdle({
+                InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
+            })
+            jumpIntent()
+        }
     }
 
     override fun onCreate() {
@@ -149,6 +175,9 @@ class XXAP : BaseApplication() {
         CContext.setApplication(this)
         OverseaAppContext.setApplication(this)
 
+        // 跳过归因手势状态机：以 Application onCreate 作为 T0
+        SkipAttrGesture.onAppCreated()
+
         MMKV.initialize(this)
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
@@ -164,21 +193,7 @@ class XXAP : BaseApplication() {
             PhoneStatusUtils.judgeIsBlacklist(),
             object : CommonConfig.OnConfigInterface {
                 override fun onSuccess() {
-                    val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
-                    ConfigUtils.initConfig(defaultConfig, 1)
-
-                    AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
-
-                    //初始化tan chu
-                    df.vir(insApp)
-                    //归因状态
-                    MMKVUtils.setUserStatus(true)
-                    //拉取数据
-                    FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                    com.p.b.common.doOnMainThreadIdle({
-                        InitAdAndTj.initJumpEvent(XXAP.Companion.insApp)
-                    })
-                    jumpIntent()
+                    postAttributionInit()
 
                     val _t0 = System.nanoTime()
                     run {
