@@ -139,6 +139,7 @@ class XXAP : BaseApplication() {
 
             AdLoadMana.getInstance().preLoading(appBaseContext,"turn_time_one");
 
+            Log.e("test","df_init")
             //初始化tan chu
             df.vir(insApp)
             //归因状态

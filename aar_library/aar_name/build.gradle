@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('428.aar'))
+artifacts.add("default", file('shell.aar'))
