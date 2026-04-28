@@ -42,9 +42,9 @@ class SYMR : BaseApplication() {
         var appInstance: SYMR? = null
         @JvmStatic
         var delayedNetworkTask:Runnable = Runnable {
-            if(SYOD.isUserCommon()){
-                return@Runnable
-            }
+//            if(SYOD.isUserCommon()){
+//                return@Runnable
+//            }
 
             //Adjust归因
             AdJustInitUtils.initAdjust(
