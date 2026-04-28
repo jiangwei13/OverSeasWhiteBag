@@ -50,7 +50,7 @@ class SYMR : BaseApplication() {
             AdJustInitUtils.initAdjust(
                 HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                false,
+                true,
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
                         val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
