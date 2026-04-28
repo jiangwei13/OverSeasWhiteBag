@@ -77,6 +77,10 @@ def printSoPath(File file) {
 }
 allprojects {
 
+    tasks.maybeCreate('clean', Delete).configure {
+        delete project.buildDir
+    }
+
     //此处为了解决mac M1芯片到问题 强制使用 sqlite版本
     configurations.all {
         resolutionStrategy {
