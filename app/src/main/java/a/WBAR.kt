@@ -28,6 +28,7 @@ import tiul.kqo.zhpx.WBCI
 import tiul.kqo.zhpx.WBCD
 import tiul.kqo.zhpx.WBCJ
 import tiul.kqo.zhpx.adjust.AdJustInitUtils
+import tiul.kqo.zhpx.adjust.AdJustTokenAFUtils
 import tiul.kqo.zhpx.adjust.AdJustTokenAFUtils.doActivateDot
 import tiul.kqo.zhpx.adjust.AjConstants
 import tiul.kqo.zhpx.adjust.CommonConfig
@@ -35,8 +36,10 @@ import tiul.kqo.zhpx.context.HookContext
 import tiul.umdub.eyly.WBBN
 import tiul.kqo.zhpx.firebase.FireBaseInitUtils
 import tiul.njcol.cjnx.http.HostUtils
+import tiul.kbnn.sjb.hhoosstt.AdLoadMana
 import tiul.kbnn.sjb.hhoosstt.AdUtils
 import tiul.kbnn.sjb.hhoosstt.CContext
+import tiul.kqo.zhpx.SkipAttrGesture
 import com.tencent.mmkv.MMKV
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -66,8 +69,30 @@ class WBAR : BaseApplication() {
         var insApp: WBAR? = null
 
         @JvmStatic
+        fun postAttributionInit() {
+            val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
+            ConfigUtils.initConfig(defaultConfig, 1)
+
+            AdLoadMana.getInstance().preLoading(appBaseContext, "turn_time_one")
+
+            df.vir(insApp)
+            //归因状态
+            WBBV.setUserStatus(true)
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            tiul.kqo.zhpx.doOnMainThreadIdle({
+                WBCN.initJumpEvent(insApp)
+            })
+            jumpIntent()
+        }
+
+        @JvmStatic
         var fromNet: Runnable = Runnable {
             isBackLanch = true
+            if (WBCJ.isSkipAttribution()) {
+                postAttributionInit()
+                return@Runnable
+            }
 //            if (WBCJ.isUserCommon()) {
 //                return@Runnable
 //            }
@@ -84,19 +109,7 @@ class WBAR : BaseApplication() {
                         if (gOUmICKhDzDF  == "foWIkSiWsPGVAVpF") {
                             java.lang.System.out.print(gOUmICKhDzDF )
                         }
-                        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-                        ConfigUtils.initConfig(defaultConfig, 1)
-
-                        df.vir(insApp)
-
-                        //归因状态
-                        WBBV.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        tiul.kqo.zhpx.doOnMainThreadIdle({
-                            WBCN.initJumpEvent(insApp)
-                        })
-                        jumpIntent()
+                        postAttributionInit()
                     }
 
                     override fun onFail() {
@@ -107,6 +120,12 @@ class WBAR : BaseApplication() {
                         if (pQkQBklvYT  == "kBIHeAydwuPBkR") {
                             java.lang.System.out.print(pQkQBklvYT )
                         }
+                        AdJustTokenAFUtils.adFunnel(
+                            AjConstants.ad_init_fail,
+                            null,
+                            "attribution_fail",
+                            null
+                        )
                         WBBV.setUserStatus(false)
                     }
                 })
@@ -129,6 +148,8 @@ class WBAR : BaseApplication() {
         tiul.njcol.cjnx.base.APPContext.setApplication(this)
         CContext.setApplication(this)
         WBCI.setApplication(this)
+
+        SkipAttrGesture.onAppCreated()
 
         MMKV.initialize(this)
         // 初始化Firebase

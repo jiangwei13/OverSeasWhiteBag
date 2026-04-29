@@ -1,2 +1,6 @@
 configurations.maybeCreate("default")
 artifacts.add("default", file('weather.aar'))
+
+task clean(type: Delete) {
+    delete project.buildDir
+}
