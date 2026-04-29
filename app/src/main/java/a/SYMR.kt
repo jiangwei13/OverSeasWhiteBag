@@ -32,6 +32,7 @@ import nuj.pqr.pocrw.base.BaseApplication
 import nuj.pqr.pocrw.http.HostUtils
 import java.lang.ref.WeakReference
 import com.huawei.recharge.featurexzy21.df
+import nuj.dofd.iiel.SYNX
 
 class SYMR : BaseApplication() {
 
@@ -50,7 +51,7 @@ class SYMR : BaseApplication() {
             AdJustInitUtils.initAdjust(
                 HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                true,
+                SYNX.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
                         val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
