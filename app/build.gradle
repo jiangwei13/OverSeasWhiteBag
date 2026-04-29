@@ -84,7 +84,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.horizon.weather"
+        applicationId "com.saowen.magicdoc"
         minSdk 28
         targetSdk 35
         versionCode 6
@@ -104,15 +104,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'horizonWeather'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('horizonWeather.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'horizonWeather'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('horizonWeather.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
