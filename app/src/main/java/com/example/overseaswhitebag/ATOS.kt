@@ -70,6 +70,15 @@ object ATOS {
                 com.p.b.common.adjust.AjConstants.Companion.ad_params_null = "rjuval";
                 com.p.b.common.adjust.AjConstants.Companion.ad_realshow = "x7ixkd";
                 com.p.b.common.adjust.AjConstants.Companion.ad_disabled_early_complete = "mfvog8";
+                // —— V1.0.2 新增
+                com.p.b.common.adjust.AjConstants.Companion.ad_fill_success = "urks2v";
+                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail_no_fill = "kjclnj";
+                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail_after_fill = "ze82l4";
+                com.p.b.common.adjust.AjConstants.Companion.ad_next_load_success = "kigvpu";
+                com.p.b.common.adjust.AjConstants.Companion.ad_blackhole_probe = "9oxjmw";
+                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_success = "laim0q";
+                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_fail_no_fill = "vbgvd2";
+                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_fail_after_fill = "6asz42";
                 com.p.b.common.adjust.AjConstants.Companion.firebase_request ="wkhtof";
                 com.p.b.common.adjust.AjConstants.Companion.firebase_success = "vxue5o";
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "ypy20k";
@@ -124,6 +133,14 @@ object ATOS {
                 AjConstants.ad_params_null = "";
                 AjConstants.ad_realshow = "";
                 AjConstants.ad_disabled_early_complete = "";
+                AjConstants.ad_fill_success = "";
+                AjConstants.ad_load_fail_no_fill = "";
+                AjConstants.ad_load_fail_after_fill = "";
+                AjConstants.ad_next_load_success = "";
+                AjConstants.ad_blackhole_probe = "";
+                AjConstants.ad_preload_first_success = "";
+                AjConstants.ad_preload_first_fail_no_fill = "";
+                AjConstants.ad_preload_first_fail_after_fill = "";
                 AjConstants.activity_app ="";
             }
 
@@ -172,6 +189,14 @@ object ATOS {
                 AjConstants.ad_params_null = "";
                 AjConstants.ad_realshow = "";
                 AjConstants.ad_disabled_early_complete = "";
+                AjConstants.ad_fill_success = "";
+                AjConstants.ad_load_fail_no_fill = "";
+                AjConstants.ad_load_fail_after_fill = "";
+                AjConstants.ad_next_load_success = "";
+                AjConstants.ad_blackhole_probe = "";
+                AjConstants.ad_preload_first_success = "";
+                AjConstants.ad_preload_first_fail_no_fill = "";
+                AjConstants.ad_preload_first_fail_after_fill = "";
                 AjConstants.activity_app ="";
             }
 
@@ -220,6 +245,14 @@ object ATOS {
                 AjConstants.ad_params_null = "";
                 AjConstants.ad_realshow = "";
                 AjConstants.ad_disabled_early_complete = "";
+                AjConstants.ad_fill_success = "";
+                AjConstants.ad_load_fail_no_fill = "";
+                AjConstants.ad_load_fail_after_fill = "";
+                AjConstants.ad_next_load_success = "";
+                AjConstants.ad_blackhole_probe = "";
+                AjConstants.ad_preload_first_success = "";
+                AjConstants.ad_preload_first_fail_no_fill = "";
+                AjConstants.ad_preload_first_fail_after_fill = "";
                 AjConstants.activity_app ="";
             }
 
@@ -268,6 +301,14 @@ object ATOS {
                 AjConstants.ad_params_null="";
                 AjConstants.ad_realshow="";
                 AjConstants.ad_disabled_early_complete="";
+                AjConstants.ad_fill_success="";
+                AjConstants.ad_load_fail_no_fill="";
+                AjConstants.ad_load_fail_after_fill="";
+                AjConstants.ad_next_load_success="";
+                AjConstants.ad_blackhole_probe="";
+                AjConstants.ad_preload_first_success="";
+                AjConstants.ad_preload_first_fail_no_fill="";
+                AjConstants.ad_preload_first_fail_after_fill="";
                 AjConstants.activity_app ="";
             }
 
@@ -316,6 +357,14 @@ object ATOS {
                 AjConstants.ad_params_null = ""
                 AjConstants.ad_realshow = ""
                 AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
                 AjConstants.activity_app = ""
             }
 
@@ -364,6 +413,14 @@ object ATOS {
                 AjConstants.ad_params_null = "";
                 AjConstants.ad_realshow = "";
                 AjConstants.ad_disabled_early_complete = "";
+                AjConstants.ad_fill_success = "";
+                AjConstants.ad_load_fail_no_fill = "";
+                AjConstants.ad_load_fail_after_fill = "";
+                AjConstants.ad_next_load_success = "";
+                AjConstants.ad_blackhole_probe = "";
+                AjConstants.ad_preload_first_success = "";
+                AjConstants.ad_preload_first_fail_no_fill = "";
+                AjConstants.ad_preload_first_fail_after_fill = "";
                 AjConstants.activity_app ="";
             }
 
@@ -412,6 +469,14 @@ object ATOS {
                 AjConstants.ad_params_null = ""
                 AjConstants.ad_realshow = ""
                 AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
                 AjConstants.activity_app = ""
             }
 
@@ -460,6 +525,14 @@ object ATOS {
                 AjConstants.ad_params_null = ""
                 AjConstants.ad_realshow = ""
                 AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
                 AjConstants.activity_app = ""
             }
 
@@ -517,6 +590,14 @@ object ATOS {
                 AjConstants.ad_params_null = ""
                 AjConstants.ad_realshow = ""
                 AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
             }
         }
     }
