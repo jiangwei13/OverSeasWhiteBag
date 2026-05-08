@@ -86,6 +86,7 @@
       30
     ],
     "hour_turn_time": 1,
+    "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
       "ipu": 10,
       "arpu": 0,

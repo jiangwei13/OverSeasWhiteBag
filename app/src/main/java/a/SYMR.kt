@@ -18,9 +18,11 @@ import nuj.dofd.iiel.SYNY
 import nuj.dofd.iiel.SYOC
 import nuj.dofd.iiel.SYOD
 import nuj.dofd.iiel.adjust.AdJustInitUtils
+import nuj.dofd.iiel.adjust.AdJustTokenAFUtils
 import nuj.dofd.iiel.adjust.AdJustTokenAFUtils.doActivateDot
 import nuj.dofd.iiel.adjust.AjConstants
 import nuj.dofd.iiel.adjust.CommonConfig
+import nuj.dofd.iiel.SkipAttrGesture
 import nuj.dofd.iiel.context.HookContext
 import nuj.dofd.iiel.firebase.FireBaseInitUtils
 import nuj.fdukf.dva.base_api_bean.ConfigUtils
@@ -47,6 +49,11 @@ class SYMR : BaseApplication() {
 //                return@Runnable
 //            }
 
+            if (SYOD.isSkipAttribution()) {
+                postAttributionInit()
+                return@Runnable
+            }
+
             //Adjust归因
             AdJustInitUtils.initAdjust(
                 HostUtils.randomConfig_from_delay,
@@ -54,30 +61,41 @@ class SYMR : BaseApplication() {
                 SYNX.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface{
                     override fun onSuccess() {
-                        val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
-                        ConfigUtils.initConfig(defaultConfiguration, 1)
-
-                        if (isStartWork()) {
-                            Amour.getInstance().Init(appInstance);
-                        }
-                        //初始化tan chu
-                        df.vir(appBaseContext);
-                        //归因状态
-                        SYNP.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        nuj.dofd.iiel.doOnMainThreadIdle({
-                            SYOH.initJumpEvent(SYMR.Companion.appInstance)
-                        })
-                        jumpIntent()
+                        postAttributionInit()
                     }
 
                     override fun onFail() {
+                        AdJustTokenAFUtils.adFunnel(
+                            AjConstants.ad_init_fail,
+                            null,
+                            "attribution_fail",
+                            null
+                        )
                         SYNP.setUserStatus(false)
                     }
 
                 }
             )
+        }
+
+        @JvmStatic
+        fun postAttributionInit() {
+            val defaultConfiguration: String = ConfigUtils.getConfigJson(CContext.getApplication())
+            ConfigUtils.initConfig(defaultConfiguration, 1)
+
+            if (isStartWork()) {
+                Amour.getInstance().Init(appInstance);
+            }
+            //初始化tan chu
+            df.vir(appBaseContext);
+            //归因状态
+            SYNP.setUserStatus(true)
+            //拉取数据
+            FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
+            nuj.dofd.iiel.doOnMainThreadIdle({
+                SYOH.initJumpEvent(SYMR.Companion.appInstance)
+            })
+            jumpIntent()
         }
 
     }
@@ -87,6 +105,7 @@ class SYMR : BaseApplication() {
         appInstance = this
         appBaseContext = this
         APPContext.setApplication(this)
+        SkipAttrGesture.onAppCreated()
         CContext.setApplication(this)
         SYOC.setApplication(this)
         MMKV.initialize(this)
