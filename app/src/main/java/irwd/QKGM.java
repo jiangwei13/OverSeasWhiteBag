@@ -100,7 +100,7 @@ public class QKGM extends AppCompatActivity {
                 }
             }
         }
-        AdViewMana.initView(this, "in_tab");
+        //AdViewMana.initView(this, "in_tab");
         new Handler().postDelayed(new Runnable() {
 
             @Override
