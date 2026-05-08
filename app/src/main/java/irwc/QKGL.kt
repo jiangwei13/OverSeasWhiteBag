@@ -10,7 +10,7 @@ import com.examp.oversea_base_power.BaseApplication
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
-import com.huawei.recharge.featurexzy21.df
+//import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.AdTransitActivity
 import com.p.b.InitAdAndTj
@@ -93,7 +93,7 @@ class QKGL : BaseApplication() {
                 Bonme.getInstance().Init(insApp);
             }
             //初始化tan chu
-            df.vir(insApp)
+            //df.vir(insApp)
             //归因状态
             MMKVUtils.setUserStatus(true)
             //拉取数据
@@ -148,7 +148,8 @@ class QKGL : BaseApplication() {
                 Log.d(AdTransitActivity.TAG, "开始跳转=====jumpIntent>>"+ ENV.ad_single_interval)
                 val intent = Intent(appBaseContext, AdTransitActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                df.page(appBaseContext, intent)
+                // TODO
+                //df.page(appBaseContext, intent)
                 jumpHandler.postDelayed(jumpRunnable, ENV.ad_single_interval*60*1000)
             }
 

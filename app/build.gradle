@@ -59,7 +59,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.board.chroma"
+        applicationId "com.saowen.magicdoc"
         minSdk 29
         targetSdk 35
         versionCode 3
@@ -88,15 +88,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'chroma'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('chroma.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'chroma'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('chroma.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
@@ -163,7 +163,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":aar_library:aar_name2")
-    implementation project(":aar_library:aar_name")
+//    implementation project(":aar_library:aar_name")
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')

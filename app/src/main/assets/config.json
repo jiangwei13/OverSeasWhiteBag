@@ -22,7 +22,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n1h4k957jpb56i"
+          "placement_id": "F77FC421A390EA7B2FC90849DDEA7612"
         }
       ]
     },
@@ -63,7 +63,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n1h4k957jpb56i"
+          "placement_id": "F77FC421A390EA7B2FC90849DDEA7612"
         }
       ]
     }
@@ -72,6 +72,7 @@
     "ka": true,
     "kp": true,
     "dialog": true,
+    "ad_single_interval": 1,
     "timerCount": [
       5,
       8,
@@ -87,6 +88,7 @@
       30
     ],
     "hour_turn_time": 10,
+    "adAutoCloseTime": 15,
     "ipu_arpu_ecpm": {
       "ipu": 0,
       "arpu": 0,

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "678278670796",
-    "project_id": "chromaboard",
-    "storage_bucket": "chromaboard.firebasestorage.app"
+    "project_number": "7429770582",
+    "project_id": "mdtextapp",
+    "storage_bucket": "mdtextapp.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:678278670796:android:8619bcb16bba2c8bd0d569",
+        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
         "android_client_info": {
-          "package_name": "com.board.chroma"
+          "package_name": "com.saowen.magicdoc"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDuJ-eqESfvCoOPEOcwb5YTJok6LvtSIMM"
+          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
         }
       ],
       "services": {
