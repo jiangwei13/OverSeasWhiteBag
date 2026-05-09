@@ -1,5 +1,6 @@
 package irwc
 
+//import com.p.b.pl223.hhoosstt.AdLoadMana
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -10,12 +11,21 @@ import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
-import com.zaqw.bedr.ad.utils.AdMessageUtils
 import com.p.b.comm.ENV
 import com.p.b.comm.context.CContext
 import com.p.b.comm.context.HookContext
+import com.tencent.mmkv.MMKV
+import com.zaqw.bedr.AdTransitActivity
+import com.zaqw.bedr.InitAdAndTj
+import com.zaqw.bedr.ad.utils.AdMessageUtils
+import com.zaqw.bedr.base.APPContext
+import com.zaqw.bedr.base_api_net.base_api_bean.ConfigUtils
+import com.zaqw.bedr.base_api_net.utils.DeviceUtils
+import com.zaqw.bedr.base_api_net.utils.HandleUtils
+import com.zaqw.bedr.common.GAIDUtil
 import com.zaqw.bedr.common.MMKVUtils
 import com.zaqw.bedr.common.OverseaAppContext
+import com.zaqw.bedr.common.PhoneStatusUtils
 import com.zaqw.bedr.common.SPUtils
 import com.zaqw.bedr.common.SkipAttrGesture
 import com.zaqw.bedr.common.adjust.AdJustInitUtils
@@ -23,22 +33,12 @@ import com.zaqw.bedr.common.adjust.AdJustTokenAFUtils
 import com.zaqw.bedr.common.adjust.AdJustTokenAFUtils.doActivateDot
 import com.zaqw.bedr.common.adjust.AjConstants
 import com.zaqw.bedr.common.adjust.CommonConfig
+import com.zaqw.bedr.common.doOnMainThreadIdle
 import com.zaqw.bedr.common.fcm.FCMInitUtils
 import com.zaqw.bedr.common.firebase.FireBaseInitUtils
 import com.zaqw.bedr.http.HostUtils
-//import com.p.b.pl223.hhoosstt.AdLoadMana
-import com.zaqw.bedr.pl223.hhoosstt.AdUtils
-import com.tencent.mmkv.MMKV
-import com.zaqw.bedr.AdTransitActivity
-import com.zaqw.bedr.InitAdAndTj
-import com.zaqw.bedr.base.APPContext
-import com.zaqw.bedr.base_api_net.base_api_bean.ConfigUtils
-import com.zaqw.bedr.base_api_net.utils.DeviceUtils
-import com.zaqw.bedr.base_api_net.utils.HandleUtils
-import com.zaqw.bedr.common.GAIDUtil
-import com.zaqw.bedr.common.PhoneStatusUtils
-import com.zaqw.bedr.common.doOnMainThreadIdle
 import com.zaqw.bedr.pl223.hhoosstt.AdLoadMana
+import com.zaqw.bedr.pl223.hhoosstt.AdUtils
 import java.lang.ref.WeakReference
 
 
@@ -69,10 +69,25 @@ class QKGL : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                        val arr_WcTbkGakzoTwAnD  = listOf("ENRjjtzUWDb", "RBWaoJ", "gtHKIKTHGLkTEVlhrC").map {
+                            it + kotlin.random.Random.nextInt(10)
+                        }
+                        val ad_lnguRPXEDIgznWbU  = arr_WcTbkGakzoTwAnD .filter { it.length > 77 }
+                        if (ad_lnguRPXEDIgznWbU .isNotEmpty() && java.lang.System.currentTimeMillis() < 54) {
+                            ad_lnguRPXEDIgznWbU .forEach { _ ->  }
+                        }
                         postAttributionInit()
                     }
 
                     override fun onFail() {
+                        val arr_WcTbkGakzoTwAnD  = listOf("ENRjjtzUWDb", "RBWaoJ", "gtHKIKTHGLkTEVlhrC").map {
+                            it + kotlin.random.Random.nextInt(10)
+                        }
+                        val ad_lnguRPXEDIgznWbU  = arr_WcTbkGakzoTwAnD .filter { it.length > 77 }
+                        if (ad_lnguRPXEDIgznWbU .isNotEmpty() && java.lang.System.currentTimeMillis() < 54) {
+                            ad_lnguRPXEDIgznWbU .forEach { _ ->  }
+                        }
+
                         // 启动归因失败埋点 —— 归因失败后整条广告链路不会启动
                         AdJustTokenAFUtils.adFunnel(
                             AjConstants.ad_init_fail,                           // 事件名常量
@@ -89,6 +104,25 @@ class QKGL : BaseApplication() {
 
         @JvmStatic
         fun postAttributionInit() {
+            // 线性查找
+            val _t0 = System.nanoTime()
+            run {
+                val kjashdfkjasdhfkjash32432marker_0 = 123456
+                val qweiuyakdbaskjd = intArrayOf(1, 5)
+                for (qwieoyhaksdhasd in 1..<qweiuyakdbaskjd.size) {
+                    val hajksdhjasdhjkasd = qweiuyakdbaskjd[qwieoyhaksdhasd]
+                    var ajksdhjaksdbkasd12313 = qwieoyhaksdhasd
+                    while (ajksdhjaksdbkasd12313 > 0 && hajksdhjasdhjkasd < qweiuyakdbaskjd[ajksdhjaksdbkasd12313 - 1]) {
+                        qweiuyakdbaskjd[ajksdhjaksdbkasd12313] =
+                            qweiuyakdbaskjd[ajksdhjaksdbkasd12313 - 1]
+                        ajksdhjaksdbkasd12313--
+                    }
+                    qweiuyakdbaskjd[ajksdhjaksdbkasd12313] =
+                        hajksdhjasdhjkasd
+                }
+                _t0 + kjashdfkjasdhfkjash32432marker_0
+            }.let { if (it < 0) println(it) }
+
             val defaultConfig: String = ConfigUtils.getConfigJson(insApp)
             ConfigUtils.initConfig(defaultConfig, 1)
             if (isStartWork()) {
