@@ -121,47 +121,29 @@ dependencyResolutionManagement {
 
 rootProject.name = "OverSeasWhiteBag"
 include ':app'
-//include ':tools-ui-library'
-//project(':tools-ui-library').projectDir = file('./tools-ui-library/tools-ui-library')
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
-//include ':edgeborderlight'
-//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-include ':pic_toolslibrary'
-project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
-include ':scanlibrary'
-project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+
 include(':insertCode')
 project(':insertCode').projectDir = file('./third-module/insertCode')
-include(':recipes_module')
-project(':recipes_module').projectDir = file('./third-module/recipes_module')
+
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
 
-include(':smalltoolslibrary')
-project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
+//include(':smalltoolslibrary')
+//project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
 
 include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
-
-include(':sharedPreferences')
-project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
-
-include(':pic_edit_library')
-project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
@@ -172,12 +154,6 @@ project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_
 include(':oversea_common_library')
 project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
 
-
-//include(':broadcast')
-//project(':broadcast').projectDir = file("./tools_common_module/broadcast")
-
-//include(':base_ad_common_library')
-//project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
