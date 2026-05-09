@@ -1,9 +1,7 @@
 package irwc
 
-import android.content.Context
 import android.util.Log
-import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import com.zaqw.bedr.common.adjust.AjConstants
 
 /**
  * Adjust Token
@@ -29,77 +27,77 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "firofyqcfdog";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "21pqma";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "gors8i";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "n1kvhj";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "18knmn";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "xii7f5";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "hfktzc";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "ufdaj1";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "jt63hw";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "nylyws";
-                com.p.b.common.adjust.AjConstants.Companion.ad_fail = "6aubu5";
+                AjConstants.Companion.adjustAppToken = "firofyqcfdog";
+                AjConstants.Companion.Login = "";
+                AjConstants.Companion.Reg = "";
+                AjConstants.Companion.topon_ilrd = "21pqma";
+                AjConstants.Companion.ipu = "gors8i";
+                AjConstants.Companion.arpu = "n1kvhj";
+                AjConstants.Companion.ipu_arpu = "18knmn";
+                AjConstants.Companion.ipu_ecpm = "xii7f5";
+                AjConstants.Companion.ipu_arpu_ecpm = "hfktzc";
+                AjConstants.Companion.blacklist = "ufdaj1";
+                AjConstants.Companion.ad_request = "jt63hw";
+                AjConstants.Companion.ad_full = "nylyws";
+                AjConstants.Companion.ad_fail = "6aubu5";
                 // —— 广告链路漏斗事件
-                com.p.b.common.adjust.AjConstants.Companion.ad_tick_fire = "oq19ic";
-                com.p.b.common.adjust.AjConstants.Companion.ad_tick_init = "x25o6e";
-                com.p.b.common.adjust.AjConstants.Companion.ad_tick_config_missing = "lnfh30";
-                com.p.b.common.adjust.AjConstants.Companion.ad_placement_miss = "y74mml";
-                com.p.b.common.adjust.AjConstants.Companion.ad_posthandle_fail = "5ktfqe";
-                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail = "eiaxef";
-                com.p.b.common.adjust.AjConstants.Companion.ad_load_success = "7d4nxd";
-                com.p.b.common.adjust.AjConstants.Companion.ad_load_timeout = "nwm03t";
-                com.p.b.common.adjust.AjConstants.Companion.ad_next_load_fail = "5355ss";
-                com.p.b.common.adjust.AjConstants.Companion.ad_adlist_empty = "ozrrrm";
-                com.p.b.common.adjust.AjConstants.Companion.ad_silent_blackhole = "m25dhm";
-                com.p.b.common.adjust.AjConstants.Companion.ad_transit_created = "4ghbhf";
-                com.p.b.common.adjust.AjConstants.Companion.ad_view_controller_null = "yd601r";
-                com.p.b.common.adjust.AjConstants.Companion.ad_show_timeout = "wivdo9";
-                com.p.b.common.adjust.AjConstants.Companion.ad_show_complete = "p7kydj";
-                com.p.b.common.adjust.AjConstants.Companion.ad_show_next = "excn3d";
-                com.p.b.common.adjust.AjConstants.Companion.ad_show_flow = "8x3hr7";
-                com.p.b.common.adjust.AjConstants.Companion.ad_weakref_lost = "hdri6q";
-                com.p.b.common.adjust.AjConstants.Companion.ad_scope_destroy_before_complete = "3t5rn6";
-                com.p.b.common.adjust.AjConstants.Companion.ad_init_fail = "ums8sn";
-                com.p.b.common.adjust.AjConstants.Companion.ad_handler_destroy = "up4kdt";
-                com.p.b.common.adjust.AjConstants.Companion.ad_close_source = "1ehu1i";
-                com.p.b.common.adjust.AjConstants.Companion.ad_jump_entry = "ksl3c1";
-                com.p.b.common.adjust.AjConstants.Companion.ad_params_null = "9w7oia";
-                com.p.b.common.adjust.AjConstants.Companion.ad_realshow = "towyih";
-                com.p.b.common.adjust.AjConstants.Companion.ad_disabled_early_complete = "7zf3on";
+                AjConstants.Companion.ad_tick_fire = "oq19ic";
+                AjConstants.Companion.ad_tick_init = "x25o6e";
+                AjConstants.Companion.ad_tick_config_missing = "lnfh30";
+                AjConstants.Companion.ad_placement_miss = "y74mml";
+                AjConstants.Companion.ad_posthandle_fail = "5ktfqe";
+                AjConstants.Companion.ad_load_fail = "eiaxef";
+                AjConstants.Companion.ad_load_success = "7d4nxd";
+                AjConstants.Companion.ad_load_timeout = "nwm03t";
+                AjConstants.Companion.ad_next_load_fail = "5355ss";
+                AjConstants.Companion.ad_adlist_empty = "ozrrrm";
+                AjConstants.Companion.ad_silent_blackhole = "m25dhm";
+                AjConstants.Companion.ad_transit_created = "4ghbhf";
+                AjConstants.Companion.ad_view_controller_null = "yd601r";
+                AjConstants.Companion.ad_show_timeout = "wivdo9";
+                AjConstants.Companion.ad_show_complete = "p7kydj";
+                AjConstants.Companion.ad_show_next = "excn3d";
+                AjConstants.Companion.ad_show_flow = "8x3hr7";
+                AjConstants.Companion.ad_weakref_lost = "hdri6q";
+                AjConstants.Companion.ad_scope_destroy_before_complete = "3t5rn6";
+                AjConstants.Companion.ad_init_fail = "ums8sn";
+                AjConstants.Companion.ad_handler_destroy = "up4kdt";
+                AjConstants.Companion.ad_close_source = "1ehu1i";
+                AjConstants.Companion.ad_jump_entry = "ksl3c1";
+                AjConstants.Companion.ad_params_null = "9w7oia";
+                AjConstants.Companion.ad_realshow = "towyih";
+                AjConstants.Companion.ad_disabled_early_complete = "7zf3on";
                 // —— V1.0.2 新增
-                com.p.b.common.adjust.AjConstants.Companion.ad_fill_success = "80gpr6";
-                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail_no_fill = "va4l72";
-                com.p.b.common.adjust.AjConstants.Companion.ad_load_fail_after_fill = "xp1xq8";
-                com.p.b.common.adjust.AjConstants.Companion.ad_next_load_success = "n0rgo6";
-                com.p.b.common.adjust.AjConstants.Companion.ad_blackhole_probe = "smgj24";
-                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_success = "na8ftt";
-                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_fail_no_fill = "mgmh9h";
-                com.p.b.common.adjust.AjConstants.Companion.ad_preload_first_fail_after_fill = "t4bgkd";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="atgsmp";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "1ycqc8";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "c469eb";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="7cbeal";
-                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="rjukpd";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
+                AjConstants.Companion.ad_fill_success = "80gpr6";
+                AjConstants.Companion.ad_load_fail_no_fill = "va4l72";
+                AjConstants.Companion.ad_load_fail_after_fill = "xp1xq8";
+                AjConstants.Companion.ad_next_load_success = "n0rgo6";
+                AjConstants.Companion.ad_blackhole_probe = "smgj24";
+                AjConstants.Companion.ad_preload_first_success = "na8ftt";
+                AjConstants.Companion.ad_preload_first_fail_no_fill = "mgmh9h";
+                AjConstants.Companion.ad_preload_first_fail_after_fill = "t4bgkd";
+                AjConstants.Companion.firebase_request ="atgsmp";
+                AjConstants.Companion.firebase_success = "1ycqc8";
+                AjConstants.Companion.adJust_attribution_request = "c469eb";
+                AjConstants.Companion.adJust_attribution_success ="7cbeal";
+                AjConstants.Companion.LiveTime ="rjukpd";
+                AjConstants.Companion.activity_app ="";
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                AjConstants.Companion.adjustAppToken = "";
+                AjConstants.Companion.Login = "";
+                AjConstants.Companion.Reg = "";
+                AjConstants.Companion.topon_ilrd = "";
+                AjConstants.Companion.ipu = "";
+                AjConstants.Companion.arpu = "";
+                AjConstants.Companion.ipu_arpu = "";
+                AjConstants.Companion.ipu_ecpm = "";
+                AjConstants.Companion.ipu_arpu_ecpm = "";
+                AjConstants.Companion.blacklist = "";
+                AjConstants.Companion.ad_request = "";
+                AjConstants.Companion.ad_full = "";
+                AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";

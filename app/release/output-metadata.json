@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.saowen.magicdoc",
+  "applicationId": "com.board.chroma",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 3,
-      "versionName": "1.0.3",
+      "versionCode": 4,
+      "versionName": "1.0.4",
       "outputFile": "app-release.apk"
     }
   ],

@@ -1,43 +1,44 @@
 package irwc
 
 import android.app.Activity
-import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.bonme.Bonme
 import com.examp.oversea_base_power.BaseApplication
-import com.example.overseaswhitebag.common.utils.APPContext
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.AdTransitActivity
-import com.p.b.InitAdAndTj
-import com.p.b.ad.utils.AdMessageUtils
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
+import com.zaqw.bedr.ad.utils.AdMessageUtils
 import com.p.b.comm.ENV
 import com.p.b.comm.context.CContext
 import com.p.b.comm.context.HookContext
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.SkipAttrGesture
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdLoadMana
-import com.p.b.pl223.hhoosstt.AdUtils
+import com.zaqw.bedr.common.MMKVUtils
+import com.zaqw.bedr.common.OverseaAppContext
+import com.zaqw.bedr.common.SPUtils
+import com.zaqw.bedr.common.SkipAttrGesture
+import com.zaqw.bedr.common.adjust.AdJustInitUtils
+import com.zaqw.bedr.common.adjust.AdJustTokenAFUtils
+import com.zaqw.bedr.common.adjust.AdJustTokenAFUtils.doActivateDot
+import com.zaqw.bedr.common.adjust.AjConstants
+import com.zaqw.bedr.common.adjust.CommonConfig
+import com.zaqw.bedr.common.fcm.FCMInitUtils
+import com.zaqw.bedr.common.firebase.FireBaseInitUtils
+import com.zaqw.bedr.http.HostUtils
+//import com.p.b.pl223.hhoosstt.AdLoadMana
+import com.zaqw.bedr.pl223.hhoosstt.AdUtils
 import com.tencent.mmkv.MMKV
+import com.zaqw.bedr.AdTransitActivity
+import com.zaqw.bedr.InitAdAndTj
+import com.zaqw.bedr.base.APPContext
+import com.zaqw.bedr.base_api_net.base_api_bean.ConfigUtils
+import com.zaqw.bedr.base_api_net.utils.DeviceUtils
+import com.zaqw.bedr.base_api_net.utils.HandleUtils
+import com.zaqw.bedr.common.GAIDUtil
+import com.zaqw.bedr.common.PhoneStatusUtils
+import com.zaqw.bedr.common.doOnMainThreadIdle
+import com.zaqw.bedr.pl223.hhoosstt.AdLoadMana
 import java.lang.ref.WeakReference
 
 
@@ -62,7 +63,8 @@ class QKGL : BaseApplication() {
             }
 
             //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+            AdJustInitUtils.initAdjust(
+                HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
@@ -98,8 +100,8 @@ class QKGL : BaseApplication() {
             MMKVUtils.setUserStatus(true)
             //拉取数据
             FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-            com.p.b.common.doOnMainThreadIdle({
-                InitAdAndTj.initJumpEvent(QKGL.Companion.insApp)
+            doOnMainThreadIdle({
+                InitAdAndTj.initJumpEvent(insApp)
             })
             jumpIntent()
         }
@@ -176,7 +178,7 @@ class QKGL : BaseApplication() {
         super.onCreate()
         QKGL.Companion.insApp = this
         appBaseContext = this
-        com.p.b.base.APPContext.setApplication(this)
+        APPContext.setApplication(this)
         CContext.setApplication(this)
         OverseaAppContext.setApplication(this)
 
@@ -195,7 +197,8 @@ class QKGL : BaseApplication() {
 
     private fun attribution() {
         //归因
-        AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
+        AdJustInitUtils.initAdjust(
+            HostUtils.randomConfig_from_delay,
             AjConstants.adjustAppToken,
             PhoneStatusUtils.judgeIsBlacklist(),
             object : CommonConfig.OnConfigInterface {
