@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 import com.clean.toos.R;
-import com.p.b.ad.AdViewMana;
 import irwf.QKGZ;
 import androidx.appcompat.app.AppCompatActivity;
 

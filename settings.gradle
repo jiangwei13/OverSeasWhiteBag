@@ -1,15 +1,15 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
-        google()
-        mavenCentral()
+        maven { url "https://jitpack.io" }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        maven { url "https://jitpack.io" }
-        maven { url "https://artifact.bytedance.com/repository/pangle" }
 
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+        google()
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -61,15 +61,14 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
 //    gradlePluginPortal()
-        google()
-        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        google()
+        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
@@ -171,6 +170,9 @@ project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_
 
 include(':oversea_common_library')
 project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
+
+
+
 
 
 //include(':broadcast')
