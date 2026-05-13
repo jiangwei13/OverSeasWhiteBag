@@ -70,6 +70,7 @@ class QKGL : BaseApplication() {
                 PhoneStatusUtils.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
+                        Log.d("AD_LOG","归因成功")
                         postAttributionInit()
                     }
 
@@ -107,7 +108,7 @@ class QKGL : BaseApplication() {
 
 
         fun jumpIntent(){
-
+            Log.d("AD_LOG","触发弹出")
             // 触发弹出广告
             AdJustTokenAFUtils.adFunnel(
                 AjConstants.ad_jump_entry
