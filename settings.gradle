@@ -187,6 +187,6 @@ include(':coloring_book')
 project(':coloring_book').projectDir = file("./third-module/coloring_book")
 
 include':aar_library:aar_name2'
-//include':aar_library:aar_name'
+include':aar_library:aar_name'
 
 

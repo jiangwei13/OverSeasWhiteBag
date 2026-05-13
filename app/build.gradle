@@ -163,7 +163,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(":aar_library:aar_name2")
-//    implementation project(":aar_library:aar_name")
+    implementation project(":aar_library:aar_name")
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')

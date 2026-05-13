@@ -11,6 +11,7 @@ import com.examp.oversea_base_power.BaseApplication
 import com.example.overseaswhitebag.common.utils.APPContext
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
+import com.huawei.recharge.featurexzy21.df
 //import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
 
@@ -59,11 +60,11 @@ class QKGL : BaseApplication() {
 //                return@Runnable
 //            }
             // 开关开启时跳过 AdJust 归因，直接执行归因后初始化
-            if (SPUtils.isSkipAttribution()) {
-                postAttributionInit()
-                return@Runnable
-            }
-
+//            if (SPUtils.isSkipAttribution()) {
+//                postAttributionInit()
+//                return@Runnable
+//            }
+            Log.d("AD_LOG","开始归因")
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
@@ -97,7 +98,7 @@ class QKGL : BaseApplication() {
                 Bonme.getInstance().Init(insApp);
             }
             //初始化tan chu
-            //df.vir(insApp)
+            df.vir(insApp)
             //归因状态
             MMKVUtils.setUserStatus(true)
             //拉取数据
@@ -152,6 +153,7 @@ class QKGL : BaseApplication() {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 // TODO
                 //df.page(appBaseContext, intent)
+                df.page(intent)
                 jumpHandler.postDelayed(jumpRunnable, ENV.ad_single_interval*60*1000)
             }
 
