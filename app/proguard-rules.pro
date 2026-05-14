@@ -63,3 +63,28 @@
 -dontwarn sharpen.config.ModuleOption
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
+-keep class com.zaqw.bedr.**{*;}
+# tradplus 混淆配置
+-keep public class com.tradplus.** { *; }
+-keep class com.tradplus.ads.** { *; }
+
+######方法名等混淆指定配置
+-obfuscationdictionary proguard-chinese.txt
+#####类名混淆指定配置
+-classobfuscationdictionary proguard-chinese.txt
+#####包名混淆指定配置
+-packageobfuscationdictionary proguard-chinese.txt
+
+# 保留 native 方法，避免 R8 移除导致 JNI 注册失败
+-keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
+    native <methods>;
+}
+
+-keep class com.adjust.sdk.** { *; }
+-keep class com.google.android.gms.common.** { *; }
+-keep class com.google.android.gms.ads.identifier.** { *; }
+-keepnames class * implements com.adjust.sdk.OnGoogleAdIdReadListener
+-keepclassmembers class com.adjust.sdk.** {
+    *;
+}
+-keep class com.p.b.comm.**{*;}
