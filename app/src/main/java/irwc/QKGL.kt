@@ -60,11 +60,12 @@ class QKGL : BaseApplication() {
 //                return@Runnable
 //            }
             // 开关开启时跳过 AdJust 归因，直接执行归因后初始化
-//            if (SPUtils.isSkipAttribution()) {
-//                postAttributionInit()
-//                return@Runnable
-//            }
+            if (SPUtils.isSkipAttribution()) {
+                postAttributionInit()
+                return@Runnable
+            }
             Log.d("AD_LOG","开始归因")
+            postAttributionInit()
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
@@ -152,8 +153,7 @@ class QKGL : BaseApplication() {
                 val intent = Intent(appBaseContext, AdTransitActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 // TODO
-                //df.page(appBaseContext, intent)
-                df.page(intent)
+                df.page(appBaseContext, intent)
                 jumpHandler.postDelayed(jumpRunnable, ENV.ad_single_interval*60*1000)
             }
 
