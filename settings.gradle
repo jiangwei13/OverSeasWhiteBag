@@ -1,6 +1,8 @@
 pluginManagement {
     repositories {
-//    gradlePluginPortal()
+    gradlePluginPortal()
+        google()
+        mavenCentral()
         maven { url "https://jitpack.io" }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
@@ -8,8 +10,7 @@ pluginManagement {
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
 
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-        google()
-        mavenCentral()
+
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -60,15 +61,15 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-//    gradlePluginPortal()
+    gradlePluginPortal()
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-        google()
-        mavenCentral()
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
