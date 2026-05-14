@@ -132,9 +132,6 @@ project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 
-include(':insertCode')
-project(':insertCode').projectDir = file('./third-module/insertCode')
-
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
