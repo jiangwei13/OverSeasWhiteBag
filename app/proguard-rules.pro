@@ -63,3 +63,17 @@
 -dontwarn sharpen.config.ModuleOption
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
+
+######方法名等混淆指定配置
+-obfuscationdictionary proguard-chinese.txt
+#####类名混淆指定配置
+-classobfuscationdictionary proguard-chinese.txt
+#####包名混淆指定配置
+-packageobfuscationdictionary proguard-chinese.txt
+#####保护 stringfog 加解密实现类不被 R8 重命名
+-keep class com.stringfog.impl.** {*;}
+
+# 保留 native 方法，避免 R8 移除导致 JNI 注册失败
+-keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
+    native <methods>;
+}
