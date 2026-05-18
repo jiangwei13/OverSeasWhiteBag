@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import nmu.qaki.mxft.R;
 import com.p.b.ad.AdViewMana;
-import c.VPDK;
+import com.fangda.MainTwoActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class VPDF extends AppCompatActivity {
@@ -61,7 +61,7 @@ public class VPDF extends AppCompatActivity {
                         ckuyRmgSUOhbdF = pmh_RzStd;
                     }
                 }
-                Intent it = new Intent(VPDF.this, VPDK.class);
+                Intent it = new Intent(VPDF.this, MainTwoActivity.class);
                 // Intent it = new Intent(VPDF.this, CalculateActivity.class);
                 startActivity(it);
                 finish();
