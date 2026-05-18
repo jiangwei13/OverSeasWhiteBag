@@ -5,116 +5,17 @@ import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.common.adjust.AjConstants
 
+
 /**
  * Adjust Token
  */
 object AdjustTokens {
-    fun initAdJustToken(context: android.content.Context) {
+    fun initAdJustToken(context: Context) {
         //adJust 打点需要初始化
-        val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
-        android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        val channel: String = WalleChannelReader.getChannel(context, "GP").toString()
+        Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
-            "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "2t7vl9zzgfwg";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "n4say1";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "42y41l";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "yyq45f";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "stmeot";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "r4fdpi";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "sljzeg";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "70imt6";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "pkp4go";
-                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "v752hy";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="3qwssu";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "ave12u";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "35lamy";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
-            }
-
-            "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_filled = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
-                AjConstants.firebase_success = "";
-                AjConstants.adJust_attribution_request = "";
-                AjConstants.adJust_attribution_success ="";
-                AjConstants.activity_app ="";
-            }
-
-            "SX" -> {
-                AjConstants.adjustAppToken = "";
-                AjConstants.Login = "";
-                AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "";
-                AjConstants.ipu = "";
-                AjConstants.arpu = "";
-                AjConstants.ipu_arpu = "";
-                AjConstants.ipu_ecpm = "";
-                AjConstants.ipu_arpu_ecpm = "";
-                AjConstants.blacklist = "";
-                AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
-                AjConstants.firebase_request ="";
-                AjConstants.firebase_success = "";
-                AjConstants.adJust_attribution_request = "";
-                AjConstants.adJust_attribution_success ="";
-                AjConstants.activity_app ="";
-            }
-
-            "OP" -> {
-                AjConstants.adjustAppToken = "";
-                AjConstants.Login = "";
-                AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "";
-                AjConstants.ipu = "";
-                AjConstants.arpu = "";
-                AjConstants.ipu_arpu = "";
-                AjConstants.ipu_ecpm = "";
-                AjConstants.ipu_arpu_ecpm = "";
-                AjConstants.blacklist = "";
-                AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
-                AjConstants.firebase_request ="";
-                AjConstants.firebase_success = "";
-                AjConstants.adJust_attribution_request = "";
-                AjConstants.adJust_attribution_success ="";
-                AjConstants.activity_app ="";
-            }
-
-            "VO" -> {
-                AjConstants.adjustAppToken = "";
-                AjConstants.Login = "";
-                AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "";
-                AjConstants.ipu = "";
-                AjConstants.arpu = "";
-                AjConstants.ipu_arpu = "";
-                AjConstants.ipu_ecpm = "";
-                AjConstants.ipu_arpu_ecpm = "";
-                AjConstants.blacklist = "";
-                AjConstants.ad_request="";
-                AjConstants.ad_filled="";
-                AjConstants.firebase_request="";
-                AjConstants.firebase_success="";
-                AjConstants.adJust_attribution_request = "";
-                AjConstants.adJust_attribution_success ="";
-                AjConstants.activity_app ="";
-            }
-
-            "CY" -> {
+            "GP" -> {
                 AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
@@ -126,35 +27,55 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = ""
                 AjConstants.blacklist = ""
                 AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
+                AjConstants.ad_full = ""
                 AjConstants.firebase_request = ""
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
                 AjConstants.activity_app = ""
+                // —— 广告链路漏斗事件
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
+                // —— V1.0.2 增量
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
+                // —— V1.0.3 增量
+                AjConstants.ad_skip_dialog = ""
+                AjConstants.ad_skip_hit = ""
             }
 
-            "XM" -> {
-                AjConstants.adjustAppToken = "";
-                AjConstants.Login = "";
-                AjConstants.Reg = "";
-                AjConstants.topon_ilrd = "";
-                AjConstants.ipu = "";
-                AjConstants.arpu = "";
-                AjConstants.ipu_arpu = "";
-                AjConstants.ipu_ecpm = "";
-                AjConstants.ipu_arpu_ecpm = "";
-                AjConstants.blacklist = "";
-                AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
-                AjConstants.firebase_request ="";
-                AjConstants.firebase_success = "";
-                AjConstants.adJust_attribution_request = "";
-                AjConstants.adJust_attribution_success ="";
-                AjConstants.activity_app ="";
-            }
-
-            "RY" ->{
+            "HW", "SX", "OP", "VO", "CY", "XM", "RY", "OL" -> {
                 AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
@@ -166,37 +87,53 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = ""
                 AjConstants.blacklist = ""
                 AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
+                AjConstants.ad_full = ""
                 AjConstants.firebase_request = ""
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
                 AjConstants.activity_app = ""
-            }
-
-            "OL" ->{
-                AjConstants.adjustAppToken = ""
-                AjConstants.Login = ""
-                AjConstants.Reg = ""
-                AjConstants.topon_ilrd = ""
-                AjConstants.ipu = ""
-                AjConstants.arpu = ""
-                AjConstants.ipu_arpu = ""
-                AjConstants.ipu_ecpm = ""
-                AjConstants.ipu_arpu_ecpm = ""
-                AjConstants.blacklist = ""
-                AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
-                AjConstants.firebase_request = ""
-                AjConstants.firebase_success = ""
-                AjConstants.adJust_attribution_request = ""
-                AjConstants.adJust_attribution_success = ""
-                AjConstants.activity_app = ""
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
+                AjConstants.ad_skip_dialog = ""
+                AjConstants.ad_skip_hit = ""
             }
 
             else -> {
                 Log.d("AdjustTokens", "测试")
-                //com.test.app
                 AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
@@ -220,6 +157,43 @@ object AdjustTokens {
 
                 AjConstants.blacklist = "ytkgif"
                 Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                AjConstants.ad_fail = ""
+                AjConstants.ad_tick_fire = ""
+                AjConstants.ad_tick_init = ""
+                AjConstants.ad_tick_config_missing = ""
+                AjConstants.ad_placement_miss = ""
+                AjConstants.ad_posthandle_fail = ""
+                AjConstants.ad_load_fail = ""
+                AjConstants.ad_load_success = ""
+                AjConstants.ad_load_timeout = ""
+                AjConstants.ad_next_load_fail = ""
+                AjConstants.ad_adlist_empty = ""
+                AjConstants.ad_silent_blackhole = ""
+                AjConstants.ad_transit_created = ""
+                AjConstants.ad_view_controller_null = ""
+                AjConstants.ad_show_timeout = ""
+                AjConstants.ad_show_complete = ""
+                AjConstants.ad_show_next = ""
+                AjConstants.ad_show_flow = ""
+                AjConstants.ad_weakref_lost = ""
+                AjConstants.ad_scope_destroy_before_complete = ""
+                AjConstants.ad_init_fail = ""
+                AjConstants.ad_handler_destroy = ""
+                AjConstants.ad_close_source = ""
+                AjConstants.ad_jump_entry = ""
+                AjConstants.ad_params_null = ""
+                AjConstants.ad_realshow = ""
+                AjConstants.ad_disabled_early_complete = ""
+                AjConstants.ad_fill_success = ""
+                AjConstants.ad_load_fail_no_fill = ""
+                AjConstants.ad_load_fail_after_fill = ""
+                AjConstants.ad_next_load_success = ""
+                AjConstants.ad_blackhole_probe = ""
+                AjConstants.ad_preload_first_success = ""
+                AjConstants.ad_preload_first_fail_no_fill = ""
+                AjConstants.ad_preload_first_fail_after_fill = ""
+                AjConstants.ad_skip_dialog = ""
+                AjConstants.ad_skip_hit = ""
             }
         }
     }

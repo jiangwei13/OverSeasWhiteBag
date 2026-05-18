@@ -48,21 +48,20 @@ xmlClassGuard {
 
 // 加入dex混淆配置
 BlackObfuscator {
-    // 是否启用
-    enabled true
+    // 仅在 release 任务时启用，避免日常 debug 构建被影响
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
     // 混淆深度
     depth 2
-    // 需要混淆的包或者类(匹配前面一段)
-    obfClass = [
-                "nmu.qaki.mxft", 
-                "nmu.rzxr.uik",
-                "nmu.izv.nehuu",
-                "nmu.emut.xvlv", 
-                "nmu.dveni.qgq", 
-                "nmu.cha.yplj",
-             
-    ]
-    // blackClass中的包或者类不会进行混淆(匹配前面一段)
+    mappingFile = file("xml-class-mapping.txt")
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses true
+    skipAndroidComponents false
+    skipCallbackLikeClasses true
+    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
+    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
+    obfClass = []
     blackClass = ["top.niunaijun.black"]
 }
 
@@ -83,27 +82,22 @@ android {
         applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 5
+        versionName "1.0.5"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    packagingOptions {
-
-
-        exclude 'META-INF/DEPENDENCIES'
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'resources.arsc', 'AndroidManifest.xml']
+        }
         dex {
             useLegacyPackaging true
         }
-        exclude 'resources.arsc'
-
-        exclude 'AndroidManifest.xml'
         jniLibs {
-
             useLegacyPackaging true
-
         }
     }
     ndkVersion "28.0.12433566"
@@ -129,6 +123,10 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            // 混淆后会被 BlackObfuscator/jiagu 二次处理，mapping 上传无效且会污染线上崩溃归因
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
         debug {
             minifyEnabled false
@@ -187,6 +185,9 @@ dependencies {
 //    implementation(project(":aar_library:app_aar"))
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
+    // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
+    // oversea_base_module 仅以 implementation 引用，可见性不传递，故在此显式引入。
+    implementation project(':oversea_common_library')
 //    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
