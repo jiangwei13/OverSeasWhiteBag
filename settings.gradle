@@ -228,6 +228,8 @@ include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 //include(":aar_library:app_aar")
 //include(":aar_library:security_checker")
+include ':aar_library:aar_name2'
+include ':aar_library:aar_name'
 
 //include ':oversea_utils'
 

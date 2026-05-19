@@ -1,0 +1,8 @@
+configurations.maybeCreate("default")
+fileTree(dir: '.', include: '*.aar').each { aar ->
+    artifacts.add("default", aar)
+}
+
+task clean(type: Delete) {
+    delete project.buildDir
+}
