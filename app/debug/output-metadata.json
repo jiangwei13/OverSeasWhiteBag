@@ -4,18 +4,18 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.saowen.magicdoc",
+  "applicationId": "com.board.chroma",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.0.1",
+      "versionCode": 6,
+      "versionName": "1.0.6",
       "outputFile": "app-debug.apk"
     }
   ],
   "elementType": "File",
-  "minSdkVersionForDexing": 26
+  "minSdkVersionForDexing": 29
 }
