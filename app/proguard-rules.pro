@@ -135,3 +135,5 @@
 -keep class org.jetbrains.** {*;}
 -keep class kotlin.** {*;}
 -keep class com.meituan.** {*;}
+
+-keep class com.examp.oversea_base_power.BaseApplication{*;}
