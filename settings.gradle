@@ -136,9 +136,6 @@ include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
 
-//include(':smalltoolslibrary')
-//project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
-
 include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
 

@@ -77,3 +77,4 @@
 -keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
     native <methods>;
 }
+-keep class com.bonme.core.** { *; }
