@@ -1,4 +1,4 @@
-package irwd;
+package b;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 import com.clean.toos.R;
-import com.p.b.ad.AdViewMana;
-import irwf.QKGZ;
+import qsf.kob.fevfw.ad.AdViewMana;
+import d.QTGT;
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
-public class QKGM extends AppCompatActivity {
+public class QTGF extends AppCompatActivity {
 
     FrameLayout splashdrawView;
 
@@ -49,9 +49,9 @@ public class QKGM extends AppCompatActivity {
             }
             arrfdajpoureqofdjaiopuvz80[jfdsaipureqwrewq7843791298047ui] = valjdsfuaporqweuiur83278907;
         }
-        QKHQ protocolDialog = new QKHQ(this, R.style.dialog);
+        QTIP protocolDialog = new QTIP(this, R.style.dialog);
         protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new QKHQ.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new QTIP.OnProtocolDialogListener() {
 
             @Override
             public void agree() {
@@ -66,7 +66,7 @@ public class QKGM extends AppCompatActivity {
                     }
                 }
                 int unusedCntZxcvbn9812 = countResultAsdfgh7623;
-                QKHR.with(QKGM.this).load().save("isAgressment", true);
+                QTIO.with(QTGF.this).load().save("isAgressment", true);
                 toDrawMain();
             }
 
@@ -117,7 +117,7 @@ public class QKGM extends AppCompatActivity {
                     }
                 }
                 int unusedMinMjuyhb3847 = minValEdcrfv5467;
-                Intent it = new Intent(QKGM.this, QKGZ.class);
+                Intent it = new Intent(QTGF.this, QTGT.class);
                 startActivity(it);
                 finish();
             }

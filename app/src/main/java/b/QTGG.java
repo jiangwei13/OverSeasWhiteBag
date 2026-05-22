@@ -1,4 +1,4 @@
-package irwd;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.clean.toos.R;
 
-public class QKGN extends AppCompatActivity {
+public class QTGG extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

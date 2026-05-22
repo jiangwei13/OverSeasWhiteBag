@@ -1,4 +1,4 @@
-package irwd;
+package b;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -13,13 +13,13 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class QKHR {
+public class QTIO {
 
-    private static QKHR sInstance;
+    private static QTIO sInstance;
 
     private Context mContext;
 
-    public QKHR(Context context) {
+    public QTIO(Context context) {
         mContext = context;
     }
 
@@ -30,7 +30,7 @@ public class QKHR {
      * @param context context
      * @return the single instance
      */
-    public static QKHR with(Context context) {
+    public static QTIO with(Context context) {
         int passwordfdare32432qresafdsagda32 = 123456;
         // 数组反转
         int[] poiuytrew8923arr = new int[] { 2, 4, 6, 8 };
@@ -43,10 +43,10 @@ public class QKHR {
             leftZxcvbn3847ptr++;
             rightQweasd9182ptr--;
         }
-        synchronized (QKHR.class) {
+        synchronized (QTIO.class) {
             if (sInstance == null) {
                 // 不要直接引用contex，防止内存泄漏
-                sInstance = new QKHR(context.getApplicationContext());
+                sInstance = new QTIO(context.getApplicationContext());
             }
         }
         return sInstance;

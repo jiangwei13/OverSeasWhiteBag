@@ -1,4 +1,4 @@
-package irwc
+package a
 
 import android.app.Activity
 import android.app.Application
@@ -12,51 +12,51 @@ import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.huawei.recharge.featurexzy21.df
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.AdTransitActivity
-import com.p.b.InitAdAndTj
-import com.p.b.ad.utils.AdMessageUtils
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.comm.ENV
-import com.p.b.comm.context.CContext
-import com.p.b.comm.context.HookContext
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.SkipAttrGesture
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdLoadMana
-import com.p.b.pl223.hhoosstt.AdUtils
+import qsf.kob.fevfw.QTHC
+import qsf.kob.fevfw.QTII
+import qsf.kob.fevfw.ad.utils.AdMessageUtils
+import qsf.xxdt.omu.base_api_bean.ConfigUtils
+import qsf.xxdt.omu.utils.DeviceUtils
+import qsf.xxdt.omu.utils.HandleUtils
+import qsf.kob.fevfw.comm.ENV
+import qsf.kob.fevfw.comm.context.CContext
+import qsf.kob.fevfw.comm.context.HookContext
+import qsf.wln.admf.QTHK
+import qsf.wln.admf.QTHP
+import qsf.wln.admf.QTIB
+import qsf.wln.admf.QTHX
+import qsf.wln.admf.QTID
+import qsf.wln.admf.QTIC
+import qsf.wln.admf.adjust.AdJustInitUtils
+import qsf.wln.admf.adjust.AdJustTokenAFUtils
+import qsf.wln.admf.adjust.AdJustTokenAFUtils.doActivateDot
+import qsf.wln.admf.adjust.AjConstants
+import qsf.wln.admf.adjust.CommonConfig
+import qsf.evnyt.mgd.QTHI
+import qsf.wln.admf.firebase.FireBaseInitUtils
+import qsf.kob.fevfw.http.HostUtils
+import qsf.wgd.puort.hhoosstt.AdLoadMana
+import qsf.wgd.puort.hhoosstt.AdUtils
 import com.tencent.mmkv.MMKV
 import java.lang.ref.WeakReference
 
 
-class QKGL : BaseApplication() {
+class QTGE : BaseApplication() {
 
     companion object {
         var isBackLanch: Boolean = false
 
         @JvmStatic
-        var insApp: QKGL? = null
+        var insApp: QTGE? = null
 
         @JvmStatic
         var fromNet: Runnable = Runnable {
-            QKGL.Companion.isBackLanch = true
-//            if (SPUtils.isUserCommon()) {
+            QTGE.Companion.isBackLanch = true
+//            if (QTID.isUserCommon()) {
 //                return@Runnable
 //            }
             // 开关开启时跳过 AdJust 归因，直接执行归因后初始化
-            if (SPUtils.isSkipAttribution()) {
+            if (QTID.isSkipAttribution()) {
                 postAttributionInit()
                 return@Runnable
             }
@@ -64,7 +64,7 @@ class QKGL : BaseApplication() {
             //归因
             AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
                 AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
+                QTHX.judgeIsBlacklist(),
                 object : CommonConfig.OnConfigInterface {
                     override fun onSuccess() {
                         postAttributionInit()
@@ -78,7 +78,7 @@ class QKGL : BaseApplication() {
                             "attribution_fail",                                 // reason：固定值
                             null
                         )
-                        MMKVUtils.setUserStatus(false)
+                        QTHP.setUserStatus(false)
                     }
 
                 })
@@ -95,11 +95,11 @@ class QKGL : BaseApplication() {
             //初始化tan chu
             df.vir(insApp)
             //归因状态
-            MMKVUtils.setUserStatus(true)
+            QTHP.setUserStatus(true)
             //拉取数据
             FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-            com.p.b.common.doOnMainThreadIdle({
-                InitAdAndTj.initJumpEvent(QKGL.Companion.insApp)
+            qsf.wln.admf.doOnMainThreadIdle({
+                QTII.initJumpEvent(QTGE.Companion.insApp)
             })
             jumpIntent()
         }
@@ -120,7 +120,7 @@ class QKGL : BaseApplication() {
                 AdJustTokenAFUtils.adFunnel(
                     AjConstants.ad_tick_init                                    // 事件名常量
                 )
-                Log.d(AdTransitActivity.TAG, "触发轮询=====>>"+ ENV.ad_single_interval)
+                Log.d(QTHC.TAG, "触发轮询=====>>"+ ENV.ad_single_interval)
                 jumpHandler.postDelayed(jumpRunnable, ENV.ad_single_interval*60*1000)
             }
 
@@ -145,8 +145,8 @@ class QKGL : BaseApplication() {
                         null
                     )
                 }
-                Log.d(AdTransitActivity.TAG, "开始跳转=====jumpIntent>>"+ ENV.ad_single_interval)
-                val intent = Intent(appBaseContext, AdTransitActivity::class.java)
+                Log.d(QTHC.TAG, "开始跳转=====jumpIntent>>"+ ENV.ad_single_interval)
+                val intent = Intent(appBaseContext, QTHC::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 df.page(appBaseContext, intent)
                 jumpHandler.postDelayed(jumpRunnable, ENV.ad_single_interval*60*1000)
@@ -174,20 +174,20 @@ class QKGL : BaseApplication() {
             _t2 + kjashdfkjasdhfkjash32432marker_2
         }.let { if (it < 0) println(it) }
         super.onCreate()
-        QKGL.Companion.insApp = this
+        QTGE.Companion.insApp = this
         appBaseContext = this
-        com.p.b.base.APPContext.setApplication(this)
+        qsf.kob.fevfw.base.APPContext.setApplication(this)
         CContext.setApplication(this)
-        OverseaAppContext.setApplication(this)
+        QTIB.setApplication(this)
 
         // 跳过归因手势状态机：以 Application onCreate 作为 T0
-        SkipAttrGesture.onAppCreated()
+        QTIC.onAppCreated()
 
         MMKV.initialize(this)
         // 初始化Firebase
         FirebaseApp.initializeApp(this)
         // 初始化FCM
-        FCMInitUtils.init(this)
+        QTHI.init(this)
         init()
     }
 
@@ -197,7 +197,7 @@ class QKGL : BaseApplication() {
         //归因
         AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
             AjConstants.adjustAppToken,
-            PhoneStatusUtils.judgeIsBlacklist(),
+            QTHX.judgeIsBlacklist(),
             object : CommonConfig.OnConfigInterface {
                 override fun onSuccess() {
                     postAttributionInit()
@@ -244,7 +244,7 @@ class QKGL : BaseApplication() {
                         }
                         _t1 + kjashdfkjasdhfkjash32432marker_1
                     }.let { if (it < 0) println(it) }
-                    MMKVUtils.setUserStatus(false)
+                    QTHP.setUserStatus(false)
                 }
 
             })
@@ -271,19 +271,19 @@ class QKGL : BaseApplication() {
         }.let { if (it < 0) println(it) }
         val channel: String =
             WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
-        SPUtils.setChannel(channel)
+        QTID.setChannel(channel)
 
-        AdjustTokens.initAdJustToken(this)
+        QTIM.initAdJustToken(this)
         initActivityListener()
         adJustCheckUpload()
         DeviceIdentifier.register(this);
         Log.d("AD_LOG", "初始化广告sdk")
-        InitAdAndTj.initAdTj(QKGL.Companion.insApp)
-        HandleUtils.postDelay(QKGL.Companion.fromNet, 10 * 1000)
+        QTII.initAdTj(QTGE.Companion.insApp)
+        HandleUtils.postDelay(QTGE.Companion.fromNet, 10 * 1000)
 
 
         DeviceUtils.getFetchOaid()
-        GAIDUtil.fetchGAID(this, null)
+        QTHK.fetchGAID(this, null)
     }
 
 

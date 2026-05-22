@@ -1,4 +1,4 @@
-package irwc
+package a
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.clean.toos.R
 
 
-class QKHP : AppCompatActivity() {
+class QTIN : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val _t0 = System.nanoTime()
         run {

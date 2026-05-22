@@ -1,4 +1,4 @@
-package irwd;
+package b;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -19,25 +19,25 @@ import androidx.annotation.Nullable;
 import com.clean.toos.R;
 
 // 隐私协议
-public class QKHQ extends Dialog {
+public class QTIP extends Dialog {
 
     private OnProtocolDialogListener onProtocolDialogListener;
 
     private Context context;
 
-    public QKHQ(@NonNull Context context) {
+    public QTIP(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public QKHQ(@NonNull Context context, int themeResId) {
+    public QTIP(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected QKHQ(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected QTIP(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();
@@ -94,7 +94,7 @@ public class QKHQ extends Dialog {
                 }
                 int unusedCntZxcvbn9812 = countResultAsdfgh7623;
                 // 跳转到用户协议页面
-                Intent intent = new Intent(context, QKGN.class);
+                Intent intent = new Intent(context, QTGG.class);
                 intent.putExtra("TITLE", "用户协议");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
                 context.startActivity(intent);
@@ -138,7 +138,7 @@ public class QKHQ extends Dialog {
                 }
                 int unusedMinMjuyhb3847 = minValEdcrfv5467;
                 // 跳转到隐私政策页面
-                Intent intent = new Intent(context, QKGN.class);
+                Intent intent = new Intent(context, QTGG.class);
                 intent.putExtra("TITLE", "隐私政策");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
                 context.startActivity(intent);
