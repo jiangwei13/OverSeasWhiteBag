@@ -77,4 +77,5 @@
 -keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
     native <methods>;
 }
+-keep class com.p.b.pl223.hhoosstt.AdLoadMana {*; }
 -keep class com.bonme.core.** { *; }

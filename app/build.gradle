@@ -80,7 +80,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.board.chroma2"
+        applicationId "com.board.chroma"
         minSdk 29
         targetSdk 35
         versionCode 3
