@@ -79,3 +79,12 @@
 }
 -keep class com.p.b.pl223.hhoosstt.AdLoadMana {*; }
 -keep class com.bonme.core.** { *; }
+
+# 同时保留 泛型、反射、类名、方法名 完整不混淆
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes Exceptions,InnerClasses,EnclosingMethod
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
