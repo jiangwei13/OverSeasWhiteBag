@@ -95,3 +95,8 @@
 -keep class org.jetbrains.** {*;}
 -keep class kotlin.** {*;}
 -keep class com.meituan.** {*;}
+
+#mmkv
+-keep class com.tencent.mmkv.** { *; }
+-dontwarn com.tencent.mmkv.**
+
