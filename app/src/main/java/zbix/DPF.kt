@@ -16,12 +16,13 @@ import java.lang.ref.WeakReference
 import android.content.pm.PackageManager
 import android.content.ComponentName
 import android.content.Intent
-import com.examp.oversea_base_power.BaseApplication
+import com.example.overseaswhitebag.AdjustTokens
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
 import com.p.b.InitAdAndTj
 import com.p.b.base.APPContext
+import com.p.b.base.BaseApplication
 
 import com.p.b.base_api_net.base_api_bean.ConfigUtils
 import com.p.b.base_api_net.utils.DeviceUtils
@@ -43,7 +44,6 @@ import com.p.b.common.fcm.FCMInitUtils
 import com.p.b.common.firebase.FireBaseInitUtils
 import com.p.b.http.HostUtils
 import com.p.b.pl223.hhoosstt.AdUtils
-import zbiz.AdjustTokens
 
 class DPF : BaseApplication() {
 
@@ -91,17 +91,30 @@ class DPF : BaseApplication() {
         CContext.setApplication(this)
         OverseaAppContext.setApplication(this)
 
-        MMKV.initialize(this)
-        // 初始化Firebase
-        FirebaseApp.initializeApp(this)
-        // 初始化FCM
-        FCMInitUtils.init(this)
-        init()
+//        MMKV.initialize(this)
+//        // 初始化Firebase
+//        FirebaseApp.initializeApp(this)
+//        // 初始化FCM
+//        FCMInitUtils.init(this)
+//        init()
+    }
+
+    override fun configureAdjustTokens() {
+        AdjustTokens.initAdJustToken(this)
+
+    }
+
+    override fun initPower() {
+        // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
+        // TODO 新 aar 对接后启用
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-
+        // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
+        // TODO 新 aar 对接后启用
     }
+
+
 
 
     private fun init() {
