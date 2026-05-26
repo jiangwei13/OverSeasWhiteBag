@@ -175,8 +175,8 @@ include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-//include ':pic_toolslibrary'
-//project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
+include ':pic_toolslibrary'
+project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
 include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
 //include ':brokendevice'
