@@ -170,30 +170,25 @@ include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
 include ':color_picker_library'
 project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
-//include ':edgeborderlight'
-//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
 include ':toolslibrary'
 project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-include ':pic_toolslibrary'
-project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
+//include ':pic_toolslibrary'
+//project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
 include ':scanlibrary'
 project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
-include ':brokendevice'
-project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include(':heartbratmeasure')
-//project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
-include(':recipes_module')
-project(':recipes_module').projectDir = file('./third-module/recipes_module')
+//include ':brokendevice'
+//project(':brokendevice').projectDir = file('./third-module/brokendevice')
+//include(':recipes_module')
+//project(':recipes_module').projectDir = file('./third-module/recipes_module')
 include(':toolsbox')
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
 
-include(':smalltoolslibrary')
-project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
+//include(':smalltoolslibrary')
+//project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
 
 include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
@@ -213,24 +208,18 @@ project(':oversea_common_library').projectDir = file('./oversea_base_module/over
 include(':oversea_base_power')
 project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_base_power')
 
-//include(':broadcast')
-//project(':broadcast').projectDir = file("./tools_common_module/broadcast")
-
-//include(':base_ad_common_library')
-//project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
 
 
-include(':coloring_book')
-project(':coloring_book').projectDir = file("./third-module/coloring_book")
+
+//include(':coloring_book')
+//project(':coloring_book').projectDir = file("./third-module/coloring_book")
 
 
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 //include(":aar_library:app_aar")
-//include(":aar_library:security_checker")
 include ':aar_library:aar_name2'
-include ':aar_library:aar_name'
+//include ':aar_library:aar_name'
 
-//include ':oversea_utils'
 
 
