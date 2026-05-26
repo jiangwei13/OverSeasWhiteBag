@@ -32,13 +32,11 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "nmu.qaki.mxft",
+                 "com.deploy"  : "nmu.qaki.mxft",
                  "com.p.b"  : "nmu.rzxr.uik",
                 ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "nmu.hxpqy.fiff",
-           "com.example.overseaswhitebag.common.utils"                    : "nmu.lone.bxtmp",
            "com.p.b.master"                                 : "nmu.izv.nehuu",
            "com.p.b.op"                                        : "nmu.emut.xvlv",
             "com.p.b.base_api_net"  : "nmu.dveni.qgq",
@@ -70,7 +68,7 @@ android {
 
 
 
-    namespace 'nmu.qaki.mxft'
+    namespace 'com.deploy'
     compileSdk 35
 
     // 临时禁用某些严格检查

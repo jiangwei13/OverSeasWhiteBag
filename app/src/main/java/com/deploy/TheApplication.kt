@@ -1,4 +1,4 @@
-package nmu.qaki.mxft
+package com.deploy
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,12 @@ import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 
 
-class BGSK : BaseApplication() {
+class TheApplication : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: BGSK? = null
+        var insApp: TheApplication? = null
     }
-
 
     override fun onCreate() {
         super.onCreate()
@@ -22,21 +21,16 @@ class BGSK : BaseApplication() {
         APPContext.setApplication(this)
     }
 
-
     override fun configureAdjustTokens() {
         AdjustTokens.initAdJustToken(this)
     }
 
-
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-//         原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        // TODO 新 aar 对接后启用
+        // 由其他 App 拉起时，转交中转页处理
         df.page(appBaseContext, intent)
     }
 
-
     override fun initPower() {
-        // 原逻辑：df.vir(insApp) —— 初始化能力
-        // TODO 新 aar 对接后启用
+        // 预留：初始化能力入口
     }
 }
