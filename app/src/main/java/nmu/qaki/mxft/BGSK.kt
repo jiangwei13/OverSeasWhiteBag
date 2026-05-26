@@ -2,7 +2,6 @@ package nmu.qaki.mxft
 
 import android.content.Intent
 import android.os.Bundle
-import com.huawei.recharge.featurexzy21.df
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 
