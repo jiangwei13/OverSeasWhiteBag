@@ -1,16 +1,16 @@
-package nmu.qaki.mxft
+package a
 
 import android.content.Intent
 import android.os.Bundle
-import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
+import dvwn.ckac.zauy.base.APPContext
+import dvwn.ckac.zauy.base.BaseApplication
 
 
-class BGSK : BaseApplication() {
+class QKGB : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: BGSK? = null
+        var insApp: QKGB? = null
     }
 
 
@@ -23,7 +23,7 @@ class BGSK : BaseApplication() {
 
 
     override fun configureAdjustTokens() {
-        AdjustTokens.initAdJustToken(this)
+        QKHT.initAdJustToken(this)
     }
 
 
