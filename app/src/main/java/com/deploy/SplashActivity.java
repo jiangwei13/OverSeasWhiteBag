@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 
-import com.fangda.MainTwoActivity;
+import com.base.khtoolslibrary.pdf.PdfReaderActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashActivity.this, MainTwoActivity.class);
+                Intent it = new Intent(SplashActivity.this, PdfReaderActivity.class);
                 startActivity(it);
                 finish();
             }

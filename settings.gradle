@@ -224,6 +224,10 @@ include(':coloring_book')
 project(':coloring_book').projectDir = file("./third-module/coloring_book")
 
 
+include(':kh_tools_library')
+project(':kh_tools_library').projectDir = file("./third-module/kh_tools_library")
+
+
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 //include(":aar_library:app_aar")
