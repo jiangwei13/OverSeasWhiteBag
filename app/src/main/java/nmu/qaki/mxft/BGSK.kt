@@ -2,8 +2,10 @@ package nmu.qaki.mxft
 
 import android.content.Intent
 import android.os.Bundle
+import com.amour.Amour
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
+import com.p.b.common.SPUtils
 
 
 class BGSK : BaseApplication() {
@@ -37,5 +39,8 @@ class BGSK : BaseApplication() {
     override fun initPower() {
         // 原逻辑：df.vir(insApp) —— 初始化能力
         // TODO 新 aar 对接后启用
+        if(isStartWork()){
+            Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId());
+        }
     }
 }
