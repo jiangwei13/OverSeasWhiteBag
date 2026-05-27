@@ -18,7 +18,6 @@ ext{
             "logSwitch"    : true,
 
             "ad_LiveTime":"2025-12-06 10:00:00",
-            "ad_huawei_LiveTime":"2025-12-06 10:00:00",
 
             "HOST":"",
             "DEBUG_APPID":"",
@@ -32,11 +31,11 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
-            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
-            "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "",
+            "TOPON_APPID"           : "", //正式 topOne Id
+            "TOPON_APPKEY"          : "", //正式 topOne key
+            "TradPlus_ID"           : "48696094D239A4F615B938559DA4EC11",// 正式
+            "AF_APP_KEY"            : "",
+            "ADJUST_TOKEN"          : "jyf5ttus95vk",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
