@@ -1,21 +1,22 @@
+
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "927168276131",
+    "project_id": "pdf-reader-da046",
+    "storage_bucket": "pdf-reader-da046.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:927168276131:android:692ef486beeef4d262c116",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.Khairan.reader"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyDHXHnvSKh4-YjP5qJbIF7W_gw1XrV4AfM"
         }
       ],
       "services": {
@@ -27,3 +28,5 @@
   ],
   "configuration_version": "1"
 }
+
+    

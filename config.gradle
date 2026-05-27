@@ -10,8 +10,8 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://sites.google.com/view/magni-see/home/privacy",
-            "userUrl"   : "https://sites.google.com/view/magni-see/home/terms",
+            "privacyUrl": "",
+            "userUrl"   : "",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
@@ -34,9 +34,9 @@ ext{
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
+            "TradPlus_ID"           : "FDCD339CDFF8474572167ED535565C11",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "z6mizjojl88w",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
