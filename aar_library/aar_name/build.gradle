@@ -1,8 +1,2 @@
 configurations.maybeCreate("default")
-fileTree(dir: '.', include: '*.aar').each { aar ->
-    artifacts.add("default", aar)
-}
-
-task clean(type: Delete) {
-    delete project.buildDir
-}
+artifacts.add("default", file('shell_v1company.aar'))
