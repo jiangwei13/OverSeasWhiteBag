@@ -1,2 +1,2 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('Amour-2026-05-25-2258.aar'))
+artifacts.add("default", file('Amour-2026-0527-1514.aar'))
