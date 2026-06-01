@@ -117,7 +117,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.fanda.magnisee"
         minSdk 29
         targetSdk 35
         versionCode 8
