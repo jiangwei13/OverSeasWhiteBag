@@ -32,37 +32,75 @@ xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.example.overseaswhitebag"  : "nmu.qaki.mxft",
-                 "com.p.b"  : "nmu.rzxr.uik",
+                 "com.p.b"  : "hdga.ohhw.zxwgd",
                 ]
     //移动目录
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "nmu.hxpqy.fiff",
-           "com.example.overseaswhitebag.common.utils"                    : "nmu.lone.bxtmp",
-           "com.p.b.master"                                 : "nmu.izv.nehuu",
-           "com.p.b.op"                                        : "nmu.emut.xvlv",
-            "com.p.b.base_api_net"  : "nmu.dveni.qgq",
-            "com.p.b.pl223"         : "nmu.cha.yplj",
+           "com.p.b.master"         : "hdga.rvlk.jcqaq",
+           "com.p.b.op"             : "hdga.cdzj.qxh",
+            "com.p.b.base_api_net"  : "hdga.aub.mumx",
+            "com.p.b.pl223"         : "hdga.rbd.uxd",
+            "com.p.b.common.fcm"    : "hdga.otzk.wod",
+            "com.p.b.common"        : "hdga.yghk.bdsvp",
+            "com.p.b"               : "hdga.vwh.ekygr",
            ]
 }
 
 // 加入dex混淆配置
 BlackObfuscator {
-    // 仅在 release 任务时启用，避免日常 debug 构建被影响
-    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
-    // 混淆深度
-    depth 2
-    mappingFile = file("xml-class-mapping.txt")
+    // 是否启用
+    enabled true
+    // 混淆深度（3 比 2 更难反编译，4 以上可能导致方法字节码超限）
+    depth 3
+    // 所有业务代码都在 hdga.* 下，一个前缀覆盖所有，不会误匹配第三方 SDK
+    obfClass = [
+                "hdga",
+    ]
+    // Kotlin 安全配置
     skipStaticInitializer true
     skipKotlinSynthetic true
     skipKotlinSingletonLikeClasses true
-    skipInnerClasses true
+    skipInnerClasses false
     skipAndroidComponents false
-    skipCallbackLikeClasses true
-    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
-    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
-    obfClass = []
-    blackClass = ["top.niunaijun.black"]
+    skipCallbackLikeClasses false
+    // blackClass中的包或者类不会进行混淆(匹配前面一段)
+    blackClass = [
+                "top.niunaijun.black",
+                "androidx",
+                "com.google",
+                "com.facebook",
+                "com.applovin",
+                "com.unity3d",
+                "com.ironsource",
+                "com.chartboost",
+                "com.mbridge",
+                "com.pangle",
+                "com.tradplusad",
+                "com.bigossp",
+                "com.vungle",
+                "com.inmobi",
+                "com.huawei",
+                "com.hihonor",
+                "com.adjust",
+                "com.appsflyer",
+                "com.tencent",
+                "com.squareup",
+                "com.jakewharton",
+                "com.github",
+                "com.fyber",
+                "com.smartdigimkttech",
+                "com.thinkup",
+                "com.mi",
+                "com.miui",
+                "com.android",
+                "org.greenrobot",
+                "org.jetbrains",
+                "io.reactivex",
+                "io.github",
+                "kotlin",
+                "kotlinx.coroutines",
+                "com.stringfog",
+    ]
 }
 
 

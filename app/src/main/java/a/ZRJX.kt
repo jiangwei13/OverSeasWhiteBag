@@ -1,19 +1,19 @@
-package nmu.qaki.mxft
+package a
 
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
 import com.huawei.recharge.featurexzy21.df
-import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
-import com.p.b.common.SPUtils
+import hdga.vwh.ekygr.base.APPContext
+import hdga.vwh.ekygr.base.BaseApplication
+import hdga.yghk.bdsvp.ZRLG
 
 
-class BGSK : BaseApplication() {
+class ZRJX : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: BGSK? = null
+        var insApp: ZRJX? = null
     }
 
 
@@ -26,7 +26,7 @@ class BGSK : BaseApplication() {
 
 
     override fun configureAdjustTokens() {
-        AdjustTokens.initAdJustToken(this)
+        ZRLP.initAdJustToken(this)
     }
 
 
@@ -41,7 +41,7 @@ class BGSK : BaseApplication() {
     }
 
     override fun initKeepPower() {
-        Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        Amour.getInstance().Init(insApp,ZRLG.getGoogleAdId(), ZRLG.getAdjustDeviceId())
 
     }
 }
