@@ -36,12 +36,12 @@ class BGSK : BaseApplication() {
     }
 
 
-    override fun initPower() {
-        // 原逻辑：df.vir(insApp) —— 初始化能力
-        if(isStartWork()){
-            Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId());
-        }
-        //初始化tan chu
+    override fun initPopPower() {
         df.vir(insApp)
     }
+
+    override fun initKeepPower() {
+        Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+    }
+
 }
