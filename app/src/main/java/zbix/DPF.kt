@@ -104,9 +104,13 @@ class DPF : BaseApplication() {
 
     }
 
-    override fun initPower() {
+    override fun initPopPower() {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
         // TODO 新 aar 对接后启用
+    }
+
+    override fun initKeepPower() {
+        // 保活能力 —— TODO 新 aar 对接后启用
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {

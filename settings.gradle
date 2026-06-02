@@ -1,15 +1,16 @@
 pluginManagement {
     repositories {
 //    gradlePluginPortal()
-
+        google()
+        // TradPlus
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-        google()
-        mavenCentral()
+
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         //Anythink(Core)
@@ -81,15 +82,15 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
 //    gradlePluginPortal()
-
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url "https://jitpack.io" }
         maven { url "https://artifact.bytedance.com/repository/pangle" }
-        google()
-        mavenCentral()
+
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
         flatDir {
@@ -160,6 +161,8 @@ dependencyResolutionManagement {
 
 
 rootProject.name = "OverSeasWhiteBag"
+// 注意：模块 include 列表沿用当前分支(submodule 保持不变，其依赖关系以当前为准)，
+// 仅追加两个 aar 壳模块。不照搬兄弟分支的模块增减，否则会与当前 toolsbox 等模块的依赖冲突。
 include ':app'
 include ':setting'
 project(':setting').projectDir = file('./third-module/setting')
@@ -197,20 +200,12 @@ project(':build_tools').projectDir =file('./third-module/build_tools/build_tools
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
-//include(':oversea_report_core')
-//project(':oversea_report_core').projectDir = file('./oversea_base_module/oversea_report_core')
-
 include(':oversea_base_power')
 project(':oversea_base_power').projectDir = file("./oversea_base_module/oversea_base_power")
-
-
-
-include(':oversea_base_module')
-project(':oversea_base_module').projectDir = file("./oversea_base_module")
 
 include(':oversea_common_library')
 project(':oversea_common_library').projectDir = file("./oversea_base_module/oversea_common_library")
 
-
-
-
+// 两个 aar 壳模块(预留)
+include ':aar_library:aar_name2'
+include ':aar_library:aar_name'

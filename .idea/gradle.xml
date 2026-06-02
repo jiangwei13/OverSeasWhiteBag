@@ -21,9 +21,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aar_library" />
+            <option value="$PROJECT_DIR$/aar_library/aar_name" />
+            <option value="$PROJECT_DIR$/aar_library/aar_name2" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/oversea_base_module" />
             <option value="$PROJECT_DIR$/oversea_base_module" />
             <option value="$PROJECT_DIR$/oversea_base_module/oversea_base_power" />
             <option value="$PROJECT_DIR$/oversea_base_module/oversea_common_library" />
@@ -38,7 +40,6 @@
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
