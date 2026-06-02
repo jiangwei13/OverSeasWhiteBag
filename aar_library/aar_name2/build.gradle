@@ -1,2 +1,8 @@
 configurations.maybeCreate("default")
-artifacts.add("default", file('Amour-2026-0527-1514.aar'))
+fileTree(dir: '.', include: '*.aar').each { aar ->
+    artifacts.add("default", aar)
+}
+
+task clean(type: Delete) {
+    delete project.buildDir
+}
