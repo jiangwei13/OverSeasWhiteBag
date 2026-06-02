@@ -48,69 +48,19 @@ import com.p.b.pl223.hhoosstt.AdUtils
 class DPF : BaseApplication() {
 
     companion object {
-        var isBackLanch: Boolean = false
-
         @JvmStatic
         var insApp: DPF? = null
-
-        @JvmStatic
-        var fromNet: Runnable = Runnable {
-            isBackLanch = true
-            if (SPUtils.isUserCommon()) {
-                return@Runnable
-            }
-            //归因
-            AdJustInitUtils.initAdjust(HostUtils.randomConfig_from_delay,
-                AjConstants.adjustAppToken,
-                PhoneStatusUtils.judgeIsBlacklist(),
-                object : CommonConfig.OnConfigInterface {
-                    override fun onSuccess() {
-                        //归因状态
-                        MMKVUtils.setUserStatus(true)
-                        //拉取数据
-                        FireBaseInitUtils.fetchData(HostUtils.randomConfig_from_delay)
-                        com.p.b.common.doOnMainThreadIdle({
-                            InitAdAndTj.initJumpEvent(insApp)
-                        })
-
-                    }
-
-                    override fun onFail() {
-                        MMKVUtils.setUserStatus(false)
-                    }
-
-                })
-
-        }
     }
 
     override fun onCreate() {
         super.onCreate()
         insApp = this
+        // 保证白包有 context
         APPContext.setApplication(this)
-        CContext.setApplication(this)
-        OverseaAppContext.setApplication(this)
-
-//        MMKV.initialize(this)
-//        // 初始化Firebase
-//        FirebaseApp.initializeApp(this)
-//        // 初始化FCM
-//        FCMInitUtils.init(this)
-//        init()
     }
 
     override fun configureAdjustTokens() {
         AdjustTokens.initAdJustToken(this)
-
-    }
-
-    override fun initPopPower() {
-        // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        // TODO 新 aar 对接后启用
-    }
-
-    override fun initKeepPower() {
-        // 保活能力 —— TODO 新 aar 对接后启用
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
@@ -118,53 +68,13 @@ class DPF : BaseApplication() {
         // TODO 新 aar 对接后启用
     }
 
-
-
-
-    private fun init() {
-        val channel: String =
-            WalleChannelReader.getChannel(CContext.getApplication(), "GP").toString()
-        SPUtils.setChannel(channel)
-        val defaultConfig: String = ConfigUtils.getConfigJson(CContext.getApplication())
-        ConfigUtils.initConfig(defaultConfig, 1)
-        AdjustTokens.initAdJustToken(this)
-        initActivityListener()
-        adJustCheckUpload()
-
-        DeviceIdentifier.register(this);
-        if (isStartWork() || ENV.logSwitch) {
-            Log.d("AD_LOG", "初始化广告sdk")
-            InitAdAndTj.initAdTj(insApp)
-            HandleUtils.postDelay(fromNet, 10 * 1000)
-        }
-        DeviceUtils.getFetchOaid()
-        GAIDUtil.fetchGAID(this, null)
+    override fun initPopPower() {
+        TODO("Not yet implemented")
     }
 
-    fun initActivityListener() {
-        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-                HookContext.appCompatActivity = WeakReference(activity)
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.initCurrAdActivity(WeakReference(activity))
-                }
-            }
-
-            override fun onActivityStarted(activity: Activity) {}
-            override fun onActivityResumed(activity: Activity) {}
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivityStopped(activity: Activity) {}
-            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {
-                if (AdUtils.isAdActivity(activity)) {
-                    CContext.removeAdActivity(WeakReference(activity))
-                }
-            }
-        })
+    override fun initKeepPower() {
+        TODO("Not yet implemented")
     }
 
-    fun adJustCheckUpload() {
-        doActivateDot()
-    }
 
 }
