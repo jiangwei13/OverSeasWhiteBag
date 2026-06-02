@@ -1,4 +1,4 @@
-package zbix
+package a
 
 import android.app.Activity
 import android.app.Application
@@ -20,36 +20,36 @@ import com.example.overseaswhitebag.AdjustTokens
 import com.github.gzuliyujiang.oaid.DeviceIdentifier
 import com.google.firebase.FirebaseApp
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.InitAdAndTj
-import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
+import coyj.gtuc.dzy.XVNW
+import coyj.gtuc.dzy.base.APPContext
+import coyj.gtuc.dzy.base.BaseApplication
 
-import com.p.b.base_api_net.base_api_bean.ConfigUtils
-import com.p.b.base_api_net.utils.DeviceUtils
-import com.p.b.base_api_net.utils.HandleUtils
-import com.p.b.comm.ENV
-import com.p.b.comm.context.CContext
-import com.p.b.comm.context.HookContext
+import coyj.zwg.lvv.base_api_bean.ConfigUtils
+import coyj.zwg.lvv.utils.DeviceUtils
+import coyj.zwg.lvv.utils.HandleUtils
+import coyj.gtuc.dzy.comm.ENV
+import coyj.gtuc.dzy.comm.context.CContext
+import coyj.gtuc.dzy.comm.context.HookContext
 
-import com.p.b.common.GAIDUtil
-import com.p.b.common.MMKVUtils
-import com.p.b.common.OverseaAppContext
-import com.p.b.common.PhoneStatusUtils
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustInitUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils.doActivateDot
-import com.p.b.common.adjust.AjConstants
-import com.p.b.common.adjust.CommonConfig
-import com.p.b.common.fcm.FCMInitUtils
-import com.p.b.common.firebase.FireBaseInitUtils
-import com.p.b.http.HostUtils
-import com.p.b.pl223.hhoosstt.AdUtils
+import coyj.yggm.nfj.XVMY
+import coyj.yggm.nfj.XVND
+import coyj.yggm.nfj.XVNP
+import coyj.yggm.nfj.XVNL
+import coyj.yggm.nfj.XVNR
+import coyj.yggm.nfj.adjust.AdJustInitUtils
+import coyj.yggm.nfj.adjust.AdJustTokenAFUtils.doActivateDot
+import coyj.yggm.nfj.adjust.AjConstants
+import coyj.yggm.nfj.adjust.CommonConfig
+import coyj.kpfs.hbqws.XVMW
+import coyj.yggm.nfj.firebase.FireBaseInitUtils
+import coyj.gtuc.dzy.http.HostUtils
+import coyj.wnt.ddjct.hhoosstt.AdUtils
 
-class DPF : BaseApplication() {
+class XVIU : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: DPF? = null
+        var insApp: XVIU? = null
     }
 
     override fun onCreate() {
