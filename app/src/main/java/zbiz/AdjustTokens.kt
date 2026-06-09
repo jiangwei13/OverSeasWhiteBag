@@ -32,6 +32,7 @@ object AdjustTokens {
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
                 com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
                 com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
+                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="7kum4e";
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "33pnl9";
                 AjConstants.ad_tick_fire = "2vh2p6";
@@ -70,8 +71,8 @@ object AdjustTokens {
                 AjConstants.ad_preload_first_fail_no_fill = "6i1biv";
                 AjConstants.ad_preload_first_fail_after_fill = "h9sto3";
                 // —— V1.0.3 增量
-                AjConstants.ad_skip_dialog = "";
-                AjConstants.ad_skip_hit = "";
+                AjConstants.ad_skip_dialog = "izcjg8";
+                AjConstants.ad_skip_hit = "iui8eg";
             }
 
             "HW" -> {
