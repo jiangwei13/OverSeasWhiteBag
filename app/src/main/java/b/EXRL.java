@@ -1,4 +1,4 @@
-package zbiy;
+package b;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -14,11 +14,11 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class DTO {
-    private static DTO sInstance;
+public class EXRL {
+    private static EXRL sInstance;
     private Context mContext;
 
-    public DTO(Context context) {
+    public EXRL(Context context) {
         mContext = context;
     }
 
@@ -29,11 +29,11 @@ public class DTO {
      * @param context context
      * @return the single instance
      */
-    public static DTO with(Context context) {
-        synchronized (DTO.class) {
+    public static EXRL with(Context context) {
+        synchronized (EXRL.class) {
             if (sInstance == null) {
                 //不要直接引用contex，防止内存泄漏
-                sInstance = new DTO(context.getApplicationContext());
+                sInstance = new EXRL(context.getApplicationContext());
             }
         }
 

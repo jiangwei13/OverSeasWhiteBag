@@ -3,7 +3,7 @@ package com.example.overseaswhitebag
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import zeps.kqoi.ywgis.adjust.AjConstants
 
 /**
  * Adjust Token
@@ -15,24 +15,24 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "15cdp8";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "vqotp8";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "e6741h";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "siux4n";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "7xm6un";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="uju518";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
-                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="7kum4e";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.Login = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.Reg = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu = "15cdp8";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.arpu = "vqotp8";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.blacklist = "e6741h";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ad_request = "siux4n";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ad_full = "7xm6un";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.firebase_request ="uju518";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.activity_app ="";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.LiveTime ="7kum4e";
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "33pnl9";
                 AjConstants.ad_tick_fire = "2vh2p6";
@@ -76,19 +76,19 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.adjustAppToken = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.Login = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.Reg = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.topon_ilrd = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.arpu = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_arpu = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_ecpm = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.blacklist = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ad_request = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.ad_full = "";
+                zeps.kqoi.ywgis.adjust.AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
