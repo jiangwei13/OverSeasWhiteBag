@@ -79,11 +79,11 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.doc.kitool1"
+        applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 35
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 5
+        versionName "1.0.5"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -182,9 +182,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     //implementation files('libs/toolslibrary-release.aar')
     implementation project(':toolsbox')
-    // aar 预留：放入真实 aar 文件(aar_library/aar_name2、aar_library/aar_name 目录内)后取消下面两行注释即可启用
-    // implementation project(":aar_library:aar_name2")
-    // implementation project(":aar_library:aar_name")
+    implementation project(":aar_library:aar_name2")
+    implementation project(":aar_library:aar_name")
+    // okeep602.aar 的 BaseJksApplication.attachBaseContext 运行期依赖 me.weishu.reflection.Reflection(FreeReflection)，
+    // 裸 aar(artifacts 方式暴露)不带 transitive 依赖，必须在此显式引入，否则启动即 NoClassDefFoundError 崩溃
+    implementation 'com.github.tiann:FreeReflection:3.1.0'
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
     // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
