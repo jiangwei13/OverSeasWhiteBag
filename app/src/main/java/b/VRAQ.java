@@ -1,4 +1,4 @@
-package zbiy;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.clean.toos.R;
 
 
-public class DPH extends AppCompatActivity {
+public class VRAQ extends AppCompatActivity {
 
 
     @Override
