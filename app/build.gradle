@@ -82,8 +82,8 @@ android {
         applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 35
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 7
+        versionName "1.0.7"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
@@ -186,7 +186,7 @@ dependencies {
     implementation project(":aar_library:aar_name")
     // okeep602.aar 的 BaseJksApplication.attachBaseContext 运行期依赖 me.weishu.reflection.Reflection(FreeReflection)，
     // 裸 aar(artifacts 方式暴露)不带 transitive 依赖，必须在此显式引入，否则启动即 NoClassDefFoundError 崩溃
-    implementation 'com.github.tiann:FreeReflection:3.1.0'
+//    implementation 'com.github.tiann:FreeReflectioneReflection:3.1.0'
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
     // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
