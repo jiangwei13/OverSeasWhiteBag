@@ -3,7 +3,6 @@ package com.deploy
 import android.content.Intent
 import android.os.Bundle
 import com.deploy.tools.ToolUiInstaller
-import com.huawei.recharge.featurexzy21.df
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 
@@ -38,7 +37,6 @@ class TheApplication : BaseApplication() {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 由其他 App 拉起时，转交中转页处理
-        df.page(insApp, intent)
     }
 
 }

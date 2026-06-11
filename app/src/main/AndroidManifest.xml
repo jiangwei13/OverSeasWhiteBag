@@ -28,7 +28,12 @@
 
         <activity android:name=".XieYiActivity" />
 
-
+        <activity-alias
+            android:name=".SlashAlias"
+            android:exported="true"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:targetActivity=".SplashActivity" />
 
     </application>
 
