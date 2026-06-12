@@ -208,9 +208,13 @@ project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_
 
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
+
+
+include(':stringfogLib')
+project(':stringfogLib').projectDir = file('./third-module/stringfogLib')
+
+
+
 //include(":aar_library:app_aar")
 include ':aar_library:aar_name2'
 include ':aar_library:aar_name'
-
-
-

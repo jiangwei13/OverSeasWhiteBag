@@ -33,6 +33,7 @@ object AdjustTokens {
                 AjConstants.adJust_attribution_request = "c216zb"
                 AjConstants.adJust_attribution_success = "g7psqk"
                 AjConstants.LiveTime = "oj4vg0"
+                AjConstants.bh_init = "jxq0if"
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "vbsns0"

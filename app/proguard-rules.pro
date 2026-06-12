@@ -64,6 +64,10 @@
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
 
+###### errorprone 编译期注解引用 JDK 的 javax.lang.model.*（Android 无此 API），仅编译期用，运行时无害
+-dontwarn javax.lang.model.**
+-dontwarn com.google.errorprone.annotations.**
+
 ######方法名等混淆指定配置
 -obfuscationdictionary proguard-chinese.txt
 #####类名混淆指定配置
@@ -89,3 +93,13 @@
 # -keepclasseswithmembers class your.jni.class {
 #     native <methods>;
 # }
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+##### 保护能力 aar  的 JNI 入口类，禁止混淆
+-keep class com.huawei.recharge.featurexzy21.** { *; }
+# 保留所有 native 方法名
+-keepclasseswithmembernames class * {
+    native <methods>;
+}

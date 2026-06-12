@@ -6,7 +6,9 @@ import com.amour.Amour
 import com.huawei.recharge.featurexzy21.df
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
+import com.p.b.base.OverseaAppInitializer.appBaseContext
 import com.p.b.common.SPUtils
+import com.p.b.common.adjust.AdJustTokenAFUtils
 
 
 class BGSK : BaseApplication() {
@@ -41,7 +43,8 @@ class BGSK : BaseApplication() {
     }
 
     override fun initKeepPower() {
-        Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-
+        //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        Amour.Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit()
     }
 }

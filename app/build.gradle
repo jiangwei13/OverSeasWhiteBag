@@ -103,15 +103,17 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magnisee'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
+            enableV1Signing true
+            enableV2Signing true
         }
         debug {
-            keyAlias 'magnisee'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
@@ -207,6 +209,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation 'com.tencent:mmkv:2.3.0'
-
+// StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
+    implementation project(':stringfogLib')
 
 }
