@@ -101,15 +101,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magnisee'
+            keyAlias 'pdfviewer'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('pdfviewer.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magnisee'
+            keyAlias 'pdfviewer'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('pdfviewer.jks')
             storePassword '123456'
         }
     }

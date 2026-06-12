@@ -17,7 +17,7 @@ object ToolUiInstaller {
 
     fun installAll() {
         // PDF 阅读页:启用 Compose 自定义 UI。注释此行即回退功能层默认 UI。
-//        ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
+        ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
 
         // 以下工具已具备覆盖机制(功能层 Controller + 注册分支已就位),
         // 待设计好各自的自定义 UI 后,实现对应 ToolUiFactory 并在此注册:
