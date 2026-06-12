@@ -188,6 +188,8 @@ dependencies {
     // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
     // oversea_base_module 仅以 implementation 引用，可见性不传递，故在此显式引入。
     implementation project(':oversea_common_library')
+    // StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
+    implementation project(':stringfogLib')
 //    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
