@@ -1,14 +1,14 @@
-//package com.deploy
+//package cdi.yzc.peo
 //
-//import com.p.b.common.LogUtil
-//import com.p.b.common.adjust.AjConstants
+//import cdi.xox.txsz.LogUtil
+//import cdi.xox.txsz.adjust.AjConstants
 //
 //
 ///**
 // * Adjust Token 配置：按渠道初始化各事件 token。
 // */
 //
-//object AdjustTokens {
+//object SHMR {
 //    fun initAdJustToken(context: android.content.Context) {
 //        //adJust 打点需要初始化
 //        val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString()
@@ -555,7 +555,7 @@
 //            }
 //
 //            else -> {
-//                LogUtil.d("AdjustTokens", "测试")
+//                LogUtil.d("SHMR", "测试")
 //                //com.test.app
 //                AjConstants.adjustAppToken = "h34rdv64os8w"
 //                LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)

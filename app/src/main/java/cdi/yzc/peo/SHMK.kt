@@ -1,19 +1,26 @@
-package com.deploy
+package cdi.yzc.peo
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import com.deploy.tools.ToolUiInstaller
+import cdi.yzc.peo.tools.ToolUiInstaller
 
 
-class TheApplication : Application() {
+class SHMK : Application() {
 
     companion object {
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insApp: SHMK? = null
     }
 
     override fun onCreate() {
+        val arr_vYvPGguixdY = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_PcISH  = (arr_vYvPGguixdY  shl 82) xor (arr_vYvPGguixdY  shr 44)
+         val j_OHFXtPORxw  = i_PcISH .inv() and 0xFFFF
+         if (j_OHFXtPORxw  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_FgRuUswFbkqYtDs")
+         }
         super.onCreate()
         insApp = this
         // 保证白包有 context
@@ -23,7 +30,7 @@ class TheApplication : Application() {
     }
 
 //    override fun configureAdjustTokens() {
-//        AdjustTokens.initAdJustToken(this)
+//        SHMR.initAdJustToken(this)
 //    }
 //
 //    override fun initPopPower() {
