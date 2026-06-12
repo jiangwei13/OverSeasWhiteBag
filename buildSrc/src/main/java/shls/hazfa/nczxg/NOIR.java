@@ -1,10 +1,10 @@
-package com.p.b;
+package shls.hazfa.nczxg;
 
 import com.github.megatronking.stringfog.IKeyGenerator;
 
 import java.nio.charset.StandardCharsets;
 
-public class CustomKeyGenerator implements IKeyGenerator {
+public class NOIR implements IKeyGenerator {
 
     @Override
     public byte[] generate(String value) {

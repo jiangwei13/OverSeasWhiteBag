@@ -1,19 +1,26 @@
-package com.deploy
+package shls.ekxz.zysdo
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import com.deploy.tools.ToolUiInstaller
+import shls.ekxz.zysdo.tools.ToolUiInstaller
 
 
-class TheApplication : Application() {
+class WCT : Application() {
 
     companion object {
         @JvmStatic
-        var insApp: TheApplication? = null
+        var insApp: WCT? = null
     }
 
     override fun onCreate() {
+        val arr_DdVIOkF = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_SbhiAoDfP  = (arr_DdVIOkF  shl 79) xor (arr_DdVIOkF  shr 18)
+         val j_gELajIJyoq  = i_SbhiAoDfP .inv() and 0xFFFF
+         if (j_gELajIJyoq  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_ijybIOnBQZKvPoTroi")
+         }
         super.onCreate()
         insApp = this
         // 保证白包有 context
@@ -23,7 +30,7 @@ class TheApplication : Application() {
     }
 
 //    override fun configureAdjustTokens() {
-//        AdjustTokens.initAdJustToken(this)
+//        WUSO.initAdJustToken(this)
 //    }
 //
 //    override fun initPopPower() {
