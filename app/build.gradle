@@ -190,6 +190,8 @@ dependencies {
     implementation project(':oversea_common_library')
     // PdfReaderActivity 所在模块
     implementation project(':kh_tools_library')
+    // StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
+    implementation project(':stringfogLib')
 //    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
