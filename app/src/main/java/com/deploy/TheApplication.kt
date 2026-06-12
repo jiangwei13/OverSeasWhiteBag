@@ -30,7 +30,11 @@ class TheApplication : BaseApplication() {
         df.page(appBaseContext, intent)
     }
 
-    override fun initPower() {
-        // 预留：初始化能力入口
+    override fun initPopPower() {
+        // 预留：初始化 pop 能力入口
+    }
+
+    override fun initKeepPower() {
+        // 预留：初始化保活能力入口
     }
 }
