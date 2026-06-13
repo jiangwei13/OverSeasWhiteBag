@@ -1,5 +1,6 @@
 package nmu.qaki.mxft
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +24,7 @@ class BGSK : BaseApplication() {
 //    override fun attachBaseContext(base: Context?) {
 //        super.attachBaseContext(base)
 //        Log.d("AD_LOG_attach", "attachBaseContext>>")
-//        Amour.Init(this,"", "")
+//        Amour.Init(this,"gaid123", "adjust123")
 //    }
 
     override fun onCreate() {
@@ -49,9 +50,12 @@ class BGSK : BaseApplication() {
 
     }
 
-    override fun initKeepPower() {
+
+
+    override fun initKeepPower(app: Application) {
         //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        Amour.Init(appBaseContext,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        //AdJustTokenAFUtils.showBhInit()
+        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit(SPUtils.getGoogleAdId())
     }
+
 }
