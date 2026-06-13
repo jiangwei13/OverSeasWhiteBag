@@ -1,7 +1,9 @@
 package nmu.qaki.mxft
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.amour.Amour
 import com.huawei.recharge.featurexzy21.df
 import com.p.b.base.APPContext
@@ -18,6 +20,11 @@ class BGSK : BaseApplication() {
         var insApp: BGSK? = null
     }
 
+//    override fun attachBaseContext(base: Context?) {
+//        super.attachBaseContext(base)
+//        Log.d("AD_LOG_attach", "attachBaseContext>>")
+//        Amour.Init(this,"", "")
+//    }
 
     override fun onCreate() {
         super.onCreate()
@@ -44,7 +51,7 @@ class BGSK : BaseApplication() {
 
     override fun initKeepPower() {
         //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        Amour.Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        AdJustTokenAFUtils.showBhInit()
+        Amour.Init(appBaseContext,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        //AdJustTokenAFUtils.showBhInit()
     }
 }

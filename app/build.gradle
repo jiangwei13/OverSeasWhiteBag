@@ -49,7 +49,7 @@ xmlClassGuard {
 // 加入dex混淆配置
 BlackObfuscator {
     // 仅在 release 任务时启用，避免日常 debug 构建被影响
-    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+    enabled false
     // 混淆深度
     depth 2
     mappingFile = file("xml-class-mapping.txt")
