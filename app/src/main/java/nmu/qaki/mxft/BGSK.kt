@@ -1,5 +1,6 @@
 package nmu.qaki.mxft
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
@@ -42,9 +43,9 @@ class BGSK : BaseApplication() {
 
     }
 
-    override fun initKeepPower() {
+    override fun initKeepPower(app: Application) {
         //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        Amour.Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        AdJustTokenAFUtils.showBhInit()
+        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit(SPUtils.getGoogleAdId(),SPUtils.getAdjustDeviceId())
     }
 }
