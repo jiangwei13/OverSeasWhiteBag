@@ -1,4 +1,4 @@
-package a;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import nmu.qaki.mxft.R;
 
-public class VPDG extends AppCompatActivity {
+public class SWT extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
