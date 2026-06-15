@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import nmu.qaki.mxft.R;
-import com.p.b.ad.AdViewMana;
+
+
 import com.fangda.MainTwoActivity;
+
+import nmu.qaki.mxft.R;
+//import com.p.b.ad.AdViewMana;
 
 @SuppressLint("CustomSplashScreen")
 public class VPDF extends AppCompatActivity {
@@ -46,7 +49,7 @@ public class VPDF extends AppCompatActivity {
                 }
             }
         }
-        AdViewMana.initView(this, "in_tab");
+        //AdViewMana.initView(this, "in_tab");
         new Handler().postDelayed(new Runnable() {
 
             @Override

@@ -47,23 +47,23 @@ xmlClassGuard {
 }
 
 // 加入dex混淆配置
-BlackObfuscator {
-    // 仅在 release 任务时启用，避免日常 debug 构建被影响
-    enabled false
-    // 混淆深度
-    depth 2
-    mappingFile = file("xml-class-mapping.txt")
-    skipStaticInitializer true
-    skipKotlinSynthetic true
-    skipKotlinSingletonLikeClasses true
-    skipInnerClasses true
-    skipAndroidComponents false
-    skipCallbackLikeClasses true
-    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
-    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
-    obfClass = []
-    blackClass = ["top.niunaijun.black"]
-}
+//BlackObfuscator {
+//    // 仅在 release 任务时启用，避免日常 debug 构建被影响
+//    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+//    // 混淆深度
+//    depth 2
+//    mappingFile = file("xml-class-mapping.txt")
+//    skipStaticInitializer true
+//    skipKotlinSynthetic true
+//    skipKotlinSingletonLikeClasses true
+//    skipInnerClasses true
+//    skipAndroidComponents false
+//    skipCallbackLikeClasses true
+//    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
+//    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
+//    obfClass = []
+//    blackClass = ["top.niunaijun.black"]
+//}
 
 
 android {
@@ -96,9 +96,9 @@ android {
         dex {
             useLegacyPackaging true
         }
-        jniLibs {
-            useLegacyPackaging true
-        }
+//        jniLibs {
+//            useLegacyPackaging true
+//        }
     }
     ndkVersion "28.0.12433566"
     signingConfigs {
@@ -193,8 +193,8 @@ dependencies {
     implementation project(':oversea_common_library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
-
-    // compose
+//
+//    // compose
     implementation("androidx.activity:activity-compose:1.7.2")
     implementation(platform("androidx.compose:compose-bom:2024.02.01"))
     implementation("androidx.compose.ui:ui")
@@ -207,7 +207,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.5.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
+//
     implementation 'com.tencent:mmkv:2.3.0'
 // StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
     implementation project(':stringfogLib')

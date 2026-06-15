@@ -6,7 +6,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.amour.Amour
+
 import com.huawei.recharge.featurexzy21.df
+
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppInitializer.appBaseContext
@@ -21,11 +23,6 @@ class BGSK : BaseApplication() {
         var insApp: BGSK? = null
     }
 
-//    override fun attachBaseContext(base: Context?) {
-//        super.attachBaseContext(base)
-//        Log.d("AD_LOG_attach", "attachBaseContext>>")
-//        Amour.Init(this,"gaid123", "adjust123")
-//    }
 
     override fun onCreate() {
         super.onCreate()
