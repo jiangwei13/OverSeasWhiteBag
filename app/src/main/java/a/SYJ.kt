@@ -12,7 +12,7 @@ import zkw.rkshx.qntnp.adjust.AjConstants
 object SYJ {
     fun initAdJustToken(context: Context) {
         //adJust 打点需要初始化
-        val channel: String = WalleChannelReader.getChannel(context, "GP").toString()
+        val channel: String = WalleChannelReader.getChannel(context, "Test").toString()
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" -> {
@@ -136,30 +136,39 @@ object SYJ {
 
             else -> {
                 Log.d("SYJ", "测试")
-                AjConstants.adjustAppToken = "h34rdv64os8w"
-                Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
-                AjConstants.Login = "oa3s4d"
-                Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
-                AjConstants.Reg = "qz5jqr"
-                Log.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
-                AjConstants.topon_ilrd = "brjff3"
-                Log.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
-                AjConstants.ipu = "wbay90"
-                Log.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
-                AjConstants.arpu = "6spfev"
-                Log.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
-
-                AjConstants.ipu_arpu = "t2kvat"
-                Log.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
-                AjConstants.ipu_ecpm = "xatbm1"
-                Log.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
-
-                AjConstants.ipu_arpu_ecpm = "awuont"
-                Log.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
-
-                AjConstants.blacklist = "ytkgif"
-                Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                AjConstants.adjustAppToken = "vjjythxozc3k"
                 AjConstants.ad_fail = ""
+                AjConstants.ad_full = "21gh1r"
+                AjConstants.ad_request = "1700w9"
+                AjConstants.firebase_request = "2s6dox"
+                AjConstants.firebase_success = "ba1ynt"
+                AjConstants.adJust_attribution_request = "dybuhb"
+                AjConstants.adJust_attribution_success = "cyehe4"
+                Log.d("AD_LOG_TEST_ADJUST", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                AjConstants.Login = ""
+                Log.d("AD_LOG_TEST_ADJUST", "Login>>" + AjConstants.Login)
+                AjConstants.Reg = ""
+                Log.d("AD_LOG_TEST_ADJUST", "Reg>>" + AjConstants.Reg)
+                AjConstants.topon_ilrd = "edf7bo"
+                Log.d("AD_LOG_TEST_ADJUST", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                AjConstants.ipu = "refvlm"
+                Log.d("AD_LOG_TEST_ADJUST", "ipu>>" + AjConstants.ipu)
+                AjConstants.arpu = "7z8jzk"
+                Log.d("AD_LOG_TEST_ADJUST", "arpu>>" + AjConstants.arpu)
+
+                AjConstants.ipu_arpu = "t43z5p"
+                Log.d("AD_LOG_TEST_ADJUST", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                AjConstants.ipu_ecpm = "eznnot"
+                Log.d("AD_LOG_TEST_ADJUST", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+
+                AjConstants.ipu_arpu_ecpm = "mkoa46"
+                Log.d("AD_LOG_TEST_ADJUST", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+
+                AjConstants.blacklist = "9xu8ai"
+                AjConstants.LiveTime = "ewx6zb"
+
+                Log.d("AD_LOG_TEST_ADJUST", "blacklist>>" + AjConstants.blacklist)
+                AjConstants.ad_fail = "gzqpee"
                 AjConstants.ad_tick_fire = ""
                 AjConstants.ad_tick_init = ""
                 AjConstants.ad_tick_config_missing = ""
