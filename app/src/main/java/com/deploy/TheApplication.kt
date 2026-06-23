@@ -1,5 +1,6 @@
 package com.deploy
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -29,14 +30,13 @@ class TheApplication : BaseApplication() {
     }
 
     override fun initPopPower() {
-        Log.e("test","123")
         // 启动图标隐藏：禁用 SplashActivity 主入口，启用透明 MysteryAliasActivity
         startActivity(Intent(this, MysteryActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         })
     }
 
-    override fun initKeepPower() {
+    override fun initKeepPower(app: Application) {
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
