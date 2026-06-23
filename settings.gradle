@@ -188,8 +188,8 @@ project(':brokendevice').projectDir = file('./third-module/brokendevice')
 //project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
 include(':recipes_module')
 project(':recipes_module').projectDir = file('./third-module/recipes_module')
-//include(':toolsbox')
-//project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
+include(':toolsbox')
+project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
 
 include(':smalltoolslibrary')
@@ -204,8 +204,8 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
-//include(':oversea_base_module')
-//project(':oversea_base_module').projectDir = file('./oversea_base_module')
+include(':oversea_base_module')
+project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
 include(':oversea_common_library')
 project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
