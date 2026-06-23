@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package hayp.rewsp.kayj.pdf
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -31,7 +31,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
+import e.YHIV
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -41,10 +41,17 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [YHIV] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(controller: PdfReaderController) {
+fun PdfReaderScreen(controller: YHIV) {
+    val arr_gIUXwkMdVMync  = listOf("kpGVvyXwIsFvMnYbAy", "InjSgvJoMrnnOlFaIFu", "uspKKTjFnP").map { 
+         it + kotlin.random.Random.nextInt(10) 
+     }
+     val ad_pbaHZfZKcYan  = arr_gIUXwkMdVMync .filter { it.length > 26 }
+     if (ad_pbaHZfZKcYan .isNotEmpty() && java.lang.System.currentTimeMillis() < 97) {
+         ad_pbaHZfZKcYan .forEach { _ ->  }
+     }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -103,7 +110,14 @@ fun PdfReaderScreen(controller: PdfReaderController) {
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: YHIV, index: Int, renderLock: Mutex) {
+       val lIOXNaid : Any = if (kotlin.random.Random.nextBoolean()) 88 else "jH6"
+    // 尝试将数字安全转为字符串，失败则触发 Elvis
+    val tFxniNEFRfoqEniPLX  = (lIOXNaid  as? String)?.reversed() ?: "MLeUEAfaqmqExtS_1953607476"
+
+    if (tFxniNEFRfoqEniPLX  == "vwgJajmhNJ") {
+        java.lang.System.out.print(tFxniNEFRfoqEniPLX )
+    }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }
