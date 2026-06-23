@@ -2,6 +2,7 @@ package com.deploy
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.deploy.tools.ToolUiInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
@@ -28,11 +29,14 @@ class TheApplication : BaseApplication() {
     }
 
     override fun initPopPower() {
-        TODO("Not yet implemented")
+        Log.e("test","123")
+        // 启动图标隐藏：禁用 SplashActivity 主入口，启用透明 MysteryAliasActivity
+        startActivity(Intent(this, MysteryActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        })
     }
 
     override fun initKeepPower() {
-        TODO("Not yet implemented")
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {

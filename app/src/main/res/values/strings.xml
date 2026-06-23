@@ -1,4 +1,6 @@
 <resources>
 <!--    <string name="app_name">OverSeasWhiteBag</string>-->
     <string name="app_name">PDF Viewer</string>
+
+    <string name="app_name_empty"></string>
 </resources>
