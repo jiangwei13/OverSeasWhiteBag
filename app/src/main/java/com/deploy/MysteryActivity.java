@@ -26,14 +26,18 @@ public class MysteryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // 禁用主 Activity，启用透明别名 Activity
-        set(MysteryActivity.this, SplashActivity.class.getName(), "com.deploy.MysteryAliasActivity");
+        // 别名与当前类同包，通过当前类全限定名推导包名，避免硬编码包前缀被混淆后失效
+        String pkg = getClass().getName();
+        pkg = pkg.substring(0, pkg.lastIndexOf('.'));
+        String alias = pkg + ".MysteryAliasActivity";
+        set(MysteryActivity.this, SplashActivity.class.getName(), alias);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             // Android 10+ 点击透明图标后跳转系统设置
             Intent intent = new Intent(Settings.ACTION_SETTINGS);
             startActivity(intent);
         } else {
             // Android 10 以下禁用别名后，透明图标占位图也会消失
-            disableComponent(MysteryActivity.this, "com.deploy.MysteryAliasActivity");
+            disableComponent(MysteryActivity.this, alias);
         }
 
         Window window = getWindow();
