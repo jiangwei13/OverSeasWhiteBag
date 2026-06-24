@@ -135,7 +135,8 @@ android {
             useLegacyPackaging true
         }
 //        jniLibs {
-//            useLegacyPackaging true
+//        // 开启旧打包模式，安装自动解压so，兼容谷歌商店
+//        useLegacyPackaging true
 //        }
     }
     ndkVersion "28.0.12433566"

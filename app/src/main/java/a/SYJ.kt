@@ -135,7 +135,7 @@ object SYJ {
             }
 
             else -> {
-                Log.d("SYJ", "测试")
+                Log.d("AD_LOG_SYJ", "测试")
                 AjConstants.adjustAppToken = "vjjythxozc3k"
                 AjConstants.ad_fail = ""
                 AjConstants.ad_full = "21gh1r"
