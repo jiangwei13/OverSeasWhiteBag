@@ -96,9 +96,9 @@ android {
         dex {
             useLegacyPackaging true
         }
-//        jniLibs {
-//            useLegacyPackaging true
-//        }
+        jniLibs {
+            useLegacyPackaging true
+        }
     }
     ndkVersion "28.0.12433566"
     signingConfigs {
