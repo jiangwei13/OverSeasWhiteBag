@@ -1,4 +1,4 @@
-package zbix
+package a
 
 import android.app.Application
 import android.os.Bundle
@@ -7,15 +7,15 @@ import com.example.overseaswhitebag.AdjustTokens
 import com.huawei.recharge.featurexzy21.df
 import com.kwad.sdk.api.proxy.app.Helpers
 import com.b.w.BaseJksApplication
-import com.p.b.base.APPContext
-import com.p.b.base.OverseaAppHost
-import com.p.b.base.OverseaAppInitializer
+import nwy.hwdd.dbwy.base.APPContext
+import nwy.hwdd.dbwy.base.OverseaAppHost
+import nwy.hwdd.dbwy.base.OverseaAppInitializer
 
-class DPF : BaseJksApplication(), OverseaAppHost {
+class CIBP : BaseJksApplication(), OverseaAppHost {
 
     companion object {
         @JvmStatic
-        var insApp: DPF? = null
+        var insApp: CIBP? = null
     }
 
     override fun onCreate() {

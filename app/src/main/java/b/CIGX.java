@@ -1,4 +1,4 @@
-package zbiy;
+package b;
 
 
 
@@ -24,23 +24,23 @@ import com.clean.toos.R;
 
 
 //隐私协议
-public class DTN extends Dialog {
+public class CIGX extends Dialog {
     private OnProtocolDialogListener onProtocolDialogListener;
     private Context context;
 
-    public DTN(@NonNull Context context) {
+    public CIGX(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public DTN(@NonNull Context context, int themeResId) {
+    public CIGX(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected DTN(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected CIGX(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();
@@ -75,7 +75,7 @@ public class DTN extends Dialog {
             @Override
             public void onClick(View widget) {
                 // 跳转到用户协议页面
-                Intent intent = new Intent(context, DPH.class);
+                Intent intent = new Intent(context, CIBR.class);
                 intent.putExtra("TITLE", "用户协议");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
                 context.startActivity(intent);
@@ -94,7 +94,7 @@ public class DTN extends Dialog {
             @Override
             public void onClick(View widget) {
                 // 跳转到隐私政策页面
-                Intent intent = new Intent(context, DPH.class);
+                Intent intent = new Intent(context, CIBR.class);
                 intent.putExtra("TITLE", "隐私政策");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
                 context.startActivity(intent);
@@ -143,7 +143,7 @@ public class DTN extends Dialog {
 //        dialogView.findViewById(R.id.protocol_url_1).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(context, DPH.class);
+//                Intent intent = new Intent(context, CIBR.class);
 //                intent.putExtra("TITLE", "隐私政策");
 //                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/privacy.html");
 //                context.startActivity(intent);
@@ -153,7 +153,7 @@ public class DTN extends Dialog {
 //        dialogView.findViewById(R.id.protocol_url_2).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(context, DPH.class);
+//                Intent intent = new Intent(context, CIBR.class);
 //                intent.putExtra("TITLE", "用户协议");
 //                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/user.html");
 //                context.startActivity(intent);

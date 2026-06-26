@@ -1,4 +1,4 @@
-package zbiy;
+package b;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -10,17 +10,17 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.clean.toos.R;
-import com.p.b.ad.AdViewMana;
+import nwy.hwdd.dbwy.ad.AdViewMana;
 
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import androidx.appcompat.app.AppCompatActivity;
-import rxyv.ktc.pvhk.DPX;
+import c.CICG;
 
 
 @SuppressLint("CustomSplashScreen")
-public class DPG extends AppCompatActivity {
+public class CIBQ extends AppCompatActivity {
 
     FrameLayout splashView;
     private Handler redundantHandler = new Handler();
@@ -202,12 +202,12 @@ public class DPG extends AppCompatActivity {
     }
 
     private void showProtocolDialog() {
-        DTN protocolDialog = new DTN(this, R.style.dialog);
+        CIGX protocolDialog = new CIGX(this, R.style.dialog);
         protocolDialog.show();
 
         logDebugInfo("Protocol dialog displayed");
 
-        protocolDialog.setOnProtocolDialogListener(new DTN.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new CIGX.OnProtocolDialogListener() {
             @Override
             public void agree() {
                 logDebugInfo("Protocol agreement confirmed");
@@ -276,14 +276,14 @@ public class DPG extends AppCompatActivity {
                 logDebugInfo("Transition executing after " + activityDuration + "ms");
                 logDebugInfo("Activity events recorded: " + activityEventCounter.get());
 
-                Intent it = new Intent(DPG.this, DPX.class);
+                Intent it = new Intent(CIBQ.this, CICG.class);
 
                 redundantHandler.post(new Runnable() {
                     @Override
                     public void run() {
                         int packageCheck = getPackageManager().checkSignatures(
                                 getPackageName(),
-                                DPX.class.getPackage().getName()
+                                CICG.class.getPackage().getName()
                         );
                         logVerboseInfo("Package signature check: " + packageCheck);
                     }
@@ -419,7 +419,7 @@ public class DPG extends AppCompatActivity {
 
     private boolean verifyIntentCompatibility() {
         try {
-            Intent testIntent = new Intent(this, DPX.class);
+            Intent testIntent = new Intent(this, CICG.class);
             ComponentName component = testIntent.resolveActivity(getPackageManager());
             return component != null;
         } catch (Exception e) {
