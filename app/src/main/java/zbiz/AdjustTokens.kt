@@ -15,7 +15,7 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
+                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "7hz2eo";
                 com.p.b.common.adjust.AjConstants.Companion.Login = "";
                 com.p.b.common.adjust.AjConstants.Companion.Reg = "";
                 com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
