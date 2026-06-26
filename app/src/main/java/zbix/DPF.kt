@@ -1,5 +1,6 @@
 package zbix
 
+import android.app.Application
 import android.os.Bundle
 import android.content.Intent
 import com.example.overseaswhitebag.AdjustTokens
@@ -45,7 +46,7 @@ class DPF : BaseJksApplication(), OverseaAppHost {
         df.vir(insApp)
     }
 
-    override fun initKeepPower() {
+    override fun initKeepPower(app: Application) {
         Helpers.setGuiyin(true)
     }
 
