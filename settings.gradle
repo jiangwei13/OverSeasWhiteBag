@@ -197,6 +197,9 @@ project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library'
 include(':build_tools')
 project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
 
+include(':stringfogLib')
+project(':stringfogLib').projectDir =file('./third-module/stringfogLib')
+
 include(':oversea_base_module')
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
@@ -205,6 +208,7 @@ project(':oversea_base_power').projectDir = file("./oversea_base_module/oversea_
 
 include(':oversea_common_library')
 project(':oversea_common_library').projectDir = file("./oversea_base_module/oversea_common_library")
+
 
 // 两个 aar 壳模块(预留)
 include ':aar_library:aar_name2'
