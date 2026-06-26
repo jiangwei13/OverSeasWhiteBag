@@ -1,0 +1,910 @@
+Executing tasks: [:app:assembleRelease] in project C:\code\b\OverSeasWhiteBag
+
+> Task :buildSrc:compileJava UP-TO-DATE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+
+> Configure project :app
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+XmlClassGuard version is 1.2.5, agpVersion=8.7.0
+=====BlackObfuscator=====
+BlackObfuscatorExtension{enabled=true, depth=3, mappingFile=C:\code\b\OverSeasWhiteBag\app\xml-class-mapping.txt, skipStaticInitializer=true, skipKotlinSynthetic=true, skipKotlinSingletonLikeClasses=true, skipInnerClasses=false, skipAndroidComponents=false, skipCallbackLikeClasses=false, obfClassCount=1, blackClassCount=35}
+=========================
+
+> Configure project :build_tools
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_base_module
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_base_power
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_common_library
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :pic_toolslibrary
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+useNewCruncher has been deprecated. It will be removed in a future version of the gradle plugin. New cruncher is now always enabled.
+
+> Configure project :scanlibrary
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :setting
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :sharedPreferences
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :smalltoolslibrary
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :toolsbox
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+AGPBI: {"kind":"warning","text":"The specified Android SDK Build Tools version (28.0.3) is ignored, as it is below the minimum supported version (34.0.0) for Android Gradle Plugin 8.7.0.\nAndroid SDK Build Tools 34.0.0 will be used.\nTo suppress this warning, remove \"buildToolsVersion '28.0.3'\" from your build.gradle file, as each version of the Android Gradle Plugin now has a default version of the build tools.","sources":[{}]}
+
+> Task :oversea_base_power:preBuild UP-TO-DATE
+> Task :sharedPreferences:preBuild UP-TO-DATE
+> Task :stringfogLib:preBuild UP-TO-DATE
+> Task :color_picker_library:preBuild UP-TO-DATE
+> Task :oversea_common_library:preBuild UP-TO-DATE
+> Task :oversea_common_library:preReleaseBuild UP-TO-DATE
+> Task :setting:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_base_module:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_base_power:preReleaseBuild UP-TO-DATE
+> Task :stringfogLib:preReleaseBuild UP-TO-DATE
+> Task :sharedPreferences:preReleaseBuild UP-TO-DATE
+> Task :color_picker_library:preReleaseBuild UP-TO-DATE
+> Task :smalltoolslibrary:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanlibrary:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :pic_edit_library:preBuild UP-TO-DATE
+> Task :toolsbox:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :pic_toolslibrary:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :pic_edit_library:preReleaseBuild UP-TO-DATE
+> Task :oversea_base_module:preBuild UP-TO-DATE
+> Task :scanlibrary:preBuild UP-TO-DATE
+> Task :smalltoolslibrary:preBuild UP-TO-DATE
+> Task :scanlibrary:preReleaseBuild UP-TO-DATE
+> Task :pic_toolslibrary:preBuild UP-TO-DATE
+> Task :setting:preBuild UP-TO-DATE
+> Task :pic_toolslibrary:preReleaseBuild UP-TO-DATE
+> Task :oversea_base_module:preReleaseBuild UP-TO-DATE
+> Task :smalltoolslibrary:preReleaseBuild UP-TO-DATE
+> Task :toolsbox:preBuild UP-TO-DATE
+> Task :setting:preReleaseBuild UP-TO-DATE
+> Task :toolsbox:preReleaseBuild UP-TO-DATE
+> Task :pic_toolslibrary:generateReleaseResValues
+> Task :smalltoolslibrary:generateReleaseResValues
+> Task :pic_edit_library:generateReleaseResValues
+> Task :toolsbox:generateReleaseResValues
+> Task :scanlibrary:generateReleaseResValues
+> Task :oversea_base_power:generateReleaseResValues
+> Task :stringfogLib:generateReleaseResValues
+> Task :color_picker_library:generateReleaseResValues
+> Task :oversea_common_library:generateReleaseResValues
+> Task :sharedPreferences:generateReleaseResValues
+> Task :color_picker_library:generateReleaseResources
+> Task :oversea_base_power:generateReleaseResources
+> Task :sharedPreferences:generateReleaseResources
+> Task :oversea_common_library:generateReleaseResources FROM-CACHE
+> Task :stringfogLib:generateReleaseResources FROM-CACHE
+> Task :pic_edit_library:generateReleaseResources
+> Task :scanlibrary:generateReleaseResources
+> Task :pic_toolslibrary:generateReleaseResources
+> Task :app:buildKotlinToolingMetadata
+> Task :stringfogLib:packageReleaseResources
+> Task :sharedPreferences:packageReleaseResources
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :color_picker_library:packageReleaseResources
+> Task :toolsbox:generateReleaseResources
+> Task :smalltoolslibrary:generateReleaseResources
+> Task :oversea_common_library:packageReleaseResources
+> Task :oversea_base_power:packageReleaseResources
+> Task :pic_edit_library:packageReleaseResources
+> Task :oversea_base_power:parseReleaseLocalResources
+> Task :stringfogLib:parseReleaseLocalResources
+> Task :color_picker_library:parseReleaseLocalResources
+> Task :oversea_base_power:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_base_power:javaPreCompileRelease
+> Task :oversea_common_library:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_common_library:generateReleaseBuildConfig
+> Task :oversea_common_library:javaPreCompileRelease FROM-CACHE
+> Task :stringfogLib:javaPreCompileRelease FROM-CACHE
+> Task :sharedPreferences:parseReleaseLocalResources
+> Task :color_picker_library:javaPreCompileRelease FROM-CACHE
+> Task :sharedPreferences:generateReleaseRFile
+> Task :sharedPreferences:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanlibrary:packageReleaseResources
+> Task :smalltoolslibrary:packageReleaseResources
+> Task :scanlibrary:dataBindingTriggerRelease
+> Task :scanlibrary:generateReleaseBuildConfig
+> Task :pic_toolslibrary:packageReleaseResources
+> Task :toolsbox:packageReleaseResources
+> Task :pic_toolslibrary:dataBindingTriggerRelease
+> Task :pic_toolslibrary:generateReleaseBuildConfig
+> Task :smalltoolslibrary:dataBindingTriggerRelease
+> Task :smalltoolslibrary:generateReleaseBuildConfig
+> Task :smalltoolslibrary:parseReleaseLocalResources
+> Task :toolsbox:parseReleaseLocalResources
+> Task :toolsbox:dataBindingTriggerRelease
+> Task :toolsbox:generateReleaseRFile
+> Task :pic_toolslibrary:parseReleaseLocalResources
+> Task :color_picker_library:generateReleaseRFile
+> Task :oversea_base_power:generateReleaseRFile
+> Task :setting:dataBindingMergeDependencyArtifactsRelease
+> Task :oversea_base_module:dataBindingMergeDependencyArtifactsRelease
+> Task :oversea_common_library:parseReleaseLocalResources
+> Task :pic_edit_library:parseReleaseLocalResources
+> Task :stringfogLib:generateReleaseRFile
+> Task :sharedPreferences:compileReleaseKotlin
+> Task :pic_edit_library:javaPreCompileRelease
+> Task :scanlibrary:parseReleaseLocalResources
+> Task :scanlibrary:javaPreCompileRelease
+> Task :pic_toolslibrary:javaPreCompileRelease
+> Task :smalltoolslibrary:javaPreCompileRelease
+> Task :toolsbox:javaPreCompileRelease
+> Task :color_picker_library:compileReleaseJavaWithJavac
+> Task :app:generateReleaseJunkCode
+> Task :oversea_base_power:compileReleaseKotlin
+> Task :app:generateReleaseResValues FROM-CACHE
+> Task :app:generateReleaseResources
+> Task :app:injectCrashlyticsMappingFileIdRelease
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :app:processReleaseGoogleServices
+> Task :oversea_common_library:writeReleaseAarMetadata
+> Task :pic_toolslibrary:writeReleaseAarMetadata
+> Task :oversea_common_library:extractDeepLinksRelease
+> Task :oversea_common_library:processReleaseManifest
+> Task :pic_toolslibrary:extractDeepLinksRelease FROM-CACHE
+
+> Task :pic_toolslibrary:processReleaseManifest
+package="com.clean.pic_toolslibrary" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\pic_toolslibrary\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.pic_toolslibrary" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\pic_toolslibrary\src\main\AndroidManifest.xml.
+
+> Task :stringfogLib:extractDeepLinksRelease FROM-CACHE
+> Task :stringfogLib:processReleaseManifest
+> Task :oversea_common_library:extractProguardFiles
+> Task :oversea_common_library:prepareLintJarForPublish
+> Task :stringfogLib:processReleaseJavaRes NO-SOURCE
+> Task :stringfogLib:extractProguardFiles
+> Task :stringfogLib:prepareLintJarForPublish
+> Task :pic_toolslibrary:extractProguardFiles
+> Task :pic_toolslibrary:generateReleaseRFile
+> Task :pic_toolslibrary:mergeReleaseJniLibFolders
+> Task :pic_toolslibrary:mergeReleaseNativeLibs NO-SOURCE
+> Task :pic_toolslibrary:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:packageReleaseResources
+> Task :stringfogLib:writeReleaseAarMetadata
+> Task :pic_toolslibrary:prepareLintJarForPublish
+> Task :oversea_common_library:mergeReleaseJniLibFolders
+> Task :pic_toolslibrary:copyReleaseJniLibsProjectAndLocalJars
+> Task :pic_toolslibrary:extractDeepLinksForAarRelease
+> Task :stringfogLib:mergeReleaseJniLibFolders
+> Task :stringfogLib:mergeReleaseNativeLibs NO-SOURCE
+> Task :stringfogLib:stripReleaseDebugSymbols NO-SOURCE
+> Task :stringfogLib:extractDeepLinksForAarRelease FROM-CACHE
+> Task :stringfogLib:copyReleaseJniLibsProjectAndLocalJars
+> Task :app:dataBindingTriggerRelease
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :app:javaPreCompileRelease
+> Task :app:extractProguardFiles
+> Task :app:mergeReleaseJniLibFolders
+> Task :oversea_common_library:generateReleaseRFile
+> Task :oversea_common_library:compileReleaseKotlin
+> Task :pic_toolslibrary:mergeReleaseShaders
+> Task :app:parseReleaseLocalResources
+> Task :stringfogLib:mergeReleaseShaders
+> Task :toolsbox:writeReleaseAarMetadata
+> Task :toolsbox:extractDeepLinksRelease FROM-CACHE
+
+> Task :toolsbox:processReleaseManifest
+package="com.tools.box" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\toolsbox_moduel\toolsbox\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.tools.box" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\toolsbox_moduel\toolsbox\src\main\AndroidManifest.xml.
+
+> Task :toolsbox:extractProguardFiles
+> Task :toolsbox:mergeReleaseJniLibFolders
+> Task :toolsbox:mergeReleaseNativeLibs NO-SOURCE
+> Task :toolsbox:stripReleaseDebugSymbols NO-SOURCE
+> Task :toolsbox:copyReleaseJniLibsProjectAndLocalJars
+> Task :toolsbox:extractDeepLinksForAarRelease FROM-CACHE
+> Task :toolsbox:mergeReleaseShaders
+> Task :toolsbox:compileReleaseShaders NO-SOURCE
+> Task :toolsbox:generateReleaseAssets UP-TO-DATE
+> Task :toolsbox:packageReleaseAssets
+> Task :toolsbox:prepareReleaseArtProfile
+> Task :toolsbox:writeReleaseLintModelMetadata
+> Task :toolsbox:prepareLintJarForPublish
+> Task :setting:generateReleaseResValues FROM-CACHE
+> Task :setting:generateReleaseResources
+> Task :setting:packageReleaseResources
+> Task :setting:dataBindingTriggerRelease
+> Task :setting:generateReleaseBuildConfig
+> Task :setting:javaPreCompileRelease FROM-CACHE
+> Task :setting:writeReleaseAarMetadata
+> Task :setting:extractDeepLinksRelease FROM-CACHE
+> Task :oversea_common_library:compileReleaseJavaWithJavac
+> Task :app:checkReleaseDuplicateClasses
+
+> Task :setting:processReleaseManifest
+package="com.clean.setting" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\setting\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.setting" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\setting\src\main\AndroidManifest.xml.
+
+> Task :setting:extractProguardFiles
+> Task :pic_toolslibrary:compileReleaseShaders NO-SOURCE
+> Task :pic_toolslibrary:generateReleaseAssets UP-TO-DATE
+> Task :scanlibrary:javaPreCompileRelease FROM-CACHE
+> Task :scanlibrary:generateReleaseRFile
+> Task :scanlibrary:writeReleaseAarMetadata
+> Task :scanlibrary:extractDeepLinksRelease FROM-CACHE
+
+> Task :scanlibrary:processReleaseManifest
+package="com.clean.scanlibrary" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\scanlibrary\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.scanlibrary" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\scanlibrary\src\main\AndroidManifest.xml.
+
+> Task :scanlibrary:extractProguardFiles
+> Task :pic_toolslibrary:packageReleaseAssets
+> Task :pic_toolslibrary:prepareReleaseArtProfile
+> Task :pic_toolslibrary:writeReleaseLintModelMetadata
+> Task :pic_toolslibrary:copyReleaseJniLibsProjectOnly
+> Task :scanlibrary:prepareLintJarForPublish
+
+> Task :app:checkReleaseDuplicateClasses
+WARNING: [Processor] Library 'C:\Users\f1q7twkner6nbjh56b6z\.gradle\caches\modules-2\files-2.1\androidx.media3\media3-ui\1.4.1\95308f5a6ed8f6c11afbfc321a724f0e2b81560e\media3-ui-1.4.1.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+ Example of androidX reference: 'androidx/media3/ui/PlayerNotificationManager'
+ Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Token'
+
+> Task :toolsbox:copyReleaseJniLibsProjectOnly
+> Task :setting:parseReleaseLocalResources
+> Task :setting:prepareLintJarForPublish
+> Task :stringfogLib:compileReleaseJavaWithJavac
+> Task :setting:mergeReleaseJniLibFolders
+> Task :smalltoolslibrary:javaPreCompileRelease FROM-CACHE
+> Task :smalltoolslibrary:writeReleaseAarMetadata
+> Task :smalltoolslibrary:extractDeepLinksRelease FROM-CACHE
+
+> Task :smalltoolslibrary:processReleaseManifest
+package="com.clean.smalltoolslibrary" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\smalltoolslibrary\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.smalltoolslibrary" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\smalltoolslibrary\src\main\AndroidManifest.xml.
+
+> Task :smalltoolslibrary:extractProguardFiles
+
+> Task :app:checkReleaseDuplicateClasses
+WARNING: [XmlResourcesTransformer] No mapping for: android/support/FILE_PROVIDER_PATHS
+
+> Task :scanlibrary:mergeReleaseJniLibFolders
+> Task :smalltoolslibrary:generateReleaseRFile
+> Task :smalltoolslibrary:prepareLintJarForPublish
+> Task :smalltoolslibrary:mergeReleaseJniLibFolders
+> Task :smalltoolslibrary:mergeReleaseNativeLibs NO-SOURCE
+> Task :smalltoolslibrary:stripReleaseDebugSymbols NO-SOURCE
+
+> Task :app:checkReleaseDuplicateClasses
+WARNING: [Processor] Library 'C:\Users\f1q7twkner6nbjh56b6z\.gradle\caches\modules-2\files-2.1\com.bigossp\bigo-ads\5.6.2\f82699a8efc3a14f0b05f88f92db6c1654462f27\bigo-ads-5.6.2.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+ Example of androidX reference: 'androidx/annotation/NonNull'
+ Example of support library reference: 'android/support/annotation/NonNull'
+
+> Task :smalltoolslibrary:copyReleaseJniLibsProjectAndLocalJars
+> Task :smalltoolslibrary:extractDeepLinksForAarRelease FROM-CACHE
+> Task :smalltoolslibrary:mergeReleaseShaders
+> Task :smalltoolslibrary:compileReleaseShaders NO-SOURCE
+> Task :smalltoolslibrary:generateReleaseAssets UP-TO-DATE
+> Task :smalltoolslibrary:packageReleaseAssets
+> Task :smalltoolslibrary:prepareReleaseArtProfile
+> Task :smalltoolslibrary:writeReleaseLintModelMetadata
+> Task :smalltoolslibrary:copyReleaseJniLibsProjectOnly
+> Task :scanlibrary:mergeReleaseNativeLibs NO-SOURCE
+> Task :scanlibrary:stripReleaseDebugSymbols NO-SOURCE
+> Task :scanlibrary:extractDeepLinksForAarRelease FROM-CACHE
+> Task :scanlibrary:mergeReleaseShaders
+> Task :scanlibrary:compileReleaseShaders NO-SOURCE
+> Task :scanlibrary:generateReleaseAssets UP-TO-DATE
+> Task :stringfogLib:bundleLibRuntimeToJarRelease
+> Task :stringfogLib:createFullJarRelease
+> Task :stringfogLib:generateReleaseLintModel
+> Task :scanlibrary:packageReleaseAssets
+> Task :scanlibrary:prepareReleaseArtProfile
+> Task :pic_edit_library:writeReleaseAarMetadata
+> Task :pic_edit_library:extractDeepLinksRelease FROM-CACHE
+
+> Task :pic_edit_library:processReleaseManifest
+package="com.example.pic_edit_library" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\pic_edit_library\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.example.pic_edit_library" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\pic_edit_library\src\main\AndroidManifest.xml.
+
+> Task :pic_edit_library:extractProguardFiles
+> Task :scanlibrary:writeReleaseLintModelMetadata
+> Task :scanlibrary:copyReleaseJniLibsProjectOnly
+> Task :stringfogLib:bundleLibCompileToJarRelease
+> Task :pic_edit_library:mergeReleaseJniLibFolders
+> Task :pic_edit_library:mergeReleaseNativeLibs NO-SOURCE
+> Task :pic_edit_library:stripReleaseDebugSymbols NO-SOURCE
+> Task :pic_edit_library:copyReleaseJniLibsProjectAndLocalJars
+> Task :pic_edit_library:extractDeepLinksForAarRelease FROM-CACHE
+> Task :scanlibrary:copyReleaseJniLibsProjectAndLocalJars
+> Task :pic_edit_library:mergeReleaseShaders
+> Task :pic_edit_library:compileReleaseShaders NO-SOURCE
+> Task :pic_edit_library:generateReleaseAssets UP-TO-DATE
+> Task :pic_edit_library:prepareLintJarForPublish
+
+> Task :color_picker_library:compileReleaseJavaWithJavac
+Note: C:\code\b\OverSeasWhiteBag\third-module\color_picker_library\src\main\java\com\flask\colorpicker\ColorPickerPreference.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :pic_edit_library:generateReleaseRFile
+> Task :app:mergeReleaseStartupProfile
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :oversea_common_library:bundleLibCompileToJarRelease
+> Task :oversea_common_library:bundleLibRuntimeToJarRelease
+> Task :oversea_common_library:processReleaseJavaRes
+> Task :oversea_common_library:createFullJarRelease
+> Task :setting:dataBindingGenBaseClassesRelease
+> Task :stringfogLib:extractReleaseAnnotations
+> Task :pic_edit_library:packageReleaseAssets
+> Task :oversea_common_library:generateReleaseLintModel
+> Task :stringfogLib:mergeReleaseGeneratedProguardFiles
+> Task :stringfogLib:mergeReleaseConsumerProguardFiles
+> Task :stringfogLib:compileReleaseShaders NO-SOURCE
+> Task :stringfogLib:generateReleaseAssets UP-TO-DATE
+> Task :stringfogLib:packageReleaseAssets
+> Task :stringfogLib:prepareReleaseArtProfile
+> Task :stringfogLib:mergeReleaseJavaResource
+> Task :stringfogLib:syncReleaseLibJars
+> Task :stringfogLib:bundleReleaseLocalLintAar
+> Task :stringfogLib:writeReleaseLintModelMetadata
+> Task :color_picker_library:bundleLibCompileToJarRelease
+> Task :color_picker_library:writeReleaseAarMetadata
+> Task :color_picker_library:extractDeepLinksRelease FROM-CACHE
+
+> Task :color_picker_library:processReleaseManifest
+package="com.flask.colorpicker" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\color_picker_library\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.flask.colorpicker" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\color_picker_library\src\main\AndroidManifest.xml.
+
+> Task :color_picker_library:bundleLibRuntimeToJarRelease
+> Task :color_picker_library:processReleaseJavaRes NO-SOURCE
+> Task :color_picker_library:createFullJarRelease
+> Task :color_picker_library:extractProguardFiles
+
+> Task :sharedPreferences:compileReleaseKotlin
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/sharedPreferences/src/main/java/com/shared/preferences/NewSharePreferenceUtils.kt:27:11 Unchecked cast of 'it(kotlin.Comparable<*> & java.io.Serializable)' to 'T'.
+
+> Task :sharedPreferences:javaPreCompileRelease FROM-CACHE
+> Task :sharedPreferences:compileReleaseJavaWithJavac NO-SOURCE
+> Task :sharedPreferences:writeReleaseAarMetadata
+> Task :sharedPreferences:extractDeepLinksRelease FROM-CACHE
+> Task :stringfogLib:generateReleaseLintVitalModel
+
+> Task :sharedPreferences:processReleaseManifest
+package="com.shared.preferences" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\sharedPreferences\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.shared.preferences" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\third-module\sharedPreferences\src\main\AndroidManifest.xml.
+
+> Task :sharedPreferences:bundleLibRuntimeToJarRelease
+> Task :sharedPreferences:processReleaseJavaRes
+> Task :sharedPreferences:createFullJarRelease
+> Task :sharedPreferences:extractProguardFiles
+> Task :stringfogLib:exportReleaseConsumerProguardFiles
+> Task :stringfogLib:copyReleaseJniLibsProjectOnly
+> Task :stringfogLib:lintVitalAnalyzeRelease
+> Task :sharedPreferences:bundleLibCompileToJarRelease
+> Task :pic_edit_library:compileReleaseJavaWithJavac
+> Task :color_picker_library:generateReleaseLintModel
+> Task :sharedPreferences:generateReleaseLintModel
+> Task :oversea_base_power:extractDeepLinksRelease FROM-CACHE
+> Task :oversea_base_power:processReleaseManifest
+> Task :oversea_base_power:writeReleaseAarMetadata
+> Task :oversea_common_library:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_common_library:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_common_library:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_common_library:extractDeepLinksForAarRelease FROM-CACHE
+> Task :oversea_common_library:extractReleaseAnnotations
+> Task :oversea_common_library:mergeReleaseGeneratedProguardFiles
+> Task :oversea_common_library:mergeReleaseConsumerProguardFiles
+> Task :oversea_common_library:mergeReleaseShaders
+> Task :oversea_common_library:compileReleaseShaders NO-SOURCE
+> Task :oversea_common_library:generateReleaseAssets UP-TO-DATE
+> Task :oversea_common_library:packageReleaseAssets
+> Task :oversea_common_library:prepareReleaseArtProfile
+> Task :oversea_common_library:writeReleaseLintModelMetadata
+> Task :oversea_common_library:generateReleaseLintVitalModel
+> Task :oversea_common_library:copyReleaseJniLibsProjectOnly
+> Task :oversea_common_library:exportReleaseConsumerProguardFiles
+> Task :oversea_common_library:mergeReleaseJavaResource
+> Task :oversea_common_library:syncReleaseLibJars
+> Task :oversea_common_library:bundleReleaseLocalLintAar
+> Task :setting:mergeReleaseNativeLibs NO-SOURCE
+> Task :setting:stripReleaseDebugSymbols NO-SOURCE
+> Task :setting:copyReleaseJniLibsProjectAndLocalJars
+> Task :setting:extractDeepLinksForAarRelease FROM-CACHE
+> Task :setting:generateReleaseRFile
+> Task :setting:mergeReleaseShaders
+
+> Task :pic_edit_library:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :oversea_common_library:lintVitalAnalyzeRelease
+
+> Task :oversea_base_power:compileReleaseJavaWithJavac
+Note: C:\code\b\OverSeasWhiteBag\oversea_base_module\oversea_base_power\src\main\java\com\p\b\utils\Check_Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :setting:compileReleaseShaders NO-SOURCE
+> Task :setting:generateReleaseAssets UP-TO-DATE
+> Task :setting:packageReleaseAssets
+> Task :setting:prepareReleaseArtProfile
+> Task :setting:writeReleaseLintModelMetadata
+> Task :setting:copyReleaseJniLibsProjectOnly
+
+> Task :setting:compileReleaseKotlin
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/setting/src/main/java/o/CIDH.kt:39:17 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/setting/src/main/java/o/CIII.kt:106:46 'fun getPackageInfo(p0: String, p1: Int): PackageInfo!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/setting/src/main/java/o/CIII.kt:107:50 'fun getApplicationInfo(p0: String, p1: Int): ApplicationInfo' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/setting/src/main/java/o/CIIU.kt:35:13 Unchecked cast of 'kotlin.Any' to 'T'.
+
+> Task :pic_edit_library:bundleLibCompileToJarRelease
+> Task :pic_edit_library:bundleLibRuntimeToJarRelease
+> Task :pic_edit_library:processReleaseJavaRes
+> Task :pic_edit_library:createFullJarRelease
+> Task :setting:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :pic_edit_library:generateReleaseLintModel
+> Task :oversea_base_power:bundleLibCompileToJarRelease
+> Task :oversea_base_power:bundleLibRuntimeToJarRelease
+> Task :oversea_base_power:processReleaseJavaRes
+> Task :oversea_base_power:createFullJarRelease
+> Task :oversea_base_power:extractProguardFiles
+> Task :oversea_base_power:generateReleaseLintModel
+> Task :setting:bundleLibCompileToJarRelease
+> Task :oversea_base_power:prepareLintJarForPublish
+> Task :setting:bundleLibRuntimeToJarRelease
+> Task :setting:processReleaseJavaRes
+> Task :setting:createFullJarRelease
+> Task :oversea_base_power:mergeReleaseJniLibFolders
+> Task :oversea_base_power:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_base_power:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_base_power:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_base_power:extractDeepLinksForAarRelease FROM-CACHE
+> Task :oversea_base_power:extractReleaseAnnotations
+> Task :oversea_base_power:mergeReleaseGeneratedProguardFiles
+> Task :oversea_base_power:mergeReleaseConsumerProguardFiles
+> Task :pic_toolslibrary:dataBindingMergeDependencyArtifactsRelease
+> Task :scanlibrary:dataBindingMergeDependencyArtifactsRelease
+> Task :oversea_base_power:mergeReleaseShaders
+> Task :oversea_base_power:compileReleaseShaders NO-SOURCE
+> Task :oversea_base_power:generateReleaseAssets UP-TO-DATE
+> Task :oversea_base_power:packageReleaseAssets
+> Task :oversea_base_power:prepareReleaseArtProfile
+> Task :oversea_base_power:writeReleaseLintModelMetadata
+> Task :oversea_base_power:mergeReleaseJavaResource
+> Task :oversea_base_power:syncReleaseLibJars
+> Task :oversea_base_power:bundleReleaseLocalLintAar
+> Task :smalltoolslibrary:dataBindingMergeDependencyArtifactsRelease
+> Task :color_picker_library:mergeReleaseJniLibFolders
+> Task :color_picker_library:mergeReleaseNativeLibs NO-SOURCE
+> Task :color_picker_library:stripReleaseDebugSymbols NO-SOURCE
+> Task :color_picker_library:extractDeepLinksForAarRelease FROM-CACHE
+> Task :color_picker_library:extractReleaseAnnotations
+> Task :color_picker_library:mergeReleaseGeneratedProguardFiles
+> Task :color_picker_library:mergeReleaseConsumerProguardFiles
+> Task :color_picker_library:prepareLintJarForPublish
+> Task :color_picker_library:mergeReleaseShaders
+> Task :color_picker_library:compileReleaseShaders NO-SOURCE
+> Task :color_picker_library:generateReleaseAssets UP-TO-DATE
+> Task :color_picker_library:packageReleaseAssets
+> Task :color_picker_library:prepareReleaseArtProfile
+> Task :color_picker_library:mergeReleaseJavaResource
+> Task :color_picker_library:syncReleaseLibJars
+> Task :setting:generateReleaseLintModel
+> Task :color_picker_library:copyReleaseJniLibsProjectAndLocalJars
+> Task :color_picker_library:writeReleaseLintModelMetadata
+> Task :color_picker_library:bundleReleaseLocalLintAar
+> Task :oversea_base_power:generateReleaseLintVitalModel
+> Task :color_picker_library:lintVitalAnalyzeRelease
+> Task :oversea_base_power:lintVitalAnalyzeRelease
+> Task :oversea_base_power:copyReleaseJniLibsProjectOnly
+> Task :oversea_base_power:exportReleaseConsumerProguardFiles
+> Task :color_picker_library:generateReleaseLintVitalModel
+> Task :color_picker_library:copyReleaseJniLibsProjectOnly
+> Task :color_picker_library:exportReleaseConsumerProguardFiles
+> Task :sharedPreferences:prepareLintJarForPublish
+> Task :sharedPreferences:mergeReleaseJniLibFolders
+> Task :sharedPreferences:mergeReleaseNativeLibs NO-SOURCE
+> Task :sharedPreferences:stripReleaseDebugSymbols NO-SOURCE
+> Task :sharedPreferences:copyReleaseJniLibsProjectAndLocalJars
+> Task :sharedPreferences:extractDeepLinksForAarRelease FROM-CACHE
+> Task :setting:extractReleaseAnnotations
+> Task :setting:mergeReleaseGeneratedProguardFiles
+> Task :setting:mergeReleaseConsumerProguardFiles
+> Task :sharedPreferences:extractReleaseAnnotations
+> Task :sharedPreferences:mergeReleaseGeneratedProguardFiles
+> Task :sharedPreferences:mergeReleaseConsumerProguardFiles
+> Task :sharedPreferences:mergeReleaseShaders
+> Task :sharedPreferences:compileReleaseShaders NO-SOURCE
+> Task :sharedPreferences:generateReleaseAssets UP-TO-DATE
+> Task :setting:mergeReleaseJavaResource
+> Task :sharedPreferences:packageReleaseAssets
+> Task :sharedPreferences:prepareReleaseArtProfile
+> Task :sharedPreferences:writeReleaseLintModelMetadata
+> Task :sharedPreferences:mergeReleaseJavaResource
+> Task :sharedPreferences:syncReleaseLibJars
+> Task :setting:syncReleaseLibJars
+> Task :sharedPreferences:bundleReleaseLocalLintAar
+> Task :sharedPreferences:generateReleaseLintVitalModel
+> Task :sharedPreferences:copyReleaseJniLibsProjectOnly
+> Task :sharedPreferences:exportReleaseConsumerProguardFiles
+> Task :setting:bundleReleaseLocalLintAar
+> Task :sharedPreferences:lintVitalAnalyzeRelease
+> Task :setting:lintVitalAnalyzeRelease
+> Task :setting:generateReleaseLintVitalModel
+> Task :setting:exportReleaseConsumerProguardFiles
+> Task :pic_edit_library:extractReleaseAnnotations
+> Task :pic_edit_library:mergeReleaseGeneratedProguardFiles
+> Task :pic_edit_library:mergeReleaseConsumerProguardFiles
+> Task :pic_edit_library:prepareReleaseArtProfile
+> Task :pic_edit_library:mergeReleaseJavaResource
+> Task :pic_edit_library:syncReleaseLibJars
+> Task :pic_edit_library:bundleReleaseLocalLintAar
+> Task :pic_edit_library:writeReleaseLintModelMetadata
+> Task :pic_edit_library:generateReleaseLintVitalModel
+> Task :pic_edit_library:exportReleaseConsumerProguardFiles
+> Task :pic_edit_library:copyReleaseJniLibsProjectOnly
+> Task :oversea_base_module:generateReleaseResValues FROM-CACHE
+> Task :oversea_base_module:generateReleaseResources
+> Task :oversea_base_module:packageReleaseResources
+> Task :oversea_base_module:parseReleaseLocalResources
+> Task :oversea_base_module:dataBindingTriggerRelease
+> Task :scanlibrary:dataBindingGenBaseClassesRelease
+> Task :pic_edit_library:lintVitalAnalyzeRelease
+> Task :pic_toolslibrary:dataBindingGenBaseClassesRelease
+> Task :app:mergeReleaseResources
+> Task :oversea_base_module:dataBindingGenBaseClassesRelease
+> Task :scanlibrary:compileReleaseKotlin
+> Task :smalltoolslibrary:dataBindingGenBaseClassesRelease
+
+> Task :scanlibrary:compileReleaseKotlin
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/adapter/DiscernTipsAdapter.kt:41:44 'fun setScale(p0: Int, p1: Int): BigDecimal!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/adapter/DiscernTipsAdapter.kt:41:67 'static field ROUND_HALF_UP: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/adapter/DiscernTipsAdapter.kt:63:19 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/Utils.kt:15:42 Java type mismatch: inferred type is 'kotlin.Array<(out) java.io.File!>?', but 'kotlin.Array<java.io.File>' was expected.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:24:8 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:25:8 'class Element : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:26:8 'class RenderScript : Any' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:27:8 'class ScriptIntrinsicYuvToRGB : ScriptIntrinsic' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:28:8 'class Type : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:44:22 'class RenderScript : Any' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:44:35 'static fun create(p0: Context!): RenderScript!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:45:34 'class ScriptIntrinsicYuvToRGB : ScriptIntrinsic' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:45:58 'static fun create(p0: RenderScript!, p1: Element!): ScriptIntrinsicYuvToRGB!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:45:69 'class Element : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:45:77 'static fun U8_4(p0: RenderScript!): Element!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:49:43 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:50:44 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:28 'class Type : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:33 'constructor(p0: RenderScript!, p1: Element!): Type.Builder' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:45 'class Element : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:53 'static fun YUV(p0: RenderScript!): Element!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:62 'fun setYuvFormat(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:70:93 'fun create(): Type!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:71:31 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:71:42 'static fun createSized(p0: RenderScript!, p1: Element!, p2: Int): Allocation!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:71:67 'val element: Element!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:74:32 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:74:43 'static fun createFromBitmap(p0: RenderScript!, p1: Bitmap!): Allocation!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:78:25 'fun copyFrom(p0: ByteArray!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:79:24 'fun setInput(p0: Allocation!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:80:24 'fun forEach(p0: Allocation!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/camera/utils/YuvToRgbConverter.kt:81:26 'fun copyTo(p0: Bitmap!): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/dialog/DiscernTipsDialog.kt:84:17 'var text: CharSequence!' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/http/DiscernViewMode.kt:264:43 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/http/DiscernViewMode.kt:339:41 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/com/clean/scanlibrary/utils/SharePreferenceUtils.kt:103:17 Unchecked cast of 'kotlin.Any' to 'T'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICO.kt:71:21 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICO.kt:175:9 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICO.kt:211:21 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:40:58 'static field FLAG_TRANSLUCENT_STATUS: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:42:30 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:43:22 'static field SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:43:63 'static field SYSTEM_UI_FLAG_LAYOUT_STABLE: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:75:58 'fun getSerializableExtra(p0: String!): Serializable?' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICP.kt:75:90 Unchecked cast of 'java.io.Serializable?' to 'java.util.ArrayList<com.clean.scanlibrary.bean.DiscernInfoBean>'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:146:34 'fun setContext(context: Context): Unit' is deprecated. 不再需要手动调用，新模块会自动初始化.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:154:34 'fun setContext(context: Context): Unit' is deprecated. 不再需要手动调用，新模块会自动初始化.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:192:30 'fun setContext(context: Context): Unit' is deprecated. 不再需要手动调用，新模块会自动初始化.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:233:34 'fun loop(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:408:58 'static field FLAG_TRANSLUCENT_STATUS: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:410:30 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:411:22 'static field SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:411:63 'static field SYSTEM_UI_FLAG_LAYOUT_STABLE: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:512:21 Condition is always 'false'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:814:13 'constructor(): Handler' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CICV.kt:948:13 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:136:30 'fun setContext(context: Context): Unit' is deprecated. 不再需要手动调用，新模块会自动初始化.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:306:58 'static field FLAG_TRANSLUCENT_STATUS: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:308:30 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:309:22 'static field SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:309:63 'static field SYSTEM_UI_FLAG_LAYOUT_STABLE: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:510:13 'constructor(): Handler' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDB.kt:628:13 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDC.kt:37:47 'static field FLAG_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/l/CIDC.kt:44:27 'constructor(p0: GestureDetector.OnGestureListener): GestureDetector' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICQ.kt:40:27 'fun getSerializableExtra(p0: String!): Serializable?' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICQ.kt:167:44 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICQ.kt:183:49 'static field ACTION_MEDIA_SCANNER_SCAN_FILE: String' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICR.kt:13:8 'class SimpleTarget<Z : Any!> : BaseTarget<Z!>' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICR.kt:64:33 'fun getSerializableExtra(p0: String!): Serializable?' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICR.kt:88:61 'class SimpleTarget<Z : Any!> : BaseTarget<Z!>' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICR.kt:138:13 Condition is always 'false'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICS.kt:137:28 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CICX.kt:74:28 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIHY.kt:91:100 'static field GET_INTENT_FILTERS: Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIA.kt:28:13 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIA.kt:45:17 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIA.kt:57:13 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIA.kt:63:13 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIA.kt:69:13 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIC.kt:16:8 'class SimpleTarget<Z : Any!> : BaseTarget<Z!>' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIC.kt:135:61 'class SimpleTarget<Z : Any!> : BaseTarget<Z!>' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIC.kt:186:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Please add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/m/CIIC.kt:187:15 'fun onActivityResult(p0: Int, p1: Int, p2: Intent?): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/n/CICT.kt:26:20 'constructor(): Handler' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/scanlibrary/src/main/java/n/CICT.kt:31:20 'constructor(): Handler' is deprecated. Deprecated in Java.
+
+> Task :smalltoolslibrary:compileReleaseKotlin
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/smalltoolslibrary/src/main/java/x/CIJY.kt:85:67 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+
+> Task :pic_toolslibrary:compileReleaseKotlin
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:32:43 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:34:43 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:36:43 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:38:43 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:48:61 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJB.kt:63:61 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/p/CIJN.kt:35:13 Unchecked cast of 'kotlin.Any' to 'T'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDR.kt:91:13 'fun startActivityForResult(p0: Intent, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDR.kt:193:50 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDR.kt:314:62 'fun onBackPressed(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDR.kt:398:70 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDV.kt:46:17 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/q/CIDW.kt:61:12 Condition is always 'true'.
+w: file:///C:/code/b/OverSeasWhiteBag/third-module/pic_toolslibrary/src/main/java/s/CIJT.kt:89:58 'fun getColor(p0: Int): Int' is deprecated. Deprecated in Java.
+
+> Task :scanlibrary:compileReleaseJavaWithJavac
+> Task :smalltoolslibrary:compileReleaseJavaWithJavac
+> Task :pic_toolslibrary:compileReleaseJavaWithJavac
+> Task :oversea_base_module:generateReleaseBuildConfig
+> Task :oversea_base_module:generateStringFogRelease
+> Task :oversea_base_module:generateReleaseRFile
+> Task :oversea_base_module:javaPreCompileRelease FROM-CACHE
+
+> Task :scanlibrary:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: C:\code\b\OverSeasWhiteBag\third-module\scanlibrary\src\main\java\com\clean\scanlibrary\camera\utils\GsonUtils.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :oversea_base_module:compileReleaseKotlin
+
+> Task :smalltoolslibrary:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :pic_toolslibrary:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: C:\code\b\OverSeasWhiteBag\third-module\pic_toolslibrary\src\main\java\q\CIED.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :smalltoolslibrary:bundleLibCompileToJarRelease
+> Task :smalltoolslibrary:bundleLibRuntimeToJarRelease
+> Task :smalltoolslibrary:processReleaseJavaRes
+> Task :smalltoolslibrary:createFullJarRelease
+> Task :smalltoolslibrary:generateReleaseLintModel
+> Task :smalltoolslibrary:extractReleaseAnnotations
+> Task :smalltoolslibrary:mergeReleaseGeneratedProguardFiles
+> Task :smalltoolslibrary:mergeReleaseConsumerProguardFiles
+> Task :smalltoolslibrary:mergeReleaseJavaResource
+> Task :smalltoolslibrary:syncReleaseLibJars
+> Task :smalltoolslibrary:bundleReleaseLocalLintAar
+> Task :smalltoolslibrary:generateReleaseLintVitalModel
+> Task :smalltoolslibrary:exportReleaseConsumerProguardFiles
+> Task :scanlibrary:bundleLibCompileToJarRelease
+> Task :scanlibrary:bundleLibRuntimeToJarRelease
+> Task :scanlibrary:processReleaseJavaRes
+> Task :scanlibrary:createFullJarRelease
+> Task :oversea_base_module:compileReleaseJavaWithJavac
+> Task :scanlibrary:generateReleaseLintModel
+> Task :scanlibrary:extractReleaseAnnotations
+> Task :scanlibrary:mergeReleaseGeneratedProguardFiles
+> Task :scanlibrary:mergeReleaseConsumerProguardFiles
+> Task :scanlibrary:mergeReleaseJavaResource
+> Task :scanlibrary:syncReleaseLibJars
+> Task :scanlibrary:bundleReleaseLocalLintAar
+> Task :scanlibrary:generateReleaseLintVitalModel
+> Task :scanlibrary:exportReleaseConsumerProguardFiles
+> Task :pic_toolslibrary:bundleLibCompileToJarRelease
+> Task :pic_toolslibrary:bundleLibRuntimeToJarRelease
+> Task :pic_toolslibrary:processReleaseJavaRes
+> Task :pic_toolslibrary:createFullJarRelease
+> Task :pic_toolslibrary:generateReleaseLintModel
+> Task :pic_toolslibrary:mergeReleaseGeneratedProguardFiles
+> Task :pic_toolslibrary:mergeReleaseConsumerProguardFiles
+> Task :pic_toolslibrary:mergeReleaseJavaResource
+> Task :pic_toolslibrary:generateReleaseLintVitalModel
+> Task :pic_toolslibrary:exportReleaseConsumerProguardFiles
+> Task :pic_toolslibrary:extractReleaseAnnotations
+> Task :pic_toolslibrary:syncReleaseLibJars
+> Task :pic_toolslibrary:bundleReleaseLocalLintAar
+
+> Task :pic_toolslibrary:lintVitalAnalyzeRelease
+timber.lint.TimberIssueRegistry in C:\Users\f1q7twkner6nbjh56b6z\.gradle\caches\8.9\transforms\31199bf051b678ba7ea708b370ff81e1\transformed\jetified-timber-4.7.1\jars\lint.jar does not specify a vendor; see IssueRegistry#vendor
+
+> Task :smalltoolslibrary:lintVitalAnalyzeRelease
+> Task :scanlibrary:lintVitalAnalyzeRelease
+> Task :app:mapReleaseSourceSetPaths
+> Task :oversea_base_module:extractDeepLinksRelease FROM-CACHE
+> Task :oversea_base_module:processReleaseJavaRes
+> Task :oversea_base_module:extractProguardFiles
+> Task :oversea_base_module:mergeReleaseJniLibFolders
+> Task :oversea_base_module:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_base_module:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_base_module:extractDeepLinksForAarRelease FROM-CACHE
+> Task :oversea_base_module:extractReleaseAnnotations
+
+> Task :oversea_base_module:processReleaseManifest
+C:\code\b\OverSeasWhiteBag\oversea_base_module\src\main\AndroidManifest.xml:9:5-79 Warning:
+	Element uses-permission#com.google.android.gms.permission.AD_ID at AndroidManifest.xml:9:5-79 duplicated with element declared at AndroidManifest.xml:6:5-78
+C:\code\b\OverSeasWhiteBag\oversea_base_module\src\main\AndroidManifest.xml:85:9-87:35 Warning:
+	Element meta-data#com.google.android.gms.ads.AD_MANAGER_APP at AndroidManifest.xml:85:9-87:35 duplicated with element declared at AndroidManifest.xml:31:9-33:36
+C:\code\b\OverSeasWhiteBag\oversea_base_module\src\main\AndroidManifest.xml:10:5-102 Warning:
+	uses-permission#android.permission.REQUEST_INSTALL_PACKAGES was tagged at AndroidManifest.xml:10 to remove other declarations but no other declaration present
+C:\code\b\OverSeasWhiteBag\oversea_base_module\src\main\AndroidManifest.xml:11:5-12:53 Warning:
+	uses-permission#android.permission.QUERY_ALL_PACKAGES was tagged at AndroidManifest.xml:11 to remove other declarations but no other declaration present
+
+> Task :oversea_base_module:prepareLintJarForPublish
+> Task :oversea_base_module:mergeReleaseShaders
+> Task :oversea_base_module:writeReleaseAarMetadata
+> Task :oversea_base_module:copyReleaseJniLibsProjectAndLocalJars
+
+> Task :app:processReleaseMainManifest
+package="com.clean.toos" found in source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.toos" from the source AndroidManifest.xml: C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml.
+[com.pangle.global:pag-sdk:7.8.5.8] C:\Users\f1q7twkner6nbjh56b6z\.gradle\caches\8.9\transforms\55e5562e5034a72fc103156be2efd4fe\transformed\jetified-pag-sdk-7.8.5.8\AndroidManifest.xml Warning:
+	Namespace 'com.bytedance' is used in multiple modules and/or libraries: com.pangle.global:pag-sdk:7.8.5.8, com.pangle.global:pag-sdk-ad:unfat-7858-20260113200610-release. Please ensure that all modules and libraries have a unique namespace. For more information, See https://developer.android.com/studio/build/configure-app-module#set-namespace
+[:aar_library:aar_name2] C:\Users\f1q7twkner6nbjh56b6z\.gradle\caches\8.9\transforms\7a5e677991dbbb251382f286730fe3fc\transformed\jetified-okeep610\AndroidManifest.xml Warning:
+	Namespace 'org.k.a' is used in multiple modules and/or libraries: :aar_library:aar_name2, :aar_library:aar_name. Please ensure that all modules and libraries have a unique namespace. For more information, See https://developer.android.com/studio/build/configure-app-module#set-namespace
+C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml:11:9-41 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+[:oversea_base_module] C:\code\b\OverSeasWhiteBag\oversea_base_module\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:5-79 Warning:
+	Element uses-permission#com.google.android.gms.permission.AD_ID at [:oversea_base_module] AndroidManifest.xml:12:5-79 duplicated with element declared at [:oversea_base_module] AndroidManifest.xml:10:5-79
+[:oversea_base_module] C:\code\b\OverSeasWhiteBag\oversea_base_module\build\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:100:9-102:36 Warning:
+	Element meta-data#com.google.android.gms.ads.AD_MANAGER_APP at [:oversea_base_module] AndroidManifest.xml:100:9-102:36 duplicated with element declared at [:oversea_base_module] AndroidManifest.xml:41:9-43:36
+C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml Warning:
+	uses-permission#android.permission.REQUEST_INSTALL_PACKAGES was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml Warning:
+	uses-permission#android.permission.QUERY_ALL_PACKAGES was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+C:\code\b\OverSeasWhiteBag\app\src\main\AndroidManifest.xml:6:5-33:19 Warning:
+	application@android:usesCleartextTraffic was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
+
+> Task :oversea_base_module:transformReleaseClassesWithAsm
+> Task :toolsbox:dataBindingMergeDependencyArtifactsRelease
+> Task :app:mergeReleaseJunkCodeManifest
+> Task :app:checkReleaseAarMetadata
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :oversea_base_module:generateReleaseLintModel
+> Task :oversea_base_module:compileReleaseShaders NO-SOURCE
+> Task :oversea_base_module:generateReleaseAssets UP-TO-DATE
+> Task :oversea_base_module:packageReleaseAssets
+> Task :oversea_base_module:prepareReleaseArtProfile
+> Task :oversea_base_module:mergeReleaseJavaResource
+> Task :oversea_base_module:bundleLibCompileToJarRelease
+> Task :oversea_base_module:mergeReleaseGeneratedProguardFiles
+> Task :oversea_base_module:bundleLibRuntimeToJarRelease
+> Task :oversea_base_module:mergeReleaseConsumerProguardFiles
+> Task :oversea_base_module:createFullJarRelease
+> Task :oversea_base_module:syncReleaseLibJars
+> Task :oversea_base_module:bundleReleaseLocalLintAar
+> Task :oversea_base_module:writeReleaseLintModelMetadata
+> Task :oversea_base_module:generateReleaseLintVitalModel
+> Task :oversea_base_module:exportReleaseConsumerProguardFiles
+> Task :toolsbox:dataBindingGenBaseClassesRelease
+> Task :oversea_base_module:copyReleaseJniLibsProjectOnly
+> Task :app:mergeReleaseArtProfile
+> Task :oversea_base_module:lintVitalAnalyzeRelease
+> Task :app:mergeReleaseNativeLibs
+> Task :app:mergeReleaseAssets
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: lib037b242f.so, libBugly_Native.so, liballiance.so, libapminsighta.so, libapminsightb.so, libapplovin-native-crash-reporter.so, libbuffer_pgl.so, libdatastore_shared_counter.so, libefc8401fcc4842618a697905d7ce8a98.so, libfile_lock_pgl.so, libkste.so, libmmkv.so, libnms.so, libpdfium.cr.so, libpdfiumandroid.so, libpglarmor.so, libpl_droidsonroids_gif.so, libsgcore.so, libsigner.so, libtt_ugen_layout.so, libweapon.so.
+
+> Task :toolsbox:compileReleaseKotlin FAILED
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:30:8 Unresolved reference 'nwy'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:31:8 Unresolved reference 'nwy'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:32:8 Unresolved reference 'nwy'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:393:37 Unresolved reference 'AutoConfigAdViewScope'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:395:24 Unresolved reference 'AdParams'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:396:55 Unresolved reference 'ScopeFinishListener'.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:397:13 'showLoading' overrides nothing.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:401:13 'hideLoading' overrides nothing.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:405:13 'onComplete' overrides nothing.
+e: file:///C:/code/b/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/c/CICG.kt:409:13 'toNextAndFinish' overrides nothing.
+
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:compressReleaseAssets
+> Task :app:processReleaseResources
+> Task :app:convertLinkedResourcesToProtoRelease
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':toolsbox:compileReleaseKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 14m 56s
+467 actionable tasks: 428 executed, 36 from cache, 3 up-to-date
