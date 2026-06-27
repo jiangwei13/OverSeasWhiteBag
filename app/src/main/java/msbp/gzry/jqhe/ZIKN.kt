@@ -40,7 +40,6 @@ object ZIKN {
                 AjConstants.Companion.firebase_success = "2sa0or"
                 AjConstants.Companion.adJust_attribution_request = "gnwsby"
                 AjConstants.Companion.adJust_attribution_success ="fjjds2"
-                AjConstants.Companion.adJust_attribution_fail = "ex48si"
                 AjConstants.Companion.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "m6toxg"
