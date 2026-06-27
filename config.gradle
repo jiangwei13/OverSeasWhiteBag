@@ -34,9 +34,9 @@ ext{
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
+            "TradPlus_ID"           : "8BB0BDF6213CA8CE45358F018BA12711",// 正式
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "pu8onpkwwglc",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
