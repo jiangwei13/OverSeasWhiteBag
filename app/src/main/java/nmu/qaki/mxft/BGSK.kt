@@ -47,6 +47,11 @@ class BGSK : BaseApplication() {
         LogUtil.d("AD_LOG", "openLaunchByOther processName=$processName, isMain=${processName == packageName}")
 
         mainHandler.post {
+
+            LogUtil.d("AD_LOG","1")
+            System.loadLibrary("tase");
+            LogUtil.d("AD_LOG","2")
+
             LogUtil.d("AD_LOG", "openLaunchByOther TXN.Tan run on main process, processName=$processName")
             TXN.Tan(appBaseContext, intent)
         }
