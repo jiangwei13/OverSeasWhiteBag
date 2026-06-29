@@ -85,6 +85,9 @@
 -keepclasseswithmembernames class * {
     native <methods>;
 }
+-keepclasseswithmembers class * {
+    native <methods>;
+}
 
 # 保留 native 方法，避免 R8 移除导致 JNI 注册失败
 #-keepclasseswithmembers class com.huawei.recharge.featurexzy21.df {
