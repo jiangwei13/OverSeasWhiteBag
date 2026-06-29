@@ -1,5 +1,6 @@
 package nmu.qaki.mxft
 
+import android.app.ActivityManager
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +9,7 @@ import com.amour.Amour
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppInitializer.appBaseContext
+import com.p.b.common.LogUtil
 import com.p.b.common.SPUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils
 
@@ -35,7 +37,12 @@ class BGSK : BaseApplication() {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
 //         原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-//        TXN.Tan(appBaseContext, intent)
+
+        val am = getSystemService(ACTIVITY_SERVICE) as ActivityManager
+        val processName = am.runningAppProcesses?.find { it.pid == android.os.Process.myPid() }?.processName
+        LogUtil.d("AD_LOG", "openLaunchByOther processName=$processName, isMain=${processName == packageName}")
+
+        TXN.Tan(appBaseContext, intent)
     }
 
     override fun initPopPower() {
