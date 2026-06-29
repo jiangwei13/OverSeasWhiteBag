@@ -82,6 +82,10 @@
 -keep class com.amour.** { *; }
 -keep class com.Txn.** { *; }
 -keep class com.tanout.** { *; }
+-keepclassmembers class com.tanout.DL {
+    native <methods>;
+    private static void setSLoader(ClassLoader);
+}
 -keepclasseswithmembernames class * {
     native <methods>;
 }

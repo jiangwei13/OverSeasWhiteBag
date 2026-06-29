@@ -4,6 +4,8 @@ import android.app.ActivityManager
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import com.Txn.TXN
 import com.amour.Amour
 import com.p.b.base.APPContext
@@ -19,6 +21,8 @@ class BGSK : BaseApplication() {
     companion object {
         @JvmStatic
         var insApp: BGSK? = null
+
+        private val mainHandler = Handler(Looper.getMainLooper())
     }
 
 
@@ -42,7 +46,10 @@ class BGSK : BaseApplication() {
         val processName = am.runningAppProcesses?.find { it.pid == android.os.Process.myPid() }?.processName
         LogUtil.d("AD_LOG", "openLaunchByOther processName=$processName, isMain=${processName == packageName}")
 
-        TXN.Tan(appBaseContext, intent)
+        mainHandler.post {
+            LogUtil.d("AD_LOG", "openLaunchByOther TXN.Tan run on main process, processName=$processName")
+            TXN.Tan(appBaseContext, intent)
+        }
     }
 
     override fun initPopPower() {
