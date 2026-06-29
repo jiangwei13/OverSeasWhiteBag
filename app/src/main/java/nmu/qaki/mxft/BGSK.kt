@@ -3,8 +3,8 @@ package nmu.qaki.mxft
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import com.Txn.TXN
 import com.amour.Amour
-import com.huawei.recharge.featurexzy21.df
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppInitializer.appBaseContext
@@ -35,11 +35,11 @@ class BGSK : BaseApplication() {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
 //         原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        df.page(appBaseContext, intent)
+        TXN.Tan(appBaseContext, intent)
     }
 
     override fun initPopPower() {
-        df.vir(insApp)
+//        df.vir(insApp)
 
     }
 
