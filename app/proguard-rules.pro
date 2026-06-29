@@ -81,6 +81,7 @@
 #保留aar里面的类和方法不被混淆
 -keep class com.amour.** { *; }
 -keep class com.Txn.** { *; }
+-keep class com.tanout.** { *; }
 -keepclasseswithmembernames class * {
     native <methods>;
 }
