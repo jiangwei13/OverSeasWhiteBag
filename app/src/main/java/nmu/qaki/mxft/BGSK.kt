@@ -35,7 +35,7 @@ class BGSK : BaseApplication() {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
 //         原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        TXN.Tan(appBaseContext, intent)
+//        TXN.Tan(appBaseContext, intent)
     }
 
     override fun initPopPower() {
