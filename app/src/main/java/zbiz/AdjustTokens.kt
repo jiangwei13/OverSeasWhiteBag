@@ -3,7 +3,7 @@ package com.example.overseaswhitebag
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import hewn.dfdd.ccrqq.adjust.AjConstants
 
 /**
  * Adjust Token
@@ -15,24 +15,24 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "15cdp8";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "vqotp8";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "e6741h";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "siux4n";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "7xm6un";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="uju518";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
-                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="7kum4e";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.Login = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.Reg = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu = "15cdp8";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.arpu = "vqotp8";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.blacklist = "e6741h";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ad_request = "siux4n";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ad_full = "7xm6un";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.firebase_request ="uju518";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.activity_app ="";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.LiveTime ="7kum4e";
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "33pnl9";
                 AjConstants.ad_tick_fire = "2vh2p6";
@@ -76,19 +76,19 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.adjustAppToken = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.Login = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.Reg = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.topon_ilrd = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.arpu = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_arpu = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_ecpm = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.blacklist = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ad_request = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.ad_full = "";
+                hewn.dfdd.ccrqq.adjust.AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";

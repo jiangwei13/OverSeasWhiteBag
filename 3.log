@@ -1,0 +1,98 @@
+com.doc.kitool
+Adjust
+应用识别码
+1acsweg3uvpc
+
+token	name	unique
+vjvpg1	ad_adlist_empty	false
+qrvb41	ad_blackhole_probe	false
+fil2dg	ad_close_source	false
+kbdji5	ad_disabled_early_complete	false
+33pnl9	ad_fail	false
+9121x7	ad_fill_success	false
+7xm6un	ad_full	false
+miqmw4	ad_handler_destroy	false
+24p2zf	ad_init_fail	false
+welw9j	ad_jump_entry	false
+7hz2eo	adjustAppToken	false
+9d1lps	adJust_attribution_fail	false
+htbvtp	adJust_attribution_request	false
+urz0c7	adJust_attribution_success	false
+evrqpo	ad_load_fail	false
+6lng2m	ad_load_fail_after_fill	false
+hxmmoi	ad_load_fail_no_fill	false
+jgrmas	ad_load_success	false
+ya6ox7	ad_load_timeout	false
+e42h09	ad_next_load_fail	false
+zgbabd	ad_next_load_success	false
+c2cvp4	ad_params_null	false
+nf1bq2	ad_placement_miss	false
+ilhyi5	ad_posthandle_fail	false
+h9sto3	ad_preload_first_fail_after_fill	false
+6i1biv	ad_preload_first_fail_no_fill	false
+c12036	ad_preload_first_success	false
+76etpo	ad_realshow	false
+siux4n	ad_request	false
+jszdx7	ad_scope_destroy_before_complete	false
+3hujlf	ad_show_complete	false
+d1lnig	ad_show_flow	false
+94zzkf	ad_show_next	false
+pcvdyg	ad_show_timeout	false
+8ppjod	ad_silent_blackhole	false
+izcjg8	ad_skip_dialog	false
+iui8eg	ad_skip_hit	false
+kdcc9b	ad_tick_config_missing	false
+2vh2p6	ad_tick_fire	false
+bndhy7	ad_tick_init	false
+8hzy2o	ad_transit_created	false
+sfgsrm	ad_view_controller_null	false
+td0sq1	ad_weakref_lost	false
+vqotp8	arpu	false
+e6741h	blacklist	false
+uju518	firebase_request	false
+e3q9jt	firebase_success	false
+15cdp8	ipu	false
+9y5x74	ipu_arpu	false
+mqtrnn	ipu_arpu_ecpm	false
+c18jch	ipu_ecpm	false
+7kum4e	LiveTime	false
+hkh62v	topon_ilrd	false
+
+
+{
+  "project_info": {
+    "project_number": "358180079268",
+    "project_id": "dockittools-c2ccf",
+    "storage_bucket": "dockittools-c2ccf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358180079268:android:4768df69b0a606d2f5c831",
+        "android_client_info": {
+          "package_name": "com.doc.kitool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlTi_vUqEfkOSRccL72l13GNZzPkOngeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
+
+
+TradPlus 应用ID： ACEB5EA88EE6C3DFD72E856A1E6E0D11
+TradPlus 广告位ID：AB8456E7D34FC4B929690EED9426FA12
+
+admob app ID：ca-app-pub-3924069160429935~8875268685
+
