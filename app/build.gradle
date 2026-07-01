@@ -204,7 +204,6 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(":aar_library:aar_name2")
     implementation project(':toolsbox')
     implementation 'com.github.Petterpx.walle:library:1.0.5'
 
@@ -230,6 +229,11 @@ dependencies {
     implementation project(':oversea_base_power')
     implementation project(':oversea_common_library')
     implementation project(':oversea_base_module')
+    implementation project(':oversea_base_module')
+
+    implementation project(":aar_library:aar_name")
+    implementation project(":aar_library:aar_name2")
+
     // StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
     implementation project(':stringfogLib')
 }

