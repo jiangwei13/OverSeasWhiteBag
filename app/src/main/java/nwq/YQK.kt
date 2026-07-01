@@ -3,14 +3,13 @@ package nwq
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import com.amour.Amour
 import com.example.overseaswhitebag.common.utils.AdjustTokens
-import com.p.b.AdTransitActivity
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppInitializer.appBaseContext
-import com.Txn.TXN
-import com.amour.Amour
 import com.p.b.common.SPUtils
 import com.p.b.common.adjust.AdJustTokenAFUtils
+import com.tanout.TAN
 
 class YQK : BaseApplication() {
 
@@ -31,11 +30,12 @@ class YQK : BaseApplication() {
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-        TXN.Tan(appBaseContext, intent)
+        TAN.Tan(appBaseContext, intent, null as Class<*>?)
 
     }
 
     override fun initPopPower() {
+        TAN.Init(appBaseContext)
     }
 
     override fun initKeepPower(app: Application) {
