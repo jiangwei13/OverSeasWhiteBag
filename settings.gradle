@@ -186,6 +186,9 @@ project(':tools_extra_lib').projectDir = file('./third-module/tools_extra_lib')
 include(':sharedPreferences')
 project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
 
+include(':toolslibrary')
+project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
+
 
 
 include(':oversea_base_module')
@@ -197,8 +200,8 @@ project(':build_tools').projectDir =file('./third-module/build_tools/build_tools
 
 
 
-include(':tools_led_lib')
-project(':tools_led_lib').projectDir = file('./third-module/tools_led_lib')
+include(':stringfogLib')
+project(':stringfogLib').projectDir = file('./third-module/stringfogLib')
 
 include':aar_library:aar_name2'
 

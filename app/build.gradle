@@ -230,4 +230,6 @@ dependencies {
     implementation project(':oversea_base_power')
     implementation project(':oversea_common_library')
     implementation project(':oversea_base_module')
+    // StringFog 运行期解密实现 com.stringfog.impl.CustomStringFogImpl 的独立承载模块
+    implementation project(':stringfogLib')
 }

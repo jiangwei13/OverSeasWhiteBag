@@ -27,7 +27,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "t7llm4";
                 AjConstants.blacklist = "12uqp8";
                 AjConstants.ad_request = "camagt";
-                AjConstants.ad_filled = "jtn65l";
+                AjConstants.ad_full = "jtn65l";
                 AjConstants.firebase_request ="35whot";
                 AjConstants.firebase_success = "pfvlac";
                 AjConstants.adJust_attribution_request = "3kk6kj";
@@ -47,7 +47,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "";
                 AjConstants.blacklist = "";
                 AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
+                AjConstants.ad_full = "";
                 AjConstants.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
@@ -67,7 +67,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "";
                 AjConstants.blacklist = "";
                 AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
+                AjConstants.ad_full = "";
                 AjConstants.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
@@ -87,7 +87,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "";
                 AjConstants.blacklist = "";
                 AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
+                AjConstants.ad_full = "";
                 AjConstants.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
@@ -107,7 +107,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "";
                 AjConstants.blacklist = "";
                 AjConstants.ad_request="";
-                AjConstants.ad_filled="";
+                AjConstants.ad_full="";
                 AjConstants.firebase_request="";
                 AjConstants.firebase_success="";
                 AjConstants.adJust_attribution_request = "";
@@ -127,7 +127,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = ""
                 AjConstants.blacklist = ""
                 AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
+                AjConstants.ad_full = ""
                 AjConstants.firebase_request = ""
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
@@ -147,7 +147,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = "";
                 AjConstants.blacklist = "";
                 AjConstants.ad_request = "";
-                AjConstants.ad_filled = "";
+                AjConstants.ad_full = "";
                 AjConstants.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
@@ -167,7 +167,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = ""
                 AjConstants.blacklist = ""
                 AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
+                AjConstants.ad_full = ""
                 AjConstants.firebase_request = ""
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
@@ -187,7 +187,7 @@ object AdjustTokens {
                 AjConstants.ipu_arpu_ecpm = ""
                 AjConstants.blacklist = ""
                 AjConstants.ad_request = ""
-                AjConstants.ad_filled = ""
+                AjConstants.ad_full = ""
                 AjConstants.firebase_request = ""
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
