@@ -16,7 +16,6 @@ object AdjustTokens {
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" -> {
-                AjConstants.adjustAppToken = "jyf5ttus95vk"
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = "tbacjn"
@@ -78,7 +77,6 @@ object AdjustTokens {
             }
 
             "HW", "SX", "OP", "VO", "CY", "XM", "RY", "OL" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -136,7 +134,6 @@ object AdjustTokens {
 
             else -> {
                 Log.d("AdjustTokens", "测试")
-                AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
                 Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
