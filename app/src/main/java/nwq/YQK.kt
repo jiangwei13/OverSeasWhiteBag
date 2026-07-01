@@ -30,6 +30,9 @@ class YQK : BaseApplication() {
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+        intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
         TAN.Tan(appBaseContext, intent, null as Class<*>?)
 
     }
