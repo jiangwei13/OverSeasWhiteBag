@@ -77,6 +77,19 @@
 #####保护 stringfog 加解密实现类不被 R8 重命名
 -keep class com.stringfog.impl.** {*;}
 
+
+#保留aar里面的类和方法不被混淆
+-keep class com.amour.** { *; }
+-keep class com.Txn.** { *; }
+-keep class com.tanout.** { *; }
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keepclasseswithmembers class * {
+    native <methods>;
+}
+
+
 # 保留 native 方法及其所在类成员，避免 R8 移除导致 JNI 注册失败
 # 兄弟项目如有自定义 JNI 类，请在此追加具体类名的 keep 规则，例如：
 # -keepclasseswithmembers class your.jni.class {

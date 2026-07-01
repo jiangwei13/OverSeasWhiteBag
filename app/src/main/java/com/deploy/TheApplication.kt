@@ -3,8 +3,8 @@ package com.deploy
 import android.content.Intent
 import android.os.Bundle
 import com.huawei.recharge.featurexzy21.df
-import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
+import com.p.b.base.OverseaAppInitializer.appBaseContext
 
 
 class TheApplication : BaseApplication() {
@@ -16,9 +16,7 @@ class TheApplication : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        insApp = this
-        // 保证白包有 context
-        APPContext.setApplication(this)
+        appInstance = this
     }
 
     override fun configureAdjustTokens() {
@@ -31,10 +29,10 @@ class TheApplication : BaseApplication() {
     }
 
     override fun initPopPower() {
-        // 预留：初始化 pop 能力入口
+        // ledlight 暂未接入 pop 保活能力
     }
 
-    override fun initKeepPower() {
-        // 预留：初始化保活能力入口
+    override fun initKeepPower(app: Application) {
+        // ledlight 暂未接入 keep 保活能力
     }
 }

@@ -37,6 +37,7 @@ ext{
             "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "",
+            "Admob_AppId"           : "ca-app-pub-1589775842977386~2029736308",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
