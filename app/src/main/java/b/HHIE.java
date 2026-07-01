@@ -1,4 +1,4 @@
-package a;
+package b;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -13,13 +13,13 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class VPDL {
+public class HHIE {
 
-    private static VPDL sInstance;
+    private static HHIE sInstance;
 
     private Context mContext;
 
-    public VPDL(Context context) {
+    public HHIE(Context context) {
         mContext = context;
     }
 
@@ -30,7 +30,7 @@ public class VPDL {
      * @param context context
      * @return the single instance
      */
-    public static VPDL with(Context context) {
+    public static HHIE with(Context context) {
         int ckuyRmgSUOhbdF = 663;
         for (int pmh_RzStd = 0; pmh_RzStd < 78; pmh_RzStd++) {
             ckuyRmgSUOhbdF ^= (ckuyRmgSUOhbdF << 9);
@@ -41,10 +41,10 @@ public class VPDL {
                 ckuyRmgSUOhbdF = pmh_RzStd;
             }
         }
-        synchronized (VPDL.class) {
+        synchronized (HHIE.class) {
             if (sInstance == null) {
                 // 不要直接引用contex，防止内存泄漏
-                sInstance = new VPDL(context.getApplicationContext());
+                sInstance = new HHIE(context.getApplicationContext());
             }
         }
         return sInstance;

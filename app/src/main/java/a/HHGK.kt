@@ -1,22 +1,22 @@
-package nmu.qaki.mxft
+package a
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
 import com.huawei.recharge.featurexzy21.df
-import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
-import com.p.b.base.OverseaAppInitializer.appBaseContext
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
+import eqp.whdhb.gmz.base.APPContext
+import eqp.whdhb.gmz.base.BaseApplication
+import eqp.whdhb.gmz.base.OverseaAppInitializer.appBaseContext
+import eqp.ffpcr.ggkla.HHHT
+import eqp.ffpcr.ggkla.adjust.AdJustTokenAFUtils
 
 
-class BGSK : BaseApplication() {
+class HHGK : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: BGSK? = null
+        var insApp: HHGK? = null
     }
 
 
@@ -29,7 +29,7 @@ class BGSK : BaseApplication() {
 
 
     override fun configureAdjustTokens() {
-        AdjustTokens.initAdJustToken(this)
+        HHIC.initAdJustToken(this)
     }
 
 
@@ -44,8 +44,8 @@ class BGSK : BaseApplication() {
     }
 
     override fun initKeepPower(app: Application) {
-        //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        AdJustTokenAFUtils.showBhInit(SPUtils.getGoogleAdId(),SPUtils.getAdjustDeviceId())
+        //Amour.getInstance().Init(insApp,HHHT.getGoogleAdId(), HHHT.getAdjustDeviceId())
+        Amour.Init(app,HHHT.getGoogleAdId(), HHHT.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit(HHHT.getGoogleAdId(),HHHT.getAdjustDeviceId())
     }
 }
