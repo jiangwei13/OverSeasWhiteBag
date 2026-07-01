@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import tmlr.hti.caqq.R;
 
-import nwt.YQQ;
+import com.mukuled.ledlightgp.activity.MtTwoActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class YQL extends AppCompatActivity {
@@ -55,7 +55,7 @@ public class YQL extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(YQL.this, YQQ.class);
+                Intent mainIntent = new Intent(YQL.this, MtTwoActivity.class);
                 startActivity(mainIntent);
                 finish();
             }
@@ -64,7 +64,7 @@ public class YQL extends AppCompatActivity {
         //        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashContainer, new AuditAdUtilsNew.onSplashAdListener() {
         //            @Override
         //            public void splashEnd() {
-        //                Intent mainIntent = new Intent(YQL.this, YQQ.class);
+        //                Intent mainIntent = new Intent(YQL.this, MtTwoActivity.class);
         //                startActivity(mainIntent);
         //                finish();
         //            }
