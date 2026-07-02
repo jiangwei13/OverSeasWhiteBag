@@ -229,7 +229,6 @@ dependencies {
     implementation project(':oversea_base_power')
     implementation project(':oversea_common_library')
     implementation project(':oversea_base_module')
-    implementation project(':oversea_base_module')
 
     implementation project(":aar_library:aar_name")
     implementation project(":aar_library:aar_name2")
