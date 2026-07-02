@@ -1,23 +1,23 @@
-package nwq
+package a
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
 import com.example.overseaswhitebag.common.utils.AdjustTokens
-import com.p.b.base.BaseApplication
-import com.p.b.base.OverseaAppInitializer.appBaseContext
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
+import oet.ndo.wrb.base.BaseApplication
+import oet.ndo.wrb.base.OverseaAppInitializer.appBaseContext
+import oet.nbxjj.jcjuq.MYCI
+import oet.nbxjj.jcjuq.adjust.AdJustTokenAFUtils
 import com.tanout.TAN
 
-class YQK : BaseApplication() {
+class MYAY : BaseApplication() {
 
     companion object {
         var isBackgroundLaunch: Boolean = false
 
         @JvmStatic
-        var appInstance: YQK? = null
+        var appInstance: MYAY? = null
     }
 
     override fun onCreate() {
@@ -42,7 +42,7 @@ class YQK : BaseApplication() {
     }
 
     override fun initKeepPower(app: Application) {
-        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        AdJustTokenAFUtils.showBhInit(SPUtils.getGoogleAdId(),SPUtils.getAdjustDeviceId())
+        Amour.Init(app,MYCI.getGoogleAdId(), MYCI.getAdjustDeviceId())
+        AdJustTokenAFUtils.showBhInit(MYCI.getGoogleAdId(),MYCI.getAdjustDeviceId())
     }
 }
