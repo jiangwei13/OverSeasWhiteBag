@@ -1,0 +1,829 @@
+> Task :buildSrc:compileJava UP-TO-DATE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+
+> Configure project :app
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+XmlClassGuard version is 1.2.5, agpVersion=8.7.0
+=====BlackObfuscator=====
+BlackObfuscatorExtension{enabled=true, depth=3, mappingFile=/Users/lexiong/code/OverSeasWhiteBag/app/xml-class-mapping.txt, skipStaticInitializer=true, skipKotlinSynthetic=true, skipKotlinSingletonLikeClasses=true, skipInnerClasses=false, skipAndroidComponents=false, skipCallbackLikeClasses=false, obfClassCount=1, blackClassCount=35}
+=========================
+
+> Configure project :build_tools
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_base_module
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_base_power
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :oversea_common_library
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :setting
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :sharedPreferences
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :tools_extra_lib
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :toolsbox
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+
+> Configure project :toolslibrary
+w: The artifact `org.jetbrains.kotlin:kotlin-compiler-embeddable` is present in the build classpath along Kotlin Gradle plugin.
+This may lead to unpredictable and inconsistent behavior.
+For more details, see: https://kotl.in/gradle/internal-compiler-symbols
+
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 36
+
+This Android Gradle plugin (8.7.0) was tested up to compileSdk = 35.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 36.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 36 is available.
+
+For more information refer to the compatibility table:
+https://d.android.com/r/tools/api-level-support
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=36
+to this project's gradle.properties.
+
+> Task :clean UP-TO-DATE
+> Task :build_tools:clean
+> Task :stringfogLib:clean
+> Task :sharedPreferences:clean
+> Task :aar_library:aar_name:clean UP-TO-DATE
+> Task :aar_library:aar_name2:clean UP-TO-DATE
+> Task :color_picker_library:clean
+> Task :setting:clean
+> Task :tools_extra_lib:clean
+> Task :stringfogLib:preBuild UP-TO-DATE
+> Task :stringfogLib:preReleaseBuild UP-TO-DATE
+> Task :setting:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :setting:preBuild UP-TO-DATE
+> Task :setting:preReleaseBuild UP-TO-DATE
+> Task :color_picker_library:preBuild UP-TO-DATE
+> Task :color_picker_library:preReleaseBuild UP-TO-DATE
+> Task :oversea_base_power:clean
+> Task :oversea_base_power:preBuild UP-TO-DATE
+> Task :oversea_base_power:preReleaseBuild UP-TO-DATE
+> Task :stringfogLib:generateReleaseResValues
+> Task :color_picker_library:generateReleaseResValues
+> Task :oversea_base_power:generateReleaseResValues FROM-CACHE
+> Task :oversea_common_library:clean
+> Task :oversea_common_library:preBuild UP-TO-DATE
+> Task :oversea_common_library:preReleaseBuild UP-TO-DATE
+> Task :oversea_common_library:generateReleaseResValues FROM-CACHE
+> Task :tools_extra_lib:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :tools_extra_lib:preBuild UP-TO-DATE
+> Task :tools_extra_lib:preReleaseBuild UP-TO-DATE
+> Task :tools_extra_lib:generateReleaseResValues FROM-CACHE
+> Task :stringfogLib:generateReleaseResources
+> Task :color_picker_library:generateReleaseResources
+> Task :oversea_base_power:generateReleaseResources
+> Task :tools_extra_lib:generateReleaseResources
+> Task :oversea_common_library:generateReleaseResources
+> Task :stringfogLib:packageReleaseResources
+> Task :color_picker_library:packageReleaseResources
+> Task :tools_extra_lib:packageReleaseResources
+> Task :oversea_base_power:packageReleaseResources
+> Task :oversea_common_library:packageReleaseResources
+> Task :oversea_common_library:parseReleaseLocalResources
+> Task :stringfogLib:parseReleaseLocalResources
+> Task :stringfogLib:generateReleaseRFile
+> Task :oversea_base_power:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_base_power:javaPreCompileRelease
+> Task :oversea_common_library:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :stringfogLib:javaPreCompileRelease
+> Task :oversea_common_library:generateReleaseRFile
+> Task :oversea_common_library:generateReleaseBuildConfig
+> Task :oversea_base_power:parseReleaseLocalResources
+> Task :color_picker_library:parseReleaseLocalResources
+> Task :tools_extra_lib:parseReleaseLocalResources
+> Task :color_picker_library:generateReleaseRFile
+> Task :tools_extra_lib:javaPreCompileRelease FROM-CACHE
+> Task :color_picker_library:javaPreCompileRelease FROM-CACHE
+> Task :oversea_base_power:generateReleaseRFile
+> Task :tools_extra_lib:generateReleaseRFile
+> Task :toolsbox:clean
+> Task :toolsbox:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :toolsbox:preBuild UP-TO-DATE
+> Task :toolsbox:preReleaseBuild UP-TO-DATE
+> Task :toolsbox:generateReleaseResValues FROM-CACHE
+> Task :toolslibrary:clean
+> Task :toolslibrary:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :toolslibrary:preBuild UP-TO-DATE
+> Task :toolslibrary:preReleaseBuild UP-TO-DATE
+> Task :toolsbox:generateReleaseResources
+> Task :oversea_base_module:clean
+> Task :oversea_base_module:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :oversea_base_module:preBuild UP-TO-DATE
+> Task :oversea_base_module:preReleaseBuild UP-TO-DATE
+> Task :toolsbox:packageReleaseResources
+> Task :toolsbox:parseReleaseLocalResources
+> Task :toolsbox:dataBindingTriggerRelease
+> Task :toolsbox:generateReleaseBuildConfig
+> Task :toolsbox:generateReleaseRFile
+
+> Task :toolslibrary:dataBindingMergeDependencyArtifactsRelease
+WARNING: [XmlResourcesTransformer] No mapping for: android/support/FILE_PROVIDER_PATHS
+
+> Task :app:clean
+
+> Task :color_picker_library:compileReleaseJavaWithJavac
+注: /Users/lexiong/code/OverSeasWhiteBag/third-module/color_picker_library/src/main/java/com/flask/colorpicker/ColorPickerPreference.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+
+> Task :oversea_base_module:dataBindingMergeDependencyArtifactsRelease
+WARNING: [Processor] Library '/Users/lexiong/.gradle/caches/modules-2/files-2.1/com.bigossp/bigo-ads/5.6.2/f82699a8efc3a14f0b05f88f92db6c1654462f27/bigo-ads-5.6.2.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+ Example of androidX reference: 'androidx/annotation/NonNull'
+ Example of support library reference: 'android/support/annotation/NonNull'
+
+> Task :stringfogLib:compileReleaseJavaWithJavac
+> Task :setting:dataBindingMergeDependencyArtifactsRelease
+> Task :setting:generateReleaseResValues FROM-CACHE
+> Task :stringfogLib:bundleLibCompileToJarRelease
+> Task :setting:generateReleaseResources
+> Task :stringfogLib:writeReleaseAarMetadata
+> Task :setting:packageReleaseResources
+> Task :setting:parseReleaseLocalResources
+> Task :toolsbox:writeReleaseAarMetadata
+> Task :stringfogLib:extractDeepLinksRelease
+> Task :stringfogLib:processReleaseManifest
+> Task :toolsbox:extractDeepLinksRelease FROM-CACHE
+
+> Task :toolsbox:processReleaseManifest
+package="cn.hzw.doodledemo" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="cn.hzw.doodledemo" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/AndroidManifest.xml.
+
+> Task :toolslibrary:generateReleaseResValues FROM-CACHE
+> Task :toolslibrary:generateReleaseResources
+> Task :toolsbox:javaPreCompileRelease
+> Task :stringfogLib:processReleaseJavaRes NO-SOURCE
+> Task :stringfogLib:extractProguardFiles
+> Task :stringfogLib:bundleLibRuntimeToJarRelease
+> Task :toolsbox:extractProguardFiles
+> Task :color_picker_library:bundleLibCompileToJarRelease
+> Task :color_picker_library:writeReleaseAarMetadata
+> Task :color_picker_library:extractDeepLinksRelease FROM-CACHE
+> Task :toolsbox:generateReleaseLibraryProguardRules
+
+> Task :color_picker_library:processReleaseManifest
+package="com.flask.colorpicker" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/color_picker_library/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.flask.colorpicker" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/color_picker_library/src/main/AndroidManifest.xml.
+
+> Task :color_picker_library:processReleaseJavaRes NO-SOURCE
+> Task :color_picker_library:extractProguardFiles
+> Task :color_picker_library:bundleLibRuntimeToJarRelease
+> Task :toolsbox:prepareLintJarForPublish
+> Task :stringfogLib:generateReleaseLintModel
+> Task :stringfogLib:createFullJarRelease
+> Task :stringfogLib:prepareLintJarForPublish
+> Task :stringfogLib:mergeReleaseGeneratedProguardFiles
+> Task :stringfogLib:exportReleaseConsumerProguardFiles
+> Task :stringfogLib:mergeReleaseJniLibFolders
+> Task :stringfogLib:mergeReleaseNativeLibs NO-SOURCE
+> Task :stringfogLib:stripReleaseDebugSymbols NO-SOURCE
+> Task :toolsbox:mergeReleaseJniLibFolders
+> Task :toolsbox:mergeReleaseNativeLibs NO-SOURCE
+> Task :toolsbox:stripReleaseDebugSymbols NO-SOURCE
+> Task :stringfogLib:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_common_library:javaPreCompileRelease FROM-CACHE
+
+> Task :oversea_base_module:dataBindingMergeDependencyArtifactsRelease
+WARNING: [Processor] Library '/Users/lexiong/.gradle/caches/modules-2/files-2.1/androidx.media3/media3-ui/1.4.1/95308f5a6ed8f6c11afbfc321a724f0e2b81560e/media3-ui-1.4.1.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+ Example of androidX reference: 'androidx/media3/ui/PlayerNotificationManager'
+ Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Token'
+
+> Task :toolsbox:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_base_power:writeReleaseAarMetadata
+> Task :oversea_base_power:extractDeepLinksRelease FROM-CACHE
+> Task :oversea_base_power:processReleaseManifest
+> Task :oversea_common_library:extractDeepLinksRelease FROM-CACHE
+> Task :oversea_base_module:generateReleaseResValues FROM-CACHE
+> Task :setting:dataBindingGenBaseClassesRelease
+> Task :setting:dataBindingTriggerRelease
+> Task :oversea_base_module:generateReleaseResources
+> Task :setting:generateReleaseBuildConfig
+> Task :setting:generateReleaseRFile
+> Task :oversea_base_module:packageReleaseResources
+> Task :oversea_common_library:processReleaseManifest
+> Task :oversea_base_module:dataBindingTriggerRelease
+> Task :oversea_base_module:parseReleaseLocalResources
+> Task :oversea_base_module:generateReleaseBuildConfig
+> Task :oversea_base_power:extractProguardFiles
+> Task :oversea_common_library:compileReleaseKotlin
+> Task :oversea_base_power:compileReleaseKotlin
+> Task :oversea_common_library:writeReleaseAarMetadata
+> Task :toolsbox:extractDeepLinksForAarRelease
+> Task :oversea_base_power:prepareLintJarForPublish
+> Task :toolsbox:mergeReleaseShaders
+> Task :toolsbox:compileReleaseShaders NO-SOURCE
+> Task :toolsbox:generateReleaseAssets UP-TO-DATE
+> Task :stringfogLib:extractDeepLinksForAarRelease FROM-CACHE
+> Task :color_picker_library:generateReleaseLintModel
+> Task :color_picker_library:createFullJarRelease
+> Task :color_picker_library:prepareLintJarForPublish
+> Task :color_picker_library:mergeReleaseGeneratedProguardFiles
+> Task :color_picker_library:exportReleaseConsumerProguardFiles
+> Task :stringfogLib:extractReleaseAnnotations
+> Task :stringfogLib:mergeReleaseConsumerProguardFiles
+> Task :stringfogLib:mergeReleaseShaders
+> Task :stringfogLib:compileReleaseShaders NO-SOURCE
+> Task :stringfogLib:generateReleaseAssets UP-TO-DATE
+> Task :stringfogLib:packageReleaseAssets
+> Task :color_picker_library:mergeReleaseJniLibFolders
+> Task :tools_extra_lib:extractDeepLinksRelease FROM-CACHE
+> Task :tools_extra_lib:writeReleaseAarMetadata
+> Task :tools_extra_lib:extractProguardFiles
+> Task :tools_extra_lib:prepareLintJarForPublish
+> Task :tools_extra_lib:processReleaseManifest
+> Task :tools_extra_lib:mergeReleaseJniLibFolders
+> Task :toolsbox:packageReleaseAssets
+> Task :tools_extra_lib:mergeReleaseNativeLibs NO-SOURCE
+> Task :stringfogLib:prepareReleaseArtProfile
+> Task :tools_extra_lib:stripReleaseDebugSymbols NO-SOURCE
+> Task :toolsbox:prepareReleaseArtProfile
+> Task :color_picker_library:mergeReleaseNativeLibs NO-SOURCE
+> Task :color_picker_library:stripReleaseDebugSymbols NO-SOURCE
+> Task :tools_extra_lib:copyReleaseJniLibsProjectAndLocalJars
+> Task :color_picker_library:copyReleaseJniLibsProjectAndLocalJars
+> Task :color_picker_library:extractDeepLinksForAarRelease FROM-CACHE
+> Task :tools_extra_lib:extractDeepLinksForAarRelease FROM-CACHE
+> Task :tools_extra_lib:mergeReleaseShaders
+> Task :tools_extra_lib:compileReleaseShaders NO-SOURCE
+> Task :tools_extra_lib:generateReleaseAssets UP-TO-DATE
+> Task :color_picker_library:extractReleaseAnnotations
+> Task :tools_extra_lib:packageReleaseAssets
+> Task :setting:javaPreCompileRelease FROM-CACHE
+> Task :toolslibrary:packageReleaseResources
+> Task :tools_extra_lib:prepareReleaseArtProfile
+> Task :setting:writeReleaseAarMetadata
+> Task :color_picker_library:mergeReleaseConsumerProguardFiles
+> Task :setting:extractDeepLinksRelease FROM-CACHE
+> Task :toolslibrary:dataBindingTriggerRelease
+> Task :color_picker_library:mergeReleaseShaders
+> Task :toolslibrary:javaPreCompileRelease FROM-CACHE
+> Task :toolslibrary:writeReleaseAarMetadata
+> Task :toolslibrary:extractDeepLinksRelease FROM-CACHE
+
+> Task :setting:processReleaseManifest
+package="com.clean.setting" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.clean.setting" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/AndroidManifest.xml.
+
+> Task :setting:extractProguardFiles
+> Task :setting:prepareLintJarForPublish
+> Task :toolslibrary:extractProguardFiles
+
+> Task :toolslibrary:processReleaseManifest
+package="com.base.toolslibrary" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.base.toolslibrary" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/AndroidManifest.xml.
+
+> Task :toolslibrary:prepareLintJarForPublish
+> Task :stringfogLib:mergeReleaseJavaResource
+> Task :toolslibrary:parseReleaseLocalResources
+> Task :stringfogLib:syncReleaseLibJars
+> Task :toolslibrary:mergeReleaseJniLibFolders
+> Task :color_picker_library:compileReleaseShaders NO-SOURCE
+> Task :color_picker_library:generateReleaseAssets UP-TO-DATE
+> Task :color_picker_library:packageReleaseAssets
+> Task :stringfogLib:bundleReleaseLocalLintAar
+> Task :color_picker_library:prepareReleaseArtProfile
+> Task :setting:mergeReleaseJniLibFolders
+> Task :setting:mergeReleaseNativeLibs NO-SOURCE
+> Task :setting:stripReleaseDebugSymbols NO-SOURCE
+> Task :color_picker_library:mergeReleaseJavaResource
+> Task :setting:extractDeepLinksForAarRelease FROM-CACHE
+> Task :setting:copyReleaseJniLibsProjectAndLocalJars
+> Task :setting:mergeReleaseShaders
+> Task :setting:compileReleaseShaders NO-SOURCE
+> Task :setting:generateReleaseAssets UP-TO-DATE
+> Task :color_picker_library:syncReleaseLibJars
+> Task :color_picker_library:bundleReleaseLocalLintAar
+> Task :color_picker_library:writeReleaseLintModelMetadata
+> Task :stringfogLib:writeReleaseLintModelMetadata
+> Task :setting:packageReleaseAssets
+> Task :setting:prepareReleaseArtProfile
+> Task :setting:writeReleaseLintModelMetadata
+> Task :tools_extra_lib:writeReleaseLintModelMetadata
+> Task :toolsbox:writeReleaseLintModelMetadata
+> Task :color_picker_library:generateReleaseLintVitalModel
+> Task :stringfogLib:generateReleaseLintVitalModel
+> Task :color_picker_library:copyReleaseJniLibsProjectOnly
+> Task :setting:copyReleaseJniLibsProjectOnly
+> Task :stringfogLib:copyReleaseJniLibsProjectOnly
+> Task :tools_extra_lib:copyReleaseJniLibsProjectOnly
+> Task :toolsbox:copyReleaseJniLibsProjectOnly
+> Task :color_picker_library:bundleReleaseAar
+> Task :oversea_base_module:dataBindingGenBaseClassesRelease
+> Task :color_picker_library:mapReleaseSourceSetPaths
+> Task :oversea_base_module:generateStringFogRelease
+> Task :oversea_base_module:generateReleaseRFile
+> Task :oversea_base_module:javaPreCompileRelease FROM-CACHE
+> Task :oversea_base_module:writeReleaseAarMetadata
+> Task :oversea_base_module:extractDeepLinksRelease
+
+> Task :oversea_base_module:processReleaseManifest
+/Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/AndroidManifest.xml:9:5-79 Warning:
+	Element uses-permission#com.google.android.gms.permission.AD_ID at AndroidManifest.xml:9:5-79 duplicated with element declared at AndroidManifest.xml:6:5-78
+/Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/AndroidManifest.xml:85:9-87:35 Warning:
+	Element meta-data#com.google.android.gms.ads.AD_MANAGER_APP at AndroidManifest.xml:85:9-87:35 duplicated with element declared at AndroidManifest.xml:31:9-33:36
+/Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/AndroidManifest.xml:10:5-102 Warning:
+	uses-permission#android.permission.REQUEST_INSTALL_PACKAGES was tagged at AndroidManifest.xml:10 to remove other declarations but no other declaration present
+/Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/AndroidManifest.xml:11:5-12:53 Warning:
+	uses-permission#android.permission.QUERY_ALL_PACKAGES was tagged at AndroidManifest.xml:11 to remove other declarations but no other declaration present
+
+> Task :oversea_base_module:extractProguardFiles
+> Task :oversea_base_module:prepareLintJarForPublish
+> Task :oversea_base_module:mergeReleaseJniLibFolders
+> Task :oversea_base_module:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_base_module:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_base_module:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_base_module:extractDeepLinksForAarRelease
+> Task :oversea_base_module:mergeReleaseShaders
+> Task :oversea_base_module:compileReleaseShaders NO-SOURCE
+> Task :oversea_base_module:generateReleaseAssets UP-TO-DATE
+> Task :oversea_base_module:packageReleaseAssets
+> Task :oversea_base_module:prepareReleaseArtProfile
+> Task :oversea_base_module:writeReleaseLintModelMetadata
+> Task :oversea_base_module:copyReleaseJniLibsProjectOnly
+> Task :toolslibrary:dataBindingGenBaseClassesRelease
+> Task :toolslibrary:generateReleaseRFile
+> Task :oversea_base_module:mapReleaseSourceSetPaths
+> Task :color_picker_library:mergeReleaseResources
+
+> Task :setting:compileReleaseKotlin
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/java/com/cln/setting/AboutToolSetActivity.kt:39:17 Condition is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/java/com/cln/setting/BusSettingFragment.kt:106:46 'fun getPackageInfo(p0: String, p1: Int): PackageInfo!' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/java/com/cln/setting/BusSettingFragment.kt:107:50 'fun getApplicationInfo(p0: String, p1: Int): ApplicationInfo' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/setting/src/main/java/com/cln/setting/ToolsSPref.kt:35:13 Unchecked cast of 'kotlin.Any' to 'T'.
+
+> Task :tools_extra_lib:compileReleaseKotlin
+> Task :tools_extra_lib:compileReleaseJavaWithJavac NO-SOURCE
+
+> Task :oversea_base_power:compileReleaseJavaWithJavac
+注: /Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/oversea_base_power/src/main/java/yias/nchxo/tbi/utils/Check_Util.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :tools_extra_lib:bundleLibCompileToJarRelease
+> Task :tools_extra_lib:bundleLibRuntimeToJarRelease
+> Task :tools_extra_lib:processReleaseJavaRes
+> Task :tools_extra_lib:createFullJarRelease
+> Task :oversea_base_power:bundleLibCompileToJarRelease
+> Task :oversea_base_power:bundleLibRuntimeToJarRelease
+> Task :oversea_base_power:processReleaseJavaRes
+> Task :oversea_base_power:createFullJarRelease
+
+> Task :oversea_common_library:compileReleaseJavaWithJavac
+注: /Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/oversea_common_library/src/main/java/yias/nchxo/tbi/comm/Check_Util.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :oversea_common_library:bundleLibCompileToJarRelease
+> Task :oversea_common_library:bundleLibRuntimeToJarRelease
+> Task :oversea_common_library:processReleaseJavaRes
+> Task :oversea_common_library:createFullJarRelease
+> Task :oversea_common_library:extractProguardFiles
+> Task :oversea_base_power:generateReleaseLintModel
+> Task :oversea_common_library:generateReleaseLintModel
+> Task :oversea_common_library:prepareLintJarForPublish
+> Task :oversea_base_power:mergeReleaseJniLibFolders
+> Task :oversea_base_power:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_base_power:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_common_library:mergeReleaseJniLibFolders
+> Task :oversea_common_library:mergeReleaseNativeLibs NO-SOURCE
+> Task :oversea_common_library:stripReleaseDebugSymbols NO-SOURCE
+> Task :oversea_base_power:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_base_power:extractDeepLinksForAarRelease FROM-CACHE
+> Task :oversea_common_library:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_common_library:extractDeepLinksForAarRelease FROM-CACHE
+> Task :oversea_base_power:extractReleaseAnnotations
+> Task :oversea_base_power:mergeReleaseGeneratedProguardFiles
+> Task :oversea_base_power:mergeReleaseConsumerProguardFiles
+> Task :oversea_common_library:extractReleaseAnnotations
+> Task :oversea_common_library:mergeReleaseGeneratedProguardFiles
+> Task :oversea_base_power:mergeReleaseShaders
+> Task :oversea_base_power:compileReleaseShaders NO-SOURCE
+> Task :oversea_base_power:generateReleaseAssets UP-TO-DATE
+> Task :oversea_base_power:packageReleaseAssets
+> Task :oversea_base_power:prepareReleaseArtProfile
+> Task :oversea_base_power:mergeReleaseJavaResource
+> Task :oversea_base_power:syncReleaseLibJars
+> Task :oversea_base_power:bundleReleaseLocalLintAar
+> Task :oversea_common_library:mergeReleaseConsumerProguardFiles
+> Task :oversea_common_library:mergeReleaseShaders
+> Task :oversea_common_library:compileReleaseShaders NO-SOURCE
+> Task :oversea_common_library:generateReleaseAssets UP-TO-DATE
+> Task :oversea_common_library:packageReleaseAssets
+> Task :oversea_common_library:prepareReleaseArtProfile
+> Task :tools_extra_lib:generateReleaseLintModel
+> Task :tools_extra_lib:mergeReleaseGeneratedProguardFiles
+> Task :oversea_common_library:mergeReleaseJavaResource
+> Task :tools_extra_lib:exportReleaseConsumerProguardFiles
+> Task :oversea_common_library:syncReleaseLibJars
+> Task :toolslibrary:mergeReleaseNativeLibs NO-SOURCE
+> Task :toolslibrary:stripReleaseDebugSymbols NO-SOURCE
+> Task :toolslibrary:copyReleaseJniLibsProjectAndLocalJars
+> Task :oversea_common_library:bundleReleaseLocalLintAar
+> Task :toolslibrary:extractDeepLinksForAarRelease FROM-CACHE
+> Task :toolslibrary:mergeReleaseShaders
+> Task :toolslibrary:compileReleaseShaders NO-SOURCE
+> Task :toolslibrary:generateReleaseAssets UP-TO-DATE
+> Task :oversea_base_power:writeReleaseLintModelMetadata
+> Task :tools_extra_lib:extractReleaseAnnotations
+> Task :tools_extra_lib:mergeReleaseConsumerProguardFiles
+> Task :oversea_common_library:writeReleaseLintModelMetadata
+> Task :tools_extra_lib:mergeReleaseJavaResource
+> Task :tools_extra_lib:syncReleaseLibJars
+> Task :toolslibrary:packageReleaseAssets
+> Task :toolslibrary:prepareReleaseArtProfile
+> Task :tools_extra_lib:bundleReleaseLocalLintAar
+> Task :color_picker_library:verifyReleaseResources
+> Task :toolslibrary:writeReleaseLintModelMetadata
+> Task :oversea_base_power:generateReleaseLintVitalModel
+> Task :oversea_common_library:generateReleaseLintVitalModel
+> Task :tools_extra_lib:generateReleaseLintVitalModel
+> Task :oversea_base_power:copyReleaseJniLibsProjectOnly
+> Task :oversea_common_library:copyReleaseJniLibsProjectOnly
+> Task :toolslibrary:copyReleaseJniLibsProjectOnly
+> Task :oversea_base_power:exportReleaseConsumerProguardFiles
+> Task :oversea_common_library:exportReleaseConsumerProguardFiles
+> Task :color_picker_library:assembleRelease
+> Task :oversea_base_power:compileReleaseLibraryResources
+> Task :oversea_common_library:compileReleaseLibraryResources FROM-CACHE
+> Task :stringfogLib:compileReleaseLibraryResources
+> Task :oversea_base_power:bundleReleaseAar
+> Task :oversea_base_power:mapReleaseSourceSetPaths
+
+> Task :setting:compileReleaseJavaWithJavac
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :setting:bundleLibCompileToJarRelease
+> Task :setting:bundleLibRuntimeToJarRelease
+> Task :setting:processReleaseJavaRes
+> Task :setting:createFullJarRelease
+> Task :setting:generateReleaseLintModel
+> Task :setting:mergeReleaseGeneratedProguardFiles
+> Task :setting:exportReleaseConsumerProguardFiles
+> Task :setting:extractReleaseAnnotations
+> Task :setting:mergeReleaseConsumerProguardFiles
+> Task :setting:mergeReleaseJavaResource
+> Task :setting:syncReleaseLibJars
+> Task :setting:bundleReleaseLocalLintAar
+> Task :stringfogLib:lintVitalAnalyzeRelease
+> Task :setting:generateReleaseLintVitalModel
+> Task :oversea_common_library:bundleReleaseAar
+> Task :oversea_common_library:mapReleaseSourceSetPaths
+> Task :oversea_base_power:mergeReleaseResources
+> Task :oversea_base_module:mergeReleaseResources
+> Task :oversea_common_library:mergeReleaseResources
+
+> Task :toolslibrary:compileReleaseKotlin
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/calculator/CommonJiSuanQiActivity.kt:88:13 Condition is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/util/LedSPref.kt:35:13 Unchecked cast of 'kotlin.Any' to 'T'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/viewModel/YingyuanScreen.kt:252:44 Check for instance is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/viewModel/YingyuanScreen.kt:275:44 Check for instance is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/viewModel/YingyuanScreen.kt:286:44 Check for instance is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/viewModel/YingyuanScreen.kt:311:44 Check for instance is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/led/viewModel/YingyuanScreen.kt:331:44 Check for instance is always 'true'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/news/health/HealthNewsFragment.kt:85:61 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/xiaoyanxiaoyu/JiTangXiaoHuaActivity.kt:84:49 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/xiaoyanxiaoyu/JiTangXiaoHuaActivity.kt:135:49 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/xiaoyanxiaoyu/NaoJinJiZhuanWanActivity.kt:64:49 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/xiaoyanxiaoyu/XiaoHuaDaQuanActivity.kt:74:49 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/activity/xiaoyanxiaoyu/XingZuoYunShiActivity.kt:64:49 Java type mismatch: inferred type is 'kotlin.String?', but 'kotlin.String' was expected.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/toolslibrary/src/main/java/com/base/toolslibrary/utils/SPref.kt:35:13 Unchecked cast of 'kotlin.Any' to 'T'.
+
+> Task :color_picker_library:lintVitalAnalyzeRelease
+> Task :setting:bundleReleaseAar
+> Task :setting:mapReleaseSourceSetPaths
+> Task :oversea_base_power:verifyReleaseResources
+> Task :oversea_base_power:assembleRelease
+> Task :sharedPreferences:preBuild UP-TO-DATE
+> Task :sharedPreferences:preReleaseBuild UP-TO-DATE
+> Task :oversea_common_library:verifyReleaseResources
+> Task :oversea_common_library:assembleRelease
+> Task :stringfogLib:bundleReleaseAar
+> Task :stringfogLib:mapReleaseSourceSetPaths
+> Task :stringfogLib:mergeReleaseResources
+> Task :stringfogLib:verifyReleaseResources
+> Task :stringfogLib:assembleRelease
+> Task :tools_extra_lib:bundleReleaseAar
+> Task :setting:mergeReleaseResources
+> Task :sharedPreferences:mergeReleaseJniLibFolders
+> Task :sharedPreferences:mergeReleaseNativeLibs NO-SOURCE
+> Task :sharedPreferences:stripReleaseDebugSymbols NO-SOURCE
+> Task :sharedPreferences:copyReleaseJniLibsProjectAndLocalJars
+> Task :sharedPreferences:generateReleaseResValues FROM-CACHE
+> Task :sharedPreferences:extractDeepLinksForAarRelease FROM-CACHE
+> Task :sharedPreferences:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :sharedPreferences:generateReleaseResources FROM-CACHE
+> Task :sharedPreferences:packageReleaseResources
+> Task :sharedPreferences:parseReleaseLocalResources FROM-CACHE
+> Task :sharedPreferences:generateReleaseRFile
+> Task :tools_extra_lib:mapReleaseSourceSetPaths
+
+> Task :toolslibrary:compileReleaseJavaWithJavac
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+
+> Task :setting:verifyReleaseResources
+> Task :tools_extra_lib:mergeReleaseResources
+> Task :toolslibrary:mergeReleaseGeneratedProguardFiles
+
+> Task :sharedPreferences:compileReleaseKotlin
+w: file:///Users/lexiong/code/OverSeasWhiteBag/third-module/sharedPreferences/src/main/java/com/shared/preferences/NewSharePreferenceUtils.kt:27:11 Unchecked cast of 'it(kotlin.Comparable<*> & java.io.Serializable)' to 'T'.
+
+> Task :toolslibrary:exportReleaseConsumerProguardFiles
+> Task :toolslibrary:bundleLibCompileToJarRelease
+> Task :toolslibrary:processReleaseJavaRes
+
+> Task :toolsbox:dataBindingMergeDependencyArtifactsRelease
+WARNING: [Processor] Library '/Users/lexiong/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-ui/2.19.1/f2854c993ee7c931a9970c22ca8a35ace6b3d9af/exoplayer-ui-2.19.1.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
+ Example of androidX reference: 'androidx/core/app/NotificationCompat$Builder'
+ Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Token'
+
+> Task :toolslibrary:bundleLibRuntimeToJarRelease
+
+> Task :oversea_base_module:compileReleaseKotlin
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:203:54 'field scaledDensity: Float' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:232:76 'field scaledDensity: Float' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:259:36 'val defaultDisplay: Display!' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:259:51 'fun getRealSize(p0: Point!): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:335:58 'static field FLAG_TRANSLUCENT_STATUS: Int' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:336:30 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:337:22 'static field SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN: Int' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:337:63 'static field SYSTEM_UI_FLAG_LAYOUT_STABLE: Int' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:339:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:368:27 'fun newInstance(): CapturedType(*)!' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:457:14 'var isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:458:14 'fun buildDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:459:24 'val drawingCache: Bitmap!' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:463:14 'fun destroyDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:486:14 'var isDrawingCacheEnabled: Boolean' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:487:14 'fun buildDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:488:24 'val drawingCache: Bitmap!' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:489:31 'fun getStatusBarHeight(context: Context): Int' is deprecated.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/DisplayUtils.kt:493:14 'fun destroyDrawingCache(): Unit' is deprecated. Deprecated in Java.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/MMKVUtils.kt:363:5 'open' has no effect on object.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/edma/eah/MMKVUtils.kt:383:5 'open' has no effect on object.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/nchxo/tbi/base/OverseaAppInitializer.kt:493:16 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'java.util.Date?'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/src/main/java/yias/nchxo/tbi/http/HarmonyUtils.kt:117:34 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'kotlin.Any?'.
+
+> Task :setting:assembleRelease
+> Task :sharedPreferences:extractReleaseAnnotations
+> Task :sharedPreferences:javaPreCompileRelease FROM-CACHE
+> Task :sharedPreferences:compileReleaseJavaWithJavac NO-SOURCE
+> Task :sharedPreferences:mergeReleaseGeneratedProguardFiles
+> Task :sharedPreferences:mergeReleaseConsumerProguardFiles
+> Task :sharedPreferences:mergeReleaseShaders
+> Task :sharedPreferences:compileReleaseShaders NO-SOURCE
+> Task :sharedPreferences:generateReleaseAssets UP-TO-DATE
+> Task :sharedPreferences:packageReleaseAssets
+> Task :sharedPreferences:prepareLintJarForPublish
+> Task :sharedPreferences:prepareReleaseArtProfile
+
+> Task :sharedPreferences:processReleaseManifest
+package="com.shared.preferences" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/sharedPreferences/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.shared.preferences" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/third-module/sharedPreferences/src/main/AndroidManifest.xml.
+
+> Task :sharedPreferences:processReleaseJavaRes
+> Task :sharedPreferences:mergeReleaseJavaResource
+> Task :sharedPreferences:syncReleaseLibJars
+> Task :sharedPreferences:writeReleaseAarMetadata
+> Task :sharedPreferences:bundleReleaseAar
+> Task :app:generateReleaseJunkCode
+> Task :app:generateReleaseResValues FROM-CACHE
+> Task :app:generateReleaseResources
+> Task :app:injectCrashlyticsMappingFileIdRelease
+> Task :sharedPreferences:mapReleaseSourceSetPaths
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:injectCrashlyticsVersionControlInfoRelease
+> Task :app:processReleaseGoogleServices
+> Task :toolslibrary:generateReleaseLintModel
+> Task :toolslibrary:createFullJarRelease
+> Task :sharedPreferences:mergeReleaseResources
+> Task :toolslibrary:extractReleaseAnnotations
+
+> Task :oversea_base_module:compileReleaseJavaWithJavac
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+
+> Task :toolslibrary:mergeReleaseConsumerProguardFiles
+> Task :toolsbox:dataBindingGenBaseClassesRelease
+> Task :tools_extra_lib:verifyReleaseResources
+> Task :toolslibrary:mergeReleaseJavaResource
+> Task :toolslibrary:syncReleaseLibJars
+> Task :toolslibrary:bundleReleaseLocalLintAar
+> Task :toolslibrary:generateReleaseLintVitalModel
+> Task :tools_extra_lib:assembleRelease
+> Task :color_picker_library:compileReleaseLibraryResources
+> Task :oversea_base_module:processReleaseJavaRes
+> Task :setting:lintVitalAnalyzeRelease
+> Task :sharedPreferences:verifyReleaseResources
+> Task :sharedPreferences:assembleRelease
+> Task :tools_extra_lib:compileReleaseLibraryResources
+> Task :oversea_base_module:transformReleaseClassesWithAsm
+> Task :toolslibrary:bundleReleaseAar
+> Task :toolslibrary:mapReleaseSourceSetPaths
+> Task :toolsbox:mapReleaseSourceSetPaths
+> Task :setting:compileReleaseLibraryResources
+> Task :oversea_base_module:generateReleaseLintModel
+> Task :oversea_base_module:bundleLibCompileToJarRelease
+> Task :oversea_base_module:bundleLibRuntimeToJarRelease
+> Task :oversea_base_module:createFullJarRelease
+> Task :oversea_base_module:extractReleaseAnnotations
+> Task :oversea_base_module:mergeReleaseGeneratedProguardFiles
+> Task :oversea_base_module:mergeReleaseConsumerProguardFiles
+> Task :oversea_base_module:mergeReleaseJavaResource
+> Task :oversea_base_module:syncReleaseLibJars
+> Task :oversea_base_module:bundleReleaseLocalLintAar
+> Task :toolslibrary:compileReleaseLibraryResources
+> Task :oversea_base_module:generateReleaseLintVitalModel
+> Task :oversea_base_module:exportReleaseConsumerProguardFiles
+> Task :oversea_base_module:bundleReleaseAar
+> Task :oversea_common_library:lintVitalAnalyzeRelease
+> Task :toolslibrary:mergeReleaseResources
+
+> Task :toolsbox:compileReleaseKotlin
+w: file:///Users/lexiong/code/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/d/PRZE.kt:94:13 Condition is always 'false'.
+w: file:///Users/lexiong/code/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/d/PRZE.kt:106:13 Condition is always 'true'.
+
+> Task :oversea_base_power:lintVitalAnalyzeRelease
+> Task :toolsbox:mergeReleaseResources
+> Task :toolslibrary:verifyReleaseResources
+> Task :toolslibrary:assembleRelease
+
+> Task :toolsbox:compileReleaseJavaWithJavac
+注: /Users/lexiong/code/OverSeasWhiteBag/toolsbox_moduel/toolsbox/src/main/java/e/PRZW.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :toolsbox:mergeReleaseGeneratedProguardFiles
+> Task :toolsbox:processReleaseJavaRes
+> Task :toolsbox:bundleLibCompileToJarRelease
+> Task :toolsbox:mergeReleaseJavaResource
+> Task :toolsbox:generateReleaseLintModel
+> Task :oversea_base_module:verifyReleaseResources
+> Task :oversea_base_module:assembleRelease
+> Task :oversea_base_module:lintVitalAnalyzeRelease
+> Task :app:packageReleaseResources
+> Task :app:dataBindingMergeDependencyArtifactsRelease
+> Task :tools_extra_lib:lintVitalAnalyzeRelease
+> Task :app:dataBindingTriggerRelease
+> Task :app:parseReleaseLocalResources
+> Task :toolsbox:extractReleaseAnnotations
+> Task :toolsbox:mergeReleaseConsumerProguardFiles
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :app:checkReleaseAarMetadata
+> Task :toolsbox:generateReleaseLintVitalModel
+> Task :toolsbox:exportReleaseConsumerProguardFiles
+
+> Task :app:processReleaseMainManifest
+package="tmlr.hti.caqq" found in source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/app/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="tmlr.hti.caqq" from the source AndroidManifest.xml: /Users/lexiong/code/OverSeasWhiteBag/app/src/main/AndroidManifest.xml.
+[com.pangle.global:pag-sdk:7.8.5.8] /Users/lexiong/.gradle/caches/8.9/transforms/741d6e37c5cecd06dd219c545f7d0290/transformed/jetified-pag-sdk-7.8.5.8/AndroidManifest.xml Warning:
+	Namespace 'com.bytedance' is used in multiple modules and/or libraries: com.pangle.global:pag-sdk:7.8.5.8, com.pangle.global:pag-sdk-ad:unfat-7858-20260113200610-release. Please ensure that all modules and libraries have a unique namespace. For more information, See https://developer.android.com/studio/build/configure-app-module#set-namespace
+[:oversea_base_module] /Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:12:5-79 Warning:
+	Element uses-permission#com.google.android.gms.permission.AD_ID at [:oversea_base_module] AndroidManifest.xml:12:5-79 duplicated with element declared at [:oversea_base_module] AndroidManifest.xml:10:5-79
+[:oversea_base_module] /Users/lexiong/code/OverSeasWhiteBag/oversea_base_module/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml:100:9-102:36 Warning:
+	Element meta-data#com.google.android.gms.ads.AD_MANAGER_APP at [:oversea_base_module] AndroidManifest.xml:100:9-102:36 duplicated with element declared at [:oversea_base_module] AndroidManifest.xml:41:9-43:36
+/Users/lexiong/code/OverSeasWhiteBag/app/src/main/AndroidManifest.xml Warning:
+	uses-permission#android.permission.REQUEST_INSTALL_PACKAGES was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+/Users/lexiong/code/OverSeasWhiteBag/app/src/main/AndroidManifest.xml Warning:
+	uses-permission#android.permission.QUERY_ALL_PACKAGES was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+/Users/lexiong/code/OverSeasWhiteBag/app/src/main/AndroidManifest.xml:6:5-30:19 Warning:
+	application@android:usesCleartextTraffic was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
+
+> Task :app:mergeReleaseJunkCodeManifest
+> Task :app:processReleaseManifest
+> Task :app:javaPreCompileRelease FROM-CACHE
+> Task :app:extractProguardFiles
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:processReleaseManifestForPackage
+> Task :app:mergeReleaseNativeLibs
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:mergeReleaseStartupProfile
+> Task :app:mergeReleaseShaders
+> Task :app:mergeReleaseArtProfile
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libBugly_Native.so, libaap.so, liballiance.so, libamour.so, libapminsighta.so, libapminsightb.so, libapplovin-native-crash-reporter.so, libbuffer_pgl.so, libc++_shared.so, libdatastore_shared_counter.so, libfile_lock_pgl.so, libkste.so, libmmkv.so, libnms.so, libpglarmor.so, libsgcore.so, libsigner.so, libtase.so, libtt_ugen_layout.so, libweapon.so, libzen.so.
+
+> Task :app:mergeReleaseAssets
+> Task :app:mergeReleaseResources
+> Task :app:extractReleaseNativeSymbolTables
+> Task :toolsbox:verifyReleaseResources
+> Task :app:dataBindingGenBaseClassesRelease
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:compressReleaseAssets
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:processReleaseResources
+> Task :toolsbox:minifyReleaseWithR8
+> Task :toolsbox:bundleLibRuntimeToJarRelease
+> Task :toolsbox:syncReleaseLibJars
+> Task :toolsbox:createFullJarRelease
+> Task :toolsbox:bundleReleaseLocalLintAar
+> Task :toolsbox:bundleReleaseAar
+> Task :toolsbox:assembleRelease
+> Task :app:convertLinkedResourcesToProtoRelease
+> Task :app:compileReleaseKotlin
+> Task :toolslibrary:lintVitalAnalyzeRelease
+
+> Task :app:compileReleaseJavaWithJavac
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :toolsbox:lintVitalAnalyzeRelease
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeReleaseGeneratedProguardFiles
+> Task :app:processReleaseJavaRes
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:mergeReleaseJavaResource
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:minifyReleaseWithR8
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.framework.adCommon.activity.AllianceEmptyShellActivity
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.ni
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.ti
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.ki
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.pi
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.oi
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.feature.reward.kwai.KwaiRewardFragment
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.qi
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.feature.interstitial.kwai.KwaiInterstitialFragment
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.o4
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.feature.reward.kwai.view.AdGestureLayout
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.s3
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.kv
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.si
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.hb
+WARNING: /Users/lexiong/.gradle/caches/8.9/transforms/291201735591477155576e55d1f6b76c/transformed/jetified-adImpl-1.2.21-runtime.jar: R8: The companion object Companion could not be found in class com.kwai.network.a.dt
+WARNING: R8: Missing class com.android.billingclient.api.BillingClient (referenced from: com.android.billingclient.api.BillingClient com.tiktok.iap.TTInAppPurchaseWrapper.mBillingClient and 1 other context)
+Missing class com.android.billingclient.api.BillingClientStateListener (referenced from: void com.tiktok.iap.TTInAppPurchaseWrapper.startBillingClient() and 1 other context)
+Missing class com.facebook.infer.annotation.Nullsafe$Mode (referenced from: com.facebook.ads.AbstractAdListener and 31 other contexts)
+Missing class com.facebook.infer.annotation.Nullsafe (referenced from: com.facebook.ads.AbstractAdListener and 31 other contexts)
+Missing class com.huawei.appgallery.log.LogAdaptor (referenced from: void com.huawei.appgallery.serviceverifykit.d.d.a.<init>() and 5 other contexts)
+Missing class com.tp.adx.sdk.exceptions.IntentNotResolvableException (referenced from: void com.tp.vast.VastVideoConfig$handleClick$urlHandler$1.urlHandlingSucceeded(java.lang.String, com.tp.adx.sdk.util.UrlAction))
+Missing class com.tradplus.china.common.ApkDownloadManager (referenced from: void com.tradplus.crosspro.manager.CPAdManager.realStartDownloadApp(java.lang.String, com.tradplus.ads.base.network.response.CPAdResponse, java.lang.String))
+Missing class com.tradplus.china.common.download.ApkRequest (referenced from: void com.tradplus.crosspro.manager.CPAdManager.realStartDownloadApp(java.lang.String, com.tradplus.ads.base.network.response.CPAdResponse, java.lang.String))
+Missing class com.tradplus.china.common.resource.ApkResource (referenced from: void com.tradplus.crosspro.manager.CPAdManager.realStartDownloadApp(java.lang.String, com.tradplus.ads.base.network.response.CPAdResponse, java.lang.String))

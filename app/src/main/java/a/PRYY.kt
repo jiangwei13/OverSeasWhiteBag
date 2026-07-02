@@ -1,23 +1,23 @@
-package nwq
+package a
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
 import com.example.overseaswhitebag.common.utils.AdjustTokens
-import com.p.b.base.BaseApplication
-import com.p.b.base.OverseaAppInitializer.appBaseContext
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
+import yias.nchxo.tbi.base.BaseApplication
+import yias.nchxo.tbi.base.OverseaAppInitializer.appBaseContext
+import yias.edma.eah.SPUtils
+import yias.edma.eah.adjust.AdJustTokenAFUtils
 import com.tanout.TAN
 
-class YQK : BaseApplication() {
+class PRYY : BaseApplication() {
 
     companion object {
         var isBackgroundLaunch: Boolean = false
 
         @JvmStatic
-        var appInstance: YQK? = null
+        var appInstance: PRYY? = null
     }
 
     override fun onCreate() {

@@ -1,4 +1,4 @@
-package nwr;
+package b;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import tmlr.hti.caqq.R;
 
-import com.mukuled.ledlightgp.activity.MtTwoActivity;
+import d.PRZE;
 
 @SuppressLint("CustomSplashScreen")
-public class YQL extends AppCompatActivity {
+public class PRYZ extends AppCompatActivity {
 
     FrameLayout splashContainer;
 
@@ -25,7 +25,7 @@ public class YQL extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splashContainer = findViewById(R.id.splashView);
 
-        //        boolean isAgreementAccepted = YQU.with(this).load().read("isAgreementAccepted", false);
+        //        boolean isAgreementAccepted = PRZS.with(this).load().read("isAgreementAccepted", false);
         //        if (!isAgreementAccepted) {
         //            showAgreementDialog();
         //        } else {
@@ -35,12 +35,12 @@ public class YQL extends AppCompatActivity {
     }
 
     private void showAgreementDialog() {
-//        YQU agreementDialog = new YQU(this, R.style.dialog);
+//        PRZS agreementDialog = new PRZS(this, R.style.dialog);
 //        agreementDialog.show();
-//        agreementDialog.setDialogListener(new YQU.OnProtocolDialogListener() {
+//        agreementDialog.setDialogListener(new PRZS.OnProtocolDialogListener() {
 //            @Override
 //            public void agree() {
-//                YQU.with(YQL.this).load().save("isAgreementAccepted", true);
+//                PRZS.with(PRYZ.this).load().save("isAgreementAccepted", true);
 //                navigateToHome();
 //            }
 //
@@ -55,7 +55,7 @@ public class YQL extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent mainIntent = new Intent(YQL.this, MtTwoActivity.class);
+                Intent mainIntent = new Intent(PRYZ.this, PRZE.class);
                 startActivity(mainIntent);
                 finish();
             }
@@ -64,7 +64,7 @@ public class YQL extends AppCompatActivity {
         //        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashContainer, new AuditAdUtilsNew.onSplashAdListener() {
         //            @Override
         //            public void splashEnd() {
-        //                Intent mainIntent = new Intent(YQL.this, MtTwoActivity.class);
+        //                Intent mainIntent = new Intent(PRYZ.this, PRZE.class);
         //                startActivity(mainIntent);
         //                finish();
         //            }

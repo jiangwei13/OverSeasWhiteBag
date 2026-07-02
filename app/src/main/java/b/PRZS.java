@@ -1,4 +1,4 @@
-package nwr;
+package b;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
@@ -14,11 +14,11 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class YQU {
-    private static YQU sInstance;
+public class PRZS {
+    private static PRZS sInstance;
     private Context mContext;
 
-    public YQU(Context context) {
+    public PRZS(Context context) {
         mContext = context;
     }
 
@@ -29,11 +29,11 @@ public class YQU {
      * @param context context
      * @return the single instance
      */
-    public static YQU with(Context context) {
-        synchronized (YQU.class) {
+    public static PRZS with(Context context) {
+        synchronized (PRZS.class) {
             if (sInstance == null) {
                 //不要直接引用contex，防止内存泄漏
-                sInstance = new YQU(context.getApplicationContext());
+                sInstance = new PRZS(context.getApplicationContext());
             }
         }
 
