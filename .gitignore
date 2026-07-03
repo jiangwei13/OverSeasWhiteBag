@@ -41,3 +41,4 @@ local.properties
 /aar_library/aar_name/build/
 /aar_library/aar_name2/build/
 *.log
+.gradle-home/
