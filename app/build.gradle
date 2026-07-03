@@ -189,6 +189,7 @@ dependencies {
 //    implementation 'com.github.tiann:FreeReflectioneReflection:3.1.0'
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
+    implementation project(':stringfogLib')
     // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
     // oversea_base_module 仅以 implementation 引用，可见性不传递，故在此显式引入。
     implementation project(':oversea_common_library')

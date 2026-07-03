@@ -38,3 +38,6 @@ local.properties
 # 编译输出
 .idea/compiler.xml
 .idea/jarRepositories.xml
+/aar_library/aar_name/build/
+/aar_library/aar_name2/build/
+*.log

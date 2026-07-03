@@ -35,7 +35,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         // android-junk-code 1.3.4 的 group 为 io.github.qq549631030
         classpath "io.github.qq549631030:android-junk-code:1.3.4"
-        classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
+        // XmlClassGuard 1.2.5 使用 buildSrc 内置版本，避免远程插件与本地补丁冲突
         // Compose Compiler
         classpath "org.jetbrains.kotlin.plugin.compose:org.jetbrains.kotlin.plugin.compose.gradle.plugin:$kotlin_version"
 
@@ -46,8 +46,8 @@ buildscript {
 
 
 plugins {
-    id 'com.android.application' version '8.7.0' apply false
-    id 'com.android.library' version '8.7.0' apply false
+    id 'com.android.application' apply false
+    id 'com.android.library' apply false
     id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
     id("com.google.gms.google-services") version "4.4.4" apply false
     id("com.google.firebase.crashlytics") version "3.0.6" apply false
