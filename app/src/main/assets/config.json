@@ -80,24 +80,7 @@
     }
   ],
   "config": {
-    "ka": true,
-    "kp": true,
-    "dialog": true,
-    "timerCount": [
-      5,
-      8,
-      10,
-      20,
-      100
-    ],
-    "timerMinute": [
-      1,
-      8,
-      10,
-      20,
-      30
-    ],
-    "hour_turn_time": 10,
+    "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
       "ipu": 0,
       "arpu": 0,
