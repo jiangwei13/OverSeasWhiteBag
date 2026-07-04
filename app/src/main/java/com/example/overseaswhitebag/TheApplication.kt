@@ -10,6 +10,7 @@ import com.b.w.BaseJksApplication
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
+import com.p.b.ad.runtime.AdLifecycleInstaller
 
 class TheApplication : BaseJksApplication(), OverseaAppHost {
 
@@ -26,6 +27,7 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
         OverseaAppInitializer.init(this, this)
         // 保证白包有 context
         APPContext.setApplication(this)
+        AdLifecycleInstaller.install(this)
     }
 
     // ApplicationListener.openLaunch —— 原由 BaseApplication 提供，切到 BaseJksApplication 后由自身实现：转调 openLaunchByOther

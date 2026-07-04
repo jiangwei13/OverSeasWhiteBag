@@ -3,22 +3,22 @@ package com.example.overseaswhitebag.privacy;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.FrameLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.clean.toos.R;
-import com.p.b.ad.AdViewMana;
+import com.p.b.ad.runtime.AdPreloadHelper;
+import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 import com.xian.bc.accounts.ui.ScanMenuMainActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
     private static final String AGREEMENT_KEY = "isAgreement";
-    private static final long SPLASH_DELAY_MS = 3000L;
+    private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
 
-    private final Handler handler = new Handler();
     private FrameLayout splashView;
+    private boolean hasNavigated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +52,21 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void toMain() {
-        AdViewMana.initView(this, "in_tab");
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashActivity.this, ScanMenuMainActivity.class));
-                finish();
-            }
-        }, SPLASH_DELAY_MS);
+        AdPreloadHelper.preloadLaunch(this);
+        new FirstSplashAdFixTimeOut().loadSplash(this, splashView, SPLASH_WAIT_TIMEOUT_MS, this::openMainOnce);
+    }
+
+    private void openMainOnce() {
+        if (hasNavigated || isFinishing()) {
+            return;
+        }
+        hasNavigated = true;
+        startActivity(new Intent(SplashActivity.this, ScanMenuMainActivity.class));
+        finish();
     }
 
     @Override
     protected void onDestroy() {
-        handler.removeCallbacksAndMessages(null);
         splashView = null;
         super.onDestroy();
     }
