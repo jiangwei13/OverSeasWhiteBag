@@ -6,7 +6,7 @@
       "ad_list_beans": [
         {
           "key": "one_splash",
-          "type": "splash",
+          "type": "in_splash",
           "gm_id": "",
           "enable": true,
           "placement_id": "17AD84C8DDF5B16DA1E5E26F69E22A12"
@@ -19,7 +19,7 @@
       "ad_list_beans": [
         {
           "key": "one_tab_inter",
-          "type": "inter",
+          "type": "in_inter",
           "gm_id": "",
           "enable": true,
           "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
@@ -32,7 +32,7 @@
       "ad_list_beans": [
         {
           "key": "one_page_native",
-          "type": "native",
+          "type": "in_native",
           "gm_id": "",
           "enable": true,
           "placement_id": "8A7C50FABDF598C4BBCEB8E72614FE12"
@@ -45,14 +45,14 @@
       "ad_list_beans": [
         {
           "key": "one_function_reward",
-          "type": "reword_video",
+          "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
           "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
         },
         {
           "key": "one_function_inter",
-          "type": "inter",
+          "type": "in_inter",
           "gm_id": "",
           "enable": false,
           "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
@@ -65,7 +65,7 @@
       "ad_list_beans": [
         {
           "key": "one_back_inter",
-          "type": "inter",
+          "type": "in_inter",
           "gm_id": "",
           "enable": true,
           "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
