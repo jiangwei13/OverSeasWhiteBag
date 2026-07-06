@@ -1,37 +1,45 @@
-package com.example.overseaswhitebag
+package spi.ocjd.wqz
 
+import spi.jba.igw.WXFQ
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import spi.jba.igw.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object WXER {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_DBzFLnEf = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_AFphbXU  = (arr_DBzFLnEf  shl 12) xor (arr_DBzFLnEf  shr 96)
+         val j_eeTDaLDoYtdbd  = i_AFphbXU .inv() and 0xFFFF
+         if (j_eeTDaLDoYtdbd  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_peOPAw")
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
-        android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        WXFQ.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "15cdp8";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "vqotp8";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "e6741h";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "siux4n";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "7xm6un";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="uju518";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
-                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="7kum4e";
+                spi.jba.igw.adjust.AjConstants.Companion.Login = "";
+                spi.jba.igw.adjust.AjConstants.Companion.Reg = "";
+                spi.jba.igw.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu = "15cdp8";
+                spi.jba.igw.adjust.AjConstants.Companion.arpu = "vqotp8";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
+                spi.jba.igw.adjust.AjConstants.Companion.blacklist = "e6741h";
+                spi.jba.igw.adjust.AjConstants.Companion.ad_request = "siux4n";
+                spi.jba.igw.adjust.AjConstants.Companion.ad_full = "7xm6un";
+                spi.jba.igw.adjust.AjConstants.Companion.firebase_request ="uju518";
+                spi.jba.igw.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
+                spi.jba.igw.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
+                spi.jba.igw.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
+                spi.jba.igw.adjust.AjConstants.Companion.activity_app ="";
+                spi.jba.igw.adjust.AjConstants.Companion.LiveTime ="7kum4e";
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "33pnl9";
                 AjConstants.ad_tick_fire = "2vh2p6";
@@ -75,18 +83,18 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                spi.jba.igw.adjust.AjConstants.Companion.Login = "";
+                spi.jba.igw.adjust.AjConstants.Companion.Reg = "";
+                spi.jba.igw.adjust.AjConstants.Companion.topon_ilrd = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu = "";
+                spi.jba.igw.adjust.AjConstants.Companion.arpu = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_arpu = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_ecpm = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
+                spi.jba.igw.adjust.AjConstants.Companion.blacklist = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ad_request = "";
+                spi.jba.igw.adjust.AjConstants.Companion.ad_full = "";
+                spi.jba.igw.adjust.AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
@@ -547,30 +555,30 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                WXFQ.d("WXER", "测试")
                 //com.test.app
-                Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                WXFQ.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                WXFQ.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                Log.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                WXFQ.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                Log.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                WXFQ.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                Log.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                WXFQ.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                Log.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                WXFQ.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                Log.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                WXFQ.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                Log.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                WXFQ.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                Log.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                WXFQ.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                WXFQ.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
                 AjConstants.ad_tick_fire = ""
