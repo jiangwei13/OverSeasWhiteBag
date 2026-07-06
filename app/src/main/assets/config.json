@@ -15,10 +15,10 @@
     },
     {
       "enable": true,
-      "scene_key": "in_inter",
+      "scene_key": "in_tab",
       "ad_list_beans": [
         {
-          "key": "one_inter",
+          "key": "one_tab_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
@@ -28,10 +28,10 @@
     },
     {
       "enable": true,
-      "scene_key": "in_native",
+      "scene_key": "in_page",
       "ad_list_beans": [
         {
-          "key": "one_native",
+          "key": "one_page_native",
           "type": "native",
           "gm_id": "",
           "enable": true,
@@ -41,14 +41,34 @@
     },
     {
       "enable": true,
-      "scene_key": "in_reward_video",
+      "scene_key": "in_function",
       "ad_list_beans": [
         {
-          "key": "one_reward",
+          "key": "one_function_reward",
           "type": "reword_video",
           "gm_id": "",
           "enable": true,
           "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
+        },
+        {
+          "key": "one_function_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": false,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_back",
+      "ad_list_beans": [
+        {
+          "key": "one_back_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
         }
       ]
     },
