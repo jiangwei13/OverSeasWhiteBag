@@ -15,7 +15,6 @@ object AdjustTokens {
         android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "1acsweg3uvpc";
                 com.p.b.common.adjust.AjConstants.Companion.Login = "";
                 com.p.b.common.adjust.AjConstants.Companion.Reg = "";
                 com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
@@ -76,7 +75,6 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.adjustAppToken = "";
                 com.p.b.common.adjust.AjConstants.Companion.Login = "";
                 com.p.b.common.adjust.AjConstants.Companion.Reg = "";
                 com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
@@ -136,7 +134,6 @@ object AdjustTokens {
             }
 
             "SX" -> {
-                AjConstants.adjustAppToken = "";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "";
@@ -196,7 +193,6 @@ object AdjustTokens {
             }
 
             "OP" -> {
-                AjConstants.adjustAppToken = "";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "";
@@ -256,7 +252,6 @@ object AdjustTokens {
             }
 
             "VO" -> {
-                AjConstants.adjustAppToken = "";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "";
@@ -316,7 +311,6 @@ object AdjustTokens {
             }
 
             "CY" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -376,7 +370,6 @@ object AdjustTokens {
             }
 
             "XM" -> {
-                AjConstants.adjustAppToken = "";
                 AjConstants.Login = "";
                 AjConstants.Reg = "";
                 AjConstants.topon_ilrd = "";
@@ -436,7 +429,6 @@ object AdjustTokens {
             }
 
             "RY" ->{
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -496,7 +488,6 @@ object AdjustTokens {
             }
 
             "OL" ->{
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -558,7 +549,6 @@ object AdjustTokens {
             else -> {
                 Log.d("AdjustTokens", "测试")
                 //com.test.app
-                AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
                 Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
