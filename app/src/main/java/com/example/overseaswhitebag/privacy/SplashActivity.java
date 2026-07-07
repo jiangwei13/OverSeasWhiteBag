@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
-    private static final String AGREEMENT_KEY = "isAgreement";
     private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
 
     private FrameLayout splashView;
@@ -26,29 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         splashView = findViewById(R.id.splashView);
 
-        boolean isAgreement = SPUtil.with(this).load().read(AGREEMENT_KEY, false);
-        if (isAgreement) {
-            toMain();
-        } else {
-            showProtocolDialog();
-        }
-    }
-
-    private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                SPUtil.with(SplashActivity.this).load().save(AGREEMENT_KEY, true);
-                toMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
-        protocolDialog.show();
+        toMain();
     }
 
     private void toMain() {
