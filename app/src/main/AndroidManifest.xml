@@ -4,7 +4,7 @@
     package="com.clean.toos">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name="com.example.overseaswhitebag.TheApplication"
+        android:name="ymba.wzix.xokk.PDMU"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,7 +16,7 @@
         tools:replace="android:icon,android:dataExtractionRules,android:fullBackupContent"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
-            android:name="com.example.overseaswhitebag.privacy.SplashActivity"
+            android:name="ymba.vnf.hkzse.YPPA"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.overseaswhitebag.privacy.XieYiActivity" />
+        <activity android:name="ymba.vnf.hkzse.YPPB" />
 
 
     </application>
