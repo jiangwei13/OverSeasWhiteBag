@@ -1,15 +1,15 @@
-package nmu.qaki.mxft
+package a
 
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import lgq.kczgd.xehk.adjust.AjConstants
 
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object YSGD {
     fun initAdJustToken(context: Context) {
         //adJust 打点需要初始化
         val channel: String = WalleChannelReader.getChannel(context, "GP").toString()
@@ -133,7 +133,7 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                Log.d("YSGD", "测试")
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
                 Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)

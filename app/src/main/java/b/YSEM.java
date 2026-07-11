@@ -1,4 +1,4 @@
-package a;
+package b;
 
 import android.annotation.SuppressLint;
 import android.content.ComponentName;
@@ -9,11 +9,11 @@ import android.os.Handler;
 import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import nmu.qaki.mxft.R;
-import com.p.b.ad.AdViewMana;
-import com.fangda.MainTwoActivity;
+import lgq.awz.gwpw.ad.AdViewMana;
+import d.YSER;
 
 @SuppressLint("CustomSplashScreen")
-public class VPDF extends AppCompatActivity {
+public class YSEM extends AppCompatActivity {
 
     FrameLayout splashView;
 
@@ -61,8 +61,8 @@ public class VPDF extends AppCompatActivity {
                         ckuyRmgSUOhbdF = pmh_RzStd;
                     }
                 }
-                Intent it = new Intent(VPDF.this, MainTwoActivity.class);
-                // Intent it = new Intent(VPDF.this, CalculateActivity.class);
+                Intent it = new Intent(YSEM.this, YSER.class);
+                // Intent it = new Intent(YSEM.this, CalculateActivity.class);
                 startActivity(it);
                 finish();
             }
