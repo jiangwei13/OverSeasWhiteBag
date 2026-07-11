@@ -45,6 +45,7 @@ class BGSK : BaseApplication() {
 
     override fun initKeepPower(app: Application) {
         //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
-        Amour.Init(app,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        val versionName = app.packageManager.getPackageInfo(app.packageName, 0).versionName.orEmpty()
+        Amour.Init(app, SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId(), versionName)
     }
 }
