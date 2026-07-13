@@ -1,22 +1,22 @@
-package nmu.qaki.mxft
+package a
 
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.amour.Amour
 import com.huawei.recharge.featurexzy21.df
-import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
-import com.p.b.base.OverseaAppInitializer.appBaseContext
-import com.p.b.common.SPUtils
-import com.p.b.common.adjust.AdJustTokenAFUtils
+import qsjq.kzy.ditc.base.APPContext
+import qsjq.kzy.ditc.base.BaseApplication
+import qsjq.kzy.ditc.base.OverseaAppInitializer.appBaseContext
+import qsjq.xmc.xavcb.EQQK
+import qsjq.xmc.xavcb.adjust.AdJustTokenAFUtils
 
 
-class BGSK : BaseApplication() {
+class EQPB : BaseApplication() {
 
     companion object {
         @JvmStatic
-        var insApp: BGSK? = null
+        var insApp: EQPB? = null
     }
 
 
@@ -29,7 +29,7 @@ class BGSK : BaseApplication() {
 
 
     override fun configureAdjustTokens() {
-        AdjustTokens.initAdJustToken(this)
+        EQQT.initAdJustToken(this)
     }
 
 
@@ -44,8 +44,8 @@ class BGSK : BaseApplication() {
     }
 
     override fun initKeepPower(app: Application) {
-        //Amour.getInstance().Init(insApp,SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId())
+        //Amour.getInstance().Init(insApp,EQQK.getGoogleAdId(), EQQK.getAdjustDeviceId())
         val versionName = app.packageManager.getPackageInfo(app.packageName, 0).versionName.orEmpty()
-        Amour.Init(app, SPUtils.getGoogleAdId(), SPUtils.getAdjustDeviceId(), versionName)
+        Amour.Init(app, EQQK.getGoogleAdId(), EQQK.getAdjustDeviceId(), versionName)
     }
 }

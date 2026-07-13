@@ -1,4 +1,4 @@
-package nmu.qaki.mxft
+package a
 
 import nmu.qaki.mxft.R
 
@@ -8,7 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 
 
-class AFEK : AppCompatActivity() {
+class EQQU : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
                       val faqIMCZgZabCP = intArrayOf(88, 87)
         val YfLkzHcLWxk = faqIMCZgZabCP.size
