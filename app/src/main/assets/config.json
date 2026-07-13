@@ -121,8 +121,8 @@
     "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
       "ipu": 1,
-      "arpu": 0,
-      "ecpm": 0.0001
+      "arpu": 0.0001,
+      "ecpm": 0
     },
     "tab_switch": {
       "enable": true,
