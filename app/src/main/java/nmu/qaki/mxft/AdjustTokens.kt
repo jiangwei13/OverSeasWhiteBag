@@ -16,27 +16,26 @@ object AdjustTokens {
         Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" -> {
-                AjConstants.adjustAppToken = "jyf5ttus95vk"
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
-                AjConstants.topon_ilrd = "tbacjn"
-                AjConstants.ipu = "lbrh5z"
-                AjConstants.arpu = "7ro82y"
-                AjConstants.ipu_arpu = "hud23h"
-                AjConstants.ipu_ecpm = "e3w1jg"
-                AjConstants.ipu_arpu_ecpm = "jcnrkt"
-                AjConstants.blacklist = "uw2pgz"
-                AjConstants.ad_request = "80sr6p"
+                AjConstants.topon_ilrd = "edf7bo"
+                AjConstants.ipu = "refvlm"
+                AjConstants.arpu = "7z8jzk"
+                AjConstants.ipu_arpu = "t43z5p"
+                AjConstants.ipu_ecpm = "eznnot"
+                AjConstants.ipu_arpu_ecpm = "mkoa46"
+                AjConstants.blacklist = "9xu8ai"
+                AjConstants.ad_request = "1700w9"
                 AjConstants.ad_full = "pb08td"
-                AjConstants.firebase_request = "3lmpv0"
-                AjConstants.firebase_success = "87c4qh"
-                AjConstants.adJust_attribution_request = "c216zb"
-                AjConstants.adJust_attribution_success = "g7psqk"
-                AjConstants.LiveTime = "oj4vg0"
+                AjConstants.firebase_request = "2s6dox"
+                AjConstants.firebase_success = "ba1ynt"
+                AjConstants.adJust_attribution_request = "dybuhb"
+                AjConstants.adJust_attribution_success = "cyehe4"
+                AjConstants.LiveTime = "ewx6zb"
                 AjConstants.bh_init = "jxq0if"
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
-                AjConstants.ad_fail = "vbsns0"
+                AjConstants.ad_fail = "gzqpee"
                 AjConstants.ad_tick_fire = "nn6ikm"
                 AjConstants.ad_tick_init = "qd6f9g"
                 AjConstants.ad_tick_config_missing = "qpv6gz"
@@ -78,7 +77,6 @@ object AdjustTokens {
             }
 
             "HW", "SX", "OP", "VO", "CY", "XM", "RY", "OL" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -136,7 +134,6 @@ object AdjustTokens {
 
             else -> {
                 Log.d("AdjustTokens", "测试")
-                AjConstants.adjustAppToken = "h34rdv64os8w"
                 Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
                 Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
