@@ -108,25 +108,49 @@
     },
     "country": {
       "br": {
-        "enable": true,
+        "enable": false,
         "ipu_arpu_ecpm": {
-          "ipu": 1,
-          "arpu": 0.0001,
+          "ipu": 5,
+          "arpu": 0.1,
           "ecpm": 0
         }
       },
-      "jp": {
+      "id": {
         "enable": false,
         "ipu_arpu_ecpm": {
-          "ipu": 0,
-          "arpu": 0,
+          "ipu": 5,
+          "arpu": 0.05,
           "ecpm": 0
+        },
+        "jp": {
+          "enable": false,
+          "ipu_arpu_ecpm": {
+            "ipu": 10,
+            "arpu": 0.2,
+            "ecpm": 0
+          },
+          "kr": {
+            "enable": false,
+            "ipu_arpu_ecpm": {
+              "ipu": 10,
+              "arpu": 0.15,
+              "ecpm": 0
+            },
+            "us": {
+              "enable": false,
+              "ipu_arpu_ecpm": {
+                "ipu": 5,
+                "arpu": 0,
+                "ecpm": 5
+              }
+            }
+          },
+          "tab_switch": {
+            "enable": true,
+            "interval_time": 30
+          }
         }
       }
-    },
-    "tab_switch": {
-      "enable": true,
-      "interval_time": 30
     }
   }
 }
