@@ -1,5 +1,7 @@
 package com.deploy.pdf
 
+import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -28,10 +30,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.base.khtoolslibrary.pdf.PdfReaderController
+import com.p.b.ad.runtime.AdScenes
+import com.p.b.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -44,7 +49,7 @@ import kotlinx.coroutines.withContext
  * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -81,9 +86,24 @@ fun PdfReaderScreen(controller: PdfReaderController) {
             }
         }
 
+        // 主页信息流广告：放在内容区与底部功能按钮之间
+        AndroidView(
+            factory = { context ->
+                FrameLayout(context).also { container ->
+                    AdShowHelper.showNative(activity, container, AdScenes.PAGE)
+                }
+            },
+            // 不预留固定高度：场景关闭或无填充时保持收起，广告渲染后按内容高度展开
+            modifier = Modifier.fillMaxWidth(),
+        )
+
         // 底部:深色圆角 "PICK PDF" 按钮 #1E1E1E
         Button(
-            onClick = { controller.pickPdf() },
+            onClick = {
+                // in_function 可灵活配置广告类型，统一交给基础模块选择并展示
+                AdShowHelper.showFunctionAd(activity)
+                controller.pickPdf()
+            },
             shape = RoundedCornerShape(10.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E1E1E)),
             modifier = Modifier

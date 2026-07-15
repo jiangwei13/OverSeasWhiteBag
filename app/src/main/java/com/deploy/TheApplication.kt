@@ -13,6 +13,7 @@ import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
+import com.p.b.ad.runtime.AdLifecycleInstaller
 
 
 class TheApplication : BaseJksApplication(), OverseaAppHost {
@@ -28,6 +29,8 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
         insApp = this
         // 触发海外公共初始化(归因/广告/跳转/生命周期监听)，host 即自身
         OverseaAppInitializer.init(this, this)
+        // 统一安装广告生命周期监听，内部带幂等保护
+        AdLifecycleInstaller.install(this)
         // 保证白包有 context
         APPContext.setApplication(this)
         // 统一安装各工具页的自定义 UI(按 ToolType 区分;未注册的工具用功能层默认 UI)
