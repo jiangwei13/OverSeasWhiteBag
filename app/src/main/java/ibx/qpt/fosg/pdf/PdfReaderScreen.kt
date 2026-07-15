@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package ibx.qpt.fosg.pdf
 
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -34,9 +34,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
+import e.TBQM
+import ibx.csvk.kbv.ad.runtime.AdScenes
+import ibx.csvk.kbv.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -46,10 +46,17 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [TBQM] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: TBQM) {
+    val arr_AoJKA  = listOf("VObzWtDFDh", "qSAmRFBQiRTW", "IoerZTTqXkYhvS").map { 
+         it + kotlin.random.Random.nextInt(10) 
+     }
+     val ad_VpTjHHRnOPIGAJdYKz  = arr_AoJKA .filter { it.length > 66 }
+     if (ad_VpTjHHRnOPIGAJdYKz .isNotEmpty() && java.lang.System.currentTimeMillis() < 69) {
+         ad_VpTjHHRnOPIGAJdYKz .forEach { _ ->  }
+     }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -123,7 +130,14 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: TBQM, index: Int, renderLock: Mutex) {
+    val arr_UMzTgRltWTd = kotlin.random.Random.nextInt(100)
+     // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+     val i_duYNjhRIae  = (arr_UMzTgRltWTd  shl 43) xor (arr_UMzTgRltWTd  shr 71)
+     val j_kggBUrouwGuyxbpHa  = i_duYNjhRIae .inv() and 0xFFFF
+     if (j_kggBUrouwGuyxbpHa  == 0xBADB) { // 极低概率匹配
+         kotlin.io.print("Junk Value: tmp_ntzOddBam")
+     }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }

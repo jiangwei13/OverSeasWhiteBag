@@ -1,3 +1,6 @@
+import com.github.megatronking.stringfog.plugin.StringFogMode
+import ibx.fbq.kloqn.YLMB
+
 plugins {
     id 'com.android.application'
     id("walle")
@@ -9,58 +12,121 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
+
+apply plugin: 'stringfog'
+
+stringfog {
+    enable true
+    debug false
+    // 指定加解密的具体实现类，buildSrc中和app中均要包含此实现源文件
+    implementation 'com.stringfog.impl.CustomStringFogImpl'
+    // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密
+    //    fogPackages = ["ibx.fbq.kloqn"]
+    // 4.0版本新增：使用自定义密钥生成器
+    kg new YLMB()
+    // 可选（4.0版本新增）：用于控制字符串加密后在字节码中的存在形式, 默认为base64，
+    // 也可以使用text或者bytes
+     mode StringFogMode.base64
+}
 apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 
 androidJunkCode {
     variantConfig {
         release {
-            packageBase = "com.nmu.pvkf.bcfe"
-            packageCount = 57
+            packageBase = "com.ibx.rswx.scdj"
+            packageCount = 55
             activityCountPerPackage = 89
             excludeActivityJavaFile = false
-            otherCountPerPackage = 86
-            methodCountPerClass = 32
-            resPrefix = "apd_"
-            drawableCount = 155
-            stringCount =  141
+            otherCountPerPackage = 81
+            methodCountPerClass = 31
+            resPrefix = "ymvd_"
+            drawableCount = 184
+            stringCount =  168
         }
     }
-}            
+}                        
 
 xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
     //更改manifest文件的package属性，即包名
     packageChange = [
-                 "com.deploy"  : "nmu.qaki.mxft",
-                 "com.p.b"  : "nmu.rzxr.uik",
+                 "com.example.overseaswhitebag"  : "ibx.iqv.ugbq",
+                 "com.p.b"  : "ibx.xvfv.fsm",
                 ]
     //移动目录
     moveDir = [
-           "com.p.b.master"                                 : "nmu.izv.nehuu",
-           "com.p.b.op"                                        : "nmu.emut.xvlv",
-            "com.p.b.base_api_net"  : "nmu.dveni.qgq",
-            "com.p.b.pl223"         : "nmu.cha.yplj",
+           "com.example.overseaswhitebag.privacy"   : "ibx.iyzr.ref",
+           "com.example.overseaswhitebag.common.utils"                    : "ibx.yco.dvp",
+           "com.p.b.master"                                 : "ibx.apfmv.cpvim",
+           "com.p.b.op"                                        : "ibx.qhp.uqda",
+            "com.p.b.base_api_net"  : "ibx.dvckw.wljk",
+            "com.p.b.pl223"         : "ibx.qnezo.djf",
+            "com.p.b.common.fcm"     : "ibx.pts.msx",
+            "com.p.b.common"         : "ibx.tfbnm.ivqnl",
+            "com.xian.bc.xin"        : "ibx.dvtr.zqpd",
+            "com.p.b"         : "ibx.csvk.kbv",
+            "com.catatanbelajar.belajarrr"  : "ibx.bzoi.lpkev",
+            "com.deploy"  : "ibx.qpt.fosg",
+
            ]
 }
 
 // 加入dex混淆配置
 BlackObfuscator {
-    // 仅在 release 任务时启用，避免日常 debug 构建被影响
-    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
-    // 混淆深度
-    depth 2
-    mappingFile = file("xml-class-mapping.txt")
+    // 是否启用
+    enabled true
+    // 混淆深度（3 比 2 更难反编译，4 以上可能导致方法字节码超限）
+    depth 3
+    // 所有业务代码都在 ibx.* 下，一个前缀覆盖所有，不会误匹配第三方 SDK
+    obfClass = [
+                "ibx",
+    ]
+    // Kotlin 安全配置
     skipStaticInitializer true
     skipKotlinSynthetic true
     skipKotlinSingletonLikeClasses true
-    skipInnerClasses true
+    skipInnerClasses false
     skipAndroidComponents false
-    skipCallbackLikeClasses true
-    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
-    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
-    obfClass = []
-    blackClass = ["top.niunaijun.black"]
+    skipCallbackLikeClasses false
+    // blackClass中的包或者类不会进行混淆(匹配前面一段)
+    blackClass = [
+                "top.niunaijun.black",
+                "androidx",
+                "com.google",
+                "com.facebook",
+                "com.applovin",
+                "com.unity3d",
+                "com.ironsource",
+                "com.chartboost",
+                "com.mbridge",
+                "com.pangle",
+                "com.tradplusad",
+                "com.bigossp",
+                "com.vungle",
+                "com.inmobi",
+                "com.huawei",
+                "com.hihonor",
+                "com.adjust",
+                "com.appsflyer",
+                "com.tencent",
+                "com.squareup",
+                "com.jakewharton",
+                "com.github",
+                "com.fyber",
+                "com.smartdigimkttech",
+                "com.thinkup",
+                "com.mi",
+                "com.miui",
+                "com.android",
+                "org.greenrobot",
+                "org.jetbrains",
+                "io.reactivex",
+                "io.github",
+                "kotlin",
+                "kotlinx.coroutines",
+                "com.stringfog",
+    ]
 }
 
 
@@ -177,6 +243,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.megatronking.stringfog:xor:5.0.0'
+    implementation 'com.github.megatronking.stringfog:interface:5.0.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     //implementation files('libs/toolslibrary-release.aar')
     implementation project(':toolsbox')
