@@ -106,6 +106,24 @@
       "arpu": 0.0001,
       "ecpm": 0
     },
+    "country": {
+      "br": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 1,
+          "arpu": 0.0001,
+          "ecpm": 0
+        }
+      },
+      "jp": {
+        "enable": false,
+        "ipu_arpu_ecpm": {
+          "ipu": 0,
+          "arpu": 0,
+          "ecpm": 0
+        }
+      }
+    },
     "tab_switch": {
       "enable": true,
       "interval_time": 30
