@@ -15,27 +15,26 @@ object AdjustTokens {
         LogUtil.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                AjConstants.Companion.adjustAppToken = ""
                 AjConstants.Companion.Login = ""
                 AjConstants.Companion.Reg = ""
-                AjConstants.Companion.topon_ilrd = ""
-                AjConstants.Companion.ipu = ""
-                AjConstants.Companion.arpu = ""
-                AjConstants.Companion.ipu_arpu = ""
-                AjConstants.Companion.ipu_ecpm = ""
-                AjConstants.Companion.ipu_arpu_ecpm = ""
-                AjConstants.Companion.LiveTime = ""
-                AjConstants.Companion.blacklist = ""
+                AjConstants.Companion.topon_ilrd = "edf7bo"
+                AjConstants.Companion.ipu = "refvlm"
+                AjConstants.Companion.arpu = "7z8jzk"
+                AjConstants.Companion.ipu_arpu = "t43z5p"
+                AjConstants.Companion.ipu_ecpm = "eznnot"
+                AjConstants.Companion.ipu_arpu_ecpm = "mkoa46"
+                AjConstants.Companion.LiveTime = "ewx6zb"
+                AjConstants.Companion.blacklist = "9xu8ai"
                 AjConstants.Companion.bh_init = ""
-                AjConstants.Companion.ad_request = ""
+                AjConstants.Companion.ad_request = "1700w9"
                 AjConstants.Companion.ad_full = ""
-                AjConstants.Companion.firebase_request =""
-                AjConstants.Companion.firebase_success = ""
-                AjConstants.Companion.adJust_attribution_request = ""
-                AjConstants.Companion.adJust_attribution_success =""
+                AjConstants.Companion.firebase_request ="2s6dox"
+                AjConstants.Companion.firebase_success = "ba1ynt"
+                AjConstants.Companion.adJust_attribution_request = "dybuhb"
+                AjConstants.Companion.adJust_attribution_success ="cyehe4"
                 AjConstants.Companion.activity_app =""
                 // —— 广告链路漏斗事件
-                AjConstants.ad_fail = ""
+                AjConstants.ad_fail = "gzqpee"
                 AjConstants.ad_tick_fire = ""
                 AjConstants.ad_tick_init = ""
                 AjConstants.ad_tick_config_missing = ""
@@ -77,7 +76,6 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                AjConstants.Companion.adjustAppToken = ""
                 AjConstants.Companion.Login = ""
                 AjConstants.Companion.Reg = ""
                 AjConstants.Companion.topon_ilrd = ""
@@ -137,7 +135,6 @@ object AdjustTokens {
             }
 
             "SX" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -197,7 +194,6 @@ object AdjustTokens {
             }
 
             "OP" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -257,7 +253,6 @@ object AdjustTokens {
             }
 
             "VO" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -317,7 +312,6 @@ object AdjustTokens {
             }
 
             "CY" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -377,7 +371,6 @@ object AdjustTokens {
             }
 
             "XM" -> {
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -437,7 +430,6 @@ object AdjustTokens {
             }
 
             "RY" ->{
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -497,7 +489,6 @@ object AdjustTokens {
             }
 
             "OL" ->{
-                AjConstants.adjustAppToken = ""
                 AjConstants.Login = ""
                 AjConstants.Reg = ""
                 AjConstants.topon_ilrd = ""
@@ -559,7 +550,6 @@ object AdjustTokens {
             else -> {
                 LogUtil.d("AdjustTokens", "测试")
                 //com.test.app
-                AjConstants.adjustAppToken = "h34rdv64os8w"
                 LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
                 LogUtil.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
