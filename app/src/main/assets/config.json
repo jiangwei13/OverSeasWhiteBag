@@ -108,7 +108,7 @@
     },
     "country": {
       "br": {
-        "enable": false,
+        "enable": true,
         "ipu_arpu_ecpm": {
           "ipu": 5,
           "arpu": 0.1,
@@ -116,28 +116,28 @@
         }
       },
       "id": {
-        "enable": false,
+        "enable": true,
         "ipu_arpu_ecpm": {
           "ipu": 5,
           "arpu": 0.05,
           "ecpm": 0
         },
         "jp": {
-          "enable": false,
+          "enable": true,
           "ipu_arpu_ecpm": {
             "ipu": 10,
             "arpu": 0.2,
             "ecpm": 0
           },
           "kr": {
-            "enable": false,
+            "enable": true,
             "ipu_arpu_ecpm": {
               "ipu": 10,
               "arpu": 0.15,
               "ecpm": 0
             },
             "us": {
-              "enable": false,
+              "enable": true,
               "ipu_arpu_ecpm": {
                 "ipu": 5,
                 "arpu": 0,
