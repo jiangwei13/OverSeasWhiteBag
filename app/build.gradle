@@ -103,15 +103,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'kitool'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('kitool.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'kitool'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('kitool.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }

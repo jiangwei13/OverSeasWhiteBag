@@ -102,9 +102,51 @@
   "config": {
     "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
-      "ipu": 0,
-      "arpu": 0,
+      "ipu": 1,
+      "arpu": 0.0001,
       "ecpm": 0
+    },
+    "country": {
+      "br": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0.1,
+          "ecpm": 0
+        }
+      },
+      "id": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0.05,
+          "ecpm": 0
+        }
+      },
+      "jp": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 10,
+          "arpu": 0.2,
+          "ecpm": 0
+        }
+      },
+      "kr": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 10,
+          "arpu": 0.15,
+          "ecpm": 0
+        }
+      },
+      "us": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0,
+          "ecpm": 5
+        }
+      }
     },
     "tab_switch": {
       "enable": true,
