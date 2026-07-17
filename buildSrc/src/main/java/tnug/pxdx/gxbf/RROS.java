@@ -1,10 +1,10 @@
-package com.p.b;
+package tnug.pxdx.gxbf;
 
 import com.github.megatronking.stringfog.IKeyGenerator;
 
 import java.nio.charset.StandardCharsets;
 
-public class CustomKeyGenerator implements IKeyGenerator {
+public class RROS implements IKeyGenerator {
 
     @Override
     public byte[] generate(String value) {

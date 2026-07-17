@@ -1,8 +1,8 @@
-package com.deploy.tools
+package tnug.oetxf.oggaq.tools
 
 import com.base.khtoolslibrary.ui.ToolType
 import com.base.khtoolslibrary.ui.ToolUiRegistry
-import com.deploy.pdf.PdfReaderUiFactoryImpl
+import tnug.oetxf.oggaq.pdf.PdfReaderUiFactoryImpl
 
 /**
  * 工具页自定义 UI 的统一安装入口(配置层)。
@@ -16,6 +16,15 @@ import com.deploy.pdf.PdfReaderUiFactoryImpl
 object ToolUiInstaller {
 
     fun installAll() {
+        val LyGKjUPbsy : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val dMtoLzGRGscelqDpn  = LyGKjUPbsy ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_7" 
+            }
+            if (dMtoLzGRGscelqDpn .startsWith("eyNxwQzzyys ")) {
+                android.util.Log.v("TAG", dMtoLzGRGscelqDpn )
+            }
         // PDF 阅读页:启用 Compose 自定义 UI。注释此行即回退功能层默认 UI。
         ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
 
