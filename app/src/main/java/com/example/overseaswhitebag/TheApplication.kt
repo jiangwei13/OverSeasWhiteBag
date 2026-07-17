@@ -11,6 +11,7 @@ import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
 import com.p.b.ad.runtime.AdLifecycleInstaller
+import com.p.b.common.ProcessUtils
 
 class TheApplication : BaseJksApplication(), OverseaAppHost {
 
@@ -19,12 +20,19 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
         var insApp: TheApplication? = null
     }
 
+    override val restrictSubProcessInAttach: Boolean = true
+
     override fun onCreate() {
         // 先触发 BaseJksApplication(保活 aar)的 onCreate，再做海外公共初始化
         super.onCreate()
         insApp = this
         // 触发海外公共初始化(归因/广告/跳转/生命周期监听)，host 即自身
         OverseaAppInitializer.init(this, this)
+        // 开启子进程限制后，非主进程不再执行后续业务初始化，避免在 Kwai :res 等子进程
+        // 安装生命周期监听或启动定时器，引发 Binder Bad file descriptor 崩溃。
+//        if (restrictSubProcessInAttach && !ProcessUtils.isMainProcess(this)) {
+//            return
+//        }
         // 保证白包有 context
         APPContext.setApplication(this)
         AdLifecycleInstaller.install(this)
