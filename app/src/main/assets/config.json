@@ -23,6 +23,13 @@
           "gm_id": "",
           "enable": true,
           "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        },
+        {
+          "key": "two_tab_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
         }
       ]
     },
@@ -44,18 +51,25 @@
       "scene_key": "in_function",
       "ad_list_beans": [
         {
-          "key": "one_function_reward",
+          "key": "one_function_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        },
+        {
+          "key": "two_function_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        },
+        {
+          "key": "three_function_reward",
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
           "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
-        },
-        {
-          "key": "one_function_inter",
-          "type": "in_inter",
-          "gm_id": "",
-          "enable": false,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
         }
       ]
     },
@@ -65,6 +79,13 @@
       "ad_list_beans": [
         {
           "key": "one_back_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        },
+        {
+          "key": "two_back_inter",
           "type": "in_inter",
           "gm_id": "",
           "enable": true,

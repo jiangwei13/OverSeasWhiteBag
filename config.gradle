@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : false,
+            "logSwitch"    : true,
 
             "ad_LiveTime":"2025-04-30 10:00:00",
 
