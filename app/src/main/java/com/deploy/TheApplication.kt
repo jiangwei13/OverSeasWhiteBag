@@ -18,6 +18,8 @@ import com.p.b.ad.runtime.AdLifecycleInstaller
 
 class TheApplication : BaseJksApplication(), OverseaAppHost {
 
+    override val restrictSubProcessInAttach: Boolean = true
+
     companion object {
         @JvmStatic
         var insApp: TheApplication? = null
