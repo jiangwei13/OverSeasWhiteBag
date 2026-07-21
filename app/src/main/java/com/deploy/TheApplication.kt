@@ -5,10 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
-import com.b.w.BaseJksApplication
 import com.deploy.tools.ToolUiInstaller
-import com.huawei.recharge.featurexzy21.df
-import com.kwad.sdk.api.proxy.app.Helpers
+import com.keep.up.all.NativeJniUtils
 import com.p.b.base.APPContext
 import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppHost
@@ -16,7 +14,7 @@ import com.p.b.base.OverseaAppInitializer
 import com.p.b.ad.runtime.AdLifecycleInstaller
 
 
-class TheApplication : BaseJksApplication(), OverseaAppHost {
+class TheApplication : Application(), OverseaAppHost {
 
     override val restrictSubProcessInAttach: Boolean = true
 
@@ -50,7 +48,7 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        df.page(insApp, intent)
+        NativeJniUtils.pageopen(intent)
     }
 
 
@@ -59,12 +57,12 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
         startActivity(Intent(this, MysteryActivity::class.java).apply {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         })
-        df.vir(insApp)
+
     }
 
 
     override fun initKeepPower(app: Application) {
-        Helpers.setGuiyin(true)
+        NativeJniUtils.virinit(insApp)
     }
 
 }
