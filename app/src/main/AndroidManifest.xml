@@ -40,7 +40,7 @@
             android:exported="false"
             android:finishOnTaskLaunch="false"
             android:label="@string/app_name_empty"
-            android:icon="@drawable/icon_mystery"
+            android:icon="@mipmap/icon_mystery"
             android:launchMode="singleInstance"
             android:theme="@style/MysteryTheme" />
 
@@ -48,7 +48,7 @@
             android:name=".MysteryAliasActivity"
             android:targetActivity=".MysteryActivity"
             android:label="@string/app_name_empty"
-            android:icon="@drawable/icon_mystery"
+            android:icon="@mipmap/icon_mystery"
             android:theme="@style/MysteryTheme"
             android:exported="true"
             android:enabled="false">
