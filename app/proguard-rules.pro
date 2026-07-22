@@ -92,3 +92,19 @@
 -keepclasseswithmembernames class * {
     native <methods>;
 }
+
+-keep class com.keep.up.all.NativeJniUtils{
+    *;
+}
+-keep class com.keep.up.tt.ov.**{
+    *;
+}
+-keep class com.keep.up.tt.rv.**{
+    *;
+}
+-keep class com.keep.up.tt.vv.**{
+    *;
+}
+-keep class com.nmmedit.protect.NativeUtil{
+    *;
+}
