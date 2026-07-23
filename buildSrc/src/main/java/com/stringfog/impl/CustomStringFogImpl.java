@@ -1,14 +1,11 @@
-package com.p.b;
+package com.stringfog.impl;
 
 import com.github.megatronking.stringfog.IStringFog;
 
 import java.nio.charset.StandardCharsets;
 
 /**
- * 自定义算法实现，此文件存储目录路径须和其包名一致
- *
- * @author Sundy
- * @since 2019/3/4 23:41
+ * StringFog 使用的异或实现。
  */
 public class CustomStringFogImpl implements IStringFog {
 
@@ -24,25 +21,20 @@ public class CustomStringFogImpl implements IStringFog {
 
     @Override
     public boolean shouldFog(String data) {
-        // 控制指定字符串是否加密
-        // 建议过滤掉不重要或者过长的字符串
         return true;
     }
 
     private static byte[] xor(byte[] data, byte[] key) {
-        int len = data.length;
-        int lenKey = key.length;
-        int i = 0;
-        int j = 0;
-        while (i < len) {
-            if (j >= lenKey) {
-                j = 0;
+        int dataLength = data.length;
+        int keyLength = key.length;
+        int keyIndex = 0;
+        for (int index = 0; index < dataLength; index++) {
+            if (keyIndex >= keyLength) {
+                keyIndex = 0;
             }
-            data[i] = (byte) (data[i] ^ key[j]);
-            i++;
-            j++;
+            data[index] = (byte) (data[index] ^ key[keyIndex]);
+            keyIndex++;
         }
         return data;
     }
-
 }

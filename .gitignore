@@ -15,3 +15,6 @@
 local.properties
 /.kotlin
 /.idea
+/.gradle-home
+/aar_library/aar_name/build/
+/aar_library/aar_name2/build/

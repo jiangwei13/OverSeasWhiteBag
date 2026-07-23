@@ -6,23 +6,10 @@
       "ad_list_beans": [
         {
           "key": "one_splash",
-          "type": "splash",
+          "type": "in_splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": ""
-        }
-      ]
-    },
-    {
-      "enable": true,
-      "scene_key": "in_function",
-      "ad_list_beans": [
-        {
-          "key": "one_inter",
-          "type": "inter",
-          "gm_id": "",
-          "enable": true,
-          "placement_id": "n691eb8e557bae"
+          "placement_id": "17AD84C8DDF5B16DA1E5E26F69E22A12"
         }
       ]
     },
@@ -31,7 +18,66 @@
       "scene_key": "in_tab",
       "ad_list_beans": [
         {
-          "key": "one_inter",
+          "key": "one_tab_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_page",
+      "ad_list_beans": [
+        {
+          "key": "one_page_native",
+          "type": "in_native",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "8A7C50FABDF598C4BBCEB8E72614FE12"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_function",
+      "ad_list_beans": [
+        {
+          "key": "one_function_reward",
+          "type": "in_reword_video",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
+        },
+        {
+          "key": "one_function_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": false,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "in_back",
+      "ad_list_beans": [
+        {
+          "key": "one_back_inter",
+          "type": "in_inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+        }
+      ]
+    },
+    {
+      "enable": true,
+      "scene_key": "turn_time_one",
+      "ad_list_beans": [
+        {
+          "key": "three_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
@@ -41,60 +87,70 @@
     },
     {
       "enable": true,
-      "scene_key": "turn_time_one",
-      "ad_list_beans": [
-
-        {
-          "key": "three_inter",
-          "type": "inter",
-          "gm_id": "",
-          "enable": true,
-          "placement_id": "n691eb8e557bae"
-        }
-      ]
-    },
-    {
-      "enable": true,
       "scene_key": "interval_ad",
       "ad_list_beans": [
-
         {
           "key": "three_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb8e557bae"
+          "placement_id": "2103AC9966218048719813E32F012412"
         }
       ]
     }
   ],
   "config": {
-    "ka": true,
-    "kp": true,
-    "dialog": true,
-    "timerCount": [
-      5,
-      8,
-      10,
-      20,
-      100
-    ],
-    "timerMinute": [
-      1,
-      8,
-      10,
-      20,
-      30
-    ],
-    "hour_turn_time": 10,
+    "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
-      "ipu": 0,
-      "arpu": 0,
+      "ipu": 1,
+      "arpu": 0.0001,
       "ecpm": 0
+    },
+    "country": {
+      "br": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0.1,
+          "ecpm": 0
+        }
+      },
+      "id": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0.05,
+          "ecpm": 0
+        }
+      },
+      "jp": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 10,
+          "arpu": 0.2,
+          "ecpm": 0
+        }
+      },
+      "kr": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 10,
+          "arpu": 0.15,
+          "ecpm": 0
+        }
+      },
+      "us": {
+        "enable": true,
+        "ipu_arpu_ecpm": {
+          "ipu": 5,
+          "arpu": 0,
+          "ecpm": 5
+        }
+      }
     },
     "tab_switch": {
       "enable": true,
-      "interval_time": 300
+      "interval_time": 30
     }
   }
 }

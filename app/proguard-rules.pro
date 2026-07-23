@@ -63,3 +63,20 @@
 -dontwarn sharpen.config.ModuleOption
 -dontwarn sharpen.config.ModulesConfigurator
 -dontwarn sharpen.config.OptionsConfigurator
+
+###### errorprone 编译期注解只在编译期使用
+-dontwarn javax.lang.model.**
+-dontwarn com.google.errorprone.annotations.**
+
+###### 方法、类和包名混淆字典
+-obfuscationdictionary proguard-chinese.txt
+-classobfuscationdictionary proguard-chinese.txt
+-packageobfuscationdictionary proguard-chinese.txt
+
+##### StringFog 运行期实现不能被移除或改名
+-keep class com.stringfog.impl.** { *; }
+
+##### 保留所有 native 方法名，避免 JNI 动态注册失效
+-keepclasseswithmembernames class * {
+    native <methods>;
+}

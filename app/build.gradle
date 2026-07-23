@@ -7,27 +7,31 @@ apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
 apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
-    //更改manifest文件的package属性，即包名
-    packageChange = [
-                 "com.example.overseaswhitebag"  : "xmf.ntrb.ycapq",
+    // 正式混淆任务会在构建前写入随机映射，源码基线保持为空。
+    packageChange = [:]
+    moveDir = [:]
+}
 
-                ]
-    //移动目录
-    moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "xmf.ncny.igvq",
-           "com.yao.tool.scenic.bean"   : "xmf.stklk.lvbf",
-           "com.yao.tool.bean"                    : "xmf.upqdh.nbauk",
-           "com.clean.scanlibrary.bean"        : "xmf.sgen.ktb",
-           "com.p.b.base_api_net.base_api_bean"             : "xmf.rxnxs.yslii",
-           "com.clean.pic_toolslibrary"                                 : "xmf.diz.kwld",
-           "com.p.b"                                        : "xmf.msvv.jlyg",
-        
-           ]
+BlackObfuscator {
+    // 日常 debug 构建不做 dex 控制流混淆。
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+    depth 2
+    mappingFile = file("xml-class-mapping.txt")
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses true
+    skipAndroidComponents false
+    skipCallbackLikeClasses true
+    // 正式混淆任务会按 oversea_base_module 的随机包名重写此处。
+    obfClass = []
+    blackClass = ["top.niunaijun.black"]
 }
 androidJunkCode {
     def config = {
@@ -50,8 +54,8 @@ android {
 
 
 
-    namespace 'com.clean.toos'
-    compileSdk 35
+    namespace 'com.deploy'
+    compileSdk 36
 
     // 临时禁用某些严格检查
     aaptOptions {
@@ -61,7 +65,7 @@ android {
     defaultConfig {
         applicationId "com.saowen.magicdoc"
         minSdk 26
-        targetSdk 35
+        targetSdk 36
         versionCode 3
         versionName "1.0.3"
         ndk {
@@ -69,34 +73,29 @@ android {
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    packagingOptions {
-
-
-        exclude 'META-INF/DEPENDENCIES'
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'resources.arsc', 'AndroidManifest.xml']
+        }
         dex {
             useLegacyPackaging true
         }
-        exclude 'resources.arsc'
-
-        exclude 'AndroidManifest.xml'
         jniLibs {
-
             useLegacyPackaging true
-
         }
     }
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'chroma'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('chroma.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'chroma'
+            keyAlias 'magicdoc'
             keyPassword '123456'
-            storeFile file('chroma.jks')
+            storeFile file('magicdoc.jks')
             storePassword '123456'
         }
     }
@@ -108,6 +107,10 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            // 二次混淆后 mapping 已失真，禁止上传到 Crashlytics。
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
         debug {
             minifyEnabled false
@@ -166,6 +169,10 @@ dependencies {
 //    implementation(project(":aar_library:app_aar"))
     implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
+    // BaseApplication 的超类型位于该模块，implementation 依赖不会向上传递。
+    implementation project(':oversea_common_library')
+    // StringFog 运行期解密实现需要直接进入 app classpath。
+    implementation project(':stringfogLib')
 //    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
