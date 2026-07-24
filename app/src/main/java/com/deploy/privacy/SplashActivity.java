@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         splashdrawView = findViewById(R.id.splashdrawView);
 
 
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
+//        boolean isAgressment = AppPrivacyPreferences.with(this).load().read("isAgressment", false);
 //        if (!isAgressment) {
 //            showProtocolDialog();
 //        } else {
@@ -39,12 +39,12 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
+        AppPrivacyProtocolDialog protocolDialog = new AppPrivacyProtocolDialog(this, R.style.dialog);
         protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
+        protocolDialog.setOnProtocolDialogListener(new AppPrivacyProtocolDialog.OnProtocolDialogListener() {
             @Override
             public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
+                AppPrivacyPreferences.with(SplashActivity.this).load().save("isAgressment", true);
                 toDrawMain();
             }
 

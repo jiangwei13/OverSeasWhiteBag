@@ -24,23 +24,23 @@ import com.deploy.R;
 
 
 //隐私协议
-public class ProtocolDialog extends Dialog {
+public class AppPrivacyProtocolDialog extends Dialog {
     private OnProtocolDialogListener onProtocolDialogListener;
     private Context context;
 
-    public ProtocolDialog(@NonNull Context context) {
+    public AppPrivacyProtocolDialog(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public ProtocolDialog(@NonNull Context context, int themeResId) {
+    public AppPrivacyProtocolDialog(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected ProtocolDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected AppPrivacyProtocolDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();

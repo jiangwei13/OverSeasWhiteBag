@@ -14,11 +14,11 @@ import android.preference.PreferenceManager;
  *
  * @since Oct. 29, 2014
  */
-public class SPUtil {
-    private static SPUtil sInstance;
+public class AppPrivacyPreferences {
+    private static AppPrivacyPreferences sInstance;
     private Context mContext;
 
-    public SPUtil(Context context) {
+    public AppPrivacyPreferences(Context context) {
         mContext = context;
     }
 
@@ -29,11 +29,11 @@ public class SPUtil {
      * @param context context
      * @return the single instance
      */
-    public static SPUtil with(Context context) {
-        synchronized (SPUtil.class) {
+    public static AppPrivacyPreferences with(Context context) {
+        synchronized (AppPrivacyPreferences.class) {
             if (sInstance == null) {
                 //不要直接引用contex，防止内存泄漏
-                sInstance = new SPUtil(context.getApplicationContext());
+                sInstance = new AppPrivacyPreferences(context.getApplicationContext());
             }
         }
 
