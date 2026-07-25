@@ -110,6 +110,13 @@
           "gm_id": "",
           "enable": true,
           "placement_id": "2103AC9966218048719813E32F012412"
+        },
+        {
+          "key": "two_external_inter",
+          "type": "inter",
+          "gm_id": "",
+          "enable": true,
+          "placement_id": "9A63C6CF08404CA7A64A3B5E31150412"
         }
       ]
     }
