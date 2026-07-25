@@ -122,7 +122,7 @@
     }
   ],
   "config": {
-    "ad_single_interval": 10,
+    "ad_single_interval": 1,
     "ipu_arpu_ecpm": {
       "ipu": 1,
       "arpu": 0.0001,

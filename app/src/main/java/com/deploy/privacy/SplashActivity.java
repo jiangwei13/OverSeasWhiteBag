@@ -1,17 +1,15 @@
 package com.deploy.privacy;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.deploy.R;
-import com.p.b.ad.AdViewMana;
+import com.p.b.ad.runtime.AdPreloadHelper;
+import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
 import cn.hzw.doodledemo.ScanMenuActivity;
 
@@ -19,8 +17,10 @@ import cn.hzw.doodledemo.ScanMenuActivity;
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
+    private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
 
-    FrameLayout splashdrawView;
+    private FrameLayout splashdrawView;
+    private boolean hasNavigated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,28 +56,25 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void toDrawMain() {
-        AdViewMana.initView(this, "in_tab");
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-                startActivity(it);
-                finish();
+        AdPreloadHelper.preloadLaunch(this);
+        new FirstSplashAdFixTimeOut().loadSplash(
+                this,
+                splashdrawView,
+                SPLASH_WAIT_TIMEOUT_MS,
+                this::openMainOnce
+        );
+    }
 
-            }
-        },3000);
-
-
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
-//            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
-//                finish();
-//            }
-//        });
-
-
-
+    /**
+     * 广告结束和超时可能同时回调，统一在这里防止重复进入主页。
+     */
+    private void openMainOnce() {
+        if (hasNavigated || isFinishing()) {
+            return;
+        }
+        hasNavigated = true;
+        Intent intent = new Intent(this, ScanMenuActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
