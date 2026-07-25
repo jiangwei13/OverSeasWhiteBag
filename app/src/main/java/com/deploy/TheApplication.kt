@@ -3,18 +3,37 @@ package com.deploy
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import com.p.b.base.BaseApplication
+import com.keep.up.all.NativeJniUtils
+import com.p.b.base.APPContext
+import com.p.b.base.OverseaAppHost
+import com.p.b.base.OverseaAppInitializer
+import com.p.b.ad.runtime.AdLifecycleInstaller
 
-class TheApplication : BaseApplication() {
+
+class TheApplication : Application(), OverseaAppHost {
+
+    override val restrictSubProcessInAttach: Boolean = true
 
     companion object {
         @JvmStatic
-        var insDrawApp: TheApplication? = null
+        var insApp: TheApplication? = null
     }
 
     override fun onCreate() {
+        // 先触发 BaseJksApplication(保活 aar)的 onCreate，再做海外公共初始化
         super.onCreate()
-        insDrawApp = this
+        insApp = this
+        // 触发海外公共初始化(归因/广告/跳转/生命周期监听)，host 即自身
+        OverseaAppInitializer.init(this, this)
+        // 统一安装广告生命周期监听，内部带幂等保护
+        AdLifecycleInstaller.install(this)
+        // 保证白包有 context
+        APPContext.setApplication(this)
+    }
+
+    // ApplicationListener.openLaunch —— 原由 BaseApplication 提供，切到 BaseJksApplication 后由自身实现：转调 openLaunchByOther
+    override fun openLaunch(intent: Intent?) {
+        intent?.let { openLaunchByOther(null, it) }
     }
 
     override fun configureAdjustTokens() {
@@ -22,17 +41,17 @@ class TheApplication : BaseApplication() {
     }
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-        // 基础模块已经构造好广告中转页 Intent，这里只负责真正拉起。
-        bundle?.let(intent::putExtras)
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
+        // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
+        NativeJniUtils.pageopen(intent)
     }
+
 
     override fun initPopPower() {
-        // 当前项目未接入 pop 保活能力。
     }
 
+
     override fun initKeepPower(app: Application) {
-        // 当前项目未接入 keep 保活能力。
+        NativeJniUtils.virinit(insApp)
     }
+
 }

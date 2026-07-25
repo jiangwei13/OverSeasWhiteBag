@@ -176,6 +176,10 @@ dependencies {
 //    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
+
+    implementation project(":aar_library:aar_name2")
+    implementation project(":aar_library:aar_name")
+
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
 
