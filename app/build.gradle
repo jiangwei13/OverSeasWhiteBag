@@ -63,7 +63,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.board.chroma"
         minSdk 26
         targetSdk 36
         versionCode 9
@@ -87,15 +87,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'chroma'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('chroma.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'chroma'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('chroma.jks')
             storePassword '123456'
         }
     }

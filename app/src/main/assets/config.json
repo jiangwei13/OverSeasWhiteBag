@@ -9,7 +9,7 @@
           "type": "in_splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": "17AD84C8DDF5B16DA1E5E26F69E22A12"
+          "placement_id": "77907F7B07F4E81DF01B2A7AAAF6D612"
         }
       ]
     },
@@ -22,7 +22,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "62BAA47574B09FEE9D21BA7B1B44EC12"
         }
       ]
     },
@@ -35,7 +35,7 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
-          "placement_id": "8A7C50FABDF598C4BBCEB8E72614FE12"
+          "placement_id": "121D12871126E847EEC7811EA834AB12"
         }
       ]
     },
@@ -48,14 +48,14 @@
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
-          "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
+          "placement_id": "3B93E400105A1D413563BC36A931A912"
         },
         {
           "key": "one_function_inter",
           "type": "in_inter",
           "gm_id": "",
           "enable": false,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "62BAA47574B09FEE9D21BA7B1B44EC12"
         }
       ]
     },
@@ -68,7 +68,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "62BAA47574B09FEE9D21BA7B1B44EC12"
         }
       ]
     },
@@ -81,7 +81,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412"
+          "placement_id": "F77FC421A390EA7B2FC90849DDEA7612"
         }
       ]
     },
@@ -94,7 +94,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412"
+          "placement_id": "F77FC421A390EA7B2FC90849DDEA7612"
         }
       ]
     },
@@ -109,14 +109,14 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412"
+          "placement_id": "F77FC421A390EA7B2FC90849DDEA7612"
         },
         {
           "key": "two_external_inter",
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "9A63C6CF08404CA7A64A3B5E31150412"
+          "placement_id": "1205C9E34706D7826B14BA17E9B1E912"
         }
       ]
     }
