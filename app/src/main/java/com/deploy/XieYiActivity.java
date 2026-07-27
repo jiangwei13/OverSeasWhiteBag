@@ -1,4 +1,4 @@
-package com.deploy.privacy;
+package com.deploy;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.deploy.R;
-
 
 public class XieYiActivity extends AppCompatActivity {
 

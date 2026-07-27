@@ -1,4 +1,4 @@
-package com.deploy.privacy;
+package com.deploy;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,7 +7,8 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.deploy.R;
+import com.deploy.privacy.AppPrivacyPreferences;
+import com.deploy.privacy.AppPrivacyProtocolDialog;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
