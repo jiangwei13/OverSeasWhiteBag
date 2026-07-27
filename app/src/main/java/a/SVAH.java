@@ -1,6 +1,4 @@
-package com.deploy.privacy;
-
-
+package a;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -16,37 +14,43 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import com.deploy.R;
 
-
 //隐私协议
-public class AppPrivacyProtocolDialog extends Dialog {
+public class SVAH extends Dialog {
+
     private OnProtocolDialogListener onProtocolDialogListener;
+
     private Context context;
 
-    public AppPrivacyProtocolDialog(@NonNull Context context) {
+    public SVAH(@NonNull Context context) {
         super(context);
         this.context = context;
         initView();
     }
 
-    public AppPrivacyProtocolDialog(@NonNull Context context, int themeResId) {
+    public SVAH(@NonNull Context context, int themeResId) {
         super(context, themeResId);
         this.context = context;
         initView();
     }
 
-    protected AppPrivacyProtocolDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    protected SVAH(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
         initView();
     }
 
     private void initView() {
+        java.lang.Object arr_yhqXkxJIHijCCutUeH = new java.lang.Object();
+        int i_CxfIG = arr_yhqXkxJIHijCCutUeH.hashCode();
+        int j_xkGcQj = new java.util.Random().nextInt(100);
+        int tmp_xzJRguQBe = (i_CxfIG ^ j_xkGcQj) & 0x7FFFFFFF;
+        if (tmp_xzJRguQBe == 81 && i_CxfIG < 21) {
+            arr_yhqXkxJIHijCCutUeH.toString();
+        }
         setCanceledOnTouchOutside(false);
         View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_protocol_layout, null);
         setContentView(dialogView);
@@ -55,27 +59,34 @@ public class AppPrivacyProtocolDialog extends Dialog {
         getWindow().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenWidth = displayMetrics.widthPixels;
         int screenHeight = displayMetrics.heightPixels;
-
         // 设置Dialog的宽度和高度（例如屏幕宽度的80%，高度的60%）
         Window window = getWindow();
         if (window != null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             layoutParams.copyFrom(window.getAttributes());
-            layoutParams.width = (int) (screenWidth * 0.75); // 80%屏幕宽度
-            layoutParams.height = (int) (screenHeight * 0.55); // 60%屏幕高度
-
+            // 80%屏幕宽度
+            layoutParams.width = (int) (screenWidth * 0.75);
+            // 60%屏幕高度
+            layoutParams.height = (int) (screenHeight * 0.55);
             // 应用设置
             window.setAttributes(layoutParams);
         }
         TextView contentTv = dialogView.findViewById(R.id.contentTv);
         SpannableString spannableString = new SpannableString(contentTv.getText());
-
         // 设置《用户协议》的点击事件
         ClickableSpan userAgreementSpan = new ClickableSpan() {
+
             @Override
             public void onClick(View widget) {
+                java.lang.Object arr_yhqXkxJIHijCCutUeH = new java.lang.Object();
+                int i_CxfIG = arr_yhqXkxJIHijCCutUeH.hashCode();
+                int j_xkGcQj = new java.util.Random().nextInt(100);
+                int tmp_xzJRguQBe = (i_CxfIG ^ j_xkGcQj) & 0x7FFFFFFF;
+                if (tmp_xzJRguQBe == 81 && i_CxfIG < 21) {
+                    arr_yhqXkxJIHijCCutUeH.toString();
+                }
                 // 跳转到用户协议页面
-                Intent intent = new Intent(context, XieYiActivity.class);
+                Intent intent = new Intent(context, SUYA.class);
                 intent.putExtra("TITLE", "用户协议");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/user");
                 context.startActivity(intent);
@@ -83,18 +94,34 @@ public class AppPrivacyProtocolDialog extends Dialog {
 
             @Override
             public void updateDrawState(TextPaint ds) {
+                long arr_BzlGVb = java.lang.System.nanoTime();
+                int i_PkLXnfaWwm = new java.util.Random().nextInt(1000);
+                boolean j_AWVMtrkeMusKVSAz = (arr_BzlGVb % (i_PkLXnfaWwm + 70)) > 40;
+                double tmp_GzdUdWLPr = j_AWVMtrkeMusKVSAz ? java.lang.Math.sqrt(i_PkLXnfaWwm) : java.lang.Math.pow(i_PkLXnfaWwm, 47);
+                if (tmp_GzdUdWLPr < 0.0) {
+                    java.lang.System.out.println(tmp_GzdUdWLPr);
+                }
                 super.updateDrawState(ds);
-                ds.setColor(getContext().getColor(android.R.color.holo_blue_dark)); // 设置蓝色
-                ds.setUnderlineText(false); // 去掉下划线
+                // 设置蓝色
+                ds.setColor(getContext().getColor(android.R.color.holo_blue_dark));
+                // 去掉下划线
+                ds.setUnderlineText(false);
             }
         };
-
         // 设置《隐私政策》的点击事件
         ClickableSpan privacyPolicySpan = new ClickableSpan() {
+
             @Override
             public void onClick(View widget) {
+                long arr_BzlGVb = java.lang.System.nanoTime();
+                int i_PkLXnfaWwm = new java.util.Random().nextInt(1000);
+                boolean j_AWVMtrkeMusKVSAz = (arr_BzlGVb % (i_PkLXnfaWwm + 70)) > 40;
+                double tmp_GzdUdWLPr = j_AWVMtrkeMusKVSAz ? java.lang.Math.sqrt(i_PkLXnfaWwm) : java.lang.Math.pow(i_PkLXnfaWwm, 47);
+                if (tmp_GzdUdWLPr < 0.0) {
+                    java.lang.System.out.println(tmp_GzdUdWLPr);
+                }
                 // 跳转到隐私政策页面
-                Intent intent = new Intent(context, XieYiActivity.class);
+                Intent intent = new Intent(context, SUYA.class);
                 intent.putExtra("TITLE", "隐私政策");
                 intent.putExtra("CONTENT", "http://api.dlzfjk.top/agreement/wjpp/privacy");
                 context.startActivity(intent);
@@ -102,28 +129,42 @@ public class AppPrivacyProtocolDialog extends Dialog {
 
             @Override
             public void updateDrawState(TextPaint ds) {
+                int process_drMNZv = new java.util.Random().nextInt(50);
+                int stack_RUwbqaapVKrdpPT = (process_drMNZv > 29) ? 1 : ((process_drMNZv > 27) ? 24 : ((process_drMNZv > 85) ? 30 : 82));
+                int i_oospnwGnTOBDzm = stack_RUwbqaapVKrdpPT * process_drMNZv;
+                if (i_oospnwGnTOBDzm > 37) {
+                    java.lang.System.arraycopy(new int[] { i_oospnwGnTOBDzm }, 0, new int[] { 0 }, 0, 1);
+                }
                 super.updateDrawState(ds);
-                ds.setColor(getContext().getColor(android.R.color.holo_blue_dark)); // 设置蓝色
-                ds.setUnderlineText(false); // 去掉下划线
+                // 设置蓝色
+                ds.setColor(getContext().getColor(android.R.color.holo_blue_dark));
+                // 去掉下划线
+                ds.setUnderlineText(false);
             }
         };
-
         // 找到《用户协议》和《隐私政策》在文本中的位置
         int userAgreementStart = contentTv.getText().toString().indexOf("《用户协议》");
         int userAgreementEnd = userAgreementStart + "《用户协议》".length();
         int privacyPolicyStart = contentTv.getText().toString().indexOf("《隐私政策》");
         int privacyPolicyEnd = privacyPolicyStart + "《隐私政策》".length();
-
         // 应用ClickableSpan
         spannableString.setSpan(userAgreementSpan, userAgreementStart, userAgreementEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(privacyPolicySpan, privacyPolicyStart, privacyPolicyEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
         // 设置TextView的文本
         contentTv.setText(spannableString);
-        contentTv.setMovementMethod(LinkMovementMethod.getInstance()); // 使点击事件生效
+        // 使点击事件生效
+        contentTv.setMovementMethod(LinkMovementMethod.getInstance());
         dialogView.findViewById(R.id.agreen).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                java.lang.Object arr_yhqXkxJIHijCCutUeH = new java.lang.Object();
+                int i_CxfIG = arr_yhqXkxJIHijCCutUeH.hashCode();
+                int j_xkGcQj = new java.util.Random().nextInt(100);
+                int tmp_xzJRguQBe = (i_CxfIG ^ j_xkGcQj) & 0x7FFFFFFF;
+                if (tmp_xzJRguQBe == 81 && i_CxfIG < 21) {
+                    arr_yhqXkxJIHijCCutUeH.toString();
+                }
                 dismiss();
                 if (onProtocolDialogListener != null) {
                     onProtocolDialogListener.agree();
@@ -131,46 +172,39 @@ public class AppPrivacyProtocolDialog extends Dialog {
             }
         });
         dialogView.findViewById(R.id.not_agreen).setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                String onaHYIwavAqsLKiG = java.util.UUID.randomUUID().toString();
+                int ckuyPSDLfQaTpfgxVRAHlQ = onaHYIwavAqsLKiG.length();
+                char pmh_JcjUDWHWrfxbtQOP = onaHYIwavAqsLKiG.charAt(new java.util.Random().nextInt(ckuyPSDLfQaTpfgxVRAHlQ));
+                boolean dimaggQVbhhHBULIm = (pmh_JcjUDWHWrfxbtQOP == 'z');
+                if (dimaggQVbhhHBULIm && ckuyPSDLfQaTpfgxVRAHlQ < 31) {
+                    onaHYIwavAqsLKiG.substring(69, 78);
+                }
                 dismiss();
                 if (onProtocolDialogListener != null) {
                     onProtocolDialogListener.refuse();
                 }
             }
         });
-
-//        dialogView.findViewById(R.id.protocol_url_1).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, XieYiActivity.class);
-//                intent.putExtra("TITLE", "隐私政策");
-//                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/privacy.html");
-//                context.startActivity(intent);
-//            }
-//        });
-//
-//        dialogView.findViewById(R.id.protocol_url_2).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, XieYiActivity.class);
-//                intent.putExtra("TITLE", "用户协议");
-//                intent.putExtra("CONTENT", "http://html.xiangrui123.xyz/lghcb/agreement/user.html");
-//                context.startActivity(intent);
-//            }
-//        });
     }
 
     public void setOnProtocolDialogListener(OnProtocolDialogListener onProtocolDialogListener) {
+        long arr_BzlGVb = java.lang.System.nanoTime();
+        int i_PkLXnfaWwm = new java.util.Random().nextInt(1000);
+        boolean j_AWVMtrkeMusKVSAz = (arr_BzlGVb % (i_PkLXnfaWwm + 70)) > 40;
+        double tmp_GzdUdWLPr = j_AWVMtrkeMusKVSAz ? java.lang.Math.sqrt(i_PkLXnfaWwm) : java.lang.Math.pow(i_PkLXnfaWwm, 47);
+        if (tmp_GzdUdWLPr < 0.0) {
+            java.lang.System.out.println(tmp_GzdUdWLPr);
+        }
         this.onProtocolDialogListener = onProtocolDialogListener;
     }
 
-
     public interface OnProtocolDialogListener {
+
         void agree();
 
         void refuse();
     }
-
-
 }
