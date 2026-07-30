@@ -49,7 +49,7 @@ BlackObfuscator {
     // 仅在 release 任务时启用，避免日常 debug 构建被影响
     enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
     // 混淆深度
-    depth 2
+    depth 3
     mappingFile = file("xml-class-mapping.txt")
     skipStaticInitializer true
     skipKotlinSynthetic true
@@ -80,8 +80,8 @@ android {
         applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 36
-        versionCode 6
-        versionName "1.0.6"
+        versionCode 7
+        versionName "1.0.7"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
