@@ -15,20 +15,20 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2025-12-06 10:00:00",
 
-            "Admob_AppId":"ca-app-pub-1589775842977386~2029736308",
+            "Admob_AppId":"ca-app-pub-3924069160429935~4096963574",
 
             "umID":"",
 
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 正式
+            "TradPlus_ID"           : "8974BAA13CC49FE9F24B33F294FFD111",// 正式
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "vjjythxozc3k",
+            "ADJUST_TOKEN"          : "firofyqcfdog",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
