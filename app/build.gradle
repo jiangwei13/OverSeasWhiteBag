@@ -51,7 +51,7 @@ BlackObfuscator {
     // 仅在 release 任务时启用，避免日常 debug 构建被影响
     enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
     // 混淆深度
-    depth 2
+    depth 3
     mappingFile = file("xml-class-mapping.txt")
     skipStaticInitializer true
     skipKotlinSynthetic true
