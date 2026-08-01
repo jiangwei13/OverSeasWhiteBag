@@ -37,6 +37,7 @@
             <option value="$PROJECT_DIR$/third-module/setting" />
             <option value="$PROJECT_DIR$/third-module/sharedPreferences" />
             <option value="$PROJECT_DIR$/third-module/smalltoolslibrary" />
+            <option value="$PROJECT_DIR$/third-module/stringfogLib" />
             <option value="$PROJECT_DIR$/toolsbox_moduel/toolsbox" />
           </set>
         </option>
