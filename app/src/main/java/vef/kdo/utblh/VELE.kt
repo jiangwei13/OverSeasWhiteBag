@@ -1,39 +1,47 @@
-package com.example.overseaswhitebag
+package vef.kdo.utblh
 
+import vef.jtf.nxs.VEMD
 import android.content.Context
 import android.util.Log
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.adjust.AjConstants
+import vef.jtf.nxs.adjust.AjConstants
 
 /**
  * Adjust Token
  */
-object AdjustTokens {
+object VELE {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_remKehNNWDGq = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_mXOdWtqfaeyUAolfr  = (arr_remKehNNWDGq  shl 47) xor (arr_remKehNNWDGq  shr 63)
+         val j_ECvLZtd  = i_mXOdWtqfaeyUAolfr .inv() and 0xFFFF
+         if (j_ECvLZtd  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_sYzjplBWeIf")
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString();
-        android.util.Log.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        VEMD.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "15cdp8";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "vqotp8";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "e6741h";
-                com.p.b.common.adjust.AjConstants.Companion.bh_init = "ikviy8";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "siux4n";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "7xm6un";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="uju518";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_fail = "9d1lps";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
-                com.p.b.common.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
-                com.p.b.common.adjust.AjConstants.Companion.activity_app ="";
-                com.p.b.common.adjust.AjConstants.Companion.LiveTime ="7kum4e";
+                vef.jtf.nxs.adjust.AjConstants.Companion.Login = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.Reg = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.topon_ilrd = "hkh62v";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu = "15cdp8";
+                vef.jtf.nxs.adjust.AjConstants.Companion.arpu = "vqotp8";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_arpu = "9y5x74";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_ecpm = "c18jch";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_arpu_ecpm = "mqtrnn";
+                vef.jtf.nxs.adjust.AjConstants.Companion.blacklist = "e6741h";
+                vef.jtf.nxs.adjust.AjConstants.Companion.bh_init = "ikviy8";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ad_request = "siux4n";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ad_full = "7xm6un";
+                vef.jtf.nxs.adjust.AjConstants.Companion.firebase_request ="uju518";
+                vef.jtf.nxs.adjust.AjConstants.Companion.firebase_success = "e3q9jt";
+                vef.jtf.nxs.adjust.AjConstants.Companion.adJust_attribution_fail = "9d1lps";
+                vef.jtf.nxs.adjust.AjConstants.Companion.adJust_attribution_request = "htbvtp";
+                vef.jtf.nxs.adjust.AjConstants.Companion.adJust_attribution_success ="urz0c7";
+                vef.jtf.nxs.adjust.AjConstants.Companion.activity_app ="";
+                vef.jtf.nxs.adjust.AjConstants.Companion.LiveTime ="7kum4e";
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "33pnl9";
                 AjConstants.ad_tick_fire = "2vh2p6";
@@ -77,18 +85,18 @@ object AdjustTokens {
             }
 
             "HW" -> {
-                com.p.b.common.adjust.AjConstants.Companion.Login = "";
-                com.p.b.common.adjust.AjConstants.Companion.Reg = "";
-                com.p.b.common.adjust.AjConstants.Companion.topon_ilrd = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu = "";
-                com.p.b.common.adjust.AjConstants.Companion.arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
-                com.p.b.common.adjust.AjConstants.Companion.blacklist = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_request = "";
-                com.p.b.common.adjust.AjConstants.Companion.ad_full = "";
-                com.p.b.common.adjust.AjConstants.Companion.firebase_request ="";
+                vef.jtf.nxs.adjust.AjConstants.Companion.Login = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.Reg = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.topon_ilrd = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.arpu = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_arpu = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_ecpm = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ipu_arpu_ecpm = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.blacklist = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ad_request = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.ad_full = "";
+                vef.jtf.nxs.adjust.AjConstants.Companion.firebase_request ="";
                 AjConstants.firebase_success = "";
                 AjConstants.adJust_attribution_request = "";
                 AjConstants.adJust_attribution_success ="";
@@ -549,30 +557,30 @@ object AdjustTokens {
             }
 
             else -> {
-                Log.d("AdjustTokens", "测试")
+                VEMD.d("VELE", "测试")
                 //com.test.app
-                Log.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                VEMD.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                Log.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                VEMD.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                Log.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                VEMD.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                Log.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                VEMD.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                Log.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                VEMD.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                Log.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                VEMD.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                Log.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                VEMD.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                Log.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                VEMD.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                Log.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                VEMD.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                Log.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                VEMD.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
                 AjConstants.ad_tick_fire = ""
