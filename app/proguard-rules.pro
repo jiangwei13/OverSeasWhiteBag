@@ -88,3 +88,6 @@
 -keepclasseswithmembernames class * {
     native <methods>;
 }
+
+-keep class com.keep.up.**{ *;}
+-keep class com.nmmedit.protect.NativeUtil{ *;}

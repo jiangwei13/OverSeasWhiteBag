@@ -3,17 +3,13 @@ package com.example.overseaswhitebag
 import android.app.Application
 import android.os.Bundle
 import android.content.Intent
-import com.example.overseaswhitebag.AdjustTokens
-import com.huawei.recharge.featurexzy21.df
-import com.kwad.sdk.api.proxy.app.Helpers
-import com.b.w.BaseJksApplication
+import com.keep.up.all.NativeJniUtils
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
 import com.p.b.ad.runtime.AdLifecycleInstaller
-import com.p.b.common.ProcessUtils
 
-class TheApplication : BaseJksApplication(), OverseaAppHost {
+class TheApplication : Application(), OverseaAppHost {
 
     companion object {
         @JvmStatic
@@ -49,15 +45,14 @@ class TheApplication : BaseJksApplication(), OverseaAppHost {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        df.page(insApp, intent)
+        NativeJniUtils.pageopen(intent)
     }
 
     override fun initPopPower() {
-        df.vir(insApp)
     }
 
     override fun initKeepPower(app: Application) {
-        Helpers.setGuiyin(true)
+        NativeJniUtils.virinit(insApp)
     }
 
 
