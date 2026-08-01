@@ -9,7 +9,7 @@
           "type": "in_splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": "17AD84C8DDF5B16DA1E5E26F69E22A12"
+          "placement_id": "B9CBBCC01E1A11816457F34D58A27412"
         }
       ]
     },
@@ -22,7 +22,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "87F2277005F26B5ABBEE181A20554112"
         }
       ]
     },
@@ -35,7 +35,7 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
-          "placement_id": "8A7C50FABDF598C4BBCEB8E72614FE12"
+          "placement_id": "6D363A738284DF4402D1334799E9FC12"
         }
       ]
     },
@@ -48,14 +48,14 @@
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
-          "placement_id": "DCC9190A5ED26CF3D3732635F6708D12"
+          "placement_id": "E10DB8DD6DC4860DC7C2149FEEE0C612"
         },
         {
           "key": "one_function_inter",
           "type": "in_inter",
           "gm_id": "",
           "enable": false,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "87F2277005F26B5ABBEE181A20554112"
         }
       ]
     },
@@ -68,7 +68,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312"
+          "placement_id": "87F2277005F26B5ABBEE181A20554112"
         }
       ]
     },
@@ -81,7 +81,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412"
+          "placement_id": "AB8456E7D34FC4B929690EED9426FA12"
         }
       ]
     },
@@ -94,7 +94,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412"
+          "placement_id": "AB8456E7D34FC4B929690EED9426FA12"
         }
       ]
     }

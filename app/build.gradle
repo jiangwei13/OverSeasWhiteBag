@@ -79,7 +79,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.doc.kitool"
         minSdk 26
         targetSdk 35
         versionCode 11
@@ -103,15 +103,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'kitool'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('kitool.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'kitool'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('kitool.jks')
             storePassword '123456'
         }
     }
