@@ -73,6 +73,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "HW" -> {
@@ -132,6 +138,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "SX" -> {
@@ -191,6 +203,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "OP" -> {
@@ -250,6 +268,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "VO" -> {
@@ -309,6 +333,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "CY" -> {
@@ -368,6 +398,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "XM" -> {
@@ -427,6 +463,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "RY" ->{
@@ -486,6 +528,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             "OL" ->{
@@ -545,6 +593,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
 
             else -> {
@@ -612,6 +666,12 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
             }
         }
     }
