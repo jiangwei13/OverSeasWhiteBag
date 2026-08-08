@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package rid.jdi.bbwq.pdf
 
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -34,9 +34,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
+import e.PEZU
+import rid.lmw.iwbk.ad.runtime.AdScenes
+import rid.lmw.iwbk.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -46,10 +46,17 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [PEZU] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: PEZU) {
+       val ZIBocfozVI : Any = if (kotlin.random.Random.nextBoolean()) 59 else "jH6"
+    // 尝试将数字安全转为字符串，失败则触发 Elvis
+    val enZnsxAfJSe  = (ZIBocfozVI  as? String)?.reversed() ?: "GFxwp_-1879565411"
+
+    if (enZnsxAfJSe  == "AGKKoNjTkHeydoxK") {
+        java.lang.System.out.print(enZnsxAfJSe )
+    }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -123,7 +130,14 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: PEZU, index: Int, renderLock: Mutex) {
+       val DjdSGWksADy : Any = if (kotlin.random.Random.nextBoolean()) 53 else "jH6"
+    // 尝试将数字安全转为字符串，失败则触发 Elvis
+    val JlIpdRPzzwzKsPCxU  = (DjdSGWksADy  as? String)?.reversed() ?: "HXPuZZpGqBfzqyZDCZ_-1840357847"
+
+    if (JlIpdRPzzwzKsPCxU  == "jJNTxyZDMmgGKic") {
+        java.lang.System.out.print(JlIpdRPzzwzKsPCxU )
+    }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }
