@@ -151,6 +151,7 @@
     "tab_switch": {
       "enable": true,
       "interval_time": 30
-    }
+    },
+    "ecpm_multiplier_enable": true
   }
 }
