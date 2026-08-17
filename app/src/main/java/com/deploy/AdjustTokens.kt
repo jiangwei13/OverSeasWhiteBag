@@ -32,6 +32,7 @@ object AdjustTokens {
                 AjConstants.Companion.firebase_success = "ba1ynt"
                 AjConstants.Companion.adJust_attribution_request = "dybuhb"
                 AjConstants.Companion.adJust_attribution_success ="cyehe4"
+                AjConstants.Companion.adJust_attribution_fail = ""
                 AjConstants.Companion.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "gzqpee"
@@ -97,6 +98,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -162,6 +164,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -227,6 +230,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -292,6 +296,7 @@ object AdjustTokens {
                 AjConstants.firebase_success=""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -357,6 +362,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -422,6 +428,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -487,6 +494,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -552,6 +560,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -626,6 +635,7 @@ object AdjustTokens {
 
                 AjConstants.blacklist = "ytkgif"
                 LogUtil.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                AjConstants.adJust_attribution_fail = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
                 AjConstants.ad_tick_fire = ""
