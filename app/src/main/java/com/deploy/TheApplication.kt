@@ -1,11 +1,8 @@
 package com.deploy
 
 import android.app.Application
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.core.content.ContextCompat.startActivity
 import com.deploy.tools.ToolUiInstaller
 import com.keep.up.all.NativeJniUtils
 import com.p.b.base.APPContext
@@ -21,12 +18,6 @@ class TheApplication : Application(), OverseaAppHost {
     companion object {
         @JvmStatic
         var insApp: TheApplication? = null
-    }
-
-    override fun attachBaseContext(base: Context?) {
-        super.attachBaseContext(base)
-        // 已归因或跳过归因的用户在最早生命周期命中快路径。
-        OverseaAppInitializer.onAttach(this, this)
     }
 
     override fun onCreate() {
