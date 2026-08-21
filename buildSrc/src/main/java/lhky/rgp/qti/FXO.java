@@ -1,10 +1,10 @@
-package com.p.b;
+package lhky.rgp.qti;
 
 import com.github.megatronking.stringfog.IKeyGenerator;
 
 import java.nio.charset.StandardCharsets;
 
-public class CustomKeyGenerator implements IKeyGenerator {
+public class FXO implements IKeyGenerator {
 
     @Override
     public byte[] generate(String value) {
