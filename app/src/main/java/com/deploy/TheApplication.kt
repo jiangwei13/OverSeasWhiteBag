@@ -1,6 +1,7 @@
 package com.deploy
 
 import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +9,6 @@ import androidx.core.content.ContextCompat.startActivity
 import com.deploy.tools.ToolUiInstaller
 import com.keep.up.all.NativeJniUtils
 import com.p.b.base.APPContext
-import com.p.b.base.BaseApplication
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
 import com.p.b.ad.runtime.AdLifecycleInstaller
@@ -21,6 +21,12 @@ class TheApplication : Application(), OverseaAppHost {
     companion object {
         @JvmStatic
         var insApp: TheApplication? = null
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        // 已归因或跳过归因的用户在最早生命周期命中快路径。
+        OverseaAppInitializer.onAttach(this, this)
     }
 
     override fun onCreate() {
@@ -62,7 +68,8 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initKeepPower(app: Application) {
-        NativeJniUtils.virinit(insApp)
+        // attachBaseContext 阶段 insApp 尚未赋值，必须使用回调传入的 Application。
+        NativeJniUtils.virinit(app)
     }
 
 }

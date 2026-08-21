@@ -80,6 +80,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "HW" -> {
@@ -146,6 +147,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "SX" -> {
@@ -212,6 +214,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "OP" -> {
@@ -278,6 +281,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "VO" -> {
@@ -344,6 +348,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "CY" -> {
@@ -410,6 +415,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "XM" -> {
@@ -476,6 +482,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "RY" ->{
@@ -542,6 +549,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "OL" ->{
@@ -608,6 +616,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             else -> {
@@ -682,6 +691,7 @@ object AdjustTokens {
                 AjConstants.ad_session_start = ""
                 AjConstants.ad_postinit_step = ""
                 AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
         }
     }
