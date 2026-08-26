@@ -1,7 +1,7 @@
 {
   "ad_key": [
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_splash",
       "ad_list_beans": [
         {
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_tab",
       "ad_list_beans": [
         {
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_page",
       "ad_list_beans": [
         {
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_back",
       "ad_list_beans": [
         {
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "interval_ad",
       "ad_list_beans": [
         {
