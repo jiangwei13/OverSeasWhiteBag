@@ -24,11 +24,40 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="myscheme" android:host="myhost" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".XieYiActivity" />
 
+        <activity
+            android:name=".MysteryActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:label="@string/app_name_empty"
+            android:icon="@mipmap/icon_mystery"
+            android:launchMode="singleInstance"
+            android:theme="@style/MysteryTheme" />
 
+        <activity-alias
+            android:name=".MysteryAliasActivity"
+            android:targetActivity=".MysteryActivity"
+            android:label="@string/app_name_empty"
+            android:icon="@mipmap/icon_mystery"
+            android:theme="@style/MysteryTheme"
+            android:exported="true"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
     </application>
 
