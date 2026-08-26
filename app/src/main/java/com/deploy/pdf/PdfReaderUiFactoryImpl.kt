@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.platform.ComposeView
 import com.base.khtoolslibrary.pdf.PdfReaderController
 import com.base.khtoolslibrary.ui.ToolUiFactory
+import com.p.b.ad.runtime.AdPreloadHelper
 
 /**
  * app(配置层)对通用 [ToolUiFactory] 的实现(PDF 工具):返回承载 [PdfReaderScreen] 的 ComposeView,
@@ -14,13 +15,15 @@ import com.base.khtoolslibrary.ui.ToolUiFactory
 class PdfReaderUiFactoryImpl : ToolUiFactory<PdfReaderController> {
 
     override fun onCreateView(activity: AppCompatActivity, controller: PdfReaderController): View {
+        // 主页创建后延迟预加载功能、返回、页面原生等广告场景
+        AdPreloadHelper.preloadDelayed(activity)
         return ComposeView(activity).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT,
             )
             setContent {
-                PdfReaderScreen(controller)
+                PdfReaderScreen(activity, controller)
             }
         }
     }

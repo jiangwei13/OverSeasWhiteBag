@@ -10,14 +10,14 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://sites.google.com/view/magni-see/home/privacy",
-            "userUrl"   : "https://sites.google.com/view/magni-see/home/terms",
+            "privacyUrl": "https://sites.google.com/view/readerpdf/home/privacy",
+            "userUrl"   : "https://sites.google.com/view/readerpdf/home/terms",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : false,
+            "logSwitch"    : true,
 
-            "ad_LiveTime":"2025-12-06 10:00:00",
+            "ad_LiveTime":"2026-07-16 18:00:00",
             "ad_huawei_LiveTime":"2025-12-06 10:00:00",
 
             "HOST":"",
@@ -27,7 +27,7 @@ ext{
             "RELEASE_SSK":"",
             "isDebug":"false",
             "buglyId":"",
-            "Admob_AppId":"",
+            "Admob_AppId":"ca-app-pub-1589775842977386~2029736308",
 
             "umID":"",
 
@@ -36,7 +36,7 @@ ext{
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
             "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "",
+            "ADJUST_TOKEN"          : "vjjythxozc3k",
             "APPID"                 : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "

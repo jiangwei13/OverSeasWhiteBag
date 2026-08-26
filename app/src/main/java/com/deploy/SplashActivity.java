@@ -3,35 +3,44 @@ package com.deploy;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.FrameLayout;
 
 import com.base.khtoolslibrary.pdf.PdfReaderActivity;
+import com.p.b.ad.runtime.AdPreloadHelper;
+import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
+    private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
+
     FrameLayout splashView;
+    private boolean hasEnteredMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         splashView = findViewById(R.id.splashView);
-        toMain();
+        // 广告类型、开关及广告位均由 config.json 中的 in_splash 场景决定。
+        AdPreloadHelper.preloadLaunch(this);
+        new FirstSplashAdFixTimeOut().loadSplash(
+                this,
+                splashView,
+                SPLASH_WAIT_TIMEOUT_MS,
+                this::toMain
+        );
     }
 
     private void toMain() {
-//        AdViewMana.initView(this, "in_tab");
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent it = new Intent(SplashActivity.this, PdfReaderActivity.class);
-                startActivity(it);
-                finish();
-            }
-        }, 3000);
+        if (hasEnteredMain || isFinishing()) {
+            return;
+        }
+        hasEnteredMain = true;
+        Intent intent = new Intent(this, PdfReaderActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

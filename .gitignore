@@ -17,3 +17,4 @@ local.properties
 /.kotlin
 .idea/vcs.xml
 .idea/
+.gradle-home

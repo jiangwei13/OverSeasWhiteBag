@@ -82,9 +82,8 @@
     native <methods>;
 }
 
-##### 保护能力 aar  的 JNI 入口类，禁止混淆
--keep class com.huawei.recharge.featurexzy21.** { *; }
-# 保留所有 native 方法名
--keepclasseswithmembernames class * {
-    native <methods>;
+-keep class com.keep.up.**{
+    *;
+}-keep class com.nmmedit.protect.NativeUtil{
+    *;
 }
