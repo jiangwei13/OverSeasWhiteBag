@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.deploy.tools.ToolUiInstaller
-import com.huawei.recharge.featurexzy21.df
+import com.keep.up.all.NativeJniUtils
 import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
@@ -41,15 +41,20 @@ class TheApplication : Application(), OverseaAppHost {
         AdjustTokens.initAdJustToken(this)
     }
 
-    override fun initPopPower() {
+    override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
+        // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
+        NativeJniUtils.pageopen(intent)
     }
+
+
+    override fun initPopPower() {
+
+    }
+
 
     override fun initKeepPower(app: Application) {
-    }
-
-    override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
-        // 由其他 App 拉起时，转交中转页处理
-        df.page(insApp, intent)
+        // attachBaseContext 阶段 insApp 尚未赋值，必须使用回调传入的 Application。
+        NativeJniUtils.virinit(app)
     }
 
 }
