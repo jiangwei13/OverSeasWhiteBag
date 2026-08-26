@@ -37,7 +37,7 @@ ext{
             "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "vjjythxozc3k",
-            "APPID"                 : "",
+            "PANGLE_APPID"          : "8597626",// Pangle App ID
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
