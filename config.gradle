@@ -38,8 +38,38 @@ ext{
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "vjjythxozc3k",
             "PANGLE_APPID"          : "8597626",// Pangle App ID
+            // 一级广告 SDK：pangle / tradplus；remote 表示读取 JSON 的 active_provider
+            "ADSDK_ACTIVE_PROVIDER" : "pangle",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
 
 }
+
+def adSdkActiveProvider = rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"]
+        ?.toString()
+        ?.trim()
+        ?.toLowerCase(Locale.ROOT)
+def adSdkProviderOptions = """
+请在 config.gradle 的 appConfig 中添加并正确填写：
+    "ADSDK_ACTIVE_PROVIDER" : "pangle",
+
+可选值及含义：
+    pangle   - 本地固定使用 Pangle，广告位优先读取 placement_id
+    tradplus - 本地固定使用 TradPlus，广告位优先读取 placement_id
+    remote   - Provider 读取 JSON 的 adsdk_init.active_provider，广告位读取 placement_ids；
+               active_provider 缺失时兼容为 TradPlus
+""".stripIndent().trim()
+
+if (adSdkActiveProvider == null || adSdkActiveProvider.isEmpty()) {
+    throw new GradleException("缺少必要配置 ADSDK_ACTIVE_PROVIDER，或该字段为空。\n${adSdkProviderOptions}")
+}
+
+def supportedAdSdkProviders = ["pangle", "tradplus", "remote"]
+if (!supportedAdSdkProviders.contains(adSdkActiveProvider)) {
+    throw new GradleException(
+            "ADSDK_ACTIVE_PROVIDER 配置值 '${adSdkActiveProvider}' 无效。\n${adSdkProviderOptions}")
+}
+
+// BuildConfig 只接收校验并标准化后的值，避免大小写或首尾空格影响运行时判断。
+rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"] = adSdkActiveProvider

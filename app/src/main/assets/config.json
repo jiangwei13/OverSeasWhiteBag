@@ -9,6 +9,7 @@
           "type": "in_splash",
           "gm_id": "",
           "enable": true,
+          "placement_id": "890178311",
           "placement_ids": {
             "tradplus": "17AD84C8DDF5B16DA1E5E26F69E22A12",
             "pangle": "890178311"
@@ -25,6 +26,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546256",
           "placement_ids": {
             "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
             "pangle": "983546256"
@@ -41,6 +43,7 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546258",
           "placement_ids": {
             "tradplus": "8A7C50FABDF598C4BBCEB8E72614FE12",
             "pangle": "983546258"
@@ -57,6 +60,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546256",
           "placement_ids": {
             "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
             "pangle": "983546256"
@@ -67,6 +71,7 @@
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546249",
           "placement_ids": {
             "tradplus": "DCC9190A5ED26CF3D3732635F6708D12",
             "pangle": "983546249"
@@ -83,6 +88,7 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546256",
           "placement_ids": {
             "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
             "pangle": "983546256"
@@ -99,6 +105,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546235",
           "placement_ids": {
             "tradplus": "2103AC9966218048719813E32F012412",
             "pangle": "983546235"
@@ -115,6 +122,7 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
+          "placement_id": "983546247",
           "placement_ids": {
             "tradplus": "2103AC9966218048719813E32F012412",
             "pangle": "983546247"
