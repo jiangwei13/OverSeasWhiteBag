@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.base.khtoolslibrary.pdf.PdfReaderActivity;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
+import com.toolsbox.business.cleantidy.ui.CleanTidyActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,7 +39,7 @@ public class SplashActivity extends AppCompatActivity {
             return;
         }
         hasEnteredMain = true;
-        Intent intent = new Intent(this, PdfReaderActivity.class);
+        Intent intent = new Intent(this, CleanTidyActivity.class);
         startActivity(intent);
         finish();
     }

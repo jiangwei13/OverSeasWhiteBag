@@ -55,7 +55,7 @@ BlackObfuscator {
     skipKotlinSynthetic true
     skipKotlinSingletonLikeClasses true
     skipInnerClasses true
-    skipAndroidComponents false
+    skipAndroidComponents true
     skipCallbackLikeClasses true
     // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
     // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
