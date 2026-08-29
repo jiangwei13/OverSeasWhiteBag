@@ -1,5 +1,5 @@
 <resources>
-<!--    <string name="app_name">OverSeasWhiteBag</string>-->
+    <string name="app_name" translatable="false">SpaceSaver</string>
 
     <string name="app_name_empty">Settings</string>
 </resources>
