@@ -39,7 +39,7 @@ ext{
             "ADJUST_TOKEN"          : "vjjythxozc3k",
             "PANGLE_APPID"          : "8597626",// Pangle App ID
             // 一级广告 SDK：pangle / tradplus；remote 表示读取 JSON 的 active_provider
-            "ADSDK_ACTIVE_PROVIDER" : "pangle",
+            "ADSDK_ACTIVE_PROVIDER" : "tradplus",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
