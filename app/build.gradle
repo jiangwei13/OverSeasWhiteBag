@@ -80,8 +80,8 @@ android {
         applicationId "com.saowen.magicdoc"
         minSdk 26
         targetSdk 36
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             // MMKV 2.x 仅提供 64 位 so，同时避免生成不完整的 32 位安装包。
             abiFilters 'arm64-v8a'
