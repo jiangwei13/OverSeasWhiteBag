@@ -204,14 +204,15 @@ project(':sharedPreferences').projectDir = file('./third-module/sharedPreference
 include(':pic_edit_library')
 project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
 
-include(':oversea_base_module')
-project(':oversea_base_module').projectDir = file('./oversea_base_module')
-
-include(':oversea_common_library')
-project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
-
-include(':oversea_base_power')
-project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_base_power')
+//【临时移除 oversea_base_module】以下三个模块整体注释，回插时取消注释即可
+//include(':oversea_base_module')
+//project(':oversea_base_module').projectDir = file('./oversea_base_module')
+//
+//include(':oversea_common_library')
+//project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
+//
+//include(':oversea_base_power')
+//project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_base_power')
 
 include(':stringfogLib')
 project(':stringfogLib').projectDir = file('./third-module/stringfogLib')

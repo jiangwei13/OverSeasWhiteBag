@@ -6,7 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.platform.ComposeView
 import com.base.khtoolslibrary.pdf.PdfReaderController
 import com.base.khtoolslibrary.ui.ToolUiFactory
-import com.p.b.ad.runtime.AdPreloadHelper
+//【临时移除 oversea_base_module】广告预加载 import 随模块注释，回插时恢复
+//import com.p.b.ad.runtime.AdPreloadHelper
 
 /**
  * app(配置层)对通用 [ToolUiFactory] 的实现(PDF 工具):返回承载 [PdfReaderScreen] 的 ComposeView,
@@ -15,8 +16,9 @@ import com.p.b.ad.runtime.AdPreloadHelper
 class PdfReaderUiFactoryImpl : ToolUiFactory<PdfReaderController> {
 
     override fun onCreateView(activity: AppCompatActivity, controller: PdfReaderController): View {
+        //【临时移除 oversea_base_module】原广告预加载随模块注释，回插时恢复：
         // 主页创建后延迟预加载功能、返回、页面原生等广告场景
-        AdPreloadHelper.preloadDelayed(activity)
+        // AdPreloadHelper.preloadDelayed(activity)
         return ComposeView(activity).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,

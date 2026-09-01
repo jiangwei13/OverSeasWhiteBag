@@ -35,8 +35,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
+//【临时移除 oversea_base_module】广告相关 import 随模块注释，回插时恢复
+//import com.p.b.ad.runtime.AdScenes
+//import com.p.b.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -87,21 +88,23 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
         }
 
         // 主页信息流广告：放在内容区与底部功能按钮之间
-        AndroidView(
-            factory = { context ->
-                FrameLayout(context).also { container ->
-                    AdShowHelper.showNative(activity, container, AdScenes.PAGE)
-                }
-            },
-            // 不预留固定高度：场景关闭或无填充时保持收起，广告渲染后按内容高度展开
-            modifier = Modifier.fillMaxWidth(),
-        )
+        //【临时移除 oversea_base_module】信息流广告整体注释，回插时恢复
+        // AndroidView(
+        //     factory = { context ->
+        //         FrameLayout(context).also { container ->
+        //             AdShowHelper.showNative(activity, container, AdScenes.PAGE)
+        //         }
+        //     },
+        //     // 不预留固定高度：场景关闭或无填充时保持收起，广告渲染后按内容高度展开
+        //     modifier = Modifier.fillMaxWidth(),
+        // )
 
         // 底部:深色圆角 "PICK PDF" 按钮 #1E1E1E
         Button(
             onClick = {
+                //【临时移除 oversea_base_module】原功能位广告随模块注释，回插时恢复：
                 // in_function 可灵活配置广告类型，统一交给基础模块选择并展示
-                AdShowHelper.showFunctionAd(activity)
+                // AdShowHelper.showFunctionAd(activity)
                 controller.pickPdf()
             },
             shape = RoundedCornerShape(10.dp),
