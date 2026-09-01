@@ -77,7 +77,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.wvlforest.cleantidy"
         minSdk 26
         targetSdk 36
         versionCode 1
@@ -102,15 +102,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magnisee'
+            keyAlias 'cleantidy'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('cleantidy.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magnisee'
+            keyAlias 'cleantidy'
             keyPassword '123456'
-            storeFile file('magnisee.jks')
+            storeFile file('cleantidy.jks')
             storePassword '123456'
         }
     }

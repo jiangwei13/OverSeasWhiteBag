@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2026-07-16 18:00:00",
             "ad_huawei_LiveTime":"2025-12-06 10:00:00",
