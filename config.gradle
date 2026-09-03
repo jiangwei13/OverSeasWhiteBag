@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2026-07-16 18:00:00",
             "ad_huawei_LiveTime":"2025-12-06 10:00:00",
@@ -27,17 +27,17 @@ ext{
             "RELEASE_SSK":"",
             "isDebug":"false",
             "buglyId":"",
-            "Admob_AppId":"ca-app-pub-1589775842977386~2029736308",
+            "Admob_AppId":"ca-app-pub-3924069160429935~1792826298",
 
             "umID":"",
 
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
+            "TradPlus_ID"           : "",// Pangle 项目不使用 TradPlus
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "vjjythxozc3k",
-            "PANGLE_APPID"          : "8597626",// Pangle App ID
+            "ADJUST_TOKEN"          : "z6mizjojl88w",
+            "PANGLE_APPID"          : "8830254",// Pangle App ID
             // 一级广告 SDK：pangle / tradplus；remote 表示读取 JSON 的 active_provider
             "ADSDK_ACTIVE_PROVIDER" : "pangle",
             "FISRT_SPLASH"          : "",
