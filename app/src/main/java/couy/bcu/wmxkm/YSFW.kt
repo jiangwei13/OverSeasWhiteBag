@@ -1,29 +1,29 @@
-//package com.deploy
+//package couy.bcu.wmxkm
 //
 //import android.app.Application
 //import android.content.Context
 //import android.content.Intent
 //import android.os.Bundle
-//import com.deploy.tools.ToolUiInstaller
+//import couy.bcu.wmxkm.tools.ToolUiInstaller
 //import com.keep.up.all.NativeJniUtils
-//import com.p.b.ad.runtime.AdLifecycleInstaller
-//import com.p.b.base.APPContext
-//import com.p.b.base.OverseaAppHost
-//import com.p.b.base.OverseaAppInitializer
+//import couy.hnrvi.vgeq.ad.runtime.AdLifecycleInstaller
+//import couy.hnrvi.vgeq.base.APPContext
+//import couy.hnrvi.vgeq.base.OverseaAppHost
+//import couy.hnrvi.vgeq.base.OverseaAppInitializer
 //
 ///**
-// * 保活线 Application 骨架：与普通线 [TheApplication] 并列，共用同一套公共初始化 [OverseaAppInitializer]。
+// * 保活线 Application 骨架：与普通线 [YSEB] 并列，共用同一套公共初始化 [OverseaAppInitializer]。
 // *
-// * 当前普通线 [TheApplication] 已通过 NativeJniUtils 对接保活能力，此类为切换到
+// * 当前普通线 [YSEB] 已通过 NativeJniUtils 对接保活能力，此类为切换到
 // * 保活 aar 的 BaseJksApplication 父类预留。待对应 aar 到位后：
 // * - 把继承从普通 [Application] 改为保活 aar 的 BaseJksApplication；
 // * - super.attachBaseContext() / super.onCreate() 即自动触发其保活逻辑。
 // */
-//class TheJksApplication : Application(), OverseaAppHost {
+//class YSFW : Application(), OverseaAppHost {
 //
 //    companion object {
 //        @JvmStatic
-//        var insApp: TheJksApplication? = null
+//        var insApp: YSFW? = null
 //    }
 //
 //    override val restrictSubProcessInAttach: Boolean = true
@@ -55,7 +55,7 @@
 //    }
 //
 //    override fun configureAdjustTokens() {
-//        AdjustTokens.initAdJustToken(this)
+//        YSFV.initAdJustToken(this)
 //    }
 //
 //    override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
