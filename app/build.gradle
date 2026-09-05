@@ -1,83 +1,95 @@
 plugins {
     id 'com.android.application'
-    id("walle")
+    id 'org.jetbrains.kotlin.android'
+    id 'walle'
 }
-apply plugin: 'kotlin-android'
+
 apply plugin: 'android-junk-code'
-apply plugin: "org.jetbrains.kotlin.plugin.compose"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'top.niunaijun.blackobfuscator'
 apply plugin: 'xml-class-guard'
-apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
-
+apply from: '../third-module/build_tools/jiagu/jiagu.gradle'
 
 androidJunkCode {
-    def config = {
-        packageBase = "com.mistyhui.weather.xia"
-        packageCount = 40
-        activityCountPerPackage = 40
-        excludeActivityJavaFile = false
-        otherCountPerPackage = 50
-        methodCountPerClass = 50
-        resPrefix = "mistyhui_"
-        drawableCount = 100
-        stringCount = 100
-    }
     variantConfig {
-//        release config
+        release {
+            packageBase = 'com.mistyhui.weather.xia'
+            packageCount = 40
+            activityCountPerPackage = 40
+            excludeActivityJavaFile = false
+            otherCountPerPackage = 50
+            methodCountPerClass = 50
+            resPrefix = 'mistyhui_'
+            drawableCount = 100
+            stringCount = 100
+        }
     }
 }
 
 xmlClassGuard {
-    mappingFile = file("xml-class-mapping.txt")
-    //更改manifest文件的package属性，即包名
+    // 映射由当前语义源码重新生成，不复用旧混淆工程的映射。
+    mappingFile = file('xml-class-mapping.txt')
     packageChange = [
-                 "com.example.overseaswhitebag"  : "xktv.nacw.iwsqc",
-                ]
-    //移动目录
+            'com.deploy': 'nmu.qaki.mxft'
+    ]
     moveDir = [
-           "com.example.overseaswhitebag.privacy"   : "xktv.flchf.usr",
-           "com.yao.tool.scenic.bean"   : "xktv.rqcyh.ryjmk",
-           "com.yao.tool.bean"                    : "xktv.aoudt.moefu",
-           "com.clean.scanlibrary.bean"        : "xktv.pudkj.lalu",
-           "com.p.b.base_api_net.base_api_bean"             : "xktv.rml.kcr",
-           "com.clean.pic_toolslibrary"                                 : "xktv.oyzue.jptb",
-           "com.p.b"                                        : "xktv.zpv.kkbog",
-           ]
+            'com.toolsbox.business': 'nmu.svzi.qjyk',
+            'com.p.b'                : 'nmu.rzxr.uik'
+    ]
+}
+
+BlackObfuscator {
+    // 只在 release 链启用，避免影响日常调试编译。
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }
+    depth 2
+    mappingFile = file('xml-class-mapping.txt')
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses true
+    skipAndroidComponents false
+    skipCallbackLikeClasses true
+    // 正式打包时由加固脚本注入实际类列表。
+    obfClass = []
+    blackClass = ['top.niunaijun.black']
 }
 
 android {
+    namespace 'com.deploy'
+    compileSdk 36
 
-
-
-    namespace 'xktv.nacw.iwsqc'
-    compileSdk 35
-
-    // 临时禁用某些严格检查
     aaptOptions {
         ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
-        additionalParameters "--no-version-vectors"
+        additionalParameters '--no-version-vectors'
     }
+
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
-        minSdk 28
-        targetSdk 35
-        versionCode 3
-        versionName "1.0.3"
+        applicationId 'com.saowen.magicdoc'
+        minSdk 26
+        targetSdk 36
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
         ndk {
-            abiFilters 'armeabi-v7a', 'arm64-v8a'
+            abiFilters 'arm64-v8a'
         }
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
+
     packaging {
         resources {
             excludes += ['META-INF/DEPENDENCIES', 'resources.arsc', 'AndroidManifest.xml']
         }
-        dex { useLegacyPackaging true }
-        jniLibs { useLegacyPackaging true }
+        dex {
+            useLegacyPackaging true
+        }
+        jniLibs {
+            useLegacyPackaging true
+        }
     }
-    ndkVersion "28.0.12433566"
+
+    ndkVersion '28.0.12433566'
+
     signingConfigs {
         release {
             keyAlias 'horizonWeather'
@@ -93,7 +105,6 @@ android {
         }
     }
 
-
     buildTypes {
         release {
             minifyEnabled true
@@ -108,18 +119,18 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
-        freeCompilerArgs += [
-                "-Xjvm-default=all",
-        ]
+        freeCompilerArgs += ['-Xjvm-default=all']
     }
 
     bundle {
@@ -133,54 +144,31 @@ android {
             enableSplit = true
         }
     }
-    viewBinding {
-        enabled = true
-    }
 
-    dataBinding {
-        enabled = true
-    }
     buildFeatures {
+        dataBinding true
         viewBinding true
     }
 
-    buildFeatures{
-        compose true
-    }
-
     lint {
-        baseline = file("lint-baseline.xml")
+        baseline = file('lint-baseline.xml')
     }
-
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-//    implementation files('libs/pluginhelper.aar')
     implementation project(':toolsbox')
-    implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation project(':oversea_base_module')
-//    implementation project(':broadcast')
-//    implementation project(':base_ad_common_library')
+    implementation project(':oversea_common_library')
+    implementation project(':stringfogLib')
+    implementation project(':aar_library:aar_name')
+
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.android.material:material:1.2.0-alpha03'
-
-    // compose
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation(platform("androidx.compose:compose-bom:2024.02.01"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material:material")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.animation:animation")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
-    implementation("io.coil-kt:coil-compose:2.5.0")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
-
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.github.Petterpx.walle:library:1.0.5'
     implementation 'com.tencent:mmkv:2.3.0'
 
-    api project(':aar_library:aar_name')
-
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }

@@ -1,158 +1,70 @@
 pluginManagement {
     repositories {
-//    gradlePluginPortal()
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-        //Ironsource
-        maven {
-            url "https://android-sdk.is.com/"
-        }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Huawei
-        maven {
-            url "https://developer.huawei.com/repo/"
-        }
-
-        //Mintegral
-        maven {
-            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
-        }
-
-        //Chartboost
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-ads"
-        }
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
-        }
+        maven { url 'https://jfrog.anythinktech.com/artifactory/overseas_sdk' }
+        maven { url 'https://jfrog.anythinktech.com/artifactory/debugger' }
+        maven { url 'https://android-sdk.is.com/' }
+        maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads' }
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-mediation' }
     }
 }
-
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-//    gradlePluginPortal()
+        google()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url "https://artifact.bytedance.com/repository/pangle" }
-
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
         maven { url 'https://developer.huawei.com/repo' }
         maven { url 'https://developer.hihonor.com/repo' }
-        flatDir {
-            dirs 'libs'
-        }
-        //Ironsource
-        maven {
-            url "https://android-sdk.is.com/"
-        }
-
-        //Pangle
-        maven {
-            url "https://artifact.bytedance.com/repository/pangle"
-        }
-
-        //Huawei
-        maven {
-            url "https://developer.huawei.com/repo/"
-        }
-
-        //Mintegral
-        maven {
-            url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
-        }
-
-        //Chartboost
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-ads"
-        }
-        maven {
-            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
-        }
+        maven { url 'https://jfrog.anythinktech.com/artifactory/overseas_sdk' }
+        maven { url 'https://jfrog.anythinktech.com/artifactory/debugger' }
+        maven { url 'https://android-sdk.is.com/' }
+        maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads' }
+        maven { url 'https://cboost.jfrog.io/artifactory/chartboost-mediation' }
+        flatDir { dirs 'libs' }
     }
 }
 
+rootProject.name = 'OverSeasWhiteBag'
 
-rootProject.name = "OverSeasWhiteBag"
 include ':app'
-//include ':tools-ui-library'
-//project(':tools-ui-library').projectDir = file('./tools-ui-library/tools-ui-library')
-include ':setting'
-project(':setting').projectDir = file('./third-module/setting')
-include ':toolslibrary'
-project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-include ':color_picker_library'
-project(':color_picker_library').projectDir = file('./third-module/color_picker_library')
-//include ':edgeborderlight'
-//project(':edgeborderlight').projectDir = file('./modules/third-module/edgeborderlight')
-//include ':brokendevice'
-//project(':brokendevice').projectDir = file('./third-module/brokendevice')
-include(':build_tools')
-project(':build_tools').projectDir =file('./third-module/build_tools/build_tools')
-include ':setting'
-project(':setting').projectDir = file('./third-module/setting')
-include ':toolslibrary'
-project(':toolslibrary').projectDir = file('./third-module/toolslibrary')
-include ':pic_toolslibrary'
-project(':pic_toolslibrary').projectDir = file('./third-module/pic_toolslibrary')
-include ':scanlibrary'
-project(':scanlibrary').projectDir = file('./third-module/scanlibrary')
-include ':brokendevice'
-project(':brokendevice').projectDir = file('./third-module/brokendevice')
-//include(':heartbratmeasure')
-//project(':heartbratmeasure').projectDir = file('./third-module/heartbratmeasure')
-include(':recipes_module')
-project(':recipes_module').projectDir = file('./third-module/recipes_module')
-include(':toolsbox')
+
+include ':toolsbox'
 project(':toolsbox').projectDir = file('./toolsbox_moduel/toolsbox')
 
+include ':setting'
+project(':setting').projectDir = file('./third-module/setting')
 
-include(':smalltoolslibrary')
-project(':smalltoolslibrary').projectDir = file('./third-module/smalltoolslibrary')
+include ':build_tools'
+project(':build_tools').projectDir = file('./third-module/build_tools/build_tools')
 
-include(':sharedPreferences')
-project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
+include ':stringfogLib'
+project(':stringfogLib').projectDir = file('./third-module/stringfogLib')
 
-include(':sharedPreferences')
-project(':sharedPreferences').projectDir = file('./third-module/sharedPreferences')
-
-include(':pic_edit_library')
-project(':pic_edit_library').projectDir = file('./third-module/pic_edit_library')
-
-include(':tallynotes')
-project(':tallynotes').projectDir = file('./third-module/tallynotes')
-
-include(':oversea_base_module')
+include ':oversea_base_module'
 project(':oversea_base_module').projectDir = file('./oversea_base_module')
 
-//include(':broadcast')
-//project(':broadcast').projectDir = file("./tools_common_module/broadcast")
+include ':oversea_common_library'
+project(':oversea_common_library').projectDir = file('./oversea_base_module/oversea_common_library')
 
-//include(':base_ad_common_library')
-//project(':base_ad_common_library').projectDir = file("./tools_common_module/base_ad_common_library")
+include ':oversea_base_power'
+project(':oversea_base_power').projectDir = file('./oversea_base_module/oversea_base_power')
 
-
-//include(":aar_library:app_aar")
-//include(":aar_library:security_checker")
-
-//include ':oversea_utils'
-include(":aar_library:aar_name")
+include ':aar_library:aar_name'

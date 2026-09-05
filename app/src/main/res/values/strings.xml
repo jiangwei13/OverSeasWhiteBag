@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Horizon Weather</string>
+    <string name="app_name_empty">Settings</string>
 </resources>

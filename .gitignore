@@ -38,3 +38,7 @@ local.properties
 # 编译输出
 .idea/compiler.xml
 .idea/jarRepositories.xml
+
+.gradle-home
+.kotlin
+aar_library/aar_name/build
