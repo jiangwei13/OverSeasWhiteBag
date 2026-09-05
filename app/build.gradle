@@ -65,11 +65,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.saowen.magicdoc'
+        applicationId 'com.horizon.weather'
         minSdk 26
         targetSdk 36
         versionCode 5
-        versionName 1.0.5
+        versionName '1.0.5'
         ndk {
             abiFilters 'arm64-v8a'
         }

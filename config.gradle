@@ -13,7 +13,7 @@ ext {
             'VERSIONNAME'          : android.versionName,
 
             // 海外公共底座与广告配置，沿用 PDF 新底座。
-            'logSwitch'            : true,
+            'logSwitch'            : false,
             'ad_LiveTime'          : '2026-07-16 18:00:00',
             'ad_huawei_LiveTime'   : '2025-12-06 10:00:00',
             'HOST'                 : '',
@@ -23,14 +23,14 @@ ext {
             'RELEASE_SSK'          : '',
             'isDebug'              : 'false',
             'buglyId'              : '',
-            'Admob_AppId'          : 'ca-app-pub-1589775842977386~2029736308',
+            'Admob_AppId'          : 'ca-app-pub-3924069160429935~1150031722',
             'umID'                 : '',
             'TOPON_APPID'          : 'h691eb23982b34',
             'TOPON_APPKEY'         : 'abb325d6a80de9f580f2f41dc6a825556',
-            'TradPlus_ID'          : 'CB94948BA3CBE894EB0558B1E3FFE211',
+            'TradPlus_ID'          : '',
             'AF_APP_KEY'           : '',
-            'ADJUST_TOKEN'         : 'vjjythxozc3k',
-            'PANGLE_APPID'         : '8597626',
+            'ADJUST_TOKEN'         : '7xl22ryzkozk',
+            'PANGLE_APPID'         : '8776273',
             'ADSDK_ACTIVE_PROVIDER': 'pangle',
 
             // setting 模块仍读取这些兼容字段。
