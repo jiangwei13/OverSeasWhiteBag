@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".TheApplication"
+        android:name="dfra.amnpv.xlqp.ZDO"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:extractNativeLibs="true"
@@ -18,7 +18,7 @@
         tools:replace="android:icon,android:dataExtractionRules,android:fullBackupContent">
 
         <activity
-            android:name=".SplashActivity"
+            android:name="dfra.amnpv.xlqp.HCA"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
@@ -38,7 +38,7 @@
         </activity>
 
         <activity
-            android:name=".MysteryActivity"
+            android:name="dfra.amnpv.xlqp.OHOU"
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnTaskLaunch="false"
@@ -48,12 +48,12 @@
             android:theme="@style/MysteryTheme" />
 
         <activity-alias
-            android:name=".MysteryAliasActivity"
+            android:name="dfra.amnpv.xlqp.MysteryAliasActivity"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/icon_mystery"
             android:label="@string/app_name_empty"
-            android:targetActivity=".MysteryActivity"
+            android:targetActivity="dfra.amnpv.xlqp.OHOU"
             android:theme="@style/MysteryTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

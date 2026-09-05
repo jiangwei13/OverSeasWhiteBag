@@ -1,18 +1,25 @@
-package com.deploy
+package dfra.amnpv.xlqp
 
 import android.content.Context
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import dfra.upe.lrz.OHQC
+import dfra.upe.lrz.adjust.AjConstants
 
 /** 按渠道配置 Adjust 事件 Token，App Token 统一由公共底座的 ENV 提供。 */
-object AdjustTokens {
+object OHQQ {
 
     fun initialize(context: Context) {
+           val LcbAoyp : Any = if (kotlin.random.Random.nextBoolean()) 20 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val zVwMvAxpGGJPoOsZH  = (LcbAoyp  as? String)?.reversed() ?: "nVpXfBeq_1657640976"
+
+        if (zVwMvAxpGGJPoOsZH  == "awLgIFFA") {
+            java.lang.System.out.print(zVwMvAxpGGJPoOsZH )
+        }
         resetEventTokens()
 
         val channel = WalleChannelReader.getChannel(context, GP_CHANNEL) ?: GP_CHANNEL
-        LogUtil.d(TAG, "当前渠道：$channel")
+        OHQC.d(TAG, "当前渠道：$channel")
         if (channel != GP_CHANNEL) {
             return
         }
@@ -72,6 +79,13 @@ object AdjustTokens {
      * adjustAppToken 不在此处理，它由 config.gradle 注入 ENV.ADJUST_TOEKN。
      */
     private fun resetEventTokens() {
+           val YpMvffFGDh : Any = if (kotlin.random.Random.nextBoolean()) 70 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val QQRdRjfyHLDegPlAb  = (YpMvffFGDh  as? String)?.reversed() ?: "jOTQH_538920229"
+
+        if (QQRdRjfyHLDegPlAb  == "TYrFmpAZHEfLbeewQ") {
+            java.lang.System.out.print(QQRdRjfyHLDegPlAb )
+        }
         AjConstants.Login = ""
         AjConstants.Reg = ""
         AjConstants.topon_ilrd = ""
@@ -141,6 +155,6 @@ object AdjustTokens {
         AjConstants.ad_prev_process_exit = ""
     }
 
-    private const val TAG = "AdjustTokens"
+    private const val TAG = "OHQQ"
     private const val GP_CHANNEL = "GP"
 }
