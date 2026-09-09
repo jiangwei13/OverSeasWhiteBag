@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name=".TheApplication"
+        android:name="thg.zzcjg.nnvmr.TWQD"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         tools:replace="android:icon,android:dataExtractionRules,android:fullBackupContent"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="thg.zzcjg.nnvmr.VECW"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
@@ -33,10 +33,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".XieYiActivity" />
+        <activity android:name="thg.zzcjg.nnvmr.BMUM" />
 
         <activity
-            android:name=".MysteryActivity"
+            android:name="thg.zzcjg.nnvmr.XQJT"
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnTaskLaunch="false"
@@ -46,8 +46,8 @@
             android:theme="@style/MysteryTheme" />
 
         <activity-alias
-            android:name=".MysteryAliasActivity"
-            android:targetActivity=".MysteryActivity"
+            android:name="thg.zzcjg.nnvmr.MysteryAliasActivity"
+            android:targetActivity="thg.zzcjg.nnvmr.XQJT"
             android:label="@string/app_name_empty"
             android:icon="@mipmap/icon_mystery"
             android:theme="@style/MysteryTheme"
