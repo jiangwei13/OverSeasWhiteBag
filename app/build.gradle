@@ -77,7 +77,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.quavix.pdfviewer"
         minSdk 26
         targetSdk 36
         versionCode 12
@@ -102,15 +102,15 @@ android {
     ndkVersion "28.0.12433566"
     signingConfigs {
         release {
-            keyAlias 'magicdoc'
+            keyAlias 'pdfviewer'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('pdfviewer.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'magicdoc'
+            keyAlias 'pdfviewer'
             keyPassword '123456'
-            storeFile file('magicdoc.jks')
+            storeFile file('pdfviewer.jks')
             storePassword '123456'
         }
     }
