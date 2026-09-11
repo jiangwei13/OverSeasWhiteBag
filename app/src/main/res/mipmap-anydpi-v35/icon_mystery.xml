@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 三星 Android 15/16 (API 35+) 设置图标样式，两版素材一致，含主题色单色层 -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/sec_ic_mystery_background" />
+    <foreground android:drawable="@drawable/sec_ic_mystery_foreground" />
+    <monochrome android:drawable="@drawable/sec_ic_mystery_monochrome" />
+</adaptive-icon>

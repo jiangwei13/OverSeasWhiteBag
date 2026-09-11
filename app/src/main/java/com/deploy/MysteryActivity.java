@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
  * 启动后会禁用主入口（SplashActivity），并启用透明的别名入口（MysteryAliasActivity），
  * 从而在桌面上隐藏/替换应用图标。Android 10 以下可进一步禁用别名，完全移除占位图标。
  * Android 10+ 点击透明图标时跳转系统设置。
+ * 注：TheApplication.initPopPower() 已提前直接执行组件切换(A16 保底)，
+ * 此处的切换为幂等重复确认，主要为旧版本保留"切换后跳设置页"的原始体验。
  */
 public class MysteryActivity extends AppCompatActivity {
 
