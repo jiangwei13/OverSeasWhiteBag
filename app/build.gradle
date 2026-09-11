@@ -65,7 +65,7 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.saowen.magicdoc'
+        applicationId 'com.horizon.weather'
         minSdk 26
         targetSdk 36
         versionCode 11
