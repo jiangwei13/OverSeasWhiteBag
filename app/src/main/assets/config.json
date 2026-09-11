@@ -52,7 +52,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_function",
       "ad_list_beans": [
         {
