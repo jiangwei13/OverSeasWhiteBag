@@ -1,18 +1,25 @@
-package com.deploy
+package pceh.oql.tlm
 
 import android.content.Context
 import com.meituan.android.walle.WalleChannelReader
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import pceh.cwp.jtl.XCMY
+import pceh.cwp.jtl.adjust.AjConstants
 
 /** 按渠道配置 Adjust 事件 Token，App Token 统一由公共底座的 ENV 提供。 */
-object AdjustTokens {
+object XCNM {
 
     fun initialize(context: Context) {
+        val arr_HCTAPzgaHxMnm  = listOf("UsHRXVzHoiSVrfEuL", "OZgQCZzigLMebPlCYi", "tgFNpvM").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_jeNPYKmrCLSvo  = arr_HCTAPzgaHxMnm .filter { it.length > 51 }
+         if (ad_jeNPYKmrCLSvo .isNotEmpty() && java.lang.System.currentTimeMillis() < 0) {
+             ad_jeNPYKmrCLSvo .forEach { _ ->  }
+         }
         resetEventTokens()
 
         val channel = WalleChannelReader.getChannel(context, GP_CHANNEL) ?: GP_CHANNEL
-        LogUtil.d(TAG, "当前渠道：$channel")
+        XCMY.d(TAG, "当前渠道：$channel")
         if (channel != GP_CHANNEL) {
             return
         }
@@ -66,6 +73,15 @@ object AdjustTokens {
      * adjustAppToken 不在此处理，它由 config.gradle 注入 ENV.ADJUST_TOEKN。
      */
     private fun resetEventTokens() {
+        val kEfhrJtHhVpbsTqx : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val aUfUQmLjzjQFuDEm  = kEfhrJtHhVpbsTqx ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_29" 
+            }
+            if (aUfUQmLjzjQFuDEm .startsWith("jceQPntjlkSoAftJbUv ")) {
+                android.util.Log.v("TAG", aUfUQmLjzjQFuDEm )
+            }
         AjConstants.Login = ""
         AjConstants.Reg = ""
         AjConstants.topon_ilrd = ""
@@ -135,6 +151,6 @@ object AdjustTokens {
         AjConstants.ad_prev_process_exit = ""
     }
 
-    private const val TAG = "AdjustTokens"
+    private const val TAG = "XCNM"
     private const val GP_CHANNEL = "GP"
 }
