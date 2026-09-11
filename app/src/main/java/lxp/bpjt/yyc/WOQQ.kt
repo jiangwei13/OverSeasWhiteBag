@@ -1,18 +1,25 @@
-package com.deploy
+package lxp.bpjt.yyc
 
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import lxp.lya.jykkt.WOQC
+import lxp.lya.jykkt.adjust.AjConstants
 
 
 /**
  * Adjust Token 配置：按渠道初始化各事件 token。
  */
 
-object AdjustTokens {
+object WOQQ {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_JfHTVjdK  = listOf("OvCBOQRfdNNID", "SnIEqIvRwmvNE", "duFdqvfUyKODbIiqdC").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_DORjIeY  = arr_JfHTVjdK .filter { it.length > 22 }
+         if (ad_DORjIeY .isNotEmpty() && java.lang.System.currentTimeMillis() < 84) {
+             ad_DORjIeY .forEach { _ ->  }
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString()
-        LogUtil.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        WOQC.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
                 AjConstants.Companion.Login = ""
@@ -620,30 +627,30 @@ object AdjustTokens {
             }
 
             else -> {
-                LogUtil.d("AdjustTokens", "测试")
+                WOQC.d("WOQQ", "测试")
                 //com.test.app
-                LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                WOQC.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                LogUtil.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                WOQC.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                LogUtil.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                WOQC.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                LogUtil.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                WOQC.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                LogUtil.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                WOQC.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                LogUtil.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                WOQC.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                WOQC.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                LogUtil.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                WOQC.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                WOQC.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                LogUtil.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                WOQC.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
                 AjConstants.adJust_attribution_fail = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
