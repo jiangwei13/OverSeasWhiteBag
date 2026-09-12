@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+
+    <!-- 桌面入口切换所用的透明窗口。 -->
+    <style name="MysteryTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

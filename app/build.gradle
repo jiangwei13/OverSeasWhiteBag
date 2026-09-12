@@ -5,33 +5,71 @@ plugins {
 apply plugin: 'kotlin-android'
 apply plugin: 'android-junk-code'
 apply plugin: "org.jetbrains.kotlin.plugin.compose"
-//apply plugin: 'com.google.gms.google-services'
-//apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'top.niunaijun.blackobfuscator'
+apply plugin: 'xml-class-guard'
+apply from: "../third-module/build_tools/jiagu/jiagu.gradle"
 
 
 androidJunkCode {
-    def config = {
-        packageBase = "com.smartht.healthtracker.xia"
-        packageCount = 40
-        activityCountPerPackage = 40
-        excludeActivityJavaFile = false
-        otherCountPerPackage = 50
-        methodCountPerClass = 50
-        resPrefix = "xia_"
-        drawableCount = 100
-        stringCount = 100
-    }
     variantConfig {
-        // release config
+        release {
+            packageBase = "com.nmu.pvkf.bcfe"
+            packageCount = 57
+            activityCountPerPackage = 89
+            excludeActivityJavaFile = false
+            otherCountPerPackage = 86
+            methodCountPerClass = 32
+            resPrefix = "apd_"
+            drawableCount = 155
+            stringCount =  141
+        }
     }
 }
+
+xmlClassGuard {
+    mappingFile = file("xml-class-mapping.txt")
+    //更改manifest文件的package属性，即包名
+    packageChange = [
+                 "com.example.overseaswhitebag" : "nmu.qaki.mxft",
+                 "com.p.b"  : "nmu.rzxr.uik",
+                ]
+    //移动目录
+    moveDir = [
+           "com.p.b.master"                                 : "nmu.izv.nehuu",
+           "com.p.b.op"                                        : "nmu.emut.xvlv",
+            "com.p.b.base_api_net"  : "nmu.dveni.qgq",
+            "com.p.b.pl223"         : "nmu.cha.yplj",
+           ]
+}
+
+// 加入dex混淆配置
+BlackObfuscator {
+    // 仅在 release 任务时启用，避免日常 debug 构建被影响
+    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
+    // 混淆深度
+    depth 2
+    mappingFile = file("xml-class-mapping.txt")
+    skipStaticInitializer true
+    skipKotlinSynthetic true
+    skipKotlinSingletonLikeClasses true
+    skipInnerClasses true
+    skipAndroidComponents true
+    skipCallbackLikeClasses true
+    // obfClass 为占位值；ProguardBuilder.prepareBlackObfuscator 在打包时会整块重写，
+    // 注入由 stringfog 生成的随机 pkgPrefix 及完整 blackClass 列表
+    obfClass = []
+    blackClass = ["top.niunaijun.black"]
+}
+
 
 android {
 
 
 
     namespace 'com.clean.toos'
-    compileSdk 35
+    compileSdk 36
 
     // 临时禁用某些严格检查
     aaptOptions {
@@ -39,33 +77,29 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.smartht.healthtrackergp"
+        applicationId "com.saowen.magicdoc"
         minSdk 28
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName "1.0.1"
         ndk {
-            abiFilters 'armeabi-v7a', 'arm64-v8a'
+            // MMKV 2.x 仅提供 64 位 so，同时避免生成不完整的 32 位安装包。
+            abiFilters 'arm64-v8a'
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    packagingOptions {
-
-
-        exclude 'META-INF/DEPENDENCIES'
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'resources.arsc', 'AndroidManifest.xml']
+        }
         dex {
             useLegacyPackaging true
         }
-        exclude 'resources.arsc'
-
-        exclude 'AndroidManifest.xml'
         jniLibs {
-
             useLegacyPackaging true
-
         }
     }
-    ndkVersion "28.0.12433566"
+    ndkVersion "28.1.13356709"
     signingConfigs {
         release {
             keyAlias 'healthtrackergp'
@@ -88,6 +122,10 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            // 混淆后会被 BlackObfuscator/jiagu 二次处理，mapping 上传无效且会污染线上崩溃归因
+            firebaseCrashlytics {
+                mappingFileUploadEnabled = false
+            }
         }
         debug {
             minifyEnabled false
@@ -141,11 +179,18 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
-//    implementation files('libs/pluginhelper.aar')
+    //implementation files('libs/toolslibrary-release.aar')
     implementation project(':toolsbox')
 //    implementation(project(":aar_library:app_aar"))
+    implementation project(":aar_library:aar_name")
     implementation 'com.github.Petterpx.walle:library:1.0.5'
-//    implementation project(':oversea_base_module')
+    implementation project(':oversea_base_module')
+    // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
+    // oversea_base_module 仅以 implementation 引用，可见性不传递，故在此显式引入。
+    implementation project(':oversea_common_library')
+    // StringFog 运行期解密实现的独立承载模块。
+    implementation project(':stringfogLib')
+//    implementation project(':oversea_report_core')
 //    implementation project(':broadcast')
 //    implementation project(':base_ad_common_library')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -166,7 +211,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation 'com.tencent:mmkv:2.3.0'
-
 
 
 }

@@ -1,82 +1,45 @@
 package com.example.overseaswhitebag.privacy;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.clean.toos.R;
 import com.bloodesugartracker.bloodpressureapp.Activity.Other_Activity.ToolsMainActivity;
-
+import com.clean.toos.R;
+import com.p.b.ad.runtime.AdPreloadHelper;
+import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
-
-    FrameLayout splashView;
+    private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
+    private boolean hasEnteredMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashView = findViewById(R.id.splashView);
-
-
-//        boolean isAgressment = SPUtil.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
-        toMain();
-    }
-
-    private void showProtocolDialog() {
-        ProtocolDialog protocolDialog = new ProtocolDialog(this, R.style.dialog);
-        protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new ProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                SPUtil.with(SplashActivity.this).load().save("isAgressment", true);
-                toMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
+        FrameLayout splashView = findViewById(R.id.splashView);
+        // 广告类型和开关由公共配置中的 in_splash 场景决定。
+        AdPreloadHelper.preloadLaunch(this);
+        new FirstSplashAdFixTimeOut().loadSplash(
+                this,
+                splashView,
+                SPLASH_WAIT_TIMEOUT_MS,
+                this::toMain
+        );
     }
 
     private void toMain() {
-
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent it = new Intent(SplashActivity.this, ToolsMainActivity.class);
-                startActivity(it);
-                finish();
-
-            }
-        },3000);
-
-
-//        AuditAdUtilsNew.Companion.openCSJSplashAd(this, splashView, new AuditAdUtilsNew.onSplashAdListener() {
-//            @Override
-//            public void splashEnd() {
-//                Intent it = new Intent(SplashActivity.this, ScanMenuActivity.class);
-//                startActivity(it);
-//                finish();
-//            }
-//        });
-
-
-
+        // 超时、关闭和失败可能先后回调，每次启动只进入首页一次。
+        if (hasEnteredMain || isFinishing() || isDestroyed()) {
+            return;
+        }
+        hasEnteredMain = true;
+        startActivity(new Intent(this, ToolsMainActivity.class));
+        finish();
     }
 }

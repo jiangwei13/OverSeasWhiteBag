@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.gradle-home/
+/aar_library/aar_name/build/
