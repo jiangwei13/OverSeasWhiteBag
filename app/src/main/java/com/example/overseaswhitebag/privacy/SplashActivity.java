@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bloodesugartracker.bloodpressureapp.Activity.Other_Activity.ToolsMainActivity;
+import com.toolsbox.business.health.Activity.Other_Activity.ToolsMainActivity;
 import com.clean.toos.R;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;

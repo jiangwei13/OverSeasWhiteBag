@@ -10,7 +10,7 @@ import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
 import com.p.b.common.ProcessUtils
-import com.xian.bc.utils.APPToolsContext
+import com.toolsbox.business.common.APPToolsContext
 
 class TheApplication : Application(), OverseaAppHost {
 
