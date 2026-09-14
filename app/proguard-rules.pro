@@ -21,6 +21,8 @@
 #-renamesourcefileattribute SourceFile
 -dontwarn org.joda.convert.FromString
 -dontwarn org.joda.convert.ToString
+# Error Prone 编译期注解引用的 Java 编译器类型，Android 运行时不需要
+-dontwarn javax.lang.model.element.Modifier
 ######fireBase###########
 ###########google###########
 -keep class com.google.android.gms.** { *; }
