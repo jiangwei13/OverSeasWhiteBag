@@ -1,17 +1,26 @@
-/*【临时移除 oversea_base_module】整文件依赖 com.p.b（AjConstants、LogUtil），已整体注释退出编译。
+/*【临时移除 oversea_base_module】整文件依赖 jqoj.gmdwk.zpfkj（AjConstants、LogUtil），已整体注释退出编译。
   回插时删除本行和文件末尾的块注释结束符即可恢复本文件。
-package com.example.overseaswhitebag
+package jqoj.ixell.qmlom
 
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import jqoj.mgnz.bcjg.LogUtil
+import jqoj.mgnz.bcjg.adjust.AjConstants
 
 
 /**
  * Adjust Token 配置：按渠道初始化各事件 token。
  */
 
-object AdjustTokens {
+object VDJY {
     fun initAdJustToken(context: android.content.Context) {
+        val cqxpd : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+            val GAsuYZPRfg  = cqxpd ?.let { 
+                it.repeat(kotlin.random.Random.nextInt(100)) 
+            } ?: run { 
+                "zY0_33" 
+            }
+            if (GAsuYZPRfg .startsWith("PmTprFVMAvcw ")) {
+                android.util.Log.v("TAG", GAsuYZPRfg )
+            }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString()
         LogUtil.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
@@ -622,7 +631,7 @@ object AdjustTokens {
             }
 
             else -> {
-                LogUtil.d("AdjustTokens", "测试")
+                LogUtil.d("VDJY", "测试")
                 //com.test.app
                 LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
