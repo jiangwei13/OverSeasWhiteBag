@@ -79,7 +79,7 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        applicationId "com.swiftan.vitaday"
         minSdk 28
         targetSdk 36
         versionCode 1
@@ -104,15 +104,15 @@ android {
     ndkVersion "28.1.13356709"
     signingConfigs {
         release {
-            keyAlias 'healthtrackergp'
+            keyAlias 'vitaday'
             keyPassword '123456'
-            storeFile file('healthtrackergp.jks')
+            storeFile file('vitaday.jks')
             storePassword '123456'
         }
         debug {
-            keyAlias 'healthtrackergp'
+            keyAlias 'vitaday'
             keyPassword '123456'
-            storeFile file('healthtrackergp.jks')
+            storeFile file('vitaday.jks')
             storePassword '123456'
         }
     }
