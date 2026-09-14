@@ -1,3 +1,5 @@
+/*【临时移除 oversea_base_module】整文件依赖 com.p.b（AjConstants、LogUtil），已整体注释退出编译。
+  回插时删除本行和文件末尾的块注释结束符即可恢复本文件。
 package com.example.overseaswhitebag
 
 import com.p.b.common.LogUtil
@@ -696,3 +698,4 @@ object AdjustTokens {
         }
     }
 }
+*/

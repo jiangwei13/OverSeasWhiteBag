@@ -9,8 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.toolsbox.business.health.Activity.Other_Activity.ToolsMainActivity;
 import com.clean.toos.R;
-import com.p.b.ad.runtime.AdPreloadHelper;
-import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
+//【临时移除 oversea_base_module】回插时取消以下注释
+//import com.p.b.ad.runtime.AdPreloadHelper;
+//import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
@@ -24,13 +25,15 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         FrameLayout splashView = findViewById(R.id.splashView);
         // 广告类型和开关由公共配置中的 in_splash 场景决定。
-        AdPreloadHelper.preloadLaunch(this);
-        new FirstSplashAdFixTimeOut().loadSplash(
-                this,
-                splashView,
-                SPLASH_WAIT_TIMEOUT_MS,
-                this::toMain
-        );
+        //【临时移除 oversea_base_module】回插时恢复下方广告加载并注释 toMain() 直调
+        //AdPreloadHelper.preloadLaunch(this);
+        //new FirstSplashAdFixTimeOut().loadSplash(
+        //        this,
+        //        splashView,
+        //        SPLASH_WAIT_TIMEOUT_MS,
+        //        this::toMain
+        //);
+        toMain();
     }
 
     private void toMain() {

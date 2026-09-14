@@ -1,6 +1,30 @@
 package com.example.overseaswhitebag
 
 import android.app.Application
+import com.example.overseaswhitebag.common.utils.APPContext
+import com.toolsbox.business.common.APPToolsContext
+
+//【临时移除 oversea_base_module】原实现（OverseaAppHost + 归因/广告/保活初始化）见文件底部注释备份，回插时恢复
+class TheApplication : Application() {
+
+    companion object {
+        @JvmStatic
+        var insApp: TheApplication? = null
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        insApp = this
+        // 同时提供宿主和健康业务所需的应用上下文。
+        APPContext.setApplication(this)
+        APPToolsContext.setApplication(this)
+    }
+}
+
+/*【临时移除 oversea_base_module】原实现备份：
+package com.example.overseaswhitebag
+
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.example.overseaswhitebag.common.utils.APPContext
@@ -57,3 +81,4 @@ class TheApplication : Application(), OverseaAppHost {
         NativeJniUtils.virinit(app)
     }
 }
+*/

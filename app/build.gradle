@@ -33,14 +33,16 @@ xmlClassGuard {
     //更改manifest文件的package属性，即包名
     packageChange = [
                  "com.example.overseaswhitebag" : "nmu.qaki.mxft",
-                 "com.p.b"  : "nmu.rzxr.uik",
+                 //【临时移除 oversea_base_module】回插时取消以下注释
+                 //"com.p.b"  : "nmu.rzxr.uik",
                 ]
     //移动目录
+    //【临时移除 oversea_base_module】回插时取消以下注释
     moveDir = [
-           "com.p.b.master"                                 : "nmu.izv.nehuu",
-           "com.p.b.op"                                        : "nmu.emut.xvlv",
-            "com.p.b.base_api_net"  : "nmu.dveni.qgq",
-            "com.p.b.pl223"         : "nmu.cha.yplj",
+           //"com.p.b.master"                                 : "nmu.izv.nehuu",
+           //"com.p.b.op"                                        : "nmu.emut.xvlv",
+            //"com.p.b.base_api_net"  : "nmu.dveni.qgq",
+            //"com.p.b.pl223"         : "nmu.cha.yplj",
            ]
 }
 
@@ -184,10 +186,12 @@ dependencies {
 //    implementation(project(":aar_library:app_aar"))
     implementation project(":aar_library:aar_name")
     implementation 'com.github.Petterpx.walle:library:1.0.5'
-    implementation project(':oversea_base_module')
+    //【临时移除 oversea_base_module】回插时取消以下注释
+    //implementation project(':oversea_base_module')
     // BaseApplication 的超类型 ApplicationListener 在 oversea_common_library 中，
     // oversea_base_module 仅以 implementation 引用，可见性不传递，故在此显式引入。
-    implementation project(':oversea_common_library')
+    //【临时移除 oversea_base_module】回插时取消以下注释
+    //implementation project(':oversea_common_library')
     // StringFog 运行期解密实现的独立承载模块。
     implementation project(':stringfogLib')
 //    implementation project(':oversea_report_core')
