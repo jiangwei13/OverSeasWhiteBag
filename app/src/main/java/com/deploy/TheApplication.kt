@@ -23,7 +23,6 @@ class TheApplication : Application(), OverseaAppHost {
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
 
-        Log.e("test","initVmp")
         StartHelper.initVmp()
     }
 
@@ -61,7 +60,6 @@ class TheApplication : Application(), OverseaAppHost {
 //            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 //        })
 
-        Log.e("test","initkeep")
         StartHelper.init(this)
     }
 
