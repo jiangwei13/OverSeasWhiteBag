@@ -11,5 +11,4 @@ public class CustomKeyGenerator implements IKeyGenerator {
         String currentKey = System.currentTimeMillis() + "";
         return currentKey.getBytes(StandardCharsets.UTF_8);
     }
-
 }

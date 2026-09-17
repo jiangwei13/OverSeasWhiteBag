@@ -1,7 +1,7 @@
 ext{
     android = [
-            versionCode      : 2,
-            versionName      : "1.0.2"
+            versionCode      : 4,
+            versionName      : "1.0.4"
     ]
     dependencies = [
 
@@ -10,15 +10,23 @@ ext{
     appConfig = [
 
             //TODO 隐私协议
-            "privacyUrl": "https://sites.google.com/view/chromaboard/home/privacy",
-            "userUrl"   : "https://sites.google.com/view/chromaboard/home/terms",
+            "privacyUrl": "https://sites.google.com/view/readerpdf/home/privacy",
+            "userUrl"   : "https://sites.google.com/view/readerpdf/home/terms",
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
             "logSwitch"    : true,
 
-            "ad_LiveTime":"2025-12-06 10:00:00",
+            "ad_LiveTime":"2026-07-16 18:00:00",
+            "ad_huawei_LiveTime":"2025-12-06 10:00:00",
 
+            "HOST":"",
+            "DEBUG_APPID":"",
+            "RELEASE_APPID":"",
+            "DEBUG_SSK":"",
+            "RELEASE_SSK":"",
+            "isDebug":"false",
+            "buglyId":"",
             "Admob_AppId":"ca-app-pub-1589775842977386~2029736308",
 
             "umID":"",
@@ -26,12 +34,45 @@ ext{
             //TODO 第三方广告SDK ID
             "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
             "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 正式
+            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "vjjythxozc3k",
+            "PANGLE_APPID"          : "8597626",// Pangle App ID
+            // 一级广告 SDK：pangle / tradplus；remote 表示读取 JSON 的 active_provider
+            "ADSDK_ACTIVE_PROVIDER" : "tradplus",
+            // 兼容绘画设置模块的配置字段。
             "APPID"                 : "",
+            "INTER_ID"              : "",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
 
 }
+
+def adSdkActiveProvider = rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"]
+        ?.toString()
+        ?.trim()
+        ?.toLowerCase(Locale.ROOT)
+def adSdkProviderOptions = """
+请在 config.gradle 的 appConfig 中添加并正确填写：
+    "ADSDK_ACTIVE_PROVIDER" : "pangle",
+
+可选值及含义：
+    pangle   - 本地固定使用 Pangle，广告位优先读取 placement_id
+    tradplus - 本地固定使用 TradPlus，广告位优先读取 placement_id
+    remote   - Provider 读取 JSON 的 adsdk_init.active_provider，广告位读取 placement_ids；
+               active_provider 缺失时兼容为 TradPlus
+""".stripIndent().trim()
+
+if (adSdkActiveProvider == null || adSdkActiveProvider.isEmpty()) {
+    throw new GradleException("缺少必要配置 ADSDK_ACTIVE_PROVIDER，或该字段为空。\n${adSdkProviderOptions}")
+}
+
+def supportedAdSdkProviders = ["pangle", "tradplus", "remote"]
+if (!supportedAdSdkProviders.contains(adSdkActiveProvider)) {
+    throw new GradleException(
+            "ADSDK_ACTIVE_PROVIDER 配置值 '${adSdkActiveProvider}' 无效。\n${adSdkProviderOptions}")
+}
+
+// BuildConfig 只接收校验并标准化后的值，避免大小写或首尾空格影响运行时判断。
+rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"] = adSdkActiveProvider

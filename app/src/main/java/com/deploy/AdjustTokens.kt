@@ -27,11 +27,12 @@ object AdjustTokens {
                 AjConstants.Companion.blacklist = "9xu8ai"
                 AjConstants.Companion.bh_init = ""
                 AjConstants.Companion.ad_request = "1700w9"
-                AjConstants.Companion.ad_full = "21gh1r"
+                AjConstants.Companion.ad_full = ""
                 AjConstants.Companion.firebase_request ="2s6dox"
                 AjConstants.Companion.firebase_success = "ba1ynt"
                 AjConstants.Companion.adJust_attribution_request = "dybuhb"
                 AjConstants.Companion.adJust_attribution_success ="cyehe4"
+                AjConstants.Companion.adJust_attribution_fail = ""
                 AjConstants.Companion.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = "gzqpee"
@@ -73,6 +74,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "HW" -> {
@@ -91,6 +99,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -132,6 +141,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "SX" -> {
@@ -150,6 +166,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -191,6 +208,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "OP" -> {
@@ -209,6 +233,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -250,6 +275,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "VO" -> {
@@ -268,6 +300,7 @@ object AdjustTokens {
                 AjConstants.firebase_success=""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -309,6 +342,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "CY" -> {
@@ -327,6 +367,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -368,6 +409,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "XM" -> {
@@ -386,6 +434,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success =""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app =""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -427,6 +476,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "RY" ->{
@@ -445,6 +501,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -486,6 +543,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             "OL" ->{
@@ -504,6 +568,7 @@ object AdjustTokens {
                 AjConstants.firebase_success = ""
                 AjConstants.adJust_attribution_request = ""
                 AjConstants.adJust_attribution_success = ""
+                AjConstants.adJust_attribution_fail = ""
                 AjConstants.activity_app = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
@@ -545,6 +610,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
 
             else -> {
@@ -572,6 +644,7 @@ object AdjustTokens {
 
                 AjConstants.blacklist = "ytkgif"
                 LogUtil.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                AjConstants.adJust_attribution_fail = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
                 AjConstants.ad_tick_fire = ""
@@ -612,6 +685,13 @@ object AdjustTokens {
                 // —— V1.0.3 增量
                 AjConstants.ad_skip_dialog = ""
                 AjConstants.ad_skip_hit = ""
+                // —— V1.0.4 增量
+                AjConstants.ad_attribution_cb = ""
+                AjConstants.firebase_fail = ""
+                AjConstants.ad_session_start = ""
+                AjConstants.ad_postinit_step = ""
+                AjConstants.ad_postinit_error = ""
+                AjConstants.ad_prev_process_exit = ""
             }
         }
     }

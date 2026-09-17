@@ -5,75 +5,40 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.deploy.privacy.AppPrivacyPreferences;
-import com.deploy.privacy.AppPrivacyProtocolDialog;
+import toolsbox.business.ScanMenuActivity;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
-import cn.hzw.doodledemo.ScanMenuActivity;
-
+import androidx.appcompat.app.AppCompatActivity;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
 
-    private FrameLayout splashdrawView;
-    private boolean hasNavigated;
+    FrameLayout splashView;
+    private boolean hasEnteredMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashdrawView = findViewById(R.id.splashdrawView);
-
-
-//        boolean isAgressment = AppPrivacyPreferences.with(this).load().read("isAgressment", false);
-//        if (!isAgressment) {
-//            showProtocolDialog();
-//        } else {
-//            toMain();
-//        }
-        toDrawMain();
-    }
-
-    private void showProtocolDialog() {
-        AppPrivacyProtocolDialog protocolDialog = new AppPrivacyProtocolDialog(this, R.style.dialog);
-        protocolDialog.show();
-        protocolDialog.setOnProtocolDialogListener(new AppPrivacyProtocolDialog.OnProtocolDialogListener() {
-            @Override
-            public void agree() {
-                AppPrivacyPreferences.with(SplashActivity.this).load().save("isAgressment", true);
-                toDrawMain();
-            }
-
-            @Override
-            public void refuse() {
-                finish();
-            }
-        });
-    }
-
-    private void toDrawMain() {
+        splashView = findViewById(R.id.splashView);
+        // 广告类型、开关及广告位均由 config.json 中的 in_splash 场景决定。
         AdPreloadHelper.preloadLaunch(this);
         new FirstSplashAdFixTimeOut().loadSplash(
                 this,
-                splashdrawView,
+                splashView,
                 SPLASH_WAIT_TIMEOUT_MS,
-                this::openMainOnce
+                this::toMain
         );
     }
 
-    /**
-     * 广告结束和超时可能同时回调，统一在这里防止重复进入主页。
-     */
-    private void openMainOnce() {
-        if (hasNavigated || isFinishing()) {
+    private void toMain() {
+        if (hasEnteredMain || isFinishing()) {
             return;
         }
-        hasNavigated = true;
+        hasEnteredMain = true;
         Intent intent = new Intent(this, ScanMenuActivity.class);
         startActivity(intent);
         finish();

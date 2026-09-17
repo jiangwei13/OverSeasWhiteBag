@@ -4,9 +4,6 @@ import com.github.megatronking.stringfog.IStringFog;
 
 import java.nio.charset.StandardCharsets;
 
-/**
- * StringFog 使用的异或实现。
- */
 public class CustomStringFogImpl implements IStringFog {
 
     @Override
@@ -25,15 +22,17 @@ public class CustomStringFogImpl implements IStringFog {
     }
 
     private static byte[] xor(byte[] data, byte[] key) {
-        int dataLength = data.length;
-        int keyLength = key.length;
-        int keyIndex = 0;
-        for (int index = 0; index < dataLength; index++) {
-            if (keyIndex >= keyLength) {
-                keyIndex = 0;
+        int len = data.length;
+        int lenKey = key.length;
+        int i = 0;
+        int j = 0;
+        while (i < len) {
+            if (j >= lenKey) {
+                j = 0;
             }
-            data[index] = (byte) (data[index] ^ key[keyIndex]);
-            keyIndex++;
+            data[i] = (byte) (data[i] ^ key[j]);
+            i++;
+            j++;
         }
         return data;
     }

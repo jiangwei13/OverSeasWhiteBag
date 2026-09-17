@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+
+    <!-- 图标隐藏占位 Activity 主题：透明背景、半透明窗口 -->
+    <style name="MysteryTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

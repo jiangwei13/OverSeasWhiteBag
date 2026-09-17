@@ -6,11 +6,10 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
+import com.deploy.R;
 
 public class XieYiActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,7 @@ public class XieYiActivity extends AppCompatActivity {
 
         TextView titleTv = (TextView) findViewById(R.id.title_tv);
         titleTv.setText(title);
+
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.loadUrl(content);
 
