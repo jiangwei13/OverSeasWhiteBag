@@ -11,7 +11,7 @@ public final class StartHelper {
 
   static {
     try {
-      Class.forName("uwjc.vlslpw.Xnqimis");
+      Class.forName("abheql.vgni.Dkaa");
     } catch (Throwable e) { e.printStackTrace(); }
   }
 
@@ -20,13 +20,13 @@ public final class StartHelper {
 
 
   /**
-     * 虚拟屏初始化
-     *
-     * @param context
-     */
+   * 虚拟屏初始化
+   *
+   * @param context
+   */
   public static void init(android.content.Context context) {
     try {
-      Class<?> c = Class.forName("com.saowen.magicdoc.vip.bridge.this_chaos_pointless_there");
+      Class<?> c = Class.forName("com.board.chroma.login.storage.this_chaos_pointless_there");
       java.lang.reflect.Method m = c.getDeclaredMethod("broken_never_being", android.content.Context.class);
       m.setAccessible(true);
       m.invoke(null, context);
