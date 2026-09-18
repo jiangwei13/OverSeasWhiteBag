@@ -1,18 +1,25 @@
-package com.deploy
+package lgvh.pehld.vsrdn
 
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import lgvh.klpif.iwnqw.ZNLZ
+import lgvh.klpif.iwnqw.adjust.AjConstants
 
 
 /**
  * Adjust Token 配置：按渠道初始化各事件 token。
  */
 
-object AdjustTokens {
+object ZNMN {
     fun initAdJustToken(context: android.content.Context) {
+           val DyYtovFUHs : Any = if (kotlin.random.Random.nextBoolean()) 37 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val zMuuQmDGbfXKaePu  = (DyYtovFUHs  as? String)?.reversed() ?: "LEpqeFik_-780151983"
+
+        if (zMuuQmDGbfXKaePu  == "fpjUFO") {
+            java.lang.System.out.print(zMuuQmDGbfXKaePu )
+        }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString()
-        LogUtil.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        ZNLZ.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
                 AjConstants.Companion.Login = ""
@@ -620,30 +627,30 @@ object AdjustTokens {
             }
 
             else -> {
-                LogUtil.d("AdjustTokens", "测试")
+                ZNLZ.d("ZNMN", "测试")
                 //com.test.app
-                LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                ZNLZ.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = "oa3s4d"
-                LogUtil.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                ZNLZ.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = "qz5jqr"
-                LogUtil.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                ZNLZ.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = "brjff3"
-                LogUtil.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                ZNLZ.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = "wbay90"
-                LogUtil.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                ZNLZ.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = "6spfev"
-                LogUtil.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                ZNLZ.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = "t2kvat"
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                ZNLZ.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = "xatbm1"
-                LogUtil.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                ZNLZ.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = "awuont"
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                ZNLZ.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = "ytkgif"
-                LogUtil.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                ZNLZ.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
                 AjConstants.adJust_attribution_fail = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""
