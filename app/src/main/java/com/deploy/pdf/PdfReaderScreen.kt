@@ -39,6 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.base.khtoolslibrary.pdf.PdfReaderController
+import com.clean.pic_toolslibrary.pdf.ImageToPdfActivity
 import com.fangda.R
 import com.p.b.ad.runtime.AdScenes
 import com.p.b.ad.runtime.AdShowHelper
@@ -90,6 +91,21 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
                             Intent(activity, PortfolioTransferActivity::class.java))
                     },
             )
+            // 右侧"图片转PDF"图标:点击跳转图片转PDF功能页
+            // pic_toolslibrary 经 aar 打进 APK 但 app 未直接依赖其源码,无法编译期引用类,
+            // 故用 setClassName + String 全名启动
+            Image(
+                painter = painterResource(id = R.mipmap.picturnpdf),
+                contentDescription = "Convert images to PDF",
+                modifier = Modifier
+                    .align(Alignment.CenterEnd)
+                    .padding(end = 20.dp)
+                    .size(30.dp)
+                    .clickable {
+                        val it = Intent(activity, ImageToPdfActivity::class.java)
+                        activity.startActivity(it)
+                    },
+            )
             Text(
                 text = "PDF Reader",
                 color = Color.White,
@@ -98,7 +114,6 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
             )
         }
 
-        // 中部:逐页渲染的 PDF 列表
         LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth()) {
             items((0 until pageCount).toList()) { index ->
                 PdfPageItem(controller = controller, index = index, renderLock = renderLock)
