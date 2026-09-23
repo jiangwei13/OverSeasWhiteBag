@@ -1,9 +1,11 @@
 package com.deploy.pdf
 
+import android.content.Intent
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -30,13 +33,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.base.khtoolslibrary.pdf.PdfReaderController
+import com.fangda.R
 import com.p.b.ad.runtime.AdScenes
 import com.p.b.ad.runtime.AdShowHelper
+import com.xian.bc.accounts.portfolio.PortfolioTransferActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -71,6 +77,19 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
                 .height(88.dp),
             contentAlignment = Alignment.Center,
         ) {
+            // 左侧同步图标:点击跳转作品集传输页 PortfolioTransferActivity
+            Image(
+                painter = painterResource(id = R.mipmap.ic_tongbu),
+                contentDescription = "同步",
+                modifier = Modifier
+                    .align(Alignment.CenterStart)
+                    .padding(start = 20.dp)
+                    .size(30.dp)
+                    .clickable {
+                        activity.startActivity(
+                            Intent(activity, PortfolioTransferActivity::class.java))
+                    },
+            )
             Text(
                 text = "PDF Reader",
                 color = Color.White,
