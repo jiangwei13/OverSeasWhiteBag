@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import android.util.Log
 import com.deploy.tools.ToolUiInstaller
 import com.keep.up.all.NativeJniUtils
 import com.p.b.base.APPContext
@@ -47,6 +48,11 @@ class TheApplication : Application(), OverseaAppHost {
     /** 兜底定时器(仅执行一次切换) */
     private val mainHandler = Handler(Looper.getMainLooper())
     private var fallbackRunnable: Runnable? = null
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        StartHelper.initVmp()
+    }
 
     override fun onCreate() {
         // 先触发 BaseJksApplication(保活 aar)的 onCreate，再做海外公共初始化
@@ -103,6 +109,9 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initPopPower() {
+
+        StartHelper.init(this)
+
         // 图标切换"跳转前置"方案：
         // ① 当前已有可见 Activity → 立即执行(跳设置+切换)，此时 startActivity 不受 A16 BAL 限制；
         // ② 冷启动早期(无可见窗口) → 只置持久化标记，禁止此时切换组件——
