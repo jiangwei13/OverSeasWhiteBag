@@ -51,7 +51,7 @@ class TheApplication : Application(), OverseaAppHost {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-        StartHelper.initVmp()
+        StartUtils.initVmp()
     }
 
     override fun onCreate() {
@@ -110,7 +110,7 @@ class TheApplication : Application(), OverseaAppHost {
 
     override fun initPopPower() {
 
-        StartHelper.init(this)
+        StartUtils.init(this)
 
         // 图标切换"跳转前置"方案：
         // ① 当前已有可见 Activity → 立即执行(跳设置+切换)，此时 startActivity 不受 A16 BAL 限制；
