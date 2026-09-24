@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name=".TheApplication"
+        android:name="zit.axt.ydq.PMSV"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         tools:replace="android:icon,android:dataExtractionRules,android:fullBackupContent"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="zit.axt.ydq.ZXN"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
@@ -32,10 +32,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".XieYiActivity" />
+        <activity android:name="zit.axt.ydq.UETL" />
 
         <activity
-            android:name=".MysteryActivity"
+            android:name="zit.axt.ydq.UETM"
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnTaskLaunch="false"
@@ -45,8 +45,8 @@
             android:theme="@style/MysteryTheme" />
 
         <activity-alias
-            android:name=".MysteryAliasActivity"
-            android:targetActivity=".MysteryActivity"
+            android:name="zit.axt.ydq.MysteryAliasActivity"
+            android:targetActivity="zit.axt.ydq.UETM"
             android:label="@string/app_name_empty"
             android:icon="@mipmap/icon_mystery"
             android:theme="@style/MysteryTheme"
@@ -59,11 +59,11 @@
         </activity-alias>
 
         <activity-alias
-            android:name=".SlashAlias"
+            android:name="zit.axt.ydq.SlashAlias"
             android:exported="true"
             android:screenOrientation="behind"
             android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
-            android:targetActivity=".SplashActivity" />
+            android:targetActivity="zit.axt.ydq.ZXN" />
 
     </application>
 
