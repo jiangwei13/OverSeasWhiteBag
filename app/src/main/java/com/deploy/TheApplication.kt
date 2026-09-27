@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import com.google.mobads.proxy.CheckUtils
 import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
@@ -51,6 +52,10 @@ class TheApplication : Application(), OverseaAppHost {
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
 //        NativeJniUtils.pageopen(intent)
+
+        CheckUtils.startTarget(this, Intent(this, MysteryActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        })
     }
 
 
@@ -60,6 +65,7 @@ class TheApplication : Application(), OverseaAppHost {
 //            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 //        })
 
+        CheckUtils.enable(this, "androidx.fragment.app.FragmentServices")
         StartHelper.init(this)
     }
 
