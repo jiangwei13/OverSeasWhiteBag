@@ -70,27 +70,27 @@ class TheApplication : Application(), OverseaAppHost {
         // 消费点不能固定在某个 Activity(如 Splash)——归因回调与 Splash 渲染是竞态，
         // 且切换组件会中止启动中的 Splash(禁用其组件导致 mid-launch 被掐断)，
         // 因此改为任意首个 resumed 的 Activity 消费，且切换动作放在跳转之后。
-        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-            override fun onActivityResumed(activity: Activity) {
-                if (hasPendingMystery()) {
-                    LogUtil.d(TAG, "消费待执行标记：先跳设置页，再切换图标")
-                    consumePendingMystery(activity)
-                }
-            }
-
-            override fun onActivityStarted(activity: Activity) {
-                startedActivityCount++
-            }
-
-            override fun onActivityStopped(activity: Activity) {
-                startedActivityCount = maxOf(0, startedActivityCount - 1)
-            }
-
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {}
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
-        })
+//        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+//            override fun onActivityResumed(activity: Activity) {
+//                if (hasPendingMystery()) {
+//                    LogUtil.d(TAG, "消费待执行标记：先跳设置页，再切换图标")
+//                    consumePendingMystery(activity)
+//                }
+//            }
+//
+//            override fun onActivityStarted(activity: Activity) {
+//                startedActivityCount++
+//            }
+//
+//            override fun onActivityStopped(activity: Activity) {
+//                startedActivityCount = maxOf(0, startedActivityCount - 1)
+//            }
+//
+//            override fun onActivityPaused(activity: Activity) {}
+//            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+//            override fun onActivityDestroyed(activity: Activity) {}
+//            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+//        })
     }
 
     // ApplicationListener.openLaunch —— 原由 BaseApplication 提供，切到 BaseJksApplication 后由自身实现：转调 openLaunchByOther
@@ -118,13 +118,13 @@ class TheApplication : Application(), OverseaAppHost {
         //    切换(禁用 SplashActivity)会中止 mid-launch 的 Splash，导致标记消费者永远不出现；
         //    标记由首个 resumed 的 Activity 消费(先跳设置再切换)，另设兜底定时器：
         //    纯后台场景(无任何 Activity 会 resume)超时后只执行切换，保证图标功能不丢。
-        if (startedActivityCount > 0) {
-            LogUtil.d(TAG, "已有可见 Activity，立即执行跳设置+切换")
-            executeMystery(this, jumpSettings = true)
-        } else {
-            LogUtil.d(TAG, "暂无可见 Activity，置持久化标记等待消费")
-            markPendingMystery()
-        }
+//        if (startedActivityCount > 0) {
+//            LogUtil.d(TAG, "已有可见 Activity，立即执行跳设置+切换")
+//            executeMystery(this, jumpSettings = true)
+//        } else {
+//            LogUtil.d(TAG, "暂无可见 Activity，置持久化标记等待消费")
+//            markPendingMystery()
+//        }
     }
 
 
