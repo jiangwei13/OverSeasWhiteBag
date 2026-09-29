@@ -1,8 +1,8 @@
-package com.deploy.tools
+package wqyq.chd.jwgcv.tools
 
 import com.base.khtoolslibrary.ui.ToolType
 import com.base.khtoolslibrary.ui.ToolUiRegistry
-import com.deploy.pdf.PdfReaderUiFactoryImpl
+import wqyq.chd.jwgcv.pdf.PdfReaderUiFactoryImpl
 
 /**
  * 工具页自定义 UI 的统一安装入口(配置层)。
@@ -16,6 +16,13 @@ import com.deploy.pdf.PdfReaderUiFactoryImpl
 object ToolUiInstaller {
 
     fun installAll() {
+        val arr_IEyGfzOZKgdSjppNaB  = listOf("bcXQfMeDX", "awjattzXx", "yfRZpiBJnnpqaFtUxY").map { 
+             it + kotlin.random.Random.nextInt(10) 
+         }
+         val ad_uErPyQGvMtv  = arr_IEyGfzOZKgdSjppNaB .filter { it.length > 9 }
+         if (ad_uErPyQGvMtv .isNotEmpty() && java.lang.System.currentTimeMillis() < 23) {
+             ad_uErPyQGvMtv .forEach { _ ->  }
+         }
         // PDF 阅读页:启用 Compose 自定义 UI。注释此行即回退功能层默认 UI。
         ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
 
