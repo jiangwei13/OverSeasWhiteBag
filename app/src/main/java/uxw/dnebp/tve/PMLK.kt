@@ -1,18 +1,25 @@
-package com.deploy
+package uxw.dnebp.tve
 
-import com.p.b.common.LogUtil
-import com.p.b.common.adjust.AjConstants
+import uxw.amh.jrwev.PMKW
+import uxw.amh.jrwev.adjust.AjConstants
 
 
 /**
  * Adjust Token 配置：按渠道初始化各事件 token。
  */
 
-object AdjustTokens {
+object PMLK {
     fun initAdJustToken(context: android.content.Context) {
+        val arr_iyHlYVyQQP = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_OvnZYdUWwdqaDG  = (arr_iyHlYVyQQP  shl 38) xor (arr_iyHlYVyQQP  shr 86)
+         val j_COaGaZbzIl  = i_OvnZYdUWwdqaDG .inv() and 0xFFFF
+         if (j_COaGaZbzIl  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_mhatnCuUTRGWGB")
+         }
         //adJust 打点需要初始化
         val channel: String = com.meituan.android.walle.WalleChannelReader.getChannel(context,"GP").toString()
-        LogUtil.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
+        PMKW.d("AdJustTokenAFUtils>>", "当前渠道》$channel")
         when (channel) {
             "GP" ->{
                 AjConstants.Companion.Login = ""
@@ -620,30 +627,30 @@ object AdjustTokens {
             }
 
             else -> {
-                LogUtil.d("AdjustTokens", "测试")
+                PMKW.d("PMLK", "测试")
                 //com.test.app
-                LogUtil.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
+                PMKW.d("InterstitialAdHelper", "adjustAppToken>>" + AjConstants.adjustAppToken)
                 AjConstants.Login = ""
-                LogUtil.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
+                PMKW.d("InterstitialAdHelper", "Login>>" + AjConstants.Login)
                 AjConstants.Reg = ""
-                LogUtil.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
+                PMKW.d("InterstitialAdHelper", "Reg>>" + AjConstants.Reg)
                 AjConstants.topon_ilrd = ""
-                LogUtil.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
+                PMKW.d("InterstitialAdHelper", "toponn_ilrd>>" + AjConstants.topon_ilrd)
                 AjConstants.ipu = ""
-                LogUtil.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
+                PMKW.d("InterstitialAdHelper", "ipu>>" + AjConstants.ipu)
                 AjConstants.arpu = ""
-                LogUtil.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
+                PMKW.d("InterstitialAdHelper", "arpu>>" + AjConstants.arpu)
 
                 AjConstants.ipu_arpu = ""
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
+                PMKW.d("InterstitialAdHelper", "ipu_arpu>>" + AjConstants.ipu_arpu)
                 AjConstants.ipu_ecpm = ""
-                LogUtil.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
+                PMKW.d("InterstitialAdHelper", "ipu_ecpm>>" + AjConstants.ipu_ecpm)
 
                 AjConstants.ipu_arpu_ecpm = ""
-                LogUtil.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
+                PMKW.d("InterstitialAdHelper", "ipu_arpu_ecpm>>" + AjConstants.ipu_arpu_ecpm)
 
                 AjConstants.blacklist = ""
-                LogUtil.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
+                PMKW.d("InterstitialAdHelper", "blacklist>>" + AjConstants.blacklist)
                 AjConstants.adJust_attribution_fail = ""
                 // —— 广告链路漏斗事件
                 AjConstants.ad_fail = ""

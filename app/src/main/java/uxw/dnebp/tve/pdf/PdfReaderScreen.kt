@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package uxw.dnebp.tve.pdf
 
 import android.content.Intent
 import android.widget.FrameLayout
@@ -38,12 +38,12 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.clean.pic_toolslibrary.pdf.ImageToPdfActivity
+import j.PMMQ
+import f.PMJP
 import com.fangda.R
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
-import com.xian.bc.accounts.portfolio.PortfolioTransferActivity
+import uxw.qely.sbx.ad.runtime.AdScenes
+import uxw.qely.sbx.ad.runtime.AdShowHelper
+import c.PMIN
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -53,10 +53,19 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [PMMQ] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: PMMQ) {
+    val iNMgyZhBkSSkzsTWyw : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+        val KvdrGXtfpOYG  = iNMgyZhBkSSkzsTWyw ?.let { 
+            it.repeat(kotlin.random.Random.nextInt(100)) 
+        } ?: run { 
+            "zY0_41" 
+        }
+        if (KvdrGXtfpOYG .startsWith("RqEFcsp ")) {
+            android.util.Log.v("TAG", KvdrGXtfpOYG )
+        }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -78,7 +87,7 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
                 .height(88.dp),
             contentAlignment = Alignment.Center,
         ) {
-            // 左侧同步图标:点击跳转作品集传输页 PortfolioTransferActivity
+            // 左侧同步图标:点击跳转作品集传输页 PMIN
             Image(
                 painter = painterResource(id = R.mipmap.ic_tongbu),
                 contentDescription = "同步",
@@ -88,7 +97,7 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
                     .size(30.dp)
                     .clickable {
                         activity.startActivity(
-                            Intent(activity, PortfolioTransferActivity::class.java))
+                            Intent(activity, PMIN::class.java))
                     },
             )
             // 右侧"图片转PDF"图标:点击跳转图片转PDF功能页
@@ -102,7 +111,7 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
                     .padding(end = 20.dp)
                     .size(30.dp)
                     .clickable {
-                        val it = Intent(activity, ImageToPdfActivity::class.java)
+                        val it = Intent(activity, PMJP::class.java)
                         activity.startActivity(it)
                     },
             )
@@ -157,7 +166,16 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: PMMQ, index: Int, renderLock: Mutex) {
+    val RdCZemDxBQw : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+        val ObiopcdoEqigqnFe  = RdCZemDxBQw ?.let { 
+            it.repeat(kotlin.random.Random.nextInt(100)) 
+        } ?: run { 
+            "zY0_22" 
+        }
+        if (ObiopcdoEqigqnFe .startsWith("xCpakRrfYv ")) {
+            android.util.Log.v("TAG", ObiopcdoEqigqnFe )
+        }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }
