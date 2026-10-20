@@ -9,10 +9,10 @@
           "type": "in_splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": "890178311",
+          "placement_id": "890178050",
           "placement_ids": {
-            "tradplus": "17AD84C8DDF5B16DA1E5E26F69E22A12",
-            "pangle": "890178311"
+            "tradplus": "",
+            "pangle": "890178050"
           }
         }
       ]
@@ -26,10 +26,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546256",
+          "placement_id": "983541022",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "",
+            "pangle": "983541022"
           }
         }
       ]
@@ -43,16 +43,16 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546258",
+          "placement_id": "983541027",
           "placement_ids": {
-            "tradplus": "8A7C50FABDF598C4BBCEB8E72614FE12",
-            "pangle": "983546258"
+            "tradplus": "",
+            "pangle": "983541027"
           }
         }
       ]
     },
     {
-      "enable": true,
+      "enable": false,
       "scene_key": "in_function",
       "ad_list_beans": [
         {
@@ -60,10 +60,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546256",
+          "placement_id": "983541022",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "",
+            "pangle": "983541022"
           }
         },
         {
@@ -71,10 +71,10 @@
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546249",
+          "placement_id": "983541014",
           "placement_ids": {
-            "tradplus": "DCC9190A5ED26CF3D3732635F6708D12",
-            "pangle": "983546249"
+            "tradplus": "",
+            "pangle": "983541014"
           }
         }
       ]
@@ -88,10 +88,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546256",
+          "placement_id": "983541022",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "",
+            "pangle": "983541022"
           }
         }
       ]
@@ -105,10 +105,10 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546235",
+          "placement_id": "983541008",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546235"
+            "tradplus": "",
+            "pangle": "983541008"
           }
         }
       ]
@@ -122,10 +122,10 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "983546247",
+          "placement_id": "983541018",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546247"
+            "tradplus": "",
+            "pangle": "983541018"
           }
         }
       ]
