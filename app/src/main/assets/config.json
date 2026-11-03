@@ -187,6 +187,14 @@
       "enable": true,
       "interval_time": 30
     },
-    "ecpm_multiplier_enable": true
+    "ecpm_multiplier_enable": true,
+    "ecpm_multiplier": {
+      "default": 0,
+      "table": {
+        "samsung:12": 1.0,
+        "samsung:13": 1.0,
+        "samsung:14": 1.0
+      }
+    }
   }
 }
