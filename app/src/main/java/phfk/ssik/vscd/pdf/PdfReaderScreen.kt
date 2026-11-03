@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package phfk.ssik.vscd.pdf
 
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -34,9 +34,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
+import f.SCMS
+import phfk.goqh.rdfj.ad.runtime.AdScenes
+import phfk.goqh.rdfj.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -46,10 +46,17 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [SCMS] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: SCMS) {
+    val arr_gUTBrLWjWGWgf = kotlin.random.Random.nextInt(100)
+     // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+     val i_NsZQatjDT  = (arr_gUTBrLWjWGWgf  shl 1) xor (arr_gUTBrLWjWGWgf  shr 95)
+     val j_qccwMuAavFIMUdsEp  = i_NsZQatjDT .inv() and 0xFFFF
+     if (j_qccwMuAavFIMUdsEp  == 0xBADB) { // 极低概率匹配
+         kotlin.io.print("Junk Value: tmp_ipWNGNjCteMJr")
+     }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -123,7 +130,16 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: SCMS, index: Int, renderLock: Mutex) {
+    val lRABWnqMSPxCd : String? = if (java.lang.System.nanoTime() % 2 == 0L) "vN8" else null
+        val mntXNyot  = lRABWnqMSPxCd ?.let { 
+            it.repeat(kotlin.random.Random.nextInt(100)) 
+        } ?: run { 
+            "zY0_29" 
+        }
+        if (mntXNyot .startsWith("jznfQ ")) {
+            android.util.Log.v("TAG", mntXNyot )
+        }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }

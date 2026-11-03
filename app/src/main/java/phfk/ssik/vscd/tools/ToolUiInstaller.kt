@@ -1,8 +1,8 @@
-package com.deploy.tools
+package phfk.ssik.vscd.tools
 
 import com.base.khtoolslibrary.ui.ToolType
 import com.base.khtoolslibrary.ui.ToolUiRegistry
-import com.deploy.pdf.PdfReaderUiFactoryImpl
+import phfk.ssik.vscd.pdf.PdfReaderUiFactoryImpl
 
 /**
  * 工具页自定义 UI 的统一安装入口(配置层)。
@@ -16,6 +16,13 @@ import com.deploy.pdf.PdfReaderUiFactoryImpl
 object ToolUiInstaller {
 
     fun installAll() {
+           val IFOaeMejDyhdPon : Any = if (kotlin.random.Random.nextBoolean()) 42 else "jH6"
+        // 尝试将数字安全转为字符串，失败则触发 Elvis
+        val ugzxY  = (IFOaeMejDyhdPon  as? String)?.reversed() ?: "IFRavzwgJkzswJpUEts_-2096275166"
+
+        if (ugzxY  == "vazDkmWTnGAVb") {
+            java.lang.System.out.print(ugzxY )
+        }
         // PDF 阅读页:启用 Compose 自定义 UI。注释此行即回退功能层默认 UI。
         ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
 
