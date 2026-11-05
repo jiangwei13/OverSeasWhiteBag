@@ -9,10 +9,10 @@
           "type": "in_splash",
           "gm_id": "",
           "enable": true,
-          "placement_id": "17AD84C8DDF5B16DA1E5E26F69E22A12",
+          "placement_id": "3DDA7D26EF6EDBA99E815FEA8308D212",
           "placement_ids": {
-            "tradplus": "17AD84C8DDF5B16DA1E5E26F69E22A12",
-            "pangle": "890178311"
+            "tradplus": "3DDA7D26EF6EDBA99E815FEA8308D212",
+            "pangle": ""
           }
         }
       ]
@@ -26,10 +26,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312",
+          "placement_id": "C6814B7004A3016C041BF64A69239912",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "C6814B7004A3016C041BF64A69239912",
+            "pangle": ""
           }
         }
       ]
@@ -43,10 +43,10 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
-          "placement_id": "8A7C50FABDF598C4BBCEB8E72614FE12",
+          "placement_id": "8F00D395314A4F78F5A9C6D2E9AA9812",
           "placement_ids": {
-            "tradplus": "8A7C50FABDF598C4BBCEB8E72614FE12",
-            "pangle": "983546258"
+            "tradplus": "8F00D395314A4F78F5A9C6D2E9AA9812",
+            "pangle": ""
           }
         }
       ]
@@ -60,10 +60,10 @@
           "type": "in_reword_video",
           "gm_id": "",
           "enable": true,
-          "placement_id": "DCC9190A5ED26CF3D3732635F6708D12",
+          "placement_id": "1103F0505056A0C5B1590F4443BA4E12",
           "placement_ids": {
-            "tradplus": "DCC9190A5ED26CF3D3732635F6708D12",
-            "pangle": "983546249"
+            "tradplus": "1103F0505056A0C5B1590F4443BA4E12",
+            "pangle": ""
           }
         },
         {
@@ -71,10 +71,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": false,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312",
+          "placement_id": "C6814B7004A3016C041BF64A69239912",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "C6814B7004A3016C041BF64A69239912",
+            "pangle": ""
           }
         }
       ]
@@ -88,10 +88,10 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "081EC63EBF09EE6E67E9A269D74AE312",
+          "placement_id": "C6814B7004A3016C041BF64A69239912",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256"
+            "tradplus": "C6814B7004A3016C041BF64A69239912",
+            "pangle": ""
           }
         }
       ]
@@ -105,10 +105,10 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412",
+          "placement_id": "58B65DA553416CCD4ADE1CA98733D512",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546235"
+            "tradplus": "58B65DA553416CCD4ADE1CA98733D512",
+            "pangle": ""
           }
         }
       ]
@@ -122,10 +122,10 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "2103AC9966218048719813E32F012412",
+          "placement_id": "58B65DA553416CCD4ADE1CA98733D512",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546247"
+            "tradplus": "58B65DA553416CCD4ADE1CA98733D512",
+            "pangle": ""
           }
         }
       ]
