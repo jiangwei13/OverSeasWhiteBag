@@ -48,10 +48,7 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initPopPower() {
-        // 启动图标隐藏：禁用 SplashActivity 主入口，启用透明 MysteryAliasActivity
-        startActivity(Intent(this, MysteryActivity::class.java).apply {
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        })
+        // 图标隐藏已由 oversea_base_module 在归因后置流程统一调度(OverseaAppHost.enableIconHide 默认开启)
     }
 
 
