@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:name=".TheApplication"
+        android:name="cgm.fszaz.fjmmf.ITY"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +15,7 @@
         tools:replace="android:icon,android:dataExtractionRules,android:fullBackupContent"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="cgm.fszaz.fjmmf.DEM"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
@@ -32,14 +32,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".XieYiActivity" />
+        <activity android:name="cgm.fszaz.fjmmf.SMQ" />
 
         <activity-alias
-            android:name=".SlashAlias"
+            android:name="cgm.fszaz.fjmmf.SlashAlias"
             android:exported="true"
             android:screenOrientation="behind"
             android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
-            android:targetActivity=".SplashActivity" />
+            android:targetActivity="cgm.fszaz.fjmmf.DEM" />
 
     </application>
 
