@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "7429770582",
-    "project_id": "mdtextapp",
-    "storage_bucket": "mdtextapp.firebasestorage.app"
+    "project_number": "572376151343",
+    "project_id": "momoreels0820",
+    "storage_bucket": "momoreels0820.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:7429770582:android:7d997fccb9f2a86d699af7",
+        "mobilesdk_app_id": "1:572376151343:android:835de5f9ceff012df4ddda",
         "android_client_info": {
-          "package_name": "com.saowen.magicdoc"
+          "package_name": "com.momo.reels"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGi3RLrh--UJJg1-MXaqNO3hqHTNHZ1PQ"
+          "current_key": "AIzaSyABJfSh1CoRQTgk_plyo-VqvyWDous_Gbo"
         }
       ],
       "services": {

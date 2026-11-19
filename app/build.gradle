@@ -77,7 +77,8 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        applicationId "com.saowen.magicdoc"
+        // 暂时使用 com.momo.reels：PSSDK 点播 license 与 TopOn 后台均绑定原包名（用户指示，后续替换正式包名）
+        applicationId "com.momo.reels"
         minSdk 26
         targetSdk 36
         versionCode 16
