@@ -156,6 +156,10 @@ dependencyResolutionManagement {
         maven {
             url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
+
+        // Dramaverse PSSDK（短剧内容 + 播放器）及其传递依赖 ttsdk-player
+        maven { url "https://artifact.bytedance.com/repository/Volcengine" }
+        maven { url "https://artifact.byteplus.com/repository/public/" }
     }
 }
 
