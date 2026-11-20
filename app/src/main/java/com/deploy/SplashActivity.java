@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.business.drama.MainActivity;
+import com.toolsbox.business.drama.MainActivity;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
