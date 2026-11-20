@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.toolsbox.business.drama.MainActivity;
+import com.toolsbox.business.drama.DramaMainActivity;
 import com.p.b.ad.runtime.AdPreloadHelper;
 import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
@@ -45,15 +45,15 @@ public class SplashActivity extends AppCompatActivity {
             return;
         }
         hasEnteredMain = true;
-        Intent intent = new Intent(this, MainActivity.class);
-        // 已有 MainActivity 时复用（通知/深链可能把开屏页压到已有任务栈上），避免重复实例。
+        Intent intent = new Intent(this, DramaMainActivity.class);
+        // 已有 DramaMainActivity 时复用（通知/深链可能把开屏页压到已有任务栈上），避免重复实例。
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         Intent source = getIntent();
         if (source != null && source.getExtras() != null) {
             intent.putExtras(source.getExtras());
         }
-        // 通知点击也要先走 in_splash 开屏；标记已展示，避免 MainActivity 再跑一次通知开屏。
-        intent.putExtra(MainActivity.EXTRA_SHELL_SPLASH_SHOWN, true);
+        // 通知点击也要先走 in_splash 开屏；标记已展示，避免 DramaMainActivity 再跑一次通知开屏。
+        intent.putExtra(DramaMainActivity.EXTRA_SHELL_SPLASH_SHOWN, true);
         startActivity(intent);
         finish();
     }
