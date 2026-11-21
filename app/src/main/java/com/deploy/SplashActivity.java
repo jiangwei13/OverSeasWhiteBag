@@ -1,43 +1,25 @@
 package com.deploy;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.FrameLayout;
 
 import com.toolsbox.business.drama.DramaMainActivity;
-import com.p.b.ad.runtime.AdPreloadHelper;
-import com.p.b.ad.splash.FirstSplashAdFixTimeOut;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-@SuppressLint("CustomSplashScreen")
+/**
+ * 只做启动路由：不绘制页面、不等待开屏广告，直接进入短剧 Activity。
+ * 黑屏开屏与 in_splash 广告由 DramaMainActivity 承担，保证点开即黑屏。
+ * 保留 Launcher / 深链 / 通知入口语义，避免改动通知与深链的指向。
+ */
 public class SplashActivity extends AppCompatActivity {
 
-    private static final long SPLASH_WAIT_TIMEOUT_MS = 5000L;
-
-    FrameLayout splashView;
     private boolean hasEnteredMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
-        splashView = findViewById(R.id.splashView);
-        // 广告类型、开关及广告位均由 config.json 中的 in_splash 场景决定。
-        AdPreloadHelper.preloadLaunch(this);
-        new FirstSplashAdFixTimeOut().loadSplash(
-                this,
-                splashView,
-                SPLASH_WAIT_TIMEOUT_MS,
-                this::toMain
-        );
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        setIntent(intent);
+        toMain();
     }
 
     private void toMain() {
@@ -52,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         if (source != null && source.getExtras() != null) {
             intent.putExtras(source.getExtras());
         }
-        // 通知点击也要先走 in_splash 开屏；标记已展示，避免 DramaMainActivity 再跑一次通知开屏。
+        // 启动链（短剧首屏）已统一承担开屏广告，通知入口不再进入应用内开屏等待。
         intent.putExtra(DramaMainActivity.EXTRA_SHELL_SPLASH_SHOWN, true);
         startActivity(intent);
         finish();

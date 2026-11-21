@@ -2,4 +2,14 @@
 <resources>
 
     <style name="Theme.MaterialComponents.DayNight.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+
+    <!-- 启动路由页：不绘制内容，窗口保持黑色，避免白屏/白闪。 -->
+    <style name="Theme.Splash.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.Splash.Base" />
 </resources>
