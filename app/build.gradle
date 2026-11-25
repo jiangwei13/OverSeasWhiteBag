@@ -77,12 +77,12 @@ android {
         additionalParameters "--no-version-vectors"
     }
     defaultConfig {
-        // 暂时使用 com.momo.reels：PSSDK 点播 license 与 TopOn 后台均绑定原包名（用户指示，后续替换正式包名）
+        // 暂用 com.momo.reels 测试：PSSDK 点播 license 与 TopOn 后台仍绑定原包名，新包名 com.xinghan.drama 授权申请后再切换
         applicationId "com.momo.reels"
         minSdk 26
         targetSdk 36
-        versionCode 16
-        versionName "1.0.16"
+        versionCode 1
+        versionName "1.0.1"
         ndk {
             // MMKV 2.x 仅支持 64 位，最终包不再向 32 位设备交付。
             abiFilters 'arm64-v8a'
