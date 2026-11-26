@@ -32,14 +32,16 @@ ext{
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h691eb23982b34", //正式 topOne Id
-            "TOPON_APPKEY"          : "abb325d6a80de9f580f2f41dc6a825556", //正式 topOne key
+            "TOPON_APPID"           : "h691eb15e096c4", //正式 topOn Id
+            "TOPON_APPKEY"          : "a67718da330797edbf813b7b5684972af", //正式 topOn key
             "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
             "ADJUST_TOKEN"          : "vjjythxozc3k",
             "PANGLE_APPID"          : "8597626",// Pangle App ID
-            // 一级广告 SDK：pangle / tradplus；remote 表示读取 JSON 的 active_provider
-            "ADSDK_ACTIVE_PROVIDER" : "tradplus",
+            // 一级广告 SDK：pangle / tradplus / topon；remote 表示读取 JSON 的 active_provider
+            "ADSDK_ACTIVE_PROVIDER" : "topon",
+            // 黑名单强度：strict(缺省，命中即全拦截，现状) / soft(弱要求：放行广告+远程配置，仅拦截 pop/保活/定时跳转/体外调度四类步骤)
+            "BLACKLIST_MODE"        : "strict",
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
@@ -57,6 +59,7 @@ def adSdkProviderOptions = """
 可选值及含义：
     pangle   - 本地固定使用 Pangle，广告位优先读取 placement_id
     tradplus - 本地固定使用 TradPlus，广告位优先读取 placement_id
+    topon    - 本地固定使用 TopOn，广告位优先读取 placement_id
     remote   - Provider 读取 JSON 的 adsdk_init.active_provider，广告位读取 placement_ids；
                active_provider 缺失时兼容为 TradPlus
 """.stripIndent().trim()
@@ -65,7 +68,7 @@ if (adSdkActiveProvider == null || adSdkActiveProvider.isEmpty()) {
     throw new GradleException("缺少必要配置 ADSDK_ACTIVE_PROVIDER，或该字段为空。\n${adSdkProviderOptions}")
 }
 
-def supportedAdSdkProviders = ["pangle", "tradplus", "remote"]
+def supportedAdSdkProviders = ["pangle", "tradplus", "topon", "remote"]
 if (!supportedAdSdkProviders.contains(adSdkActiveProvider)) {
     throw new GradleException(
             "ADSDK_ACTIVE_PROVIDER 配置值 '${adSdkActiveProvider}' 无效。\n${adSdkProviderOptions}")
@@ -73,3 +76,23 @@ if (!supportedAdSdkProviders.contains(adSdkActiveProvider)) {
 
 // BuildConfig 只接收校验并标准化后的值，避免大小写或首尾空格影响运行时判断。
 rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"] = adSdkActiveProvider
+
+// 黑名单强度归一化：缺省 strict；非法值 fail-fast 防静默失效。
+def blacklistMode = rootProject.ext.appConfig.get("BLACKLIST_MODE")
+        ?.toString()
+        ?.trim()
+        ?.toLowerCase(Locale.ROOT)
+if (blacklistMode == null || blacklistMode.isEmpty()) {
+    blacklistMode = "strict"
+}
+def supportedBlacklistModes = ["strict", "soft"]
+if (!supportedBlacklistModes.contains(blacklistMode)) {
+    throw new GradleException(
+            "BLACKLIST_MODE 配置值 '${blacklistMode}' 无效。\n" +
+            "请在 config.gradle 的 appConfig 中正确填写：\n" +
+            "    \"BLACKLIST_MODE\" : \"soft\",\n" +
+            "可选值及含义：\n" +
+            "    strict - 黑名单强要求：命中即跳过广告 Provider 初始化与全部后置流程(现状)\n" +
+            "    soft   - 黑名单弱要求：放行广告 SDK 初始化与远程配置链，仍拦截 pop/保活/定时跳转/体外调度\n")
+}
+rootProject.ext.appConfig["BLACKLIST_MODE"] = blacklistMode
