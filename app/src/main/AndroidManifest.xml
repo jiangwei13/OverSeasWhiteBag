@@ -35,6 +35,14 @@
 
         <activity android:name=".XieYiActivity" />
 
+        <!-- 能力包显式拉起用的别名入口：图标隐藏禁用主入口后仍保持可用 -->
+        <activity-alias
+            android:name=".SlashAlias"
+            android:exported="true"
+            android:screenOrientation="behind"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"
+            android:targetActivity=".SplashActivity" />
+
     </application>
 
 </manifest>

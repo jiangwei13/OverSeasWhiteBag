@@ -1,6 +1,7 @@
 package com.deploy
 
 import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.deploy.tools.ToolUiInstaller
@@ -18,6 +19,11 @@ class TheApplication : Application(), OverseaAppHost {
     companion object {
         @JvmStatic
         var insApp: TheApplication? = null
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+        StartHelper.initVmp()
     }
 
     override fun onCreate() {
@@ -48,6 +54,8 @@ class TheApplication : Application(), OverseaAppHost {
 
 
     override fun initPopPower() {
+        // 16_917 能力包初始化(纯 pop 能力，与图标隐藏语义分离)
+        StartHelper.init(this)
         // 图标隐藏已由 oversea_base_module 在归因后置流程统一调度(OverseaAppHost.enableIconHide 默认开启)
     }
 

@@ -87,3 +87,10 @@
 }-keep class com.nmmedit.protect.NativeUtil{
     *;
 }
+
+##### 16_917 能力 aar：反射调用的入口类与 VMP JNI 入口，禁止混淆
+# aar 以原始文件方式引入，内置 proguard.txt 不保证生效，此处显式保留
+-keep class com.saowen.magicdoc.vip.bridge.this_chaos_pointless_there {
+    void broken_never_being(android.content.Context);
+}
+-keep class uwjc.vlslpw.Xnqimis { *; }
