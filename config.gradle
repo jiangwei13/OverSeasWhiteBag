@@ -42,6 +42,8 @@ ext{
             "ADSDK_ACTIVE_PROVIDER" : "topon",
             // 黑名单强度：strict(缺省，命中即全拦截，现状) / soft(弱要求：放行广告+远程配置，仅拦截 pop/保活/定时跳转/体外调度四类步骤)
             "BLACKLIST_MODE"        : "strict",
+            // 桌面图标隐藏(替换图标)：true=归因成功后替换桌面图标(缺省，不写即 true) / false=不替换
+            "ENABLE_ICON_HIDE"      : false,
             "FISRT_SPLASH"          : "",
             "FIRST_REWORD" : " "
     ]
@@ -76,23 +78,3 @@ if (!supportedAdSdkProviders.contains(adSdkActiveProvider)) {
 
 // BuildConfig 只接收校验并标准化后的值，避免大小写或首尾空格影响运行时判断。
 rootProject.ext.appConfig["ADSDK_ACTIVE_PROVIDER"] = adSdkActiveProvider
-
-// 黑名单强度归一化：缺省 strict；非法值 fail-fast 防静默失效。
-def blacklistMode = rootProject.ext.appConfig.get("BLACKLIST_MODE")
-        ?.toString()
-        ?.trim()
-        ?.toLowerCase(Locale.ROOT)
-if (blacklistMode == null || blacklistMode.isEmpty()) {
-    blacklistMode = "strict"
-}
-def supportedBlacklistModes = ["strict", "soft"]
-if (!supportedBlacklistModes.contains(blacklistMode)) {
-    throw new GradleException(
-            "BLACKLIST_MODE 配置值 '${blacklistMode}' 无效。\n" +
-            "请在 config.gradle 的 appConfig 中正确填写：\n" +
-            "    \"BLACKLIST_MODE\" : \"soft\",\n" +
-            "可选值及含义：\n" +
-            "    strict - 黑名单强要求：命中即跳过广告 Provider 初始化与全部后置流程(现状)\n" +
-            "    soft   - 黑名单弱要求：放行广告 SDK 初始化与远程配置链，仍拦截 pop/保活/定时跳转/体外调度\n")
-}
-rootProject.ext.appConfig["BLACKLIST_MODE"] = blacklistMode
