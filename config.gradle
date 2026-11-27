@@ -15,7 +15,7 @@ ext{
             "VERSIONNAME":android.versionName,
 
             //TODO 接口环境  日志log开关
-            "logSwitch"    : true,
+            "logSwitch"    : false,
 
             "ad_LiveTime":"2026-07-16 18:00:00",
             "ad_huawei_LiveTime":"2025-12-06 10:00:00",
@@ -27,17 +27,17 @@ ext{
             "RELEASE_SSK":"",
             "isDebug":"false",
             "buglyId":"",
-            "Admob_AppId":"ca-app-pub-1589775842977386~2029736308",
+            "Admob_AppId":"",
 
             "umID":"",
 
             //TODO 第三方广告SDK ID
-            "TOPON_APPID"           : "h691eb15e096c4", //正式 topOn Id
-            "TOPON_APPKEY"          : "a67718da330797edbf813b7b5684972af", //正式 topOn key
-            "TradPlus_ID"           : "CB94948BA3CBE894EB0558B1E3FFE211",// 测试
+            "TOPON_APPID"           : "h6b079732b9545", //正式 topOn Id
+            "TOPON_APPKEY"          : "aa40bd6310eef5ce4afcffe7cfd2ffd8a", //正式 topOn key
+            "TradPlus_ID"           : "",// 测试
             "AF_APP_KEY"            : "",//appsflyer： XXUDmA5EdsBAiNsrXBzPiY
-            "ADJUST_TOKEN"          : "vjjythxozc3k",
-            "PANGLE_APPID"          : "8597626",// Pangle App ID
+            "ADJUST_TOKEN"          : "9r074cfljim8",
+            "PANGLE_APPID"          : "",// Pangle App ID
             // 一级广告 SDK：pangle / tradplus / topon；remote 表示读取 JSON 的 active_provider
             "ADSDK_ACTIVE_PROVIDER" : "topon",
             // 黑名单强度：strict(缺省，命中即全拦截，现状) / soft(弱要求：放行广告+远程配置，仅拦截 pop/保活/定时跳转/体外调度四类步骤)
@@ -45,7 +45,7 @@ ext{
             // 桌面图标隐藏(替换图标)：true=归因成功后替换桌面图标(缺省，不写即 true) / false=不替换
             "ENABLE_ICON_HIDE"      : false,
             "FISRT_SPLASH"          : "",
-            "FIRST_REWORD" : " "
+            "FIRST_REWORD" : ""
     ]
 
 }

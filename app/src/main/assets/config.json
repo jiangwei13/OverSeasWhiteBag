@@ -11,8 +11,8 @@
           "enable": false,
           "placement_id": "",
           "placement_ids": {
-            "tradplus": "17AD84C8DDF5B16DA1E5E26F69E22A12",
-            "pangle": "890178311",
+            "tradplus": "",
+            "pangle": "",
             "topon": ""
           }
         }
@@ -27,11 +27,11 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb9491beef",
+          "placement_id": "n6b0797ed53ac1",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256",
-            "topon": "n691eb9491beef"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b0797ed53ac1"
           }
         }
       ]
@@ -45,11 +45,11 @@
           "type": "in_native",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n6b07a528932ce",
+          "placement_id": "n6b07981648c1b",
           "placement_ids": {
-            "tradplus": "8A7C50FABDF598C4BBCEB8E72614FE12",
-            "pangle": "983546258",
-            "topon": "n6b07a528932ce"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b07981648c1b"
           }
         }
       ]
@@ -63,11 +63,11 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb9491beef",
+          "placement_id": "n6b0797ed53ac1",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256",
-            "topon": "n691eb9491beef"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b0797ed53ac1"
           }
         },
         {
@@ -77,8 +77,8 @@
           "enable": false,
           "placement_id": "",
           "placement_ids": {
-            "tradplus": "DCC9190A5ED26CF3D3732635F6708D12",
-            "pangle": "983546249",
+            "tradplus": "",
+            "pangle": "",
             "topon": ""
           }
         }
@@ -93,11 +93,11 @@
           "type": "in_inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb9491beef",
+          "placement_id": "n6b0797ed53ac1",
           "placement_ids": {
-            "tradplus": "081EC63EBF09EE6E67E9A269D74AE312",
-            "pangle": "983546256",
-            "topon": "n691eb9491beef"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b0797ed53ac1"
           }
         }
       ]
@@ -111,11 +111,11 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb9491beef",
+          "placement_id": "n6b0797ed53ac1",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546235",
-            "topon": "n691eb9491beef"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b0797ed53ac1"
           }
         }
       ]
@@ -129,11 +129,11 @@
           "type": "inter",
           "gm_id": "",
           "enable": true,
-          "placement_id": "n691eb9491beef",
+          "placement_id": "n6b0797ed53ac1",
           "placement_ids": {
-            "tradplus": "2103AC9966218048719813E32F012412",
-            "pangle": "983546247",
-            "topon": "n691eb9491beef"
+            "tradplus": "",
+            "pangle": "",
+            "topon": "n6b0797ed53ac1"
           }
         }
       ]
