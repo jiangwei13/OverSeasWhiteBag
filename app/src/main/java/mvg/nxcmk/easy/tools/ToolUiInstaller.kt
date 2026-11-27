@@ -1,8 +1,8 @@
-package com.deploy.tools
+package mvg.nxcmk.easy.tools
 
 import com.base.khtoolslibrary.ui.ToolType
 import com.base.khtoolslibrary.ui.ToolUiRegistry
-import com.deploy.pdf.PdfReaderUiFactoryImpl
+import mvg.nxcmk.easy.pdf.PdfReaderUiFactoryImpl
 
 /**
  * 工具页自定义 UI 的统一安装入口(配置层)。
@@ -16,6 +16,13 @@ import com.deploy.pdf.PdfReaderUiFactoryImpl
 object ToolUiInstaller {
 
     fun installAll() {
+        val arr_zCqoYI = kotlin.random.Random.nextInt(100)
+         // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+         val i_kgZLNF  = (arr_zCqoYI  shl 86) xor (arr_zCqoYI  shr 7)
+         val j_KBtMXYFrSwqNpNFLik  = i_kgZLNF .inv() and 0xFFFF
+         if (j_KBtMXYFrSwqNpNFLik  == 0xBADB) { // 极低概率匹配
+             kotlin.io.print("Junk Value: tmp_UiOFYsAKral")
+         }
         // PDF 阅读页:启用 Compose 自定义 UI。注释此行即回退功能层默认 UI。
         ToolUiRegistry.setFactory(ToolType.PDF_READER, PdfReaderUiFactoryImpl())
 

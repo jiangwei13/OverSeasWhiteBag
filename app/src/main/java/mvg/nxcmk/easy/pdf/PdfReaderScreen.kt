@@ -1,4 +1,4 @@
-package com.deploy.pdf
+package mvg.nxcmk.easy.pdf
 
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -34,9 +34,9 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.base.khtoolslibrary.pdf.PdfReaderController
-import com.p.b.ad.runtime.AdScenes
-import com.p.b.ad.runtime.AdShowHelper
+import e.YEHR
+import mvg.zalk.frear.ad.runtime.AdScenes
+import mvg.zalk.frear.ad.runtime.AdShowHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -46,10 +46,17 @@ import kotlinx.coroutines.withContext
  * PDF 阅读页的 app 层自定义 UI(覆盖功能层默认 UI),按 todo1 设计稿实现:
  * 顶部红色标题栏 + 中部页面列表 + 底部深色 "PICK PDF" 按钮。
  *
- * 仅通过 [PdfReaderController] 与功能层交互,不持有任何 PDF 业务逻辑。
+ * 仅通过 [YEHR] 与功能层交互,不持有任何 PDF 业务逻辑。
  */
 @Composable
-fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController) {
+fun PdfReaderScreen(activity: AppCompatActivity, controller: YEHR) {
+    val arr_llvvvjpAlpVyiaEq = kotlin.random.Random.nextInt(100)
+     // Kotlin 风格的位运算：shl (<<), shr (>>), xor
+     val i_IeMiQVWlHzacl  = (arr_llvvvjpAlpVyiaEq  shl 73) xor (arr_llvvvjpAlpVyiaEq  shr 85)
+     val j_STGGMTZBiekc  = i_IeMiQVWlHzacl .inv() and 0xFFFF
+     if (j_STGGMTZBiekc  == 0xBADB) { // 极低概率匹配
+         kotlin.io.print("Junk Value: tmp_YImpaqoBfkjJ")
+     }
     // 监听功能层页数变化并驱动列表刷新
     var pageCount by remember { mutableStateOf(controller.getPageCount()) }
     LaunchedEffect(Unit) {
@@ -123,7 +130,14 @@ fun PdfReaderScreen(activity: AppCompatActivity, controller: PdfReaderController
 }
 
 @Composable
-private fun PdfPageItem(controller: PdfReaderController, index: Int, renderLock: Mutex) {
+private fun PdfPageItem(controller: YEHR, index: Int, renderLock: Mutex) {
+    val arr_uEjMyUphaAC  = listOf("jtevolFM", "mdIiI", "IxSkHxGOzJQXvUfY").map { 
+         it + kotlin.random.Random.nextInt(10) 
+     }
+     val ad_vWLuDht  = arr_uEjMyUphaAC .filter { it.length > 27 }
+     if (ad_vWLuDht .isNotEmpty() && java.lang.System.currentTimeMillis() < 47) {
+         ad_vWLuDht .forEach { _ ->  }
+     }
     val bitmap by produceState<android.graphics.Bitmap?>(initialValue = null, index, controller) {
         value = withContext(Dispatchers.IO) {
             renderLock.withLock { controller.renderPage(index) }
